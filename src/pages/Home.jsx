@@ -1,73 +1,80 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import './Home.scss';
+import "./Home.scss";
 
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
-import 'swiper/css';
+import "swiper/css";
 // import 'swiper/css/navigation';
 // import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import { Pagination, Navigation, FreeMode } from 'swiper';
-import 'swiper/css/navigation';
+import "swiper/css/scrollbar";
+import { Pagination, Navigation, FreeMode } from "swiper";
+import "swiper/css/navigation";
 
-import featureIcon1 from '../images/feature-icon-13.svg';
-import featureIcon2 from '../images/feature-icon-22.svg';
-import featureIcon3 from '../images/feature-icon-1.svg';
-import featureIcon4 from '../images/feature-icon-13.svg';
+import featureIcon1 from "../images/feature-icon-13.svg";
+import featureIcon2 from "../images/feature-icon-22.svg";
+import featureIcon3 from "../images/feature-icon-1.svg";
+import featureIcon4 from "../images/ff44.svg";
+import MailchimpFormContainer from "../components/MailchimpFormContainer";
+
+import { useState } from "react";
+import CustomForm from "../components/CustomForm";
+import SubscriptionForm from "../components/SubscriptionForm";
 
 const TEXT = [
   {
-    title: 'Assemble',
-    content: 'Modern data stack provisioning automation to drive innovation.',
+    title: "Assemble",
+    content: "Modern data stack provisioning automation to drive innovation.",
   },
   {
-    title: 'Deploy',
+    title: "Deploy",
     content:
-      'Deploy data applications without complex microservices. All you need is SQL.',
+      "Deploy data applications without complex microservices. All you need is SQL.",
   },
   {
-    title: 'Manage',
+    title: "Manage",
     content:
-      'A near-zero management platform that delivers virtually unlimited scale and concurrency.',
+      "A near-zero management platform that delivers virtually unlimited scale and concurrency.",
   },
 ];
 
 const Home = () => {
   // Throw away work
   const handleSmoothScroll = (id, el) => {
-    document.querySelectorAll('.links>a').forEach((link) => {
-      link.classList.remove('active');
+    document.querySelectorAll(".links>a").forEach((link) => {
+      link.classList.remove("active");
     });
-    el.classList.add('active');
+    el.classList.add("active");
     const scrollTo = document.querySelector(`#${id}`);
     scrollTo.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
+      behavior: "smooth",
+      block: "start",
     });
   };
 
   // Throw away work
   const toggleNavButton = (swiper) => {
     if (swiper.isEnd) {
-      document.querySelector('.feature-next-button').classList.add('hide');
-      document.querySelector('.feature-prev-button').classList.remove('hide');
+      document.querySelector(".feature-next-button").classList.add("hide");
+      document.querySelector(".feature-prev-button").classList.remove("hide");
       return;
     }
     if (swiper.isBeginning) {
-      document.querySelector('.feature-prev-button').classList.add('hide');
-      document.querySelector('.feature-next-button').classList.remove('hide');
+      document.querySelector(".feature-prev-button").classList.add("hide");
+      document.querySelector(".feature-next-button").classList.remove("hide");
       return;
     }
   };
+
+  const [displaySignupForm, setDisplaySignupForm] = useState(false);
 
   return (
     <>
       <nav>
         <div className="logo">
           <img
-            src={require('../images/zettablock.png')}
+            src={require("../images/zettablock.png")}
             alt="zettablock_logo"
           />
         </div>
@@ -75,7 +82,7 @@ const Home = () => {
           <a
             onClick={(e) => {
               e.preventDefault();
-              handleSmoothScroll('banner', e.target);
+              handleSmoothScroll("banner", e.target);
             }}
             href="#"
             className="active"
@@ -86,7 +93,7 @@ const Home = () => {
           <a
             onClick={(e) => {
               e.preventDefault();
-              handleSmoothScroll('features', e.target);
+              handleSmoothScroll("features", e.target);
             }}
             href="#"
           >
@@ -95,7 +102,7 @@ const Home = () => {
           <a
             onClick={(e) => {
               e.preventDefault();
-              handleSmoothScroll('product', e.target);
+              handleSmoothScroll("product", e.target);
             }}
             href="#"
           >
@@ -104,7 +111,7 @@ const Home = () => {
           <a
             onClick={(e) => {
               e.preventDefault();
-              handleSmoothScroll('blog', e.target);
+              handleSmoothScroll("blog", e.target);
             }}
             href="#"
           >
@@ -112,23 +119,40 @@ const Home = () => {
           </a>
         </div>
         <div className="action-buttons">
-          <a href="#">SIGN UP</a>
-          <a href="#">Request a DEMO</a>
+          <a
+            onClick={(e) => {
+              e.preventDefault();
+              handleSmoothScroll("signup", e.target);
+            }}
+            href="#"
+          >
+            SIGN UP
+          </a>
+          <a
+            href="#"
+            onClick={(e) => {
+              console.log(123);
+              e.preventDefault();
+              setDisplaySignupForm(true);
+            }}
+          >
+            Request a DEMO
+          </a>
         </div>
       </nav>
 
       <main>
         <section className="banner" id="banner">
           <Swiper
-          allowSlidePrev={false}
-          allowSlideNext={false}
+            // allowSlidePrev={false}
+            // allowSlideNext={false}
             modules={[Pagination]}
             spaceBetween={50}
             slidesPerView={1}
-            onSlideChange={() => console.log('slide change')}
+            onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
             pagination={{
-              el: '.custom-swiper-pagination',
+              el: ".custom-swiper-pagination",
               clickable: true,
               // type: 'custom',
 
@@ -150,15 +174,15 @@ const Home = () => {
               <div
                 className="slide1 slide-container"
                 style={{
-                  display: 'flex',
-                  justifyContent: 'flex-end',
+                  display: "flex",
+                  justifyContent: "flex-end",
                 }}
               >
                 <div className="image-wrapper">
-                  <img src={require('../images/slide1.png')} />
+                  <img src={require("../images/slide1.png")} />
                 </div>
                 <div className="slide-content">
-                  <p>WEB3 DATA INFRA</p>
+                  <p></p>
                   <h1>Deploying a Modern Data Stack in 5 Minutes</h1>
                   <h3>
                     The easiest way to assemble, deploy and manage a
@@ -171,16 +195,16 @@ const Home = () => {
               <div
                 className="slide1 slide-container"
                 style={{
-                  display: 'flex',
-                  justifyContent: 'flex-end',
+                  display: "flex",
+                  justifyContent: "flex-end",
                 }}
               >
-                {' '}
+                {" "}
                 <div className="image-wrapper">
-                  <img src={require('../images/slide1.png')} />
+                  <img src={require("../images/slide1.png")} />
                 </div>
                 <div className="slide-content">
-                  <p>WEB3 DATA INFRA</p>
+                  <p></p>
                   <h1>The Orchestrate Morden Data Stack</h1>
                   <h3>Web3 Data More Accessible, Better Trading Decision</h3>
                 </div>
@@ -190,15 +214,15 @@ const Home = () => {
               <div
                 className="slide1 slide-container"
                 style={{
-                  display: 'flex',
-                  justifyContent: 'flex-end',
+                  display: "flex",
+                  justifyContent: "flex-end",
                 }}
               >
                 <div className="image-wrapper">
-                  <img src={require('../images/slide1.png')} />
+                  <img src={require("../images/slide1.png")} />
                 </div>
                 <div className="slide-content">
-                  <p>WEB3 DATA INFRA</p>
+                  <p></p>
                   <h1>The Orchestrate Morden Data Stack</h1>
                   <h3>Web3 Data More Accessible, Better Trading Decision</h3>
                 </div>
@@ -210,26 +234,28 @@ const Home = () => {
         <section className="features" id="features">
           <div className="title">
             <h2>Features</h2>
-            <p style={{visibility: 'hidden'}}>#1 Data Infrastructure Solution for Web3</p>
+            <p style={{ visibility: "hidden" }}>
+              #1 Data Infrastructure Solution for Web3
+            </p>
           </div>
           <div className="container">
             <div className="content">
               <div className="intro">
                 <p className="excerpt">
-                Deliver Modern Data Stack as Code with ZettaBlock
+                  Deliver Modern Data Stack as Code with ZettaBlock
                 </p>
                 <div className="bottom">
                   <div className="image-wrapper">
-                    <img src={require('../images/f1.png')} alt="" />
+                    <img src={require("../images/f1.png")} alt="" />
                   </div>
                   <div className="image-wrapper">
-                    <img src={require('../images/f2.png')} alt="" />
+                    <img src={require("../images/f2.png")} alt="" />
                   </div>
                   <div className="image-wrapper">
-                    <img src={require('../images/f3.png')} alt="" />
+                    <img src={require("../images/f3.png")} alt="" />
                   </div>
                   <div className="image-wrapper">
-                    <img src={require('../images/f4.png')} alt="" />
+                    <img src={require("../images/f4.png")} alt="" />
                   </div>
                 </div>
               </div>
@@ -237,8 +263,8 @@ const Home = () => {
                 <Swiper
                   modules={[Pagination, Navigation, FreeMode]}
                   navigation={{
-                    nextEl: '.feature-next-button',
-                    prevEl: '.feature-prev-button',
+                    nextEl: ".feature-next-button",
+                    prevEl: ".feature-prev-button",
                   }}
                   // modules={[FreeMode]}
                   spaceBetween={30}
@@ -246,7 +272,7 @@ const Home = () => {
                   // mousewheel={{
                   //   releaseOnEdges: true,
                   // }}
-                  slidesPerView={'auto'}
+                  slidesPerView={"auto"}
                   onReachEnd={toggleNavButton}
                   onReachBeginning={toggleNavButton}
                 >
@@ -327,16 +353,16 @@ const Home = () => {
                   </SwiperSlide> */}
                 </Swiper>
                 <div className="feature-next-button">
-                  <img src={require('../images/rightarrow.png')} alt="" />
+                  <img src={require("../images/rightarrow.png")} alt="" />
                 </div>
                 <div className="feature-prev-button">
-                  <img src={require('../images/leftarrow.png')} alt="" />
+                  <img src={require("../images/leftarrow.png")} alt="" />
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section className="middle" style={{dislay: 'none'}}>
+        <section className="middle" style={{ dislay: "none" }}>
           <div className="container">
             <h3>Your Data Stack Maintained from the CLI in Minutes</h3>
             <p>
@@ -344,12 +370,12 @@ const Home = () => {
               website or project will end up looking like.
             </p>
             <div className="image-wrapper">
-              <img src={require('../images/middle.png')} alt="" />
+              <img src={require("../images/middle.png")} alt="" />
             </div>
             <div className="one-third">
               <div className="image-text">
                 <div className="image">
-                  <img src={require('../images/Chart.png')} />
+                  <img src={require("../images/Chart.png")} />
                 </div>
                 <div className="text">
                   <h5>Orchestrate in Minutes</h5>
@@ -358,7 +384,7 @@ const Home = () => {
               </div>
               <div className="image-text">
                 <div className="image">
-                  <img src={require('../images/icon2.png')} />
+                  <img src={require("../images/icon2.png")} />
                 </div>
                 <div className="text">
                   <h5>Deploy Anywhere</h5>
@@ -369,7 +395,7 @@ const Home = () => {
               </div>
               <div className="image-text">
                 <div className="image">
-                  <img src={require('../images/Border.png')} />
+                  <img src={require("../images/Border.png")} />
                 </div>
                 <div className="text">
                   <h5>Modularized & Customizable</h5>
@@ -395,10 +421,10 @@ const Home = () => {
               <a href="">Request a demo</a>
             </div>
             <div className="mid">
-              <img src={require('../images/left.png')} alt="" />
+              <img src={require("../images/left.png")} alt="" />
             </div>
             <div className="right">
-              <img src={require('../images/right.png')} alt="" />
+              <img src={require("../images/right.png")} alt="" />
             </div>
           </div>
         </section>
@@ -406,24 +432,22 @@ const Home = () => {
           <div className="container">
             <div className="title">
               <h2>Blog</h2>
-              <p style={{visibility: 'hidden'}}>#1 Data Infrastructure Solution for Web3</p>
+              <p style={{ visibility: "hidden" }}>
+                #1 Data Infrastructure Solution for Web3
+              </p>
             </div>
             <div className="content">
               <div className="left">
                 <div className="primary-blog">
                   <div className="sub-title">Zettablock</div>
                   <h3>Get started with ZettaBlock</h3>
-                  <p>
-                    Deploying a modern data stack in 5 minutes
-                  </p>
+                  <p>Deploying a modern data stack in 5 minutes</p>
                   <a href="">READ</a>
                 </div>
               </div>
               <div className="right">
                 <a href="#" className="other-blog">
-                  <div className="title">
-                    Rethinking the morden data stack
-                  </div>
+                  <div className="title">Rethinking the morden data stack</div>
                 </a>
                 <a href="#" className="other-blog">
                   <div className="title">
@@ -435,7 +459,7 @@ const Home = () => {
           </div>
           <div className="fade-effect"></div>
         </section>
-        <section className="testimonial" style={{display: 'none'}}>
+        <section className="testimonial" style={{ display: "none" }}>
           <div className="container">
             <div className="title">
               <h2>Customer Quotes</h2>
@@ -446,14 +470,14 @@ const Home = () => {
                 spaceBetween={30}
                 slidesPerView={2}
                 navigation={{
-                  nextEl: '.next-button',
-                  prevEl: '.prev-button',
+                  nextEl: ".next-button",
+                  prevEl: ".prev-button",
                 }}
-                onSlideChange={() => console.log('slide change')}
+                onSlideChange={() => console.log("slide change")}
                 onSwiper={(swiper) => console.log(swiper)}
                 pagination={{
                   clickable: true,
-                  el: '.custom-swiper-pagination2',
+                  el: ".custom-swiper-pagination2",
                   renderBullet: function (index, className) {
                     return `
                       <div class="${className}">
@@ -473,7 +497,7 @@ const Home = () => {
                     </p>
                     <div className="bottom">
                       <div className="left">
-                        <img src={require('../images/opensea.png')} />
+                        <img src={require("../images/opensea.png")} />
                       </div>
                       <div className="right">Crypto NFT Market</div>
                     </div>
@@ -489,7 +513,7 @@ const Home = () => {
                     </p>
                     <div className="bottom">
                       <div className="left">
-                        <img src={require('../images/anchain.png')} />
+                        <img src={require("../images/anchain.png")} />
                       </div>
                       <div className="right">Crypto Smart Chain</div>
                     </div>
@@ -505,7 +529,7 @@ const Home = () => {
                     </p>
                     <div className="bottom">
                       <div className="left">
-                        <img src={require('../images/opensea.png')} />
+                        <img src={require("../images/opensea.png")} />
                       </div>
                       <div className="right">Crypto NFT Market</div>
                     </div>
@@ -513,10 +537,10 @@ const Home = () => {
                 </SwiperSlide>
               </Swiper>
               <div className="prev-button">
-                <img src={require('../images/leftarrow.png')} alt="" />
+                <img src={require("../images/leftarrow.png")} alt="" />
               </div>
               <div className="next-button">
-                <img src={require('../images/rightarrow.png')} alt="" />
+                <img src={require("../images/rightarrow.png")} alt="" />
               </div>
               <div className="custom-swiper-pagination2"></div>
             </div>
@@ -524,22 +548,22 @@ const Home = () => {
           <div className="conpanies-container">
             <div className="companies">
               <div className="company">
-                <img src={require('../images/logo1.png')} alt="" />
+                <img src={require("../images/logo1.png")} alt="" />
               </div>
               <div className="company">
-                <img src={require('../images/logo2.png')} alt="" />
+                <img src={require("../images/logo2.png")} alt="" />
               </div>
               <div className="company">
-                <img src={require('../images/logo3.png')} alt="" />
+                <img src={require("../images/logo3.png")} alt="" />
               </div>
               <div className="company">
-                <img src={require('../images/logo4.png')} alt="" />
+                <img src={require("../images/logo4.png")} alt="" />
               </div>
               <div className="company">
-                <img src={require('../images/logo5.png')} alt="" />
+                <img src={require("../images/logo5.png")} alt="" />
               </div>
               <div className="company">
-                <img src={require('../images/logo6.png')} alt="" />
+                <img src={require("../images/logo6.png")} alt="" />
               </div>
             </div>
           </div>
@@ -548,13 +572,19 @@ const Home = () => {
           <div className="container">
             <div className="left">
               <div className="image-wrapper">
-                <img src={require('../images/zettablock.png')} alt="" />
+                <img src={require("../images/zettablock.png")} alt="" />
               </div>
-              <p>Web3 Data More Accessible, Better Trading Decision</p>
-              <h5>Sign up & get news</h5>
-              <div className="input">
-                <img src={require('../images/input.png')} alt="" />
-              </div>
+              <p>Deploying a Modern Data Stack in 5 Minutes</p>
+              <h5>SUBSCRIBE TO OUR MAILING LIST</h5>
+              {/* <div id="signup" className="input">
+                <img src={require("../images/input.png")} alt="" />
+              </div> */}
+              <MailchimpFormContainer
+                u="1ff0f35da3b86da52617aadd6"
+                id="bc40fdafb4"
+                closeModal={() => {}}
+                Component={SubscriptionForm}
+              ></MailchimpFormContainer>
             </div>
             <div className="right">
               <h4>
@@ -587,12 +617,21 @@ const Home = () => {
               <a href="">Language</a>
             </div>
             <div className="social-media">
-              <img src={require('../images/media.png')} />
+              <img src={require("../images/media.png")} />
             </div>
             <div className="copy">© 2022 Zettablock Inc.</div>
           </div>
         </div>
-        <div className="space"></div>
+        {displaySignupForm && (
+          <div className="modal-container">
+            <MailchimpFormContainer
+              u="1ff0f35da3b86da52617aadd6"
+              id="bc40fdafb4"
+              closeModal={setDisplaySignupForm}
+              Component={CustomForm}
+            ></MailchimpFormContainer>
+          </div>
+        )}
       </main>
     </>
   );
