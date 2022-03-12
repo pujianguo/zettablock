@@ -575,7 +575,7 @@ const Home = () => {
                 <img src={require("../images/zettablock.png")} alt="" />
               </div>
               <p>Deploying a Modern Data Stack in 5 Minutes</p>
-              <h5>SUBSCRIBE TO OUR MAILING LIST</h5>
+              <h5 id="signup">SUBSCRIBE TO OUR MAILING LIST</h5>
               {/* <div id="signup" className="input">
                 <img src={require("../images/input.png")} alt="" />
               </div> */}
