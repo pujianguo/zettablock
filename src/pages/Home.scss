@@ -451,7 +451,7 @@ main {
         }
         .feature-card {
           border-radius: 6px;
-          border: 1px solid rgba($color: $white, $alpha: 0.2);
+          border: 1px solid rgba($color: $white, $alpha: 0.12);
 
           overflow: hidden;
           width: 270px;
@@ -507,7 +507,7 @@ main {
             z-index: 1;
             img {
               width: calc(100% - 1px);
-              opacity: 0.4;
+              opacity: 0.8;
               border-radius: 0 0 6px 6px;
             }
           }
@@ -528,12 +528,13 @@ main {
       line-height: 160%;
       margin-bottom: 2px;
       font-weight: 600;
+      font-size: 32px;
     }
     .container > p {
       color: $purple;
       height: 54px;
-      font-size: 18px;
-      width: 900px;
+      font-size: 16px;
+      width: 840px;
       line-height: 150%;
       text-align: center;
       margin: 0 auto;
