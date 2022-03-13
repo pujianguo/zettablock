@@ -18,6 +18,13 @@ import featureIcon1 from '../images/feature-icon-1.svg';
 import featureIcon2 from '../images/feature-icon-2.svg';
 import featureIcon3 from '../images/feature-icon-3.svg';
 import featureIcon4 from '../images/feature-icon-4.svg';
+import cliIcon1 from '../images/cli-icon-1.svg';
+import cliIcon2 from '../images/cli-icon-2.svg';
+import cliIcon3 from '../images/cli-icon-3.svg';
+import socialIcon1 from '../images/social-icon-linkedin.svg';
+import socialIcon2 from '../images/social-icon-twitter.svg';
+import socialIcon3 from '../images/social-icon-slack.svg';
+import socialIcon4 from '../images/social-icon-discord.svg';
 import MailchimpFormContainer from '../components/MailchimpFormContainer';
 
 import { useState } from 'react';
@@ -337,12 +344,12 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="middle" style={{ dislay: 'none' }}>
+        <section className="middle">
           <div className="container">
             <h3>Your Data Stack Maintained from the CLI in Minutes</h3>
             <p>
-              The visual guide will provide a view to the customer of what their website or project will end up looking
-              like.
+              The product is mostly based on open-source components and modular architecture that aims to become the
+              “Terraform for Data”.
             </p>
             <div className="image-wrapper">
               <img src={require('../images/middle.png')} alt="" />
@@ -350,29 +357,29 @@ const Home = () => {
             <div className="one-third">
               <div className="image-text">
                 <div className="image">
-                  <img src={require('../images/Chart.png')} />
+                  <img src={cliIcon1} />
                 </div>
                 <div className="text">
                   <h5>Orchestrate in Minutes</h5>
-                  <p>The visual guide will provide a view to the customer</p>
+                  <p>Get quickly with our tools and tons of examples right from your local machine.</p>
                 </div>
               </div>
               <div className="image-text">
                 <div className="image">
-                  <img src={require('../images/icon2.png')} />
+                  <img src={cliIcon2} />
                 </div>
                 <div className="text">
                   <h5>Deploy Anywhere</h5>
-                  <p>The visual guide will provide a view to the customer of what</p>
+                  <p>Provides the flexibility in deployment options. Own your data stack, end to end.</p>
                 </div>
               </div>
               <div className="image-text">
                 <div className="image">
-                  <img src={require('../images/Border.png')} />
+                  <img src={cliIcon3} />
                 </div>
                 <div className="text">
                   <h5>Modularized & Customizable</h5>
-                  <p>The visual guide will provide a view to the customer of what their website</p>
+                  <p>Open source to give you the power to build your ideal data stack.</p>
                 </div>
               </div>
             </div>
@@ -385,16 +392,28 @@ const Home = () => {
                 <span className="blue">Zetta</span>Block Tools
               </h2>
               <p>
-                The visual guide will provide a view to the customer of what their website or project will end up
-                looking like.
+                Zettablock provides both code and visual editors to help build customizable and managed modern data
+                stack.
               </p>
               <a href="">Request a demo</a>
             </div>
             <div className="mid">
-              <img src={require('../images/left.png')} alt="" />
+              <img src={require('../images/tools-core-item.png')} alt="" />
+              <img src={require('../images/tools-core-bg.png')} alt="" />
+              <h3>
+                <span className="blue">Zetta</span>Block
+                <br />
+                Core
+              </h3>
             </div>
             <div className="right">
-              <img src={require('../images/right.png')} alt="" />
+              <img src={require('../images/tools-cloud-item.png')} alt="" />
+              <img src={require('../images/tools-cloud-bg.png')} alt="" />
+              <h3>
+                <span className="blue">Zetta</span>Block
+                <br />
+                Cloud
+              </h3>
             </div>
           </div>
         </section>
@@ -405,21 +424,28 @@ const Home = () => {
               <p style={{ visibility: 'hidden' }}>#1 Data Infrastructure Solution for Web3</p>
             </div>
             <div className="content">
-              <div className="left">
-                <div className="primary-blog">
-                  <div className="sub-title">Zettablock</div>
+              <div className="blog">
+                <div className="info">
+                  <h4>Zettablock</h4>
                   <h3>Get started with ZettaBlock</h3>
                   <p>Deploying a modern data stack in 5 minutes</p>
-                  <a href="">READ</a>
+                  <button href="#">READ</button>
                 </div>
+                <img src={require('../images/blog-cover-1.png')} alt="" />
               </div>
-              <div className="right">
-                <a href="#" className="other-blog">
-                  <div className="title">Rethinking the morden data stack</div>
-                </a>
-                <a href="#" className="other-blog">
-                  <div className="title">Orchestrate a data platform for Solana</div>
-                </a>
+              <div className="blog">
+                <div className="info">
+                  <h3>Rethinking the morden data stack</h3>
+                  <button href="#">READ</button>
+                </div>
+                <img src={require('../images/blog-cover-2.png')} alt="" />
+              </div>
+              <div className="blog">
+                <div className="info">
+                  <h3>Orchestrate a data platform for Solana</h3>
+                  <button href="#">READ</button>
+                </div>
+                <img src={require('../images/blog-cover-3.png')} alt="" />
               </div>
             </div>
           </div>
@@ -533,7 +559,7 @@ const Home = () => {
           <div className="container">
             <div className="left">
               <div className="image-wrapper">
-                <img src={require('../images/zettablock.png')} alt="" />
+                <img src={logoMain} alt="" />
               </div>
               <p>Deploying a Modern Data Stack in 5 Minutes</p>
               <h5 id="signup">SUBSCRIBE TO OUR MAILING LIST</h5>
@@ -543,40 +569,60 @@ const Home = () => {
               <MailchimpFormContainer
                 u="1ff0f35da3b86da52617aadd6"
                 id="bc40fdafb4"
+                placeholder="Please Input E-mail"
                 closeModal={() => {}}
                 Component={SubscriptionForm}></MailchimpFormContainer>
             </div>
             <div className="right">
               <h4>
-                Information is separate from both knowledge and data, and lies nebulously between them. It is
-                information about objects.
+                ZettaBlock is building a customizable and managed data stack. This infrastructure-as-code tool
+                dramatically reduces the time and engineering resources customers need to orchestrate a modern data
+                platform.
               </h4>
               <div className="row">
                 <div className="col">
-                  <div className="title">First column</div>
-                  <div className="content">
-                    Incorporating user needs collected during user research into the designs
-                  </div>
+                  <div className="title">FOLLOW US</div>
+                  <ul className="content">
+                    <li>
+                      <a href="https://www.linkedin.com/company/zettablockhq/">
+                        <img src={socialIcon1} alt="Linkedin" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com/ZettablockHq">
+                        <img src={socialIcon2} alt="Twitter" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://zettablockcommunity.slack.com/">
+                        <img src={socialIcon3} alt="Slack" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src={socialIcon4} alt="Discord" />
+                      </a>
+                    </li>
+                  </ul>
                 </div>
-                <div className="col">
+                {/* <div className="col">
                   <div className="title">Second column</div>
                   <div className="content">Maintaining consistency throughout the system</div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
         </section>
         <div className="copyright">
           <div className="container">
+            <div className="copy">
+              © 2022&nbsp;&nbsp;&nbsp;Zettablock Inc.&nbsp;&nbsp;-&nbsp;&nbsp;All Rights Reserved.
+            </div>
             <div className="links">
-              <a href="">Privacy Policy</a>
-              <a href="">Term of service</a>
-              <a href="">Language</a>
+              <a>Privacy Policy</a>
+              <a>Term of service</a>
+              <a>Language</a>
             </div>
-            <div className="social-media">
-              <img src={require('../images/media.png')} />
-            </div>
-            <div className="copy">© 2022 Zettablock Inc.</div>
           </div>
         </div>
         {displaySignupForm && (
