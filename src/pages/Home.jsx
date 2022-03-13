@@ -214,13 +214,13 @@ const Home = () => {
           <div className="custom-swiper-pagination"></div>
         </section>
         <section className="features" id="features">
-          <div className="title">
-            <h2>Features</h2>
-            <p style={{ visibility: 'hidden' }}>#1 Data Infrastructure Solution for Web3</p>
-          </div>
           <div className="container">
             <div className="content">
               <div className="intro">
+                <div className="title">
+                  <h2>Features</h2>
+                  {/* <p style={{ visibility: 'hidden' }}>#1 Data Infrastructure Solution for Web3</p> */}
+                </div>
                 <p className="excerpt">Deliver Modern Data Stack as Code with ZettaBlock</p>
                 <div className="bottom">
                   <div className="image-wrapper">
@@ -264,7 +264,9 @@ const Home = () => {
                         </div>
                         <p>Connect sources, deploy SQL, and trigger actions without tedious configurations.</p>
                       </div>
-                      <div className="bottom"></div>
+                      <div className="bottom">
+                        <img src={require('../images/feature-image-1.png')} />
+                      </div>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -278,7 +280,9 @@ const Home = () => {
                         </div>
                         <p>Self-serve accurate and low-latency data from our unified batch & streaming platform.</p>
                       </div>
-                      <div className="bottom"></div>
+                      <div className="bottom">
+                        <img src={require('../images/feature-image-2.png')} />
+                      </div>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -292,7 +296,9 @@ const Home = () => {
                         </div>
                         <p>Plug and play a wide range of tools to quickly rollout your very own modern data stack.</p>
                       </div>
-                      <div className="bottom"></div>
+                      <div className="bottom">
+                        <img src={require('../images/feature-image-3.png')} />
+                      </div>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -308,7 +314,9 @@ const Home = () => {
                           Deploy collaboratively and safely using isolated environments, Git-enabled version control.
                         </p>
                       </div>
-                      <div className="bottom"></div>
+                      <div className="bottom">
+                        <img src={require('../images/feature-image-4.png')} />
+                      </div>
                     </div>
                   </SwiperSlide>
                   {/* <SwiperSlide>
