@@ -433,7 +433,7 @@ main {
         .feature-next-button,
         .feature-prev-button {
           position: absolute;
-          top: 50%;
+          top: calc(50% - 11px);
           cursor: pointer;
           &.hide {
             visibility: hidden;
@@ -958,8 +958,10 @@ main {
           align-items: center;
           border-radius: 6px;
           input {
-            font-size: 16px;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 18px;
             box-sizing: border-box;
+            font-weight: 500;
             outline: none;
             border: none;
             height: 100%;
