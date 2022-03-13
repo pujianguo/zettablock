@@ -31,12 +31,13 @@ const SubscriptionForm = ({ status, message, onValidated }) => {
         <input
           type="email"
           name="email"
+          placeholder="john.doe@company.com"
           onChange={(e) => {
             setEmail(e.target.value);
           }}
         />
         <div>
-          <img src={sendImage} alt="submite" onClick={handleSubmit} />
+          <img style={{cursor: 'pointer'}} src={sendImage} alt="submite" onClick={handleSubmit} />
         </div>
       </form>
     </>
