@@ -1585,10 +1585,11 @@ main {
 
   .mc__form-container {
     font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    width: 600px;
-    padding: 20px 30px;
-    background-color: $black;
-    color: $white;
+    width: 460px;
+    padding: 20px 20px;
+    background-color: $white;
+    color: $black;
+    border-radius: 10px;
     // box-shadow: 0 0 5px 2px $white;
     & > div > span {
       cursor: pointer;
@@ -1606,21 +1607,29 @@ main {
         border: none;
         border-radius: 6px;
         cursor: pointer;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        min-width: 220px;
       }
       display: flex;
       flex-direction: column;
       .mc__title {
         text-align: center;
-        font-size: 36px;
+        font-size: 24px;
         font-weight: bold;
-        margin-bottom: 30px;
-        line-height: 110%;
+        margin-bottom: 10px;
+        line-height: 130%;
       }
       & > p {
-        font-size: 24px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        text-align: center;
+        color: #8698d5;
         margin-bottom: 30px;
       }
       .mc__field-container {
+        padding: 0 20px;
         & > p {
           text-align: left;
           font-size: 20px;
@@ -1628,13 +1637,43 @@ main {
         }
         display: flex;
         flex-direction: column;
+        gap: 24px;
         & > input {
-          background-color: #c3c3c3;
+          width: 100%;
+          margin: 0 auto;
+          background: #ededed;
+          border-radius: 6px;
           border: none;
-          margin-bottom: 30px;
-          height: 30px;
-          font-size: 20px;
-          padding: 4px 20px;
+          height: 44px;
+          font-size: 18px;
+          padding: 4px 16px;
+          box-sizing: border-box;
+          &::-webkit-input-placeholder {
+            color: rgba(0, 0, 0, 0.25);
+          }
+          &:focus,
+          &:focus-visible {
+            border-color: #0057ff;
+          }
+        }
+        div {
+          display: flex;
+          gap: 20px;
+          input {
+            width: 100%;
+            margin: 0 auto;
+            background: #ededed;
+            border-radius: 6px;
+            border: none;
+            margin-bottom: 20px;
+            height: 44px;
+            font-size: 18px;
+            padding: 4px 16px;
+            box-sizing: border-box;
+            &::-webkit-input-placeholder {
+              color: rgba(0, 0, 0, 0.25);
+            }
+          }
         }
       }
     }
