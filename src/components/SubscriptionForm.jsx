@@ -12,6 +12,7 @@ const SubscriptionForm = ({ status, message, onValidated }) => {
       email.indexOf("@") > -1 &&
       onValidated({
         EMAIL: email,
+        'group[45212][2]': 1
       });
   };
   useEffect(() => {

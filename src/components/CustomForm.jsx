@@ -22,6 +22,7 @@ const CustomForm = ({ status, message, onValidated, setVisible }) => {
         COMPANY: company,
         TITLE: title,
         PHONE: phone,
+        'group[45212][1]': 1,
       });
   };
 

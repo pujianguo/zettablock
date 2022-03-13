@@ -22,6 +22,8 @@ import { useState } from "react";
 import CustomForm from "../components/CustomForm";
 import SubscriptionForm from "../components/SubscriptionForm";
 
+import("scroll-behavior-polyfill");
+
 const TEXT = [
   {
     title: "Assemble",
