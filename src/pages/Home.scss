@@ -542,9 +542,13 @@ main {
     }
     .image-wrapper {
       margin-bottom: 40px;
+      border-radius: 12px;
+      overflow: hidden;
       width: 100%;
+      height: fit-content;
       img {
         width: 100%;
+        margin-bottom: -3px;
       }
     }
     .one-third {
