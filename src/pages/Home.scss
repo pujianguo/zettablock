@@ -168,7 +168,6 @@ nav {
   z-index: 99;
   position: fixed;
   width: 100%;
-  padding: 15px 50px;
   background: rgba(0, 0, 0, 0.88);
   backdrop-filter: blur(50px);
   box-sizing: border-box;
@@ -176,7 +175,14 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 50px;
+    width: 1440px;
+    margin: 0 auto;
+  }
   .links {
     a {
       display: inline-block;
@@ -221,7 +227,8 @@ main {
   .banner {
     padding-bottom: 70px;
     .swiper {
-      width: 100%;
+      // width: 100%;
+      width: 1440px;
       height: 75vh;
       min-height: 600px;
       max-height: 680px;
@@ -379,7 +386,7 @@ main {
     .container {
       position: absolute;
       left: calc(50% - 585px);
-      width: calc(50% + 585px);
+      width: 1305px;
       .content {
         display: flex;
         width: 100%;

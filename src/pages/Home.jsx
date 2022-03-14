@@ -81,63 +81,65 @@ const Home = () => {
   return (
     <>
       <nav>
-        <div className="logo">
-          <img src={logoMain} alt="zettablock_logo" />
-        </div>
-        <div className="links">
-          <a
-            onClick={(e) => {
-              e.preventDefault();
-              handleSmoothScroll('banner', e.target);
-            }}
-            href="#"
-            className="active">
-            HOME
-          </a>
+        <div className='container'>
+          <div className="logo">
+            <img src={logoMain} alt="zettablock_logo" />
+          </div>
+          <div className="links">
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                handleSmoothScroll('banner', e.target);
+              }}
+              href="#"
+              className="active">
+              HOME
+            </a>
 
-          <a
-            onClick={(e) => {
-              e.preventDefault();
-              handleSmoothScroll('features', e.target);
-            }}
-            href="#">
-            FEATURES
-          </a>
-          <a
-            onClick={(e) => {
-              e.preventDefault();
-              handleSmoothScroll('product', e.target);
-            }}
-            href="#">
-            PRODUCT
-          </a>
-          <a
-            onClick={(e) => {
-              e.preventDefault();
-              handleSmoothScroll('blog', e.target);
-            }}
-            href="#">
-            BLOG
-          </a>
-        </div>
-        <div className="action-buttons">
-          <a
-            onClick={(e) => {
-              e.preventDefault();
-              handleSmoothScroll('signup', e.target);
-            }}
-            href="#">
-            SIGN UP
-          </a>
-          <a
-            href="#"
-            onClick={(e) => {
-              console.log(123);
-              e.preventDefault();
-              setDisplaySignupForm(true);
-            }}>
-            Request a DEMO
-          </a>
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                handleSmoothScroll('features', e.target);
+              }}
+              href="#">
+              FEATURES
+            </a>
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                handleSmoothScroll('product', e.target);
+              }}
+              href="#">
+              PRODUCT
+            </a>
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                handleSmoothScroll('blog', e.target);
+              }}
+              href="#">
+              BLOG
+            </a>
+          </div>
+          <div className="action-buttons">
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                handleSmoothScroll('signup', e.target);
+              }}
+              href="#">
+              SIGN UP
+            </a>
+            <a
+              href="#"
+              onClick={(e) => {
+                console.log(123);
+                e.preventDefault();
+                setDisplaySignupForm(true);
+              }}>
+              Request a DEMO
+            </a>
+          </div>
         </div>
       </nav>
 
@@ -579,7 +581,7 @@ const Home = () => {
                 u="1ff0f35da3b86da52617aadd6"
                 id="bc40fdafb4"
                 placeholder="Please Input E-mail"
-                closeModal={() => {}}
+                closeModal={() => { }}
                 Component={SubscriptionForm}></MailchimpFormContainer>
             </div>
             <div className="right">
@@ -592,17 +594,17 @@ const Home = () => {
                   <div className="title">FOLLOW US</div>
                   <ul className="content">
                     <li>
-                      <a target="_blank" href="https://www.linkedin.com/company/zettablockhq/">
+                      <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/company/zettablockhq/">
                         <img src={socialIcon1} alt="Linkedin" />
                       </a>
                     </li>
                     <li>
-                      <a target="_blank" href="https://twitter.com/ZettablockHq">
+                      <a rel="noreferrer" target="_blank" href="https://twitter.com/ZettablockHq">
                         <img src={socialIcon2} alt="Twitter" />
                       </a>
                     </li>
                     <li>
-                      <a target="_blank" href="https://zettablockcommunity.slack.com/">
+                      <a rel="noreferrer" target="_blank" href="https://zettablockcommunity.slack.com/">
                         <img src={socialIcon3} alt="Slack" />
                       </a>
                     </li>
