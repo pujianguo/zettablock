@@ -175,7 +175,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  .container{
+  .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -615,8 +615,8 @@ main {
         img:nth-child(2) {
           width: 290px;
           position: absolute;
-          top: 24px;
-          border-radius: 6px;
+          top: 28px;
+          border-radius: 12px;
           z-index: 1;
         }
         h3 {
@@ -641,8 +641,8 @@ main {
         img:nth-child(2) {
           width: 290px;
           position: absolute;
-          top: 24px;
-          border-radius: 6px;
+          top: 28px;
+          border-radius: 12px;
           z-index: 1;
         }
         h3 {
