@@ -587,7 +587,7 @@ const Home = () => {
             <div className="right">
               <h4>We are hiring. Come to work with us at ZettaBlock!</h4>
               <p>
-                Careers: <a href="mailto:founders@datalego.cloud">founders@datalego.cloud</a>
+                Careers: <a href="mailto:founders@zettablock.com">founders@zettablock.com</a>
               </p>
               <div className="row">
                 <div className="col">
