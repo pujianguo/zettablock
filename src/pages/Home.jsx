@@ -40,11 +40,13 @@ const TEXT = [
   },
   {
     title: 'Deploy',
-    content: 'Deploy data applications without complex microservices. All you need is SQL.',
+    content:
+      'Deploy data applications without complex microservices. All you need is SQL.',
   },
   {
     title: 'Manage',
-    content: 'A near-zero management platform that delivers virtually unlimited scale and concurrency.',
+    content:
+      'A near-zero management platform that delivers virtually unlimited scale and concurrency.',
   },
 ];
 
@@ -76,12 +78,23 @@ const Home = () => {
     }
   };
 
+  const toggleHamburgerMenu = () => {
+    const hamburger = document.querySelector('.hamburger>button');
+    const innerMenu = document.querySelector('.mobile-inner');
+    hamburger.classList.toggle('opened');
+    innerMenu.classList.toggle('expand');
+    hamburger.setAttribute(
+      'aria-expanded',
+      hamburger.classList.contains('opened')
+    );
+  };
+
   const [displaySignupForm, setDisplaySignupForm] = useState(false);
 
   return (
     <>
       <nav>
-        <div className='container'>
+        <div className="container">
           <div className="logo">
             <img src={logoMain} alt="zettablock_logo" />
           </div>
@@ -92,7 +105,8 @@ const Home = () => {
                 handleSmoothScroll('banner', e.target);
               }}
               href="#"
-              className="active">
+              className="active"
+            >
               HOME
             </a>
 
@@ -101,7 +115,8 @@ const Home = () => {
                 e.preventDefault();
                 handleSmoothScroll('features', e.target);
               }}
-              href="#">
+              href="#"
+            >
               FEATURES
             </a>
             <a
@@ -109,7 +124,8 @@ const Home = () => {
                 e.preventDefault();
                 handleSmoothScroll('product', e.target);
               }}
-              href="#">
+              href="#"
+            >
               PRODUCT
             </a>
             <a
@@ -117,7 +133,8 @@ const Home = () => {
                 e.preventDefault();
                 handleSmoothScroll('blog', e.target);
               }}
-              href="#">
+              href="#"
+            >
               BLOG
             </a>
           </div>
@@ -127,7 +144,8 @@ const Home = () => {
                 e.preventDefault();
                 handleSmoothScroll('signup', e.target);
               }}
-              href="#">
+              href="#"
+            >
               SIGN UP
             </a>
             <a
@@ -136,10 +154,97 @@ const Home = () => {
                 console.log(123);
                 e.preventDefault();
                 setDisplaySignupForm(true);
-              }}>
+              }}
+            >
               Request a DEMO
             </a>
           </div>
+        </div>
+        <div className="mobile-nav">
+          <div className="mobile-logo">
+            <img src={logoMain} alt="zettablock_logo" />
+          </div>
+          <div className="hamburger">
+            <button
+              class="menu"
+              onClick={toggleHamburgerMenu}
+              aria-label="Main Menu"
+            >
+              <svg width="60" height="60" viewBox="0 0 100 100">
+                <path
+                  class="line line1"
+                  d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+                />
+                <path class="line line2" d="M 20,50 H 80" />
+                <path
+                  class="line line3"
+                  d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+                />
+              </svg>
+            </button>
+          </div>
+          <div className="mobile-inner">
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                handleSmoothScroll('banner', e.target);
+              }}
+              href="#"
+              className="active"
+            >
+              HOME
+            </a>
+
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                handleSmoothScroll('features', e.target);
+              }}
+              href="#"
+            >
+              FEATURES
+            </a>
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                handleSmoothScroll('product', e.target);
+              }}
+              href="#"
+            >
+              PRODUCT
+            </a>
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                handleSmoothScroll('blog', e.target);
+              }}
+              href="#"
+            >
+              BLOG
+            </a>
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                handleSmoothScroll('signup', e.target);
+              }}
+              href="#"
+              className=''
+            >
+              SIGN UP
+            </a>
+            <a
+              href="#"
+              className='special'
+              onClick={(e) => {
+                console.log(123);
+                e.preventDefault();
+                setDisplaySignupForm(true);
+              }}
+            >
+              Request a DEMO
+            </a>
+          </div>
+          
         </div>
       </nav>
 
@@ -148,12 +253,13 @@ const Home = () => {
           <div className="slide-content">
             <p>ZETTABLOCK</p>
             <h1>Deploying a Modern Data Stack in 5 Minutes</h1>
-            <h3>The easiest way to assemble, deploy and manage a programmable data stack.</h3>
+            <h3>
+              The easiest way to assemble, deploy and manage a programmable data
+              stack.
+            </h3>
           </div>
           <div className="image-cover"></div>
           <Swiper
-            // allowSlidePrev={false}
-            // allowSlideNext={false}
             modules={[Autoplay, Pagination, EffectFade]}
             spaceBetween={50}
             slidesPerView={1}
@@ -181,14 +287,16 @@ const Home = () => {
                   </div>
                   `;
               },
-            }}>
+            }}
+          >
             <SwiperSlide>
               <div
                 className="slide1 slide-container"
                 style={{
                   display: 'flex',
                   justifyContent: 'flex-end',
-                }}>
+                }}
+              >
                 <div className="image-wrapper">
                   <img src={require('../images/slide1.png')} />
                 </div>
@@ -200,7 +308,8 @@ const Home = () => {
                 style={{
                   display: 'flex',
                   justifyContent: 'flex-end',
-                }}>
+                }}
+              >
                 {' '}
                 <div className="image-wrapper">
                   <img src={require('../images/slide2.png')} />
@@ -213,7 +322,8 @@ const Home = () => {
                 style={{
                   display: 'flex',
                   justifyContent: 'flex-end',
-                }}>
+                }}
+              >
                 <div className="image-wrapper">
                   <img src={require('../images/slide3.png')} />
                 </div>
@@ -230,7 +340,9 @@ const Home = () => {
                   <h2>Features</h2>
                   {/* <p style={{ visibility: 'hidden' }}>#1 Data Infrastructure Solution for Web3</p> */}
                 </div>
-                <p className="excerpt">Delivering Modern Data Stack as Code with ZettaBlock.</p>
+                <p className="excerpt">
+                  Delivering Modern Data Stack as Code with ZettaBlock.
+                </p>
                 <div className="bottom">
                   <div className="image-wrapper">
                     <img src={featureIcon1} alt="" />
@@ -261,7 +373,8 @@ const Home = () => {
                   // }}
                   slidesPerView={'auto'}
                   onReachEnd={toggleNavButton}
-                  onReachBeginning={toggleNavButton}>
+                  onReachBeginning={toggleNavButton}
+                >
                   <SwiperSlide>
                     <div className="feature-card">
                       <div className="top">
@@ -271,7 +384,10 @@ const Home = () => {
                             <img src={featureIcon1} alt="" />
                           </div>
                         </div>
-                        <p>Connect sources, deploy SQL, and trigger actions without tedious configurations.</p>
+                        <p>
+                          Connect sources, deploy SQL, and trigger actions
+                          without tedious configurations.
+                        </p>
                       </div>
                       <div className="bottom">
                         <img src={require('../images/feature-image-1.png')} />
@@ -287,7 +403,10 @@ const Home = () => {
                             <img src={featureIcon2} alt="" />
                           </div>
                         </div>
-                        <p>Self-serve accurate and low-latency data from our unified batch & streaming platform.</p>
+                        <p>
+                          Self-serve accurate and low-latency data from our
+                          unified batch & streaming platform.
+                        </p>
                       </div>
                       <div className="bottom">
                         <img src={require('../images/feature-image-2.png')} />
@@ -303,7 +422,10 @@ const Home = () => {
                             <img src={featureIcon3} alt="" />
                           </div>
                         </div>
-                        <p>Plug and play a wide range of tools to quickly rollout your very own modern data stack.</p>
+                        <p>
+                          Plug and play a wide range of tools to quickly rollout
+                          your very own modern data stack.
+                        </p>
                       </div>
                       <div className="bottom">
                         <img src={require('../images/feature-image-3.png')} />
@@ -320,7 +442,8 @@ const Home = () => {
                           </div>
                         </div>
                         <p>
-                          Deploy collaboratively and safely using isolated environments, Git-enabled version control.
+                          Deploy collaboratively and safely using isolated
+                          environments, Git-enabled version control.
                         </p>
                       </div>
                       <div className="bottom">
@@ -339,7 +462,7 @@ const Home = () => {
                 <div className="feature-next-button">
                   <img src={require('../images/rightarrow.png')} alt="" />
                 </div>
-                <div className="feature-prev-button">
+                <div className="feature-prev-button hide">
                   <img src={require('../images/leftarrow.png')} alt="" />
                 </div>
               </div>
@@ -348,10 +471,13 @@ const Home = () => {
         </section>
         <section className="middle">
           <div className="container">
-            <h3>Unlocking the Power of Data with Programmable Modern Data Stack</h3>
+            <h3>
+              Unlocking the Power of Data with Programmable Modern Data Stack
+            </h3>
             <p>
-              ZettaBlock is building a customizable and managed data stack. This infrastructure-as-code tool
-              dramatically reduces the time and engineering resources customers need to orchestrate a modern data
+              ZettaBlock is building a customizable and managed data stack. This
+              infrastructure-as-code tool dramatically reduces the time and
+              engineering resources customers need to orchestrate a modern data
               platform.
             </p>
             <div className="image-wrapper">
@@ -364,7 +490,10 @@ const Home = () => {
                 </div>
                 <div className="text">
                   <h5>Orchestrate in Minutes</h5>
-                  <p>Provisioning modern data stacks have never been easier, no Ph.D. required.</p>
+                  <p>
+                    Provisioning modern data stacks have never been easier, no
+                    Ph.D. required.
+                  </p>
                 </div>
               </div>
               <div className="image-text">
@@ -373,7 +502,10 @@ const Home = () => {
                 </div>
                 <div className="text">
                   <h5>Modularized & Customizable</h5>
-                  <p>Lego-like, plug-and-play experience to give you the power to build your ideal data stack.</p>
+                  <p>
+                    Lego-like, plug-and-play experience to give you the power to
+                    build your ideal data stack.
+                  </p>
                 </div>
               </div>
               <div className="image-text">
@@ -382,7 +514,10 @@ const Home = () => {
                 </div>
                 <div className="text">
                   <h5>Cloud-Native</h5>
-                  <p>Build, deploy and maintain a scalable data stack with the modern cloud.</p>
+                  <p>
+                    Build, deploy and maintain a scalable data stack with the
+                    modern cloud.
+                  </p>
                 </div>
               </div>
             </div>
@@ -395,8 +530,8 @@ const Home = () => {
                 <span className="blue">Zetta</span>Block Tools
               </h2>
               <p>
-                Zettablock provides both code and visual editors to help build customizable and managed modern data
-                stack.
+                Zettablock provides both code and visual editors to help build
+                customizable and managed modern data stack.
               </p>
               <a
                 href="#"
@@ -404,7 +539,8 @@ const Home = () => {
                   console.log(123);
                   e.preventDefault();
                   setDisplaySignupForm(true);
-                }}>
+                }}
+              >
                 Request a demo
               </a>
             </div>
@@ -412,9 +548,9 @@ const Home = () => {
               <img src={require('../images/tools-core-item.png')} alt="" />
               <img src={require('../images/tools-core-bg.png')} alt="" />
               <h3>
-                <span className="blue">Zetta</span>Block
+                <span className="blue">Zetta</span>Block 
                 <br />
-                Core
+                <span> Core</span>
               </h3>
             </div>
             <div className="right">
@@ -423,7 +559,7 @@ const Home = () => {
               <h3>
                 <span className="blue">Zetta</span>Block
                 <br />
-                Cloud
+                <span> Cloud</span>
               </h3>
             </div>
           </div>
@@ -432,7 +568,9 @@ const Home = () => {
           <div className="container">
             <div className="title">
               <h2>Blog</h2>
-              <p style={{ visibility: 'hidden' }}>#1 Data Infrastructure Solution for Web3</p>
+              <p style={{ visibility: 'hidden' }}>
+                #1 Data Infrastructure Solution for Web3
+              </p>
             </div>
             <div className="content">
               <div className="blog">
@@ -488,12 +626,15 @@ const Home = () => {
                       </div>
                       `;
                   },
-                }}>
+                }}
+              >
                 <SwiperSlide>
                   <div className="quote">
                     <p>
-                      For over 10 years, Bitly has been the Internet’s go-to tool for shortening a link. What you might
-                      not know is that apart from saving us from character limits, the company also developed.
+                      For over 10 years, Bitly has been the Internet’s go-to
+                      tool for shortening a link. What you might not know is
+                      that apart from saving us from character limits, the
+                      company also developed.
                     </p>
                     <div className="bottom">
                       <div className="left">
@@ -506,9 +647,10 @@ const Home = () => {
                 <SwiperSlide>
                   <div className="quote">
                     <p>
-                      In a few short years, Frame.io has upended the traditional model of video collaboration with a
-                      modern, cloud-based solution. The platform is both fast and intuitive, racking up an impressive
-                      list.
+                      In a few short years, Frame.io has upended the traditional
+                      model of video collaboration with a modern, cloud-based
+                      solution. The platform is both fast and intuitive, racking
+                      up an impressive list.
                     </p>
                     <div className="bottom">
                       <div className="left">
@@ -521,9 +663,10 @@ const Home = () => {
                 <SwiperSlide>
                   <div className="quote">
                     <p>
-                      In a few short years, Frame.io has upended the traditional model of video collaboration with a
-                      modern, cloud-based solution. The platform is both fast and intuitive, racking up an impressive
-                      list.
+                      In a few short years, Frame.io has upended the traditional
+                      model of video collaboration with a modern, cloud-based
+                      solution. The platform is both fast and intuitive, racking
+                      up an impressive list.
                     </p>
                     <div className="bottom">
                       <div className="left">
@@ -581,30 +724,46 @@ const Home = () => {
                 u="1ff0f35da3b86da52617aadd6"
                 id="bc40fdafb4"
                 placeholder="Please Input E-mail"
-                closeModal={() => { }}
-                Component={SubscriptionForm}></MailchimpFormContainer>
+                closeModal={() => {}}
+                Component={SubscriptionForm}
+              ></MailchimpFormContainer>
             </div>
             <div className="right">
               <h4>We are hiring. Come to work with us at ZettaBlock!</h4>
               <p>
-                Careers: <a href="mailto:founders@zettablock.com">founders@zettablock.com</a>
+                Careers:{' '}
+                <a href="mailto:founders@zettablock.com">
+                  founders@zettablock.com
+                </a>
               </p>
               <div className="row">
                 <div className="col">
                   <div className="title">FOLLOW US</div>
                   <ul className="content">
                     <li>
-                      <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/company/zettablockhq/">
+                      <a
+                        rel="noreferrer"
+                        target="_blank"
+                        href="https://www.linkedin.com/company/zettablockhq/"
+                      >
                         <img src={socialIcon1} alt="Linkedin" />
                       </a>
                     </li>
                     <li>
-                      <a rel="noreferrer" target="_blank" href="https://twitter.com/ZettablockHq">
+                      <a
+                        rel="noreferrer"
+                        target="_blank"
+                        href="https://twitter.com/ZettablockHq"
+                      >
                         <img src={socialIcon2} alt="Twitter" />
                       </a>
                     </li>
                     <li>
-                      <a rel="noreferrer" target="_blank" href="https://zettablockcommunity.slack.com/">
+                      <a
+                        rel="noreferrer"
+                        target="_blank"
+                        href="https://zettablockcommunity.slack.com/"
+                      >
                         <img src={socialIcon3} alt="Slack" />
                       </a>
                     </li>
@@ -626,7 +785,8 @@ const Home = () => {
         <div className="copyright">
           <div className="container">
             <div className="copy">
-              © 2022&nbsp;&nbsp;&nbsp;DataLego Inc.&nbsp;&nbsp;-&nbsp;&nbsp;All Rights Reserved.
+              © 2022&nbsp;&nbsp;&nbsp;DataLego Inc.&nbsp;&nbsp;-&nbsp;&nbsp;All
+              Rights Reserved.
             </div>
             <div className="links">
               <a>Privacy Policy</a>
@@ -641,7 +801,8 @@ const Home = () => {
               u="1ff0f35da3b86da52617aadd6"
               id="bc40fdafb4"
               closeModal={setDisplaySignupForm}
-              Component={CustomForm}></MailchimpFormContainer>
+              Component={CustomForm}
+            ></MailchimpFormContainer>
           </div>
         )}
       </main>
