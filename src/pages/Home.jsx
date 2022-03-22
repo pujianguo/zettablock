@@ -26,6 +26,10 @@ import socialIcon2 from '../images/social-icon-twitter.svg';
 import socialIcon3 from '../images/social-icon-slack.svg';
 import socialIcon4 from '../images/social-icon-discord.svg';
 import MailchimpFormContainer from '../components/MailchimpFormContainer';
+import arrowRight from '../images/arrow_right.svg';
+import arrowRightBlack from '../images/arrow_right_black.svg';
+import middleImage from '../images/middle.svg';
+import toolsImage from '../images/tools.svg';
 
 import { useState } from 'react';
 import CustomForm from '../components/CustomForm';
@@ -170,7 +174,7 @@ const Home = () => {
               onClick={toggleHamburgerMenu}
               aria-label="Main Menu"
             >
-              <svg width="60" height="60" viewBox="0 0 100 100">
+              <svg width="20" height="20" viewBox="0 0 100 100">
                 <path
                   class="line line1"
                   d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
@@ -228,13 +232,13 @@ const Home = () => {
                 handleSmoothScroll('signup', e.target);
               }}
               href="#"
-              className=''
+              className=""
             >
               SIGN UP
             </a>
             <a
               href="#"
-              className='special'
+              className="special"
               onClick={(e) => {
                 console.log(123);
                 e.preventDefault();
@@ -244,7 +248,6 @@ const Home = () => {
               Request a DEMO
             </a>
           </div>
-          
         </div>
       </nav>
 
@@ -279,7 +282,9 @@ const Home = () => {
                 return `
                   <div class="${className}">
                     <div class="bullet">
-                      0${index + 1}&nbsp;&nbsp;&nbsp;${TEXT[index].title}
+                      <span>0${index + 1}&nbsp;&nbsp;&nbsp;${
+                  TEXT[index].title
+                }</span>
                     </div>
                     <div class="bullet-text">
                       ${TEXT[index].content}
@@ -300,6 +305,13 @@ const Home = () => {
                 <div className="image-wrapper">
                   <img src={require('../images/slide1.png')} />
                 </div>
+                <div className="slide-text">
+                  <div className="top">01 Assemble</div>
+                  <div className="bottom">
+                    Modern data stack provisioning automation to drive
+                    innovation.
+                  </div>
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -313,6 +325,13 @@ const Home = () => {
                 {' '}
                 <div className="image-wrapper">
                   <img src={require('../images/slide2.png')} />
+                </div>{' '}
+                <div className="slide-text">
+                  <div className="top">02 Deploy</div>
+                  <div className="bottom">
+                    Deploy data applications without complex microservices. All
+                    you need is SQL.
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
@@ -326,11 +345,39 @@ const Home = () => {
               >
                 <div className="image-wrapper">
                   <img src={require('../images/slide3.png')} />
+                </div>{' '}
+                <div className="slide-text">
+                  <div className="top">03 Manage</div>
+                  <div className="bottom">
+                    A near-zero management platform that delivers virtually
+                    unlimited scale and concurrency.
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
           </Swiper>
           <div className="custom-swiper-pagination"></div>
+          <div className="slide-content-mobile">
+            <p>ZETTABLOCK</p>
+            <h1>Deploying a Modern Data Stack in 5 Minutes</h1>
+            <h3>
+              The easiest way to assemble, deploy and manage a programmable data
+              stack.
+            </h3>
+            <div className="request-demo">
+              <a
+                href="#"
+                onClick={(e) => {
+                  console.log(123);
+                  e.preventDefault();
+                  setDisplaySignupForm(true);
+                }}
+              >
+                Request a demo
+              </a>
+              <img width="20" src={arrowRight} />
+            </div>
+          </div>
         </section>
         <section className="features" id="features">
           <div className="container">
@@ -466,8 +513,85 @@ const Home = () => {
                   <img src={require('../images/leftarrow.png')} alt="" />
                 </div>
               </div>
+              <div className="feature-list-mobile">
+                <div className="feature-card-mobile">
+                  <div className="first">
+                    <div className="top">Zero Time to Market</div>
+                    <div className="bottom">
+                      Connect sources, deploy SQL, and trigger actions without
+                      tedious configurations.
+                    </div>
+                  </div>
+                  <div className="second">
+                    <img
+                      src={require('../images/feature-image-1.png')}
+                      alt=""
+                    />
+                    <div className="icon-top-right">
+                      <img src={featureIcon1} alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div className="feature-card-mobile">
+                  <div className="first">
+                    <div className="top">Self-Serve Data Platform</div>
+                    <div className="bottom">
+                      Self-serve accurate and low-latency data from our unified
+                      batch & streaming platform.
+                    </div>
+                  </div>
+                  <div className="second">
+                    <img
+                      src={require('../images/feature-image-2.png')}
+                      alt=""
+                    />
+                    <div className="icon-top-right">
+                      <img src={featureIcon2} alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div className="feature-card-mobile">
+                  <div className="first">
+                    <div className="top">Extensible</div>
+                    <div className="bottom">
+                      Plug and play a wide range of tools to quickly rollout
+                      your very own modern data stack.
+                    </div>
+                  </div>
+                  <div className="second">
+                    <img
+                      src={require('../images/feature-image-3.png')}
+                      alt=""
+                    />
+                    <div className="icon-top-right">
+                      <img src={featureIcon3} alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div className="feature-card-mobile">
+                  <div className="first">
+                    <div className="top">DevOps Best Practices</div>
+                    <div className="bottom">
+                      Deploy collaboratively and safely using isolated
+                      environ-ments, Git-enabled version control.
+                    </div>
+                  </div>
+                  <div className="second">
+                    <img
+                      src={require('../images/feature-image-4.png')}
+                      alt=""
+                    />
+                    <div className="icon-top-right">
+                      <img src={featureIcon4} alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+        </section>
+        <section className="mobile-middle">
+          <img src={middleImage} alt="" />
         </section>
         <section className="middle">
           <div className="container">
@@ -543,12 +667,28 @@ const Home = () => {
               >
                 Request a demo
               </a>
+              <div className="mobile-display">
+                <img src={toolsImage} />
+                <div className="request-demo">
+                  <a
+                    href="#"
+                    onClick={(e) => {
+                      console.log(123);
+                      e.preventDefault();
+                      setDisplaySignupForm(true);
+                    }}
+                  >
+                    Request a demo
+                  </a>
+                  <img width="20" src={arrowRightBlack} />
+                </div>
+              </div>
             </div>
             <div className="mid">
               <img src={require('../images/tools-core-item.png')} alt="" />
               <img src={require('../images/tools-core-bg.png')} alt="" />
               <h3>
-                <span className="blue">Zetta</span>Block 
+                <span className="blue">Zetta</span>Block
                 <br />
                 <span> Core</span>
               </h3>
@@ -582,16 +722,16 @@ const Home = () => {
                 </div>
                 <img src={require('../images/blog-cover-1.png')} alt="" />
               </div>
-              <div className="blog">
+              <div className="blog secondary">
                 <div className="info">
-                  <h3>Rethinking the morden data stack</h3>
+                  <h3 className='secondary'>Rethinking the morden data stack</h3>
                   <button href="#">READ</button>
                 </div>
                 <img src={require('../images/blog-cover-2.png')} alt="" />
               </div>
-              <div className="blog">
+              <div className="blog secondary">
                 <div className="info">
-                  <h3>Orchestrate a data platform for Solana</h3>
+                  <h3 className='secondary'>Orchestrate a data platform for Solana</h3>
                   <button href="#">READ</button>
                 </div>
                 <img src={require('../images/blog-cover-3.png')} alt="" />
@@ -716,6 +856,9 @@ const Home = () => {
                 <img src={logoMain} alt="" />
               </div>
               <p>Deploying a Modern Data Stack in 5 Minutes.</p>
+              <div className="mobile-text">
+              ZettaBlock is building a customizable and managed data stack. This infrastructure-as-code tool dramatically reduces the time and engineering resources customers need to orchestrate a modern data platform.
+              </div>
               <h5 id="signup">SUBSCRIBE TO OUR MAILING LIST</h5>
               {/* <div id="signup" className="input">
                 <img src={require("../images/input.png")} alt="" />
@@ -779,6 +922,11 @@ const Home = () => {
                   <div className="content">Maintaining consistency throughout the system</div>
                 </div> */}
               </div>
+            </div>
+            <div className="links-mobile">
+              <a>Privacy Policy</a>
+              <a>Term of service</a>
+              <a>Language</a>
             </div>
           </div>
         </section>
