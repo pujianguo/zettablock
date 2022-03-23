@@ -724,14 +724,18 @@ const Home = () => {
               </div>
               <div className="blog secondary">
                 <div className="info">
-                  <h3 className='secondary'>Rethinking the morden data stack</h3>
+                  <h3 className="secondary">
+                    Rethinking the morden data stack
+                  </h3>
                   <button href="#">READ</button>
                 </div>
                 <img src={require('../images/blog-cover-2.png')} alt="" />
               </div>
               <div className="blog secondary">
                 <div className="info">
-                  <h3 className='secondary'>Orchestrate a data platform for Solana</h3>
+                  <h3 className="secondary">
+                    Orchestrate a data platform for Solana
+                  </h3>
                   <button href="#">READ</button>
                 </div>
                 <img src={require('../images/blog-cover-3.png')} alt="" />
@@ -857,7 +861,10 @@ const Home = () => {
               </div>
               <p>Deploying a Modern Data Stack in 5 Minutes.</p>
               <div className="mobile-text">
-              ZettaBlock is building a customizable and managed data stack. This infrastructure-as-code tool dramatically reduces the time and engineering resources customers need to orchestrate a modern data platform.
+                ZettaBlock is building a customizable and managed data stack.
+                This infrastructure-as-code tool dramatically reduces the time
+                and engineering resources customers need to orchestrate a modern
+                data platform.
               </div>
               <h5 id="signup">SUBSCRIBE TO OUR MAILING LIST</h5>
               {/* <div id="signup" className="input">
@@ -911,7 +918,11 @@ const Home = () => {
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a
+                        rel="noreferrer"
+                        target="_blank"
+                        href="https://discord.gg/BXUpthQ8cz"
+                      >
                         <img src={socialIcon4} alt="Discord" />
                       </a>
                     </li>
