@@ -226,6 +226,12 @@ const Home = () => {
             >
               BLOG
             </a>
+            <div className="separator">
+            <span></span>
+            <span></span>
+            <span></span>
+            </div>
+            <div className="bot-links">
             <a
               onClick={(e) => {
                 e.preventDefault();
@@ -238,7 +244,7 @@ const Home = () => {
             </a>
             <a
               href="#"
-              className="special"
+              className=""
               onClick={(e) => {
                 console.log(123);
                 e.preventDefault();
@@ -247,6 +253,7 @@ const Home = () => {
             >
               Request a DEMO
             </a>
+            </div>
           </div>
         </div>
       </nav>
