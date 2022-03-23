@@ -1741,6 +1741,7 @@ main {
   section.banner {
     display: block;
     padding-bottom: 0;
+    padding-top: 51px;
     .swiper {
       width: 100%;
       height: calc(100vh - 370px);
@@ -1955,7 +1956,7 @@ main {
     position: relative;
     text-align: left;
     height: auto;
-    padding-top: 40px;
+    padding-top: 50px;
     padding-bottom: 90px;
     box-sizing: border-box;
     .container {
