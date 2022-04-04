@@ -732,7 +732,7 @@ const Home = () => {
               <div className="blog secondary">
                 <div className="info">
                   <h3 className="secondary">
-                    Rethinking the morden data stack
+                    Rethinking the modern data stack
                   </h3>
                   <button href="#">READ</button>
                 </div>
