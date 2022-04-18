@@ -910,7 +910,7 @@ const Home = () => {
                       <a
                         rel="noreferrer"
                         target="_blank"
-                        href="https://twitter.com/ZettablockHq"
+                        href="https://twitter.com/ZettaBlockHQ"
                       >
                         <img src={socialIcon2} alt="Twitter" />
                       </a>
@@ -928,7 +928,7 @@ const Home = () => {
                       <a
                         rel="noreferrer"
                         target="_blank"
-                        href="https://discord.gg/BXUpthQ8cz"
+                        href="https://discord.gg/px42xPBFkN"
                       >
                         <img src={socialIcon4} alt="Discord" />
                       </a>
