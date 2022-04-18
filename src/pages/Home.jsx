@@ -668,7 +668,7 @@ const Home = () => {
         </section>
         <section className="use-cases" id='usecases'>
           <div className="container">
-            <h2>Use Case</h2>
+            <h2>Use Cases</h2>
             <div className="content">
               <div className="image-wrapper">
                 <img src={useCasesImage} alt="use-cases" />
@@ -690,8 +690,8 @@ const Home = () => {
                       <img src="/zettatrade-feature-1.svg" alt="" />
                     </div>
                     <div className="right">
-                      STATE OF THE ART <br />
-                      DATA INFRASTRUCTURE
+                      state of the art <br className="hide-mobile" />
+                      data infrastructure
                     </div>
                   </div>
                   <div className="text">
@@ -706,7 +706,7 @@ const Home = () => {
                       <img src="/zettatrade-feature-2.svg" alt="" />
                     </div>
                     <div className="right">
-                      Discover <br />
+                      Discover <br className="hide-mobile" />
                       new opportunities
                     </div>
                   </div>
@@ -722,7 +722,7 @@ const Home = () => {
                       <img src="/zettatrade-feature-3.svg" alt="" />
                     </div>
                     <div className="right">
-                      TRADE <br />
+                      TRADE <br className="hide-mobile" />
                       Ahead of the curve
                     </div>
                   </div>
