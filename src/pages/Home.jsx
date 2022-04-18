@@ -62,6 +62,7 @@ const Home = () => {
       link.classList.remove('active');
     });
     el.classList.add('active');
+    toggleHamburgerMenu()
     const scrollTo = document.querySelector(`#${id}`);
     scrollTo.scrollIntoView({
       behavior: 'smooth',
@@ -216,6 +217,15 @@ const Home = () => {
               href="#"
             >
               FEATURES
+            </a>
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                handleSmoothScroll('usecases', e.target);
+              }}
+              href="#"
+            >
+              USE CASES
             </a>
             <a
               onClick={(e) => {
