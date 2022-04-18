@@ -30,6 +30,7 @@ import arrowRight from '../images/arrow_right.svg';
 import arrowRightBlack from '../images/arrow_right_black.svg';
 import middleImage from '../images/middle.svg';
 import toolsImage from '../images/tools.svg';
+import useCasesImage from '../images/usecase.png';
 
 import { useState } from 'react';
 import CustomForm from '../components/CustomForm';
@@ -113,7 +114,16 @@ const Home = () => {
             >
               HOME
             </a>
-
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                handleSmoothScroll('usecases', e.target);
+              }}
+              href="#"
+              className="active"
+            >
+              USE CASES
+            </a>
             <a
               onClick={(e) => {
                 e.preventDefault();
@@ -227,32 +237,32 @@ const Home = () => {
               BLOG
             </a>
             <div className="separator">
-            <span></span>
-            <span></span>
-            <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
             <div className="bot-links">
-            <a
-              onClick={(e) => {
-                e.preventDefault();
-                handleSmoothScroll('signup', e.target);
-              }}
-              href="#"
-              className=""
-            >
-              SIGN UP
-            </a>
-            <a
-              href="#"
-              className=""
-              onClick={(e) => {
-                console.log(123);
-                e.preventDefault();
-                setDisplaySignupForm(true);
-              }}
-            >
-              Request a DEMO
-            </a>
+              <a
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSmoothScroll('signup', e.target);
+                }}
+                href="#"
+                className=""
+              >
+                SIGN UP
+              </a>
+              <a
+                href="#"
+                className=""
+                onClick={(e) => {
+                  console.log(123);
+                  e.preventDefault();
+                  setDisplaySignupForm(true);
+                }}
+              >
+                Request a DEMO
+              </a>
             </div>
           </div>
         </div>
@@ -262,10 +272,11 @@ const Home = () => {
         <section className="banner" id="banner">
           <div className="slide-content">
             <p>ZETTABLOCK</p>
-            <h1>Deploying a Modern Data Stack in 5 Minutes</h1>
+            <h1>Build Essential Data Infrastructure for Web3</h1>
             <h3>
-              The easiest way to assemble, deploy and manage a programmable data
-              stack.
+              The platform provides queryable APIs to generate core insights via
+              on-chain and off-chain signals - all without the complexity of
+              maintaining infrastructure
             </h3>
           </div>
           <div className="image-cover"></div>
@@ -366,10 +377,11 @@ const Home = () => {
           <div className="custom-swiper-pagination"></div>
           <div className="slide-content-mobile">
             <p>ZETTABLOCK</p>
-            <h1>Deploying a Modern Data Stack in 5 Minutes</h1>
+            <h1>Build Essential Data Infrastructure for Web3</h1>
             <h3>
-              The easiest way to assemble, deploy and manage a programmable data
-              stack.
+              The platform provides queryable APIs to generate core insights via
+              on-chain and off-chain signals - all without the complexity of
+              maintaining infrastructure
             </h3>
             <div className="request-demo">
               <a
@@ -649,6 +661,75 @@ const Home = () => {
                     Build, deploy and maintain a scalable data stack with the
                     modern cloud.
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="use-cases" id='usecases'>
+          <div className="container">
+            <h2>Use Case</h2>
+            <div className="content">
+              <div className="image-wrapper">
+                <img src={useCasesImage} alt="use-cases" />
+                <a
+                  className="preview"
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    alert('Comming Soon...');
+                  }}
+                >
+                  <img src="/zettatrade-video-play.svg" alt="preview-video" />
+                </a>
+              </div>
+              <div className="row">
+                <div className="col">
+                  <div className="title">
+                    <div className="left">
+                      <img src="/zettatrade-feature-1.svg" alt="" />
+                    </div>
+                    <div className="right">
+                      STATE OF THE ART <br />
+                      DATA INFRASTRUCTURE
+                    </div>
+                  </div>
+                  <div className="text">
+                    Built by infrastructure engineers from the best data driven
+                    companies in Silicon Valley, deploy data applications
+                    without complex microservices, all you need is SQL.
+                  </div>
+                </div>
+                <div className="col">
+                  <div className="title">
+                    <div className="left">
+                      <img src="/zettatrade-feature-2.svg" alt="" />
+                    </div>
+                    <div className="right">
+                      Discover <br />
+                      new opportunities
+                    </div>
+                  </div>
+                  <div className="text">
+                    Identify the most prominent wallets from comprehensive
+                    on-chain data. Create your own alerts, charts and dashboard
+                    using SQL.
+                  </div>
+                </div>
+                <div className="col">
+                  <div className="title">
+                    <div className="left">
+                      <img src="/zettatrade-feature-3.svg" alt="" />
+                    </div>
+                    <div className="right">
+                      TRADE <br />
+                      Ahead of the curve
+                    </div>
+                  </div>
+                  <div className="text">
+                    Automated trading in sub-seconds when a prominent wallet has
+                    been moving its funds.
+                  </div>
                 </div>
               </div>
             </div>
