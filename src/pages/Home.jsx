@@ -120,7 +120,6 @@ const Home = () => {
                 handleSmoothScroll('usecases', e.target);
               }}
               href="#"
-              className="active"
             >
               USE CASES
             </a>
