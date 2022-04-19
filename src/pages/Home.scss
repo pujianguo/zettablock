@@ -143,8 +143,7 @@ $perl: #f3f3f3;
 $xl: 1170px;
 
 body > * {
-  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
-    Helvetica, Arial, sans-serif;
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
   background-color: $black;
 }
@@ -352,11 +351,7 @@ main {
       top: 0;
       left: calc(50% - 585px);
       &::after {
-        background: linear-gradient(
-          90deg,
-          #1b1b1b 15%,
-          rgba(27, 27, 27, 0) 65%
-        );
+        background: linear-gradient(90deg, #1b1b1b 15%, rgba(27, 27, 27, 0) 65%);
         content: '';
         display: block;
         width: 100%;
@@ -619,9 +614,22 @@ main {
         & > img {
           width: 100%;
         }
+        .usecase-pc {
+          display: block;
+        }
+        .usecase-mb {
+          display: none;
+        }
         .preview {
           position: absolute;
           left: 55px;
+          bottom: 60px;
+          cursor: pointer;
+          // visibility: hidden;
+        }
+        .gotoweb {
+          position: absolute;
+          left: 295px;
           bottom: 60px;
           cursor: pointer;
           // visibility: hidden;
@@ -759,11 +767,7 @@ main {
   }
   .blog {
     .fade-effect {
-      background: linear-gradient(
-        180deg,
-        rgba(27, 27, 27, 0) 0%,
-        rgba(0, 87, 255, 0.2) 100%
-      );
+      background: linear-gradient(180deg, rgba(27, 27, 27, 0) 0%, rgba(0, 87, 255, 0.2) 100%);
       padding-bottom: 160px;
     }
     padding: 70px 0 0px;
@@ -809,11 +813,7 @@ main {
             content: '';
             width: 100%;
             height: 360px;
-            background: linear-gradient(
-              0deg,
-              rgba(5, 14, 27, 0.6) 0%,
-              rgba(5, 14, 27, 0) 100%
-            );
+            background: linear-gradient(0deg, rgba(5, 14, 27, 0.6) 0%, rgba(5, 14, 27, 0) 100%);
             position: absolute;
             z-index: 3;
             opacity: 0.2;
@@ -952,11 +952,7 @@ main {
     }
     .conpanies-container {
       padding-bottom: 114px;
-      background: linear-gradient(
-        180deg,
-        rgba(27, 27, 27, 0) 0%,
-        rgba(0, 87, 255, 0.2) 100%
-      );
+      background: linear-gradient(180deg, rgba(27, 27, 27, 0) 0%, rgba(0, 87, 255, 0.2) 100%);
       .companies {
         padding: 24px 0 0;
         display: flex;
@@ -1057,8 +1053,7 @@ main {
           align-items: center;
           border-radius: 6px;
           input {
-            font-family: 'Outfit', -apple-system, BlinkMacSystemFont,
-              'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
             font-size: 18px;
             box-sizing: border-box;
             font-weight: 500;
@@ -1505,11 +1500,7 @@ main {
       }
       .conpanies-container {
         padding-bottom: 60px;
-        background: linear-gradient(
-          180deg,
-          rgba(27, 27, 27, 0) 0%,
-          rgba(0, 87, 255, 0.2) 100%
-        );
+        background: linear-gradient(180deg, rgba(27, 27, 27, 0) 0%, rgba(0, 87, 255, 0.2) 100%);
         .companies {
           padding: 24px 0 0;
           display: flex;
@@ -1697,8 +1688,7 @@ main {
   background-color: rgba($color: #000000, $alpha: 0.7);
 
   .mc__form-container {
-    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
-      Helvetica, Arial, sans-serif;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     width: 460px;
     padding: 20px 20px;
     background-color: $white;
@@ -1808,7 +1798,6 @@ main {
     background: $perl;
     text-align: left;
     .container {
-      
       width: 100%;
       padding: 0px 0px;
       box-sizing: border-box;
@@ -1829,12 +1818,29 @@ main {
         & > img {
           width: 100%;
         }
+        .usecase-pc {
+          display: none;
+        }
+        .usecase-mb {
+          display: block;
+        }
         .preview {
           position: absolute;
-          left: 55px;
+          left: 25px;
           bottom: 60px;
           cursor: pointer;
-          visibility: hidden;
+          transform: scale(0.7);
+          transform-origin: left center;
+          // visibility: hidden;
+        }
+        .gotoweb {
+          position: absolute;
+          left: 200px;
+          bottom: 60px;
+          cursor: pointer;
+          transform: scale(0.7);
+          transform-origin: left center;
+          // visibility: hidden;
         }
       }
       .row {
@@ -1904,11 +1910,7 @@ main {
               top: 0;
               height: 100%;
               width: 100%;
-              background: linear-gradient(
-                0deg,
-                #1b1b1b 0%,
-                rgba(27, 27, 27, 0) 36.22%
-              );
+              background: linear-gradient(0deg, #1b1b1b 0%, rgba(27, 27, 27, 0) 36.22%);
             }
             img {
               height: 100%;
@@ -2001,11 +2003,7 @@ main {
       top: 0;
       left: 0%;
       &::after {
-        background: linear-gradient(
-          90deg,
-          #1b1b1b 15%,
-          rgba(27, 27, 27, 0) 65%
-        );
+        background: linear-gradient(90deg, #1b1b1b 15%, rgba(27, 27, 27, 0) 65%);
         content: '';
         display: block;
         width: 100%;
@@ -2442,11 +2440,7 @@ main {
   section.blog {
     display: block;
     .fade-effect {
-      background: linear-gradient(
-        180deg,
-        rgba(27, 27, 27, 0) 0%,
-        rgba(0, 87, 255, 0.2) 100%
-      );
+      background: linear-gradient(180deg, rgba(27, 27, 27, 0) 0%, rgba(0, 87, 255, 0.2) 100%);
       padding-bottom: 100px;
     }
     padding: 100px 0px 0px;
@@ -2508,11 +2502,7 @@ main {
             content: '';
             width: 100%;
             height: 360px;
-            background: linear-gradient(
-              0deg,
-              rgba(5, 14, 27, 0.6) 0%,
-              rgba(5, 14, 27, 0) 100%
-            );
+            background: linear-gradient(0deg, rgba(5, 14, 27, 0.6) 0%, rgba(5, 14, 27, 0) 100%);
             position: absolute;
             z-index: 3;
             opacity: 0.2;
@@ -2678,8 +2668,7 @@ main {
           align-items: center;
           border-radius: 6px;
           input {
-            font-family: 'Outfit', -apple-system, BlinkMacSystemFont,
-              'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
             font-size: 18px;
             box-sizing: border-box;
             font-weight: 500;
@@ -2881,11 +2870,7 @@ main {
           align-items: center;
           margin-top: 20px;
           width: 100%;
-          background: linear-gradient(
-            180deg,
-            rgba(27, 27, 27, 0) 0%,
-            rgba(0, 87, 255, 0.2) 100%
-          );
+          background: linear-gradient(180deg, rgba(27, 27, 27, 0) 0%, rgba(0, 87, 255, 0.2) 100%);
         }
         a {
           font-weight: 600;
@@ -2899,11 +2884,7 @@ main {
           }
           &.special {
             margin-top: 20px;
-            background: linear-gradient(
-              135deg,
-              #3277ff 18.62%,
-              #0057ff 105.59%
-            );
+            background: linear-gradient(135deg, #3277ff 18.62%, #0057ff 105.59%);
             border-radius: 5px;
             padding: 7px 16px 8px;
           }
