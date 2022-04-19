@@ -283,9 +283,8 @@ const Home = () => {
             <p>ZETTABLOCK</p>
             <h1>Build Essential Data Infrastructure for Web3</h1>
             <h3>
-              The platform provides queryable APIs to generate core insights via
-              on-chain and off-chain signals - all without the complexity of
-              maintaining infrastructure
+              The platform provides simple, scalable, and reliable APIs without
+              the complexity of maintaining infrastructure
             </h3>
           </div>
           <div className="image-cover"></div>
@@ -388,8 +387,8 @@ const Home = () => {
             <p>ZETTABLOCK</p>
             <h1>Build Essential Data Infrastructure for Web3</h1>
             <h3>
-              The platform provides simple, scalable, and reliable APIs all
-              without the complexity of maintaining infrastructure
+              The platform provides simple, scalable, and reliable APIs without
+              the complexity of maintaining infrastructure
             </h3>
             <div className="request-demo">
               <a
