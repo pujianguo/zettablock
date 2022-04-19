@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Website - www.zettablock.com
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Deployment
+- Any updates in the master branch will trigger a deployment
 
 ## Available Scripts
 
