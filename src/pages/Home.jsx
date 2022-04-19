@@ -283,8 +283,8 @@ const Home = () => {
             <p>ZETTABLOCK</p>
             <h1>Build Essential Data Infrastructure for Web3</h1>
             <h3>
-              The platform provides simple, scalable, and reliable APIs without
-              the complexity of maintaining infrastructure
+              The platform provides simple, queryable, and real-time APIs
+              without the complexity of maintaining infrastructure
             </h3>
           </div>
           <div className="image-cover"></div>
@@ -387,8 +387,8 @@ const Home = () => {
             <p>ZETTABLOCK</p>
             <h1>Build Essential Data Infrastructure for Web3</h1>
             <h3>
-              The platform provides simple, scalable, and reliable APIs without
-              the complexity of maintaining infrastructure
+              The platform provides simple, queryable, and real-time APIs
+              without the complexity of maintaining infrastructure
             </h3>
             <div className="request-demo">
               <a
@@ -414,7 +414,7 @@ const Home = () => {
                   {/* <p style={{ visibility: 'hidden' }}>#1 Data Infrastructure Solution for Web3</p> */}
                 </div>
                 <p className="excerpt">
-                  Delivering Modern Data Stack as Code with ZettaBlock.
+                  Deliver Web3 Data Infra as APIs with ZettaBlock.
                 </p>
                 <div className="bottom">
                   <div className="image-wrapper">
@@ -625,10 +625,11 @@ const Home = () => {
               Unlocking the Power of Data with Programmable Modern Data Stack
             </h3>
             <p>
-              ZettaBlock is building a customizable and managed data stack. This
-              infrastructure-as-code tool dramatically reduces the time and
-              engineering resources customers need to orchestrate a modern data
-              platform.
+              ZettaBlock is building the essential data infrastructure for web3.
+              This data platform provides web3 developers with simple,
+              queryable, and real-time APIs to generate core insights via
+              on-chain and off-chain signals - all without the complexity of
+              maintaining infrastructure themselves.
             </p>
             <div className="image-wrapper">
               <img src={require('../images/dataflow.png')} alt="" />
@@ -954,7 +955,7 @@ const Home = () => {
               <div className="image-wrapper">
                 <img src={logoMain} alt="" />
               </div>
-              <p>Deploying a Modern Data Stack in 5 Minutes.</p>
+              <p>Build Essential Data Infrastructure for Web3</p>
               <div className="mobile-text">
                 ZettaBlock is building a customizable and managed data stack.
                 This infrastructure-as-code tool dramatically reduces the time
