@@ -62,7 +62,7 @@ const Home = () => {
       link.classList.remove('active');
     });
     el.classList.add('active');
-    toggleHamburgerMenu()
+    toggleHamburgerMenu();
     const scrollTo = document.querySelector(`#${id}`);
     scrollTo.scrollIntoView({
       behavior: 'smooth',
@@ -388,9 +388,8 @@ const Home = () => {
             <p>ZETTABLOCK</p>
             <h1>Build Essential Data Infrastructure for Web3</h1>
             <h3>
-              The platform provides queryable APIs to generate core insights via
-              on-chain and off-chain signals - all without the complexity of
-              maintaining infrastructure
+              The platform provides simple, scalable, and reliable APIs all
+              without the complexity of maintaining infrastructure
             </h3>
             <div className="request-demo">
               <a
@@ -675,7 +674,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="use-cases" id='usecases'>
+        <section className="use-cases" id="usecases">
           <div className="container">
             <h2>Use Cases</h2>
             <div className="content">
