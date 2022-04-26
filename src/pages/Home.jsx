@@ -967,10 +967,10 @@ const Home = () => {
               </div>
               <p>Build Essential Data Infrastructure for Web3</p>
               <div className="mobile-text">
-                ZettaBlock is building a customizable and managed data stack.
-                This infrastructure-as-code tool dramatically reduces the time
-                and engineering resources customers need to orchestrate a modern
-                data platform.
+                ZettaBlock is building the data platform that will be the
+                backbone of the next generation of apps. Web3 developers can
+                generate core insights via on-chain and off-chain signals
+                without maintaining the complex infra.
               </div>
               <h5 id="signup">SUBSCRIBE TO OUR MAILING LIST</h5>
               {/* <div id="signup" className="input">
