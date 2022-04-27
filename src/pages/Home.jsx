@@ -36,7 +36,8 @@ import useCasesImageMB from '../images/usecase-mobile.png';
 import { useState } from 'react';
 import CustomForm from '../components/CustomForm';
 import SubscriptionForm from '../components/SubscriptionForm';
-
+import { useEffect } from 'react';
+import ReactGA from 'react-ga';
 import('scroll-behavior-polyfill');
 
 const TEXT = [
@@ -57,6 +58,10 @@ const TEXT = [
 ];
 
 const Home = () => {
+  useEffect(() => {
+    ReactGA.initialize('UA-227336978-1');
+    ReactGA.pageview(window.location.pathname);
+  }, []);
   // Throw away work
   const handleSmoothScroll = (id, el) => {
     document.querySelectorAll('.links>a').forEach((link) => {
