@@ -23,7 +23,7 @@ import cliIcon2 from '../images/cli-icon-3.svg';
 import cliIcon3 from '../images/cli-icon-2.svg';
 import socialIcon1 from '../images/social-icon-linkedin.svg';
 import socialIcon2 from '../images/social-icon-twitter.svg';
-import socialIcon3 from '../images/social-icon-slack.svg';
+import socialIcon3 from '../images/medium.svg';
 import socialIcon4 from '../images/social-icon-discord.svg';
 import MailchimpFormContainer from '../components/MailchimpFormContainer';
 import arrowRight from '../images/arrow_right.svg';
@@ -1023,9 +1023,9 @@ const Home = () => {
                       <a
                         rel="noreferrer"
                         target="_blank"
-                        href="https://zettablockcommunity.slack.com/"
+                        href="https://zettablock.medium.com/"
                       >
-                        <img src={socialIcon3} alt="Slack" />
+                        <img src={socialIcon3} alt="Medium" />
                       </a>
                     </li>
                     <li>
