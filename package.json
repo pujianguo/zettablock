@@ -1,0 +1,35 @@
+{
+  "name": "slides-vue",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "chokidar": "^3.5.2",
+    "core-js": "^3.19.2",
+    "dat.gui": "^0.7.7",
+    "vue": "^2.6.14",
+    "vue-router": "^3.5.3",
+    "vue2-collapse": "^1.0.15"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.5.15",
+    "@vue/cli-service": "^4.5.15",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^10.2.0",
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^4.46.0"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}

@@ -1,0 +1,332 @@
+/* Import Font - Tomato Grotesk */
+@font-face {
+  font-family: 'Tomato Grotesk';
+  src: url('/assets/fonts/archia-thin-webfont.woff2') format('woff2'),
+    url('/assets/fonts/archia-thin-webfont.woff') format('woff');
+  font-weight: 250;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tomato Grotesk';
+  src: url('/assets/fonts/archia-light-webfont.woff2') format('woff2'),
+    url('/assets/fonts/archia-light-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tomato Grotesk';
+  src: url('/assets/fonts/archia-regular-webfont.woff2') format('woff2'),
+    url('/assets/fonts/archia-regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tomato Grotesk';
+  src: url('/assets/fonts/archia-medium-webfont.woff2') format('woff2'),
+    url('/assets/fonts/archia-medium-webfont.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tomato Grotesk';
+  src: url('/assets/fonts/archia-semibold-webfont.woff2') format('woff2'),
+    url('/assets/fonts/archia-semibold-webfont.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tomato Grotesk';
+  src: url('/assets/fonts/archia-bold-webfont.woff2') format('woff2'),
+    url('/assets/fonts/archia-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/**************** Global ***************/
+html,
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: #111;
+  font-size: 14px;
+  overflow: auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', Helvetica, Tahoma, Arial, 'Hiragino Sans GB',
+    'Microsoft YaHei', 微软雅黑, SimSun, 宋体, Heiti, 黑体, sans-serif;
+  font-weight: normal;
+  letter-spacing: 0;
+  -moz-user-select: none; /*火狐*/
+  -webkit-user-select: none; /*webkit浏览器*/
+  -ms-user-select: none; /*IE10*/
+  -khtml-user-select: none; /*早期浏览器*/
+  user-select: none;
+  @media screen and (min-width: 1200px) {
+    min-width: 1200px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1199px) {
+    min-width: 960px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    min-width: 700px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html,
+  body {
+    min-width: 320px;
+  }
+}
+
+a,
+.tab-hover {
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+    transition: all 0.3s ease;
+  }
+}
+
+textarea {
+  border: 0;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 1);
+  line-height: 28px;
+  letter-spacing: 1px;
+  outline: none;
+  resize: none;
+  &:-moz-placeholder {
+    color: rgba(165, 165, 165, 1);
+  }
+  &::-webkit-input-placeholder {
+    color: rgba(165, 165, 165, 1);
+  }
+  &::-moz-placeholder {
+    color: rgba(165, 165, 165, 1);
+  }
+  &:-ms-input-placeholder {
+    color: rgba(165, 165, 165, 1);
+  }
+}
+
+input {
+  outline: none;
+  -webkit-appearance: none;
+}
+
+button {
+  outline: none;
+}
+
+/**************** FONT ***************/
+
+h2 {
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.h2-size {
+  font-size: 26px;
+}
+
+.h3-size {
+  font-size: 18px;
+}
+
+.h4-size {
+  font-size: 16px;
+}
+
+.p-size {
+  font-size: 14px;
+}
+
+.font-weight-6 {
+  font-weight: 600;
+}
+
+.font-weight-5 {
+  font-weight: 500;
+}
+
+.font-weight-4 {
+  font-weight: 400;
+}
+
+.font-weight-3 {
+  font-weight: 300;
+}
+
+/**************** COLOR ***************/
+.c-gray1 {
+  color: rgba(165, 165, 165, 1);
+}
+
+.c-gray2 {
+  color: rgba(102, 102, 102, 1);
+}
+
+.c-gray3 {
+  color: rgba(217, 217, 217, 1);
+}
+
+.c-white {
+  color: rgba(255, 255, 255, 1);
+}
+
+.c-white-t-7 {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.c-block {
+  color: rgba(0, 0, 0, 1);
+}
+
+.c-block-t-5 {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.c-block-t-05 {
+  color: rgba(0, 0, 0, 0.05);
+}
+
+.c-green {
+  color: rgba(7, 215, 155, 1);
+}
+
+.c-blue {
+  color: #0029ff;
+}
+.bgc-blue {
+  background-color: #0029ff;
+}
+
+.c-blue-t6 {
+  color: rgba(0, 31, 255, 0.6);
+}
+
+/**************** LAYOUT ***************/
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-center-left {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.flex-center-end {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.flex-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.flex-left-top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.flex-left-center {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-left-end {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.flex-end-center {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-between-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.flex-between-end {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.margin-auto {
+  margin: 0 auto;
+}
