@@ -1,6 +1,6 @@
 /* Import Font - Tomato Grotesk */
 @font-face {
-  font-family: 'Tomato Grotesk';
+  font-family: 'archia';
   src: url('/assets/fonts/archia-thin-webfont.woff2') format('woff2'),
     url('/assets/fonts/archia-thin-webfont.woff') format('woff');
   font-weight: 250;
@@ -9,7 +9,7 @@
 }
 
 @font-face {
-  font-family: 'Tomato Grotesk';
+  font-family: 'archia';
   src: url('/assets/fonts/archia-light-webfont.woff2') format('woff2'),
     url('/assets/fonts/archia-light-webfont.woff') format('woff');
   font-weight: 300;
@@ -18,7 +18,7 @@
 }
 
 @font-face {
-  font-family: 'Tomato Grotesk';
+  font-family: 'archia';
   src: url('/assets/fonts/archia-regular-webfont.woff2') format('woff2'),
     url('/assets/fonts/archia-regular-webfont.woff') format('woff');
   font-weight: 400;
@@ -27,7 +27,7 @@
 }
 
 @font-face {
-  font-family: 'Tomato Grotesk';
+  font-family: 'archia';
   src: url('/assets/fonts/archia-medium-webfont.woff2') format('woff2'),
     url('/assets/fonts/archia-medium-webfont.woff') format('woff');
   font-weight: 500;
@@ -36,7 +36,7 @@
 }
 
 @font-face {
-  font-family: 'Tomato Grotesk';
+  font-family: 'archia';
   src: url('/assets/fonts/archia-semibold-webfont.woff2') format('woff2'),
     url('/assets/fonts/archia-semibold-webfont.woff') format('woff');
   font-weight: 600;
@@ -45,7 +45,7 @@
 }
 
 @font-face {
-  font-family: 'Tomato Grotesk';
+  font-family: 'archia';
   src: url('/assets/fonts/archia-bold-webfont.woff2') format('woff2'),
     url('/assets/fonts/archia-bold-webfont.woff') format('woff');
   font-weight: 700;
@@ -62,7 +62,7 @@ body {
   background: #111;
   font-size: 14px;
   overflow: auto;
-  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', Helvetica, Tahoma, Arial, 'Hiragino Sans GB',
+  font-family: 'archia', -apple-system, BlinkMacSystemFont, 'PingFang SC', Helvetica, Tahoma, Arial, 'Hiragino Sans GB',
     'Microsoft YaHei', 微软雅黑, SimSun, 宋体, Heiti, 黑体, sans-serif;
   font-weight: normal;
   letter-spacing: 0;
