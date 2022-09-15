@@ -54,7 +54,7 @@
       <div class="background" style="background-image:url(assets/slide1-bg.png);"></div>
     </section>
     <!-- Slide 2 (#16) -->
-    <section class="slide slide2 whiteSlide">
+    <section id="product" class="slide slide2 whiteSlide">
       <div class="content">
         <div class="container">
           <div class="wrap">
@@ -88,7 +88,7 @@
       <div class="background" style="background:#fff;"></div>
     </section>
     <!-- Slide 3 (#16) -->
-    <section class="slide slide3 whiteSlide">
+    <section id="usecase" class="slide slide3 whiteSlide">
       <div class="content">
         <div class="container">
           <div class="wrap">
@@ -131,7 +131,7 @@
     </section>
 
     <!-- Slide 4 (#16) -->
-    <section class="slide slide4 whiteSlide">
+    <section id="about" class="slide slide4 whiteSlide">
       <div class="content">
         <div class="container">
           <div class="wrap">
@@ -214,7 +214,7 @@
     </section>
 
     <!-- Slide 5 (#16) -->
-    <section class="slide slide5 whiteSlide">
+    <section id="blog" class="slide slide5 whiteSlide">
       <div class="content">
         <div class="container">
           <div class="wrap">
@@ -237,24 +237,37 @@
               <div class="right">
                 <h1>Join the Web3 Data Revolution</h1>
                 <ul>
-                  <li><svg>
+                  <li>
+                <a href="https://twitter.com/ZettaBlockHQ" target="_blank"> 
+                  <svg>
                       <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#social-twitter"></use>
-                    </svg></li>
-                  <li><svg>
+                    </svg></a></li>
+                  <li>
+                <a href="https://www.linkedin.com/company/zettablockhq/" target="_blank"> 
+                  <svg>
                       <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#social-linkedin"></use>
-                    </svg></li>
-                  <li><svg>
+                    </svg></a></li>
+                  <li>
+                <a href="discord.gg/px42xPBFkN" target="_blank"> 
+                  <svg>
                       <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#social-discord"></use>
-                    </svg></li>
-                  <li><svg>
+                    </svg></a></li>
+                  <li>
+                <a href="" target="_blank"> 
+                  <svg>
                       <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#social-medium"></use>
-                    </svg></li>
-                  <li><svg>
+                    </svg></a></li>
+                  <li>
+                <a href="https://github.com/Zettablock" target="_blank"> 
+                  <svg>
                       <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#social-github"></use>
-                    </svg></li>
-                  <li><svg>
+                    </svg></a></li>
+                  <li>
+                <a href=" https://www.youtube.com/channel/UCZ7OYTGcXA93faGcmnyjTzw
+" target="_blank"> 
+                  <svg>
                       <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#social-youtube"></use>
-                    </svg></li>
+                    </svg></a></li>
                 </ul>
                 <h1>Subscribe to Our Mailing List</h1>
                 <div class="signup"><input type="text" placeholder="Email Address">

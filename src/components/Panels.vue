@@ -12,13 +12,13 @@
             </svg></a></div>
         <div class="right">
           <ul class="menu">
-            <li><a href="#">Product<svg>
+            <li><a href="#product">Product<svg>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-down"></use>
                 </svg></a></li>
-            <li><a href="#">Use Cases</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="#usecase">Use Cases</a></li>
+            <li><a href="https://docsend.com/view/4yjh7wivyxkg9s5z" target="_blank">Pricing</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#about">About</a></li>
           </ul>
           <a class="cta" href="#">Get Early Access <svg>
               <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#arrow-right-blue"></use>
