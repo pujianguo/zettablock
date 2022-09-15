@@ -20,7 +20,7 @@
             <li><a href="#blog">Blog</a></li>
             <li><a href="#about">About</a></li>
           </ul>
-          <a class="cta" href="#">Get Early Access <svg>
+          <a class="cta" @click="toggleSignup">Get Early Access <svg>
               <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#arrow-right-blue"></use>
             </svg></a>
         </div>
@@ -122,6 +122,12 @@
   export default {
     name: "mainNav",
     components: {},
+    props: {
+      toggleSignup: {
+        type: Function,
+        required: true
+      },
+    },
     data() {
       return {};
     },
