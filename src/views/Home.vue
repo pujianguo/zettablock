@@ -1,7 +1,7 @@
 <template>
   <div id="SlidesContainer" class="page-slides slides scroll smooth smoothScroll animated noPreload">
     <SvgLibrary></SvgLibrary>
-    <Panels></Panels>
+    <Panels :toggleSignup="toggleSignup"></Panels>
 
     <!-- Slide 1 (#03) -->
     <section class="slide slide1 whiteSlide">
@@ -221,7 +221,7 @@
             <div class="fix-12-12 newslette">
               <h1>Newslette</h1>
               <h2>Say goodbye to slow and unstable data infra</h2>
-              <a href="#">Get Early Access</a>
+              <a @click="toggleSignup()">Get Early Access</a>
               <p>Build your decentralized apps today</p>
             </div>
           </div>
@@ -270,9 +270,13 @@
                     </svg></a></li>
                 </ul>
                 <h1>Subscribe to Our Mailing List</h1>
-                <div class="signup"><input type="text" placeholder="Email Address">
-                  <a href="#">Sign Up</a>
+                
+                <div class="signup">
+                  <form class="fix-12-12 subscribe" action="https://zettablock.us14.list-manage.com/subscribe/post?u=1ff0f35da3b86da52617aadd6&amp;id=bc40fdafb4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate><input type="email" value="" name="EMAIL" placeholder="Email Address">
+                  <button class="signup-button" href="#">Sign Up</button></form>
+                  
                 </div>
+              
 
               </div>
             </div>
@@ -281,6 +285,28 @@
       </div>
       <div class="background" style="background:#fff;"></div>
     </section>
+    <div class="form-container" v-show="showForm">
+        <div class="form-content">
+          <div class="close">
+          <div></div>
+          <div @click="toggleSignup">X</div>
+        </div>
+        <form class="fix-12-12 subscribe" action="https://zettablock.us14.list-manage.com/subscribe/post?u=1ff0f35da3b86da52617aadd6&amp;id=bc40fdafb4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+                <input type="text" value="" name="NAME" id="mce-EMAIL" class="fix-8-12" placeholder="NAME" />
+                <input type="text" value="" name="COMPANY" id="mce-EMAIL" class="fix-8-12" placeholder="COMPANY" />
+                <input type="email" value="" name="EMAIL" id="mce-EMAIL" class="fix-8-12" placeholder="EMAIL" />
+                <input type="text" value="" name="TITLE" id="mce-EMAIL" class="fix-8-12" placeholder="TITLE" />
+                <input type="text" value="" name="PHONE" id="mce-EMAIL" class="fix-8-12" placeholder="Phone" />
+                <input style="display: none;" checked type="checkbox" value="1" name="group[45212][1]" id="mce-group[45212]-45212-2">
+                <button @click="toggleSignup()" class="button square fix-4-12">
+                  <span href="">Get Early Access
+                    <svg style="width: 32px; height: 24px">
+                      <use xlink:href="#arrowbutton"></use>
+                    </svg></span>
+                </button>
+              </form>
+        </div>
+    </div>
   </div>
 
 </template>
@@ -299,6 +325,7 @@
     data() {
       return {
         scrollOffer: 0,
+        showForm: false,
       };
     },
     created() {
@@ -317,6 +344,10 @@
       this.removeHome();
     },
     methods: {
+      toggleSignup() {
+        console.log("toggle",this.showForm);
+        this.showForm = !this.showForm;
+      },
       onCreateView() {
         document.querySelector("body").classList.add("posr");
         slidesFunction();
@@ -348,6 +379,57 @@
 </script>
 
 <style lang="scss">
+  .close {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    color: #000;
+    div {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .form-content {
+    width: 600px;
+    height: 400px;
+    background: #fff;
+    border: 1px solid #eee;
+    form {
+      // .signup-button {
+      //   display: inline-block;
+      // }
+      padding: 0 30px 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      input {
+        border: none;
+        box-shadow: none;
+        padding: 8px 12px;
+        margin: 5px 0;
+        border: 1px solid #000;
+      }
+      button {
+        background: #281af0;
+        margin-top: 20px;
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+  }
+  .form-container {
+    z-index: 100;
+    position: fixed;
+    background-color: rgba(0,0,0,1);
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .posr {
     position: relative;
   }
@@ -1226,8 +1308,13 @@
                 color: rgba(255, 255, 255, 0.2);
               }
             }
-            a {
+            button {
+              background-color: transparent;
+              border: none;
               position: absolute;
+              &:hover {
+                cursor: pointer;
+              }
               right: 0;
               top: 0;
               height: 70px;
