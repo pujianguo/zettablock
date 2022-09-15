@@ -248,12 +248,12 @@
                       <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#social-linkedin"></use>
                     </svg></a></li>
                   <li>
-                <a href="discord.gg/px42xPBFkN" target="_blank"> 
+                <a href="https://discord.gg/px42xPBFkN" target="_blank"> 
                   <svg>
                       <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#social-discord"></use>
                     </svg></a></li>
                   <li>
-                <a href="" target="_blank"> 
+                <a href="https://zettablockhq.medium.com/" target="_blank"> 
                   <svg>
                       <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#social-medium"></use>
                     </svg></a></li>
