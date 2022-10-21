@@ -14,7 +14,7 @@ of your Slides Project. It also requires plugins.js and jquery-3.5.1 to run this
 
 https://designmodo.com/slides/
 
-*/ 
+*/
 
 window.inAction = 1;
 window.allowSlide = 1;
@@ -579,7 +579,7 @@ $(document).ready(function() { "use strict";
         } else {
           window.allowSlide = 0;
         }
-  
+
         //hide panels on scroll
         if (window.panelsToHide) {
           if (scrollDirection === "down" && $currentSection.scrollTop() > 0) {
@@ -1405,7 +1405,7 @@ $(document).ready(function() { "use strict";
         }
         return dfd.promise();
       }
-       
+
       $.when( animatePopup() ).then(
         function( status ) { // done
           if(focusOnID){
@@ -1443,7 +1443,7 @@ $(document).ready(function() { "use strict";
             }
           }
         });
-      } 
+      }
       if (HTML5videos.length > 0){
         HTML5videos.each(function(){
           var video = $(this);
@@ -1524,7 +1524,7 @@ $(document).ready(function() { "use strict";
     var isPopupOnMousePressed = false;
     $(document).on("mousedown", function (e){
       if($(e.target).closest(".popupShown .popup .popupContent, .popupTrigger").length){
-        isPopupOnMousePressed = true; 
+        isPopupOnMousePressed = true;
       }else{
         isPopupOnMousePressed = false;
       }
@@ -1813,7 +1813,7 @@ $(document).ready(function() { "use strict";
 
             // if slider slides couter applied
             sliderCounterController($sliderCounter, nextIndex, $el);
-              
+
           });
 
           //set status
@@ -1884,7 +1884,7 @@ $(document).ready(function() { "use strict";
 
             // if slider slides couter applied
             sliderCounterController($sliderCounter, nextIndex, $el);
-              
+
           });
 
           //set status
@@ -2127,7 +2127,7 @@ $(document).ready(function() { "use strict";
     if(typeof(window.dropdownInterval)=="number"){
       clearInterval(window.dropdownInterval);
     }
-    
+
     //hide
     if (!$isHover) {
       hideDropdown();
@@ -2135,7 +2135,7 @@ $(document).ready(function() { "use strict";
       over = false;
       $(document).mousemove(function(e){
         if(
-          $(e.target).attr("data-dropdown-id")==dropdownID || 
+          $(e.target).attr("data-dropdown-id")==dropdownID ||
           $(e.target).closest(".dropdownTrigger.hover[data-dropdown-id="+dropdownID+"]").length ||
           $(e.target).closest(".dropdown[data-dropdown-id="+dropdownID+"]").length
         ){
@@ -2176,7 +2176,7 @@ $(document).ready(function() { "use strict";
     if($element.hasClass("hide") && $element.hasClass("show")){
       $element.removeClass("hide show");
     }
-    
+
     $element.addClass('show');
 
     if (setPosition) {
@@ -2303,7 +2303,7 @@ $(document).ready(function() { "use strict";
     if($(document).find('.dialogContainer').length==0){
       return false;
     }
-  
+
     // bind open/close methods to any element with data-dialog-action
     if(options=="bindOpenCloseMethods"){
       bindOpenCloseMethods($(this));
@@ -2374,7 +2374,7 @@ $(document).ready(function() { "use strict";
       if(settings.closeByCookie){
         el.close();
       }
-    
+
       // open links in dialog
       $(el).find("[data-href]").on('click', function(){
         if ($(this).data('target')){
@@ -2465,9 +2465,9 @@ $(document).ready(function() { "use strict";
       $(el).click(function(){
         var action = $(this).attr("data-dialog-action"),
             id = $(this).attr("data-dialog-id");
-        
+
         if(id=="" || id==undefined){id=false;}
-         
+
         if(action=="close"){
           if(id && $(this).closest(".dialog").length==0){ // if element is OUTSIDE the dialog box
             $(document).find(".dialog[data-dialog-id="+id+"]").slidesDialog("close");

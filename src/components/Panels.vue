@@ -7,9 +7,16 @@
     <!-- Panel Top -->
     <nav class="panel top">
       <div class="sections desktop">
-        <div class="left"><a href="#" title="ZettaBlock"><svg style="width:176px;height:24px">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-full"></use>
-            </svg></a></div>
+        <div class="left">
+          <a href="#" title="ZettaBlock" class="logo">
+            <svg class="logo-icon">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-icon"></use>
+            </svg>
+            <svg class="logo-text">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-text"></use>
+            </svg>
+          </a>
+        </div>
         <div class="right">
           <ul class="menu">
             <li><a href="#product">Product<svg>
@@ -119,20 +126,22 @@
 </template>
 
 <script>
-  export default {
-    name: "mainNav",
-    components: {},
-    props: {
-      toggleSignup: {
-        type: Function,
-        required: true
-      },
+
+export default {
+  name: "mainNav",
+  components: {},
+  props: {
+    toggleSignup: {
+      type: Function,
+      required: true
     },
-    data() {
-      return {};
-    },
-    methods: {},
-  };
+  },
+  data() {
+    return {};
+  },
+
+  methods: {},
+};
 </script>
 
 <style lang="scss">
@@ -143,13 +152,28 @@
     background: rgba(255, 255, 255, 0.8);
     border-bottom: 1px solid #281af0;
     backdrop-filter: blur(20px);
+    .left{
+      .logo{
+        display: flex;
+        align-items: center;
+        .logo-icon{
+          width: 24px;
+          height: 24px;
+          margin-right: 16px;
+        }
+        .logo-text{
+          width: 129px;
+          height: 20px;
+          color: #000;
+        }
+      }
+    }
     .right .menu {
       li {
         a {
-          font-family: "Archia";
+          font-family: 'Basier Square';
           font-style: normal;
-          font-weight: 600;
-          font-size: 16px;
+          font-weight: 500;
           line-height: 100%;
           display: flex;
           align-items: center;

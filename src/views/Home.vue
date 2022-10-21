@@ -7,96 +7,130 @@
     <section class="slide slide1 whiteSlide">
       <div class="content">
         <div class="container">
-          <div class="wrap">
-
+          <div class="wrap padding-bottom-4">
             <div class="fix-12-12">
-              <img class="logo-ani margin-bottom-6 margin-top-6 ae-2 fromCenter" src="assets/logo-animation.gif" alt="">
-              <div class="fix-10-12 margin-bottom-20">
-                <svg class="ae-3 fromCenter main-title">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#main-title"></use>
-                </svg>
+              <img class="logo-ani ae-2 fromCenter margin-top-6 margin-bottom-4" src="assets/logo-animation.gif" alt="">
+              <div class="fix-10-12 fix-main-title ae-3 fromCenter">
+                <div class="main-title">
+                  The Unified Web3 <br/>Data Platform
+                </div>
               </div>
-              <div class="fix-8-12 margin-bottom-5">
-                <p class="ae-5 fromBottom">ZettaBlock is a one-stop blockchain data platform to make data<br> indexing, querying, analyzing, and sharing easy and flexible.<br>Anyone can build real-time, reliable, data-intensive dApps via SQL without<br>the complexity of maintaining infrastructure.</p>
+              <div class="fix-10-12">
+                <div class="ae-6 fromBottom button access-button" @click="toggleSignup">
+                  <span class="button-text">Get Early Access</span>
+                  <svg class="button-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
+                  </svg>
+                </div>
+                <p class="ae-5 fromBottom description">ZettaBlock is a one-stop blockchain data platform to make data indexing, querying, analyzing, and sharing easy and flexible.<br>Anyone can build real-time, reliable, data-intensive dApps via SQL without the complexity of maintaining infrastructure.</p>
+                <p class="ae-5 fromBottom scroll-tip">scroll down to explore</p>
               </div>
-              <div class="fix-8-12">
-                <svg class="ae-6 fromBottom mouse">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#mouse"></use>
-                </svg>
-              </div>
-              <ul class="fix-12-12 data">
-                <li>
-                  <h1>110B+</h1>
-                  <h2>Transactions</h2>
-                  <p>Rich transactions indexed and decoded for 8+ blockchains since genesis.</p>
-                </li>
-                <li>
-                  <h1>1M+</h1>
-                  <h2>Smart Contracts</h2>
-                  <p>Contracts available with internal data structures for querying.</p>
-                </li>
-                <li>
-                  <h1>4.3B+</h1>
-                  <h2>Price Feeds </h2>
-                  <p>Price feeds for fiat and crypto pairs.</p>
-                </li>
-                <li>
-                  <h1>99.95%</h1>
-                  <h2>180 Day Uptime</h2>
-                  <p>Truely reliable platform for decentralised products of the future.</p>
-                </li>
-              </ul>
             </div>
-
           </div>
         </div>
       </div>
-      <div class="background" style="background-image:url(assets/slide1-bg.png);"></div>
+      <div class="background" style="background: url(/assets/images/slide1_bg.png) no-repeat top center / cover"></div>
     </section>
-    <!-- Slide 2 (#16) -->
+
+
+    <!-- Slide 2 -->
     <section id="product" class="slide slide2 whiteSlide">
       <div class="content">
         <div class="container">
-          <div class="wrap">
-
-            <div class="fix-12-12 left margin-bottom-4">
-              <h1>Start building your dApps<span>with ZettaBlock</span></h1>
+          <div class="wrap padding-top-8 padding-bottom-9">
+            <div class="fix-12-12 fix-title">
+              <div class="title-order ae-2 fromCenter">
+                <div class="order">1</div>
+              </div>
+              <h1 class="title-text ae-3 fromCenter">Start building your dApps</h1>
             </div>
-            <div class="fix-12-12 beforeafter margin-bottom-4">
-              <div class="noSelect twentytwenty">
-                <!-- The before image is first -->
-                <img src="assets/start-with.png" />
-                <!-- The after image is last -->
-                <img src="assets/start-without.png" />
+
+            <div class="fix-12-12 slide-content">
+              <div class="content-title" :style="{'--left': slide2Left }">
+                <div class="title-item" :class="{active: slide2CurrentIndex === 1}" @click="handleSlide2CurrentIndexChange($event, 1)">With ZettaBlock</div>
+                <div class="title-item" :class="{active: slide2CurrentIndex === 2}" @click="handleSlide2CurrentIndexChange($event, 2)">Without ZettaBlock</div>
+              </div>
+              <div class="content-image">
+                <div class="content-image-inner" :style="{left: slide2CurrentIndex === 1 ? 0 : '-100%'}">
+                  <div class="img-item">
+                    <img src="/assets/images/slide2_start_with.png" alt="">
+                  </div>
+                  <div class="img-item">
+                    <img src="/assets/images/slide2_start_without.png" alt="">
+                  </div>
+                </div>
               </div>
             </div>
-            <ul class="fix-12-12 content flex-center">
-              <li class="flex-left-top">
-                <h1>1</h1>
-                <p>ZettaBlock abstracts out low-level data layer APIs and queries by providing a single interface for unified on-chain and off-chain data layer access. </p>
-              </li>
-              <li class="flex-left-top">
-                <h1>2</h1>
-                <p>Applications built on top of ZettaBlock can transform and serve data through our real-time API or push data anywhere you want like Postgres and S3. All you need is SQL.</p>
-              </li>
-
-            </ul>
           </div>
-
         </div>
       </div>
       <div class="background" style="background:#fff;"></div>
     </section>
-    <!-- Slide 3 (#16) -->
+
+    <!-- Slide 3 -->
     <section id="usecase" class="slide slide3 whiteSlide">
       <div class="content">
         <div class="container">
-          <div class="wrap">
-
-            <div class="fix-12-12 left margin-bottom-4">
-              <h1>Features<span>What's New</span></h1>
+          <div class="wrap padding-top-9 padding-bottom-9">
+            <div class="fix-12-12 fix-title">
+              <div class="title-order">
+                <div class="order">2</div>
+              </div>
+              <h1 class="title-text">Start with the developer</h1>
+              <p class="title-description">
+                ZettaBlock is a one-stop blockchain data platform to make data indexing, querying, analyzing, and sharing easy and flexible.<br/>
+                Anyone can build real-time, reliable, data-intensive dApps via SQL without the complexity of maintaining infrastructure.
+              </p>
             </div>
-            <div class="fix-12-12 feature flex-left-top">
+            <!-- 图表 -->
+            <div class="fix-12-12 flex-left-top margin-top-10">
+
+            </div>
+            <!-- 数字 -->
+            <ul class="fix-12-12 data-number">
+              <li>
+                <h1 id="slide3Number1"></h1>
+                <h2>Transactions</h2>
+                <p>Rich transactions indexed and decoded for 8+ blockchains since genesis.</p>
+              </li>
+              <li>
+                <h1 id="slide3Number2"></h1>
+                <h2>Smart Contracts</h2>
+                <p>Contracts available with internal data structures for querying.</p>
+              </li>
+              <li>
+                <h1 id="slide3Number3"></h1>
+                <h2>Price Feeds </h2>
+                <p>Price feeds for fiat and crypto pairs.</p>
+              </li>
+              <li>
+                <h1 id="slide3Number4"></h1>
+                <h2>180 Day Uptime</h2>
+                <p>Truely reliable platform for decentralised products of the future.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="background" style="background:#fff;"></div>
+    </section>
+
+    <!-- Slide 4 -->
+    <section id="usecase" class="slide slide4 whiteSlide">
+      <div class="content">
+        <div class="container">
+          <div class="wrap padding-top-9">
+            <div class="fix-12-12 fix-title">
+              <div class="title-order">
+                <div class="order">3</div>
+              </div>
+              <h1 class="title-text">Features</h1>
+              <p class="title-description">
+                ZettaBlock is a one-stop blockchain data platform to make data indexing, querying, analyzing, and sharing easy and flexible.<br/>
+                Anyone can build real-time, reliable, data-intensive dApps via SQL without the complexity of maintaining infrastructure.
+              </p>
+            </div>
+            <div class="fix-12-12 feature flex-left-top margin-top-9">
               <ul class="pill controller" data-slider-id="feature">
                 <li class="selected"></li>
                 <li></li>
@@ -122,19 +156,52 @@
                 </li>
               </ul>
             </div>
-
           </div>
-
         </div>
       </div>
       <div class="background" style="background:#fff;"></div>
     </section>
 
-    <!-- Slide 4 (#16) -->
-    <section id="about" class="slide slide4 whiteSlide">
+    <!-- Slide 5 -->
+    <section class="slide slide5 whiteSlide">
+      <div class="content">
+        <div class="container">
+          <div class="wrap padding-top-9 padding-bottom-9">
+            <div class="fix-12-12 fix-title">
+              <div class="title-order">
+                <div class="order">4</div>
+              </div>
+              <h1 class="title-text">Get Started with ZettaBlock</h1>
+            </div>
+            <div class="fix-12-12">
+              <div class="menu" :style="{'--left': slide5Left, '--width': slide5Width }">
+                <div class="menu-item" v-for="(item, index) in slide5Menu" :key="item.id"
+                  :class="{active: slide5CurrentIndex === index}"
+                  @click="handleSlide5MenuChange($event, index)"
+                  >{{item.name}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="background" style="background:#fff;"></div>
+    </section>
+
+    <!-- Slide 6 -->
+    <section id="about" class="slide slide6 whiteSlide">
       <div class="content">
         <div class="container">
           <div class="wrap">
+            <div class="fix-12-12 fix-title">
+              <div class="title-order">
+                <div class="order">5</div>
+              </div>
+              <h1 class="title-text">Features</h1>
+              <p class="title-description">
+                ZettaBlock is a one-stop blockchain data platform to make data indexing, querying, analyzing, and sharing easy and flexible.<br/>
+                Anyone can build real-time, reliable, data-intensive dApps via SQL without the complexity of maintaining infrastructure.
+              </p>
+            </div>
 
             <div class="fix-12-12 left margin-bottom-4">
               <h1 class="margin-bottom-3">Why ZettaBlock ?</h1>
@@ -213,11 +280,57 @@
       <div class="background" style="background:#fff;"></div>
     </section>
 
-    <!-- Slide 5 (#16) -->
-    <section id="blog" class="slide slide5 whiteSlide">
+    <!-- Slide 55-->
+    <section id="blog" class="slide slide55 whiteSlide">
       <div class="content">
         <div class="container">
           <div class="wrap">
+            <div class="fix-12-12 fix-title">
+              <div class="title-order">
+                <div class="order">4</div>
+              </div>
+              <h1 class="title-text">Get Started with ZettaBlock</h1>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="background" style="background:#fff;"></div>
+    </section>
+
+    <!-- Slide 6-->
+    <section id="blog" class="slide slide6 whiteSlide">
+      <div class="content">
+        <div class="container">
+          <div class="wrap">
+            <div class="fix-12-12 fix-title">
+              <div class="title-order">
+                <div class="order">5</div>
+              </div>
+              <h1 class="title-text">WHY ZettaBlock ?</h1>
+              <p class="title-description">
+                ZettaBlock is a one-stop blockchain data platform to make data indexing, querying, analyzing, and <br/> sharing easy and flexible. Anyone can build real-time, reliable.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="background" style="background:#fff;"></div>
+    </section>
+
+    <!-- Slide 7 -->
+    <section id="blog" class="slide slide7 whiteSlide">
+      <div class="content">
+        <div class="container">
+          <div class="wrap">
+            <div class="fix-12-12 fix-title">
+              <div class="title-order">
+                <div class="order">6</div>
+              </div>
+              <h1 class="title-text">Recent Articles</h1>
+            </div>
+
             <div class="fix-12-12 newslette">
               <h1>Newslette</h1>
               <h2>Say goodbye to slow and unstable data infra</h2>
@@ -285,6 +398,7 @@
       </div>
       <div class="background" style="background:#fff;"></div>
     </section>
+
     <div class="form-container" v-show="showForm">
         <div class="form-content">
           <div class="close">
@@ -315,6 +429,14 @@
   import { slidesFunction } from "../utils/slides_v5.2.1";
   import SvgLibrary from "../components/SvgLibrary.vue";
   import Panels from "../components/Panels.vue";
+  import bounty from "bounty";
+  import gsap from 'gsap'
+  import ScrollTrigger from 'gsap/ScrollTrigger'
+import { nextTick } from '_vue@2.7.13@vue';
+  gsap.registerPlugin(ScrollTrigger)
+
+
+
 
   export default {
     name: "home",
@@ -326,24 +448,109 @@
       return {
         scrollOffer: 0,
         showForm: false,
+        slide2CurrentIndex: 1,
+        slide2Left: 0,
+        slide5CurrentIndex: 0,
+        slide5Left: 0,
+        slide5Width: 0,
+        slide5Menu: [
+          {id: 1, name: 'NFT'},
+          {id: 2, name: 'DeFi'},
+          {id: 3, name: 'Wallet'},
+          {id: 4, name: 'Data Analytics'},
+          {id: 5, name: 'Blockchains'},
+        ]
       };
     },
     created() {
       document.title = "ZettaBlock - The Unified Web3 Data Platform";
-      $(window).on("load", function () {
-        $(".twentytwenty").twentytwenty();
-      });
     },
     mounted() {
       setTimeout(() => {
         this.onCreateView();
       }, 100);
+      this.$nextTick(() => {
+        this.initSlide3()
+        this.handleSlide5MenuChange({target: $('.menu-item')[0]}, 0)
+      })
     },
     watch: {},
     destroyed() {
       this.removeHome();
     },
     methods: {
+      // Slide2中的切换
+      handleSlide2CurrentIndexChange ({ target }, index) {
+        const { width, left } = target.getBoundingClientRect()
+        const { left: parentLeft } = target.parentNode.getBoundingClientRect()
+        this.slide2Left = left - parentLeft + 'px'
+        this.slide2CurrentIndex = index
+      },
+
+      // Slide3中的方法
+      initSlide3 () {
+        ScrollTrigger.create({
+          trigger: '.slide3 .data-number',
+          start: 'top bottom-=50px',
+          end: 'bottom top',
+          // markers: true,
+          onEnter: () => {
+            this.showCount()
+          },
+        })
+      },
+      showCount () {
+        bounty({
+          el: '#slide3Number1',
+          value: '110B+',
+          lineHeight: 1,
+          height: 60,
+          letterSpacing: -1,
+          animationDelay: 100,
+          letterAnimationDelay: 200,
+          duration: 3000,
+        });
+        bounty({
+          el: '#slide3Number2',
+          value: '1M+',
+          lineHeight: 1,
+          height: 60,
+          letterSpacing: -1,
+          animationDelay: 100,
+          letterAnimationDelay: 200,
+          duration: 3000,
+        });
+        bounty({
+          el: '#slide3Number3',
+          value: '4.3B+',
+          lineHeight: 1,
+          height: 60,
+          letterSpacing: -1,
+          animationDelay: 100,
+          letterAnimationDelay: 200,
+          duration: 3000,
+        });
+        bounty({
+          el: '#slide3Number4',
+          value: '99.95%',
+          lineHeight: 1,
+          height: 60,
+          letterSpacing: -1,
+          animationDelay: 100,
+          letterAnimationDelay: 200,
+          duration: 3000,
+        });
+      },
+
+      // Slide5
+      handleSlide5MenuChange({ target }, i) {
+        const { width, left } = target.getBoundingClientRect()
+        const { left: parentLeft } = target.parentNode.getBoundingClientRect()
+        this.slide5Left = left - parentLeft + 'px'
+        this.slide5Width = width + 'px'
+        this.slide5CurrentIndex = i
+      },
+
       toggleSignup() {
         console.log("toggle",this.showForm);
         this.showForm = !this.showForm;
@@ -419,7 +626,7 @@
     }
   }
   .form-container {
-    z-index: 100;
+    z-index: 300;
     position: fixed;
     background-color: rgba(0,0,0,1);
     top: 0;
@@ -433,371 +640,224 @@
   .posr {
     position: relative;
   }
+
+  .fix-title{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .title-order{
+      width: 165px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url(/assets/images/title_bg.png) no-repeat;
+      .order{
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        background: linear-gradient(180deg, #FBFAFF 0%, #FFFFFF 25.98%, #EFEFFF 87.14%, #F5F3FD 100%);
+        border: 1px solid rgba(40, 26, 240, 0.04);
+        box-shadow: 0px 27px 11px rgba(40, 27, 240, 0.01), 0px 15px 9px rgba(40, 27, 240, 0.02), 0px 7px 7px rgba(40, 27, 240, 0.04), 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
+        border-radius: 50px;
+        font-family: 'Basier Square';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        color: #281AF0;
+      }
+    }
+    .title-text{
+      font-family: 'Basier Square';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 54px;
+      line-height: 110%;
+      color: #000000;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+    .title-description{
+      margin-top: 20px;
+      font-family: 'Basier Square';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      text-align: center;
+      color: #000000;
+      opacity: 0.5;
+    }
+  }
   .slide1 {
+    .wrap{
+      .fix-12-12{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        .fix-main-title{
+          flex: 1;
+          padding-bottom: 40px;
+        }
+      }
+    }
     .logo-ani {
       width: 60px;
       position: relative;
       top: 0;
     }
     .main-title {
-      width: 826px;
-      height: 198px;
+      width: 100%;
+      font-size: 80px;
+      font-weight: 700;
+      line-height: 88px;
+      text-align: center;
+      text-transform: uppercase;
+      background: radial-gradient(53.42% 202.11% at 78.75% 25.76%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #281AF0;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+
     }
-    p {
-      font-family: "Archia";
+    .access-button{
+      width: 248px;
+      height: 52px;
+      background: radial-gradient(129.53% 327.88% at 69.76% 0%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #2914F7;
+      box-shadow: 0px 77px 31px rgba(106, 38, 249, 0.01), 0px 43px 26px rgba(106, 38, 249, 0.05), 0px 19px 19px rgba(106, 38, 249, 0.09), 0px 5px 11px rgba(106, 38, 249, 0.1), 0px 0px 0px rgba(106, 38, 249, 0.1);
+      border-radius: 4px;
+      text-align: center;
+      margin-bottom: 45px;
+      .button-text{
+        font-family: 'Basier Square';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 100%;
+      }
+      .button-icon{
+        width: 24px;
+        height: 24px;
+        margin-left: 5px;
+        margin-right: 0;
+      }
+    }
+    .description{
+      font-family: "Basier Square";
       font-style: normal;
-      font-weight: 500;
+      font-weight: 400;
       font-size: 16px;
       line-height: 150%;
-      /* or 24px */
-
       text-align: center;
       letter-spacing: -0.2px;
-
       color: #000000;
     }
-    .mouse {
-      width: 48px;
-      height: 48px;
+    .scroll-tip{
+      font-family: 'Basier Square';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 100%;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #5A20FB;
+      opacity: 0.2;
+      text-align: center;
+      margin-top: 100px;
     }
     .background {
       background-size: cover;
       background-position: center bottom;
-      max-height: 100vh;
     }
-    .data {
-      display: flex;
-      margin-top: 160px;
-      gap: 30px;
-      flex: 1;
-      li {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        align-content: flex-start;
-        border-top: 2px solid #281af0;
-        padding-top: 25px;
-        min-width: 310px;
 
-        h1 {
-          font-family: "Archia";
-          font-style: normal;
-          font-weight: 600;
-          font-size: 60px;
-          line-height: 100%;
-          letter-spacing: -0.2px;
-          color: #281af0;
-          margin-bottom: 5px;
-        }
-        h2 {
-          font-family: "Archia";
-          font-style: normal;
-          font-weight: 600;
-          font-size: 32px;
-          line-height: 150%;
-          letter-spacing: -0.2px;
-          color: #000000;
-          margin-bottom: 20px;
-        }
-        p {
-          font-family: "Archia";
-          font-style: normal;
-          font-weight: 500;
-          font-size: 15px;
-          line-height: 150%;
-          letter-spacing: -0.2px;
-          color: #000000;
-          text-align: left;
-        }
-      }
-    }
   }
   .slide2 {
-    h1 {
-      font-family: "Archia";
-      font-style: normal;
-      font-weight: 600;
-      font-size: 60px;
-      line-height: 110%;
-      /* identical to box height, or 66px */
-
-      display: flex;
-      align-items: center;
-      letter-spacing: -0.2px;
-
-      color: #281af0;
+    .container{
+      height: auto !important;
+    }
+    .slide-content{
       width: 100%;
-      span {
-        font-weight: 250;
-        margin-left: 24px;
-      }
-    }
-    .beforeafter {
-      .twentytwenty-before-label:before {
-        content: "With ZettaBlock";
-      }
-      .twentytwenty-after-label:before {
-        content: "Without ZettaBlock";
-      }
-      html:not(.page-loaded) .twentytwenty img:nth-child(1) {
-        display: none;
-      }
-      .twentytwenty-horizontal .twentytwenty-handle:before,
-      .twentytwenty-horizontal .twentytwenty-handle:after,
-      .twentytwenty-vertical .twentytwenty-handle:before,
-      .twentytwenty-vertical .twentytwenty-handle:after {
-        content: " ";
-        display: block;
-        background: #281af0;
+      border: 1px solid rgba(40, 26, 240, 0.08);
+      border-radius: 12px;
+      margin-top: 80px;
+      position: relative;
+      .content-title{
         position: absolute;
-        z-index: 30;
-      }
-
-      .twentytwenty-horizontal .twentytwenty-handle:before,
-      .twentytwenty-horizontal .twentytwenty-handle:after {
-        width: 2px;
-        height: 9999px;
+        top: -30px;
         left: 50%;
-        margin-left: -1.5px;
+        transform: translateX(-50%);
+        height: 60px;
+        width: 535px;
+        border-radius: 50px;
+        background: linear-gradient(180deg, #FBFAFF 0%, #FFFFFF 25.98%, #EFEFFF 87.14%, #F5F3FD 100%);
+        border: 1px solid rgba(40, 26, 240, 0.04);
+        box-shadow: 0px 27px 11px rgba(40, 27, 240, 0.01), 0px 15px 9px rgba(40, 27, 240, 0.02), 0px 7px 7px rgba(40, 27, 240, 0.04), 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
+        border-radius: 50px;
+        display: flex;
+        z-index: 1;
+        .title-item{
+          flex: 1;
+          height: 58px;
+          line-height: 58px;
+          text-align: center;
+          font-family: 'Basier Square';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          color: rgba(40, 26, 240, 0.4);
+          cursor: pointer;
+          &.active{
+            color: #FFFFFF;
+          }
+        }
+        &::before{
+          content: '';
+          position: absolute;
+          width: 50%;
+          left: var(--left);
+          height: 100%;
+          background: radial-gradient(129.53% 327.88% at 69.76% 0%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #2914F7;
+          box-shadow: 0px 77px 31px rgba(106, 38, 249, 0.01), 0px 43px 26px rgba(106, 38, 249, 0.05), 0px 19px 19px rgba(106, 38, 249, 0.09), 0px 5px 11px rgba(106, 38, 249, 0.1), 0px 0px 0px rgba(106, 38, 249, 0.1);
+          border-radius: 99px;
+          z-index: -1;
+          transition: all .4s;
+          transition-timing-function: ease-in-out;
+        }
       }
-
-      .twentytwenty-vertical .twentytwenty-handle:before,
-      .twentytwenty-vertical .twentytwenty-handle:after {
-        width: 9999px;
-        height: 3px;
-        top: 50%;
-        margin-top: -1.5px;
-      }
-
-      .twentytwenty-before-label,
-      .twentytwenty-after-label,
-      .twentytwenty-overlay {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
-      }
-
-      .twentytwenty-before-label,
-      .twentytwenty-after-label,
-      .twentytwenty-overlay {
-        -webkit-transition-duration: 0.5s;
-        -moz-transition-duration: 0.5s;
-        transition-duration: 0.5s;
-      }
-
-      .twentytwenty-before-label,
-      .twentytwenty-after-label {
-        -webkit-transition-property: opacity;
-        -moz-transition-property: opacity;
-        transition-property: opacity;
-      }
-
-      .twentytwenty-before-label:before,
-      .twentytwenty-after-label:before {
-        color: white;
-        font-size: 13px;
-        letter-spacing: 0.1em;
-      }
-
-      .twentytwenty-before-label:before,
-      .twentytwenty-after-label:before {
-        position: absolute;
-        background: rgba(255, 255, 255, 0.2);
-        line-height: 38px;
-        padding: 0 20px;
-        -webkit-border-radius: 2px;
-        -moz-border-radius: 2px;
-        border-radius: 2px;
-      }
-
-      .twentytwenty-horizontal .twentytwenty-before-label:before,
-      .twentytwenty-horizontal .twentytwenty-after-label:before {
-        top: 50%;
-        margin-top: -19px;
-      }
-
-      .twentytwenty-vertical .twentytwenty-before-label:before,
-      .twentytwenty-vertical .twentytwenty-after-label:before {
-        left: 50%;
-        margin-left: -45px;
-        text-align: center;
-        width: 90px;
-      }
-
-      .twentytwenty-left-arrow,
-      .twentytwenty-right-arrow,
-      .twentytwenty-up-arrow,
-      .twentytwenty-down-arrow {
-        width: 0;
-        height: 0;
-        border: 6px inset transparent;
-        position: absolute;
-      }
-
-      .twentytwenty-left-arrow,
-      .twentytwenty-right-arrow {
-        top: 50%;
-        margin-top: -6px;
-      }
-
-      .twentytwenty-up-arrow,
-      .twentytwenty-down-arrow {
-        left: 50%;
-        margin-left: -6px;
-      }
-
-      .twentytwenty-container {
-        -webkit-box-sizing: content-box;
-        -moz-box-sizing: content-box;
-        box-sizing: content-box;
-        z-index: 0;
-        overflow: hidden;
+      .content-image{
         position: relative;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-      }
-      .twentytwenty-container img {
-        max-width: 100%;
-        position: absolute;
-        top: 0;
-        display: block;
-      }
-      .twentytwenty-container.active .twentytwenty-overlay,
-      .twentytwenty-container.active :hover.twentytwenty-overlay {
-        background: rgba(0, 0, 0, 0);
-      }
-      .twentytwenty-container.active .twentytwenty-overlay .twentytwenty-before-label,
-      .twentytwenty-container.active .twentytwenty-overlay .twentytwenty-after-label,
-      .twentytwenty-container.active :hover.twentytwenty-overlay .twentytwenty-before-label,
-      .twentytwenty-container.active :hover.twentytwenty-overlay .twentytwenty-after-label {
-        opacity: 0;
-      }
-      .twentytwenty-container * {
-        -webkit-box-sizing: content-box;
-        -moz-box-sizing: content-box;
-        box-sizing: content-box;
-      }
-
-      .twentytwenty-before-label {
-        opacity: 0;
-      }
-      .twentytwenty-before-label:before {
-        content: attr(data-content);
-      }
-
-      .twentytwenty-after-label {
-        opacity: 0;
-      }
-      .twentytwenty-after-label:before {
-        content: attr(data-content);
-      }
-
-      .twentytwenty-horizontal .twentytwenty-before-label:before {
-        left: 10px;
-      }
-
-      .twentytwenty-horizontal .twentytwenty-after-label:before {
-        right: 10px;
-      }
-
-      .twentytwenty-vertical .twentytwenty-before-label:before {
-        top: 10px;
-      }
-
-      .twentytwenty-vertical .twentytwenty-after-label:before {
-        bottom: 10px;
-      }
-
-      .twentytwenty-overlay {
-        -webkit-transition-property: background;
-        -moz-transition-property: background;
-        transition-property: background;
-        background: rgba(0, 0, 0, 0);
-        z-index: 25;
-      }
-      .twentytwenty-overlay:hover {
-        background: rgba(0, 0, 0, 0);
-      }
-      .twentytwenty-overlay:hover .twentytwenty-after-label {
-        opacity: 0;
-      }
-      .twentytwenty-overlay:hover .twentytwenty-before-label {
-        opacity: 0;
-      }
-
-      .twentytwenty-before {
-        z-index: 20;
-      }
-
-      .twentytwenty-after {
-        z-index: 10;
-      }
-
-      .twentytwenty-handle {
-        height: 50px;
-        width: 50px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        margin-left: -28px;
-        margin-top: -25px;
-        border: 3px solid #281af0;
-        -webkit-border-radius: 1000px;
-        -moz-border-radius: 1000px;
-        border-radius: 1000px;
-        z-index: 40;
-        cursor: pointer;
-        background: #281af0;
-        filter: drop-shadow(0px 15px 6px rgba(40, 26, 240, 0.02))
-          drop-shadow(0px 9px 5px rgba(40, 26, 240, 0.05))
-          drop-shadow(0px 4px 4px rgba(40, 26, 240, 0.09))
-          drop-shadow(0px 1px 2px rgba(40, 26, 240, 0.1))
-          drop-shadow(0px 0px 0px rgba(40, 26, 240, 0.1));
-      }
-
-      .twentytwenty-horizontal .twentytwenty-handle:before {
-        bottom: 50%;
-        margin-bottom: 28px;
-      }
-      .twentytwenty-horizontal .twentytwenty-handle:after {
-        top: 50%;
-        margin-top: 22px;
-      }
-
-      .twentytwenty-vertical .twentytwenty-handle:before {
-        left: 50%;
-        margin-left: 22px;
-      }
-      .twentytwenty-vertical .twentytwenty-handle:after {
-        right: 50%;
-        margin-right: 22px;
-      }
-
-      .twentytwenty-left-arrow {
-        border-right: 6px solid white;
-        left: 50%;
-        margin-left: -17px;
-      }
-
-      .twentytwenty-right-arrow {
-        border-left: 6px solid white;
-        right: 50%;
-        margin-right: -17px;
-      }
-
-      .twentytwenty-up-arrow {
-        border-bottom: 6px solid white;
-        top: 50%;
-        margin-top: -17px;
-      }
-
-      .twentytwenty-down-arrow {
-        border-top: 6px solid white;
-        bottom: 50%;
-        margin-bottom: -17px;
+        width: 100%;
+        height: 0;
+        padding-bottom: 50.7246%;
+        overflow: hidden;
+        display: flex;
+        .content-image-inner{
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 200%;
+          height: 100%;
+          transition: all .4s;
+          transition-timing-function: ease-in-out;
+          .img-item{
+            width: 50%;
+            height: 100%;
+            display: inline-block;
+            img{
+              display: block;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
       }
     }
+
     .content {
       gap: 40px;
       li {
@@ -827,24 +887,62 @@
     }
   }
   .slide3 {
-    h1 {
-      font-family: "Archia";
-      font-style: normal;
-      font-weight: 600;
-      font-size: 60px;
-      line-height: 110%;
-      /* identical to box height, or 66px */
+    .container{
+      height: auto !important;
+    }
 
-      display: flex;
-      align-items: center;
-      letter-spacing: -0.2px;
-
-      color: #281af0;
-      width: 100%;
-      span {
-        font-weight: 250;
-        margin-left: 24px;
+    .data-number {
+      display: grid;
+      grid-template-rows: minmax(100px auto);
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-auto-flow: dense;
+      grid-gap: 10px;
+      margin-top: 160px;
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        h1 {
+          font-family: 'Basier Square';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 60px;
+          height: 60px;
+          line-height: 100%;
+          letter-spacing: -0.2px;
+          color: #281af0;
+          margin-bottom: 5px;
+          svg{
+            fill: #281af0 !important;
+          }
+        }
+        h2 {
+          font-family: "Basier Square";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 150%;
+          letter-spacing: -0.2px;
+          color: #000000;
+          margin-bottom: 12px;
+        }
+        p {
+          font-family: "Basier Square";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+          letter-spacing: -0.2px;
+          color: #000000;
+          text-align: left;
+        }
       }
+    }
+  }
+  .slide4 {
+    .container{
+      height: auto !important;
     }
     .feature {
       .pill {
@@ -888,42 +986,60 @@
       }
     }
   }
-  .slide4 {
+  .slide5 {
+    .container{
+      height: auto !important;
+    }
+    .menu{
+      position: relative;
+      display: flex;
+      margin-top: 35px;
+      justify-content: center;
+      .menu-item{
+        z-index: 10;
+        margin: 0 15px;
+        padding: 18px 46px;
+        font-family: 'Basier Square';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: -0.2px;
+        color: rgba(40, 26, 240, 0.3);
+        cursor: pointer;
+        background: linear-gradient(180deg, #FBFAFF 0%, #FFFFFF 25.98%, #EFEFFF 87.14%, #F5F3FD 100%);
+        border: 1px solid rgba(40, 26, 240, 0.04);
+        box-shadow: 0px 27px 11px rgba(40, 27, 240, 0.01), 0px 15px 9px rgba(40, 27, 240, 0.02), 0px 7px 7px rgba(40, 27, 240, 0.04), 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
+        border-radius: 50px;
+        transition-delay: 0s;
+      }
+      .active {
+        color: #fff;
+        background: transparent;
+        transition-delay: 0.3s;
+      }
+      &::before {
+        position: absolute;
+        left: var(--left);
+        width: var(--width);
+        height: 100%;
+        content: '';
+        background: radial-gradient(129.53% 327.88% at 69.76% 0%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #2914F7;
+        box-shadow: 0px 77px 31px rgba(106, 38, 249, 0.01), 0px 43px 26px rgba(106, 38, 249, 0.05), 0px 19px 19px rgba(106, 38, 249, 0.09), 0px 5px 11px rgba(106, 38, 249, 0.1), 0px 0px 0px rgba(106, 38, 249, 0.1);
+        border-radius: 99px;
+        transition: all .4s;
+        transition-timing-function: ease-in-out;
+      }
+    }
+  }
+  .slide6 {
     .container .wrap:not(.noSpaces),
     .container .wrap.spaceWrap,
     .container .wrap .spaceWrap {
       padding: 120px calc(8% + 15px);
       padding-bottom: 0px;
     }
-    h1 {
-      font-family: "Archia";
-      font-style: normal;
-      font-weight: 600;
-      font-size: 60px;
-      line-height: 110%;
-      /* identical to box height, or 66px */
 
-      display: flex;
-      align-items: center;
-      letter-spacing: -0.2px;
-
-      color: #281af0;
-      width: 100%;
-      span {
-        font-weight: 250;
-        margin-left: 24px;
-      }
-    }
-    p {
-      font-family: "Archia";
-      font-style: normal;
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 150%;
-      letter-spacing: -0.2px;
-      color: #000000;
-      opacity: 0.7;
-    }
     .why {
       position: relative;
       display: flex;
@@ -1080,7 +1196,7 @@
       }
     }
   }
-  .slide5 {
+  .slide55 {
     .wrap {
       width: 100%;
       vertical-align: top;
