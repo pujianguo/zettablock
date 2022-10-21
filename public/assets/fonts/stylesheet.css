@@ -1,0 +1,66 @@
+
+@font-face {
+	font-family: 'Basier Square';
+	src: url('/assets/fonts/basiersquare-regular-webfont.woff2') format('woff2'),
+		url('/assets/fonts/basiersquare-regular-webfont.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Basier Square';
+	src: url('/assets/fonts/basiersquare-regularitalic-webfont.woff2') format('woff2'),
+		url('/assets/fonts/basiersquare-regularitalic-webfont.woff') format('woff');
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Basier Square_medium';
+	src: url('/assets/fonts/basiersquare-medium-webfont.woff2') format('woff2'),
+		url('/assets/fonts/basiersquare-medium-webfont.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Basier Square';
+	src: url('/assets/fonts/basiersquare-mediumitalic-webfont.woff2') format('woff2'),
+		url('/assets/fonts/basiersquare-mediumitalic-webfont.woff') format('woff');
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Basier Square';
+	src: url('/assets/fonts/basiersquare-semibold-webfont.woff2') format('woff2'),
+		url('/assets/fonts/basiersquare-semibold-webfont.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Basier Square';
+	src: url('/assets/fonts/basiersquare-semibolditalic-webfont.woff2') format('woff2'),
+		url('/assets/fonts/basiersquare-semibolditalic-webfont.woff') format('woff');
+	font-weight: 600;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Basier Square';
+	src: url('/assets/fonts/basiersquare-bold-webfont.woff2') format('woff2'),
+		url('/assets/fonts/basiersquare-bold-webfont.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Basier Square';
+	src: url('/assets/fonts/basiersquare-bolditalic-webfont.woff2') format('woff2'),
+		url('/assets/fonts/basiersquare-bolditalic-webfont.woff') format('woff');
+	font-weight: 700;
+	font-style: italic;
+	font-display: swap;
+}

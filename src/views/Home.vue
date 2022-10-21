@@ -238,45 +238,45 @@
                 <h1>Join the Web3 Data Revolution</h1>
                 <ul>
                   <li>
-                <a href="https://twitter.com/ZettaBlockHQ" target="_blank"> 
+                <a href="https://twitter.com/ZettaBlockHQ" target="_blank">
                   <svg>
                       <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#social-twitter"></use>
                     </svg></a></li>
                   <li>
-                <a href="https://www.linkedin.com/company/zettablockhq/" target="_blank"> 
+                <a href="https://www.linkedin.com/company/zettablockhq/" target="_blank">
                   <svg>
                       <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#social-linkedin"></use>
                     </svg></a></li>
                   <li>
-                <a href="https://discord.gg/px42xPBFkN" target="_blank"> 
+                <a href="https://discord.gg/px42xPBFkN" target="_blank">
                   <svg>
                       <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#social-discord"></use>
                     </svg></a></li>
                   <li>
-                <a href="https://zettablockhq.medium.com/" target="_blank"> 
+                <a href="https://zettablockhq.medium.com/" target="_blank">
                   <svg>
                       <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#social-medium"></use>
                     </svg></a></li>
                   <li>
-                <a href="https://github.com/Zettablock" target="_blank"> 
+                <a href="https://github.com/Zettablock" target="_blank">
                   <svg>
                       <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#social-github"></use>
                     </svg></a></li>
                   <li>
                 <a href=" https://www.youtube.com/channel/UCZ7OYTGcXA93faGcmnyjTzw
-" target="_blank"> 
+" target="_blank">
                   <svg>
                       <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#social-youtube"></use>
                     </svg></a></li>
                 </ul>
                 <h1>Subscribe to Our Mailing List</h1>
-                
+
                 <div class="signup">
                   <form class="fix-12-12 subscribe" action="https://zettablock.us14.list-manage.com/subscribe/post?u=1ff0f35da3b86da52617aadd6&amp;id=bc40fdafb4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate><input type="email" value="" name="EMAIL" placeholder="Email Address">
                   <button class="signup-button" href="#">Sign Up</button></form>
-                  
+
                 </div>
-              
+
 
               </div>
             </div>
