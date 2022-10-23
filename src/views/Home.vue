@@ -166,7 +166,7 @@
     <section class="slide slide5 whiteSlide">
       <div class="content">
         <div class="container">
-          <div class="wrap padding-top-9 padding-bottom-9">
+          <div class="wrap padding-top-9 padding-bottom-8">
             <div class="fix-12-12 fix-title">
               <div class="title-order">
                 <div class="order">4</div>
@@ -177,8 +177,27 @@
               <div class="menu" :style="{'--left': slide5Left, '--width': slide5Width }">
                 <div class="menu-item" v-for="(item, index) in slide5Menu" :key="item.id"
                   :class="{active: slide5CurrentIndex === index}"
-                  @click="handleSlide5MenuChange($event, index)"
+                  @click="handleSlide5MenuChange(index)"
                   >{{item.name}}</div>
+              </div>
+              <div class="swiper" id="slide5Swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide swiper-slide-nft">
+                    swiper-slide-nft
+                  </div>
+                  <div class="swiper-slide swiper-slide-defi">
+                    swiper-slide-defi
+                  </div>
+                  <div class="swiper-slide swiper-slide-wallet">
+                    swiper-slide-wallet
+                  </div>
+                  <div class="swiper-slide swiper-slide-analytics">
+                    swiper-slide-analytics
+                  </div>
+                  <div class="swiper-slide swiper-slide-blockchains">
+                    swiper-slide-chains
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -191,7 +210,7 @@
     <section id="blog" class="slide slide6 whiteSlide">
       <div class="content">
         <div class="container">
-          <div class="wrap">
+          <div class="wrap padding-top-8">
             <div class="fix-12-12 fix-title">
               <div class="title-order">
                 <div class="order">5</div>
@@ -436,12 +455,14 @@
     },
     mounted() {
       this.slide7Swiper = null
+      this.slide7Swiper = null
       setTimeout(() => {
         this.onCreateView();
       }, 100);
       this.$nextTick(() => {
         this.initSlide3()
-        this.handleSlide5MenuChange({target: $('.menu-item')[0]}, 0)
+        this.handleSlide5MenuChange(0, true)
+        this.initSlide5Swiper()
         this.initSlide7Swiper()
       })
     },
@@ -518,12 +539,28 @@
       },
 
       // Slide5
-      handleSlide5MenuChange({ target }, i) {
+      handleSlide5MenuChange(i, isInit = false) {
+        const target = $('.menu-item')[i]
         const { width, left } = target.getBoundingClientRect()
         const { left: parentLeft } = target.parentNode.getBoundingClientRect()
         this.slide5Left = left - parentLeft + 'px'
         this.slide5Width = width + 'px'
         this.slide5CurrentIndex = i
+        if (!isInit) {
+          this.slide5Swiper.slideTo(i)
+        }
+      },
+      initSlide5Swiper () {
+        this.slide5Swiper = new Swiper('#slide5Swiper', {
+          slidesPerView: "auto",
+          // loop: true,
+        })
+        this.slide5Swiper.on('activeIndexChange', (e) => {
+          const { realIndex } = e
+          if (realIndex !== this.slide7SwiperIndex) {
+            this.handleSlide5MenuChange(realIndex)
+          }
+        })
       },
 
       initSlide7Swiper () {
@@ -1034,6 +1071,18 @@
         border-radius: 99px;
         transition: all .4s;
         transition-timing-function: ease-in-out;
+      }
+    }
+    .swiper{
+      width: 100%;
+      margin-top: 100px;
+      height: 700px;
+      background: #FAFAFF;
+      border: 1px solid rgba(40, 26, 240, 0.08);
+      border-radius: 12px;
+      .swiper-slide{
+        width: 100%;
+        height: 100%;
       }
     }
   }
