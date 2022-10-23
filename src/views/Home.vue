@@ -187,117 +187,6 @@
       <div class="background" style="background:#fff;"></div>
     </section>
 
-    <!-- Slide 6 -->
-    <section id="about" class="slide slide6 whiteSlide">
-      <div class="content">
-        <div class="container">
-          <div class="wrap">
-            <div class="fix-12-12 fix-title">
-              <div class="title-order">
-                <div class="order">5</div>
-              </div>
-              <h1 class="title-text">Features</h1>
-              <p class="title-description">
-                ZettaBlock is a one-stop blockchain data platform to make data indexing, querying, analyzing, and sharing easy and flexible.<br/>
-                Anyone can build real-time, reliable, data-intensive dApps via SQL without the complexity of maintaining infrastructure.
-              </p>
-            </div>
-
-            <div class="fix-12-12 left margin-bottom-4">
-              <h1 class="margin-bottom-3">Why ZettaBlock ?</h1>
-              <p>ZettaBlock is a one-stop blockchain data platform to make data<br />
-                indexing, querying, analyzing, and sharing easy and flexible. <br />
-                Anyone can build real-time, reliable.</p>
-              <div class="fix-12-12 why flex-left-top">
-                <div class="col">
-                  <img src="assets/why-1.png" alt="" />
-                </div>
-                <div class="col">
-                  <img src="assets/why-2.png" alt="" />
-                  <img src="assets/why-3.png" alt="" />
-                </div>
-                <div class="col">
-                  <img src="assets/why-4.png" alt="" />
-                  <img src="assets/why-5.png" alt="" />
-                </div>
-                <div class="col">
-                  <img src="assets/why-6.png" alt="" />
-                  <img src="assets/why-7.png" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="fix-12-12 news margin-bottom-4">
-              <h1 class="margin-bottom-3">Recent<br /> Articles</h1>
-              <button class="page-button" @click="clicklSrcoll('right')">
-                <svg>
-                  <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#page-left"></use>
-                </svg>
-              </button>
-              <button class="page-button" @click="clicklSrcoll('left')">
-                <svg>
-                  <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#page-right"></use>
-                </svg>
-              </button>
-              <div id="marquee" class="area10" style="position: relative">
-                <ul class="flex-left-top">
-                  <li class="fromBottom ae-3">
-                    <svg>
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-shape"></use>
-                    </svg>
-                    <h2>Get started with ZettaBlock</h2>
-                    <p>Deploying a modern data stack in 5 minutes</p>
-                    <a href="#">READ<svg>
-                        <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#arrow-right-blue"></use>
-                      </svg></a>
-                  </li>
-                  <li class="fromBottom ae-4">
-                    <svg>
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-shape"></use>
-                    </svg>
-                    <h2>Rethinking the morden data stack</h2>
-                    <a href="#">READ<svg>
-                        <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#arrow-right-blue"></use>
-                      </svg></a>
-                  </li>
-                  <li class="fromBottom ae-5">
-                    <svg>
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-shape"></use>
-                    </svg>
-                    <h2>Orchestrate a data platform for Solana</h2>
-                    <a href="#">READ<svg>
-                        <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#arrow-right-blue"></use>
-                      </svg></a>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-      <div class="background" style="background:#fff;"></div>
-    </section>
-
-    <!-- Slide 55-->
-    <section id="blog" class="slide slide55 whiteSlide">
-      <div class="content">
-        <div class="container">
-          <div class="wrap">
-            <div class="fix-12-12 fix-title">
-              <div class="title-order">
-                <div class="order">4</div>
-              </div>
-              <h1 class="title-text">Get Started with ZettaBlock</h1>
-            </div>
-
-          </div>
-        </div>
-      </div>
-      <div class="background" style="background:#fff;"></div>
-    </section>
-
     <!-- Slide 6-->
     <section id="blog" class="slide slide6 whiteSlide">
       <div class="content">
@@ -312,15 +201,60 @@
                 ZettaBlock is a one-stop blockchain data platform to make data indexing, querying, analyzing, and <br/> sharing easy and flexible. Anyone can build real-time, reliable.
               </p>
             </div>
-
+            <div class="fix-12-12 content-content">
+              <div class="item" v-for="item in slide6List" :key="item.id">
+                <svg class="item-icon">
+                  <use :href="`#${item.icon}`"></use>
+                </svg>
+                <div class="item-title">{{item.title}}</div>
+                <div class="item-desc">{{item.desc}}</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="background" style="background:#fff;"></div>
     </section>
 
-    <!-- Slide 7 -->
+    <!-- Slide 7-->
     <section id="blog" class="slide slide7 whiteSlide">
+      <div class="content">
+        <div class="container">
+          <div class="wrap">
+            <div class="fix-12-12">
+              <div class="fix-title">
+                <div class="title-order">
+                  <div class="order">6</div>
+                </div>
+                <h1 class="title-text">Recent Articles</h1>
+              </div>
+              <div class="content-content">
+                <div class="swiper">
+                  <div class="swiper-item" v-for="item in slide7List" :key="item.id">
+                    <svg class="item-icon">
+                      <use href="#union-1"></use>
+                    </svg>
+                    <div class="item-title">{{item.title}}</div>
+                    <div class="item-desc">{{item.desc}}</div>
+                    <a class="item-link" :href="item.link">
+                      <span>READ</span>
+                      <svg class="link-icon">
+                        <use href="#arrow-right"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="background" style="background:#FAFAFF;"></div>
+    </section>
+
+
+    <!-- Slide 7 -->
+    <section id="blog" class="slide slide77 whiteSlide">
       <div class="content">
         <div class="container">
           <div class="wrap">
@@ -399,6 +333,7 @@
       <div class="background" style="background:#fff;"></div>
     </section>
 
+
     <div class="form-container" v-show="showForm">
         <div class="form-content">
           <div class="close">
@@ -432,7 +367,6 @@
   import bounty from "bounty";
   import gsap from 'gsap'
   import ScrollTrigger from 'gsap/ScrollTrigger'
-import { nextTick } from '_vue@2.7.13@vue';
   gsap.registerPlugin(ScrollTrigger)
 
 
@@ -459,6 +393,21 @@ import { nextTick } from '_vue@2.7.13@vue';
           {id: 3, name: 'Wallet'},
           {id: 4, name: 'Data Analytics'},
           {id: 5, name: 'Blockchains'},
+        ],
+        slide6List: [
+          {id: 1, icon: 'ic-database', title: 'Data Unification', desc: 'Support easy access to on-chain and off-chain data from multiple data sources.'},
+          {id: 2, icon: 'ic-processor', title: 'Scalability', desc: 'Support users to easily join petabyte-scale (1,000TB+) data with SQL.'},
+          {id: 3, icon: 'ic-flag', title: 'Easy of Use', desc: 'Rich transactions indexed and decoded for 8+ blockchains since genesis.'},
+          {id: 4, icon: 'ic-performance', title: 'Absolute Performance', desc: '<0.01 second low-latency customized APIs with sub-second data freshness.'},
+          {id: 5, icon: 'ic-cashwithdraw', title: 'Cost Efficiency', desc: 'Reduce many economic costs and technical thresholds for developers.'},
+          {id: 6, icon: 'ic-stats', title: 'Analytics Supported', desc: 'Provide query builder and visualization interface for blockchain analytics.'},
+          {id: 7, icon: 'ic-doubletick', title: 'Reliability', desc: 'Provide near-perfect system uptimes to support real-time, data-intensive apps.'},
+          {id: 8, icon: 'ic-flag', title: 'More', desc: 'Looking forward to your exploration'},
+        ],
+        slide7List: [
+          {id: 1, title: 'Get started with ZettaBlock', desc: 'Deploying a modern data stack in 5 minutes', link: ''},
+          {id: 2, title: 'Rethinking the morden data stack', desc: '',  link: ''},
+          {id: 3, title: 'Orchestrate a data platform for Solana', desc: '', link: ''},
         ]
       };
     },
@@ -1033,6 +982,149 @@ import { nextTick } from '_vue@2.7.13@vue';
     }
   }
   .slide6 {
+    .container{
+      height: auto !important;
+    }
+    .content-content{
+      display: grid;
+      grid-template-rows: minmax(100px auto);
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-auto-flow: dense;
+      grid-gap: 30px;
+      margin-top: 70px;
+      .item{
+        padding: 40px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background: #FAFAFF;
+        border: 1px solid rgba(40, 26, 240, 0.08);
+        border-radius: 12px;
+        text-align: left;
+        .item-icon{
+          width: 32px;
+          height: 32px;
+        }
+        .item-title{
+          font-family: 'Basier Square';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 32px;
+          line-height: 120%;
+          color: #392CFF;
+          margin-bottom: 20px;
+        }
+        .item-desc{
+          font-family: 'Basier Square';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 150%;
+          letter-spacing: 0.2px;
+          color: #000000;
+          opacity: 0.7;
+        }
+      }
+    }
+
+  }
+  .slide7 {
+    .container{
+      height: auto !important;
+      .wrap{
+        padding-right: 0;
+        padding-bottom: 140px;
+      }
+    }
+    .fix-12-12{
+      display: flex;
+      .fix-title{
+        width: 256px !important;
+        height: 188px !important;
+        margin-right: 90px !important;
+        position: relative;
+        .title-order{
+          position: absolute;
+          top: 0;
+          left: 0;
+          align-items: flex-start;
+          justify-content: flex-start;
+        }
+        .title-text{
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          text-align: left;
+          text-transform: uppercase;
+        }
+      }
+      .content-content{
+        flex: 1;
+        overflow: hidden;
+        // background: #eee;
+        .swiper{
+          display: flex;
+          .swiper-item{
+            width: 460px;
+            height: 380px;
+            padding: 30px;
+            flex-shrink: 0;
+            background: #FFFFFF;
+            margin-right: 30px;
+            border: 1px solid rgba(40, 26, 240, 0.08);
+            box-shadow: 14px 53px 33px rgba(0, 0, 97, 0.02), 6px 23px 24px rgba(0, 0, 97, 0.03), 2px 6px 13px rgba(0, 0, 97, 0.03), 0px 0px 0px rgba(0, 0, 97, 0.03);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+
+            .item-icon{
+              width: 24px;
+              height: 15px;
+            }
+            .item-title{
+              margin-top: 24px;
+              font-family: 'Basier Square';
+              font-style: normal;
+              font-weight: 500;
+              font-size: 48px;
+              line-height: 110%;
+              letter-spacing: -0.2px;
+              color: #000000;
+            }
+            .item-desc{
+              margin-top: 10px;
+              font-family: 'Basier Square';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 22px;
+              line-height: 150%;
+              color: #000000;
+              opacity: 0.5;
+              flex: 1;
+            }
+            .item-link{
+              font-family: 'Basier Square';
+              font-style: normal;
+              font-weight: 600;
+              font-size: 24px;
+              line-height: 100%;
+              display: flex;
+              align-items: center;
+              letter-spacing: -0.2px;
+              color: #281AF0;
+              .link-icon{
+                width: 32px;
+                height: 32px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .slide66 {
     .container .wrap:not(.noSpaces),
     .container .wrap.spaceWrap,
     .container .wrap .spaceWrap {
@@ -1190,262 +1282,6 @@ import { nextTick } from '_vue@2.7.13@vue';
               left: auto;
               margin-left: 10px;
               opacity: 1;
-            }
-          }
-        }
-      }
-    }
-  }
-  .slide55 {
-    .wrap {
-      width: 100%;
-      vertical-align: top;
-    }
-    .container .wrap:not(.noSpaces),
-    .container .wrap.spaceWrap,
-    .container .wrap .spaceWrap {
-      padding: 120px calc(8% + 15px);
-    }
-    .newslette {
-      position: relative;
-      background: #ffffff;
-      border: 1px solid #281af0;
-      overflow: hidden;
-      height: 260px;
-      width: 100%;
-      top: 80px;
-      z-index: 2;
-      h1 {
-        position: absolute;
-        left: 40px;
-        top: -24px;
-
-        font-family: "Archia";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 110.385px;
-        line-height: 110%;
-
-        display: flex;
-        align-items: center;
-        letter-spacing: -0.315385px;
-        -webkit-text-stroke: 1px #281af0;
-        -webkit-text-fill-color: #fff;
-        opacity: 0.1;
-      }
-      h2 {
-        position: absolute;
-        left: 40px;
-        top: 50px;
-        width: 455px;
-        white-space: normal;
-        text-align: left;
-        font-family: "Archia";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 48px;
-        line-height: 110%;
-        /* or 53px */
-
-        display: flex;
-        align-items: center;
-        letter-spacing: -0.2px;
-
-        color: #281af0;
-      }
-      a {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px 30px;
-        gap: 10px;
-
-        position: absolute;
-        width: 330px;
-        height: 68px;
-        right: 96px;
-        top: 96px;
-
-        background: #281af0;
-        font-family: "Archia";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 28px;
-        line-height: 100%;
-        /* identical to box height, or 28px */
-
-        display: flex;
-        align-items: center;
-        letter-spacing: -0.2px;
-
-        color: #ffffff;
-      }
-      p {
-        position: absolute;
-        width: 330px;
-        right: 96px;
-        top: 174px;
-        text-align: center;
-
-        font-family: "Archia";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 150%;
-
-        letter-spacing: -0.2px;
-
-        color: #3e31f1;
-
-        opacity: 0.3;
-      }
-    }
-    .footer {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 640px;
-      background: #281af0;
-      z-index: 1;
-      .wrap {
-        display: block;
-        position: relative;
-        padding-top: 70px;
-        .left {
-          padding-left: 30px;
-          width: 40%;
-          float: left;
-
-          svg {
-            height: 50px;
-            margin-bottom: 40px;
-          }
-          p {
-            max-width: 460px;
-            font-family: "Archia";
-            font-style: normal;
-            font-weight: 400;
-            font-size: 24px;
-            line-height: 160%;
-            /* or 38px */
-
-            letter-spacing: -0.2px;
-
-            color: #ffffff;
-
-            opacity: 0.7;
-            margin-bottom: 150px;
-          }
-          h5 {
-            font-family: "Archia";
-            font-style: normal;
-            font-weight: 600;
-            font-size: 28px;
-            line-height: 100%;
-            /* identical to box height, or 28px */
-
-            letter-spacing: -0.2px;
-
-            color: #ffffff;
-          }
-        }
-        .right {
-          padding-right: 30px;
-          width: 60%;
-          float: right;
-          padding-left: 110px;
-          h1 {
-            font-family: "Archia";
-            font-style: normal;
-            font-weight: 600;
-            font-size: 44px;
-            line-height: 110%;
-            /* or 48px */
-
-            display: flex;
-            align-items: center;
-            letter-spacing: -0.2px;
-
-            color: #ffffff;
-          }
-          ul {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            padding: 0px;
-            width: 620px;
-            margin-bottom: 80px;
-            margin-top: 35px;
-          }
-          li {
-            display: flex;
-            align-content: center;
-            align-items: center;
-            justify-content: center;
-            width: 120px;
-            height: 120px;
-            flex: 1;
-            order: 1;
-            flex-grow: 1;
-            background: #281af0;
-            border: 2px solid #584dff;
-            border-radius: 120px;
-            margin-right: -20px;
-            svg {
-              width: 50px;
-              height: 50px;
-            }
-          }
-          .signup {
-            width: 640px;
-            height: 70px;
-            position: relative;
-            input {
-              margin-top: 35px;
-              width: 640px;
-              height: 70px;
-              line-height: 70px;
-
-              font-family: "Archia";
-              font-style: normal;
-              font-weight: 600;
-              font-size: 36px;
-              line-height: 110%;
-              background: transparent;
-              border: 0;
-              border-bottom: 1px solid #ffffff;
-              display: flex;
-              align-items: center;
-              letter-spacing: -0.2px;
-
-              color: #ffffff;
-              &::placeholder {
-                color: rgba(255, 255, 255, 0.2);
-              }
-            }
-            button {
-              background-color: transparent;
-              border: none;
-              position: absolute;
-              &:hover {
-                cursor: pointer;
-              }
-              right: 0;
-              top: 0;
-              height: 70px;
-              font-family: "Archia";
-              font-style: normal;
-              font-weight: 600;
-              font-size: 28px;
-              line-height: 100%;
-              /* identical to box height, or 28px */
-
-              display: flex;
-              align-items: center;
-              letter-spacing: -0.2px;
-
-              color: #ffffff;
             }
           }
         }
