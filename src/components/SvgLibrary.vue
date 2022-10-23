@@ -413,6 +413,15 @@
       </defs>
     </symbol>
 
+    <symbol id="chevron-left" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.2594 21.9998L30.0927 9.16645L27.5 6.57373L12.0739 21.9998L27.5 37.4258L30.0927 34.8331L17.2594 21.9998Z" fill="#281AF0"/>
+    </symbol>
+    <symbol id="chevron-right" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16.5 6.57373L13.9073 9.16645L26.7406 21.9998L13.9073 34.8331L16.5 37.4258L31.926 21.9998L16.5 6.57373Z" fill="#281AF0"/>
+    </symbol>
+
+
+
 
 
 

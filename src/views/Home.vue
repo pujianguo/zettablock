@@ -229,21 +229,31 @@
                 <h1 class="title-text">Recent Articles</h1>
               </div>
               <div class="content-content">
-                <div class="swiper">
-                  <div class="swiper-item" v-for="item in slide7List" :key="item.id">
-                    <svg class="item-icon">
-                      <use href="#union-1"></use>
-                    </svg>
-                    <div class="item-title">{{item.title}}</div>
-                    <div class="item-desc">{{item.desc}}</div>
-                    <a class="item-link" :href="item.link">
-                      <span>READ</span>
-                      <svg class="link-icon">
-                        <use href="#arrow-right"></use>
+                <div class="swiper" id="slide7Swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide" v-for="item in slide7List" :key="item.id">
+                      <svg class="item-icon">
+                        <use href="#union-1"></use>
                       </svg>
-                    </a>
+                      <div class="item-title">{{item.title}}</div>
+                      <div class="item-desc">{{item.desc}}</div>
+                      <a class="item-link" :href="item.link">
+                        <span>READ</span>
+                        <svg class="link-icon">
+                          <use href="#arrow-right"></use>
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
+              </div>
+              <div class="swiper-button">
+                <svg class="button-item" :class="{disabled: false}" @click="handleSlide7SwiperPrev">
+                  <use href="#chevron-left"></use>
+                </svg>
+                <svg class="button-item" :class="{disabled: false}" @click="handleSlide7SwiperNext">
+                  <use href="#chevron-right"></use>
+                </svg>
               </div>
             </div>
           </div>
@@ -252,85 +262,96 @@
       <div class="background" style="background:#FAFAFF;"></div>
     </section>
 
+    <!-- Slide 8 -->
 
-    <!-- Slide 7 -->
-    <section id="blog" class="slide slide77 whiteSlide">
+    <section class="slide slide8 whiteSlide">
       <div class="content">
         <div class="container">
           <div class="wrap">
-            <div class="fix-12-12 fix-title">
-              <div class="title-order">
-                <div class="order">6</div>
-              </div>
-              <h1 class="title-text">Recent Articles</h1>
-            </div>
-
-            <div class="fix-12-12 newslette">
-              <h1>Newslette</h1>
-              <h2>Say goodbye to slow and unstable data infra</h2>
-              <a @click="toggleSignup()">Get Early Access</a>
-              <p>Build your decentralized apps today</p>
-            </div>
-          </div>
-          <div class="footer">
-            <div class="wrap">
-              <div class="left">
-                <svg>
-                  <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#logo-white"></use>
-                </svg>
-                <p>ZettaBlock is the unified Web3 data platform. Developers use ZettaBlock to build real-time, reliable, data-intensive apps in minutes.</p>
-                <h5>© 2022 ZettaBlock Inc.</h5>
-              </div>
-              <div class="right">
-                <h1>Join the Web3 Data Revolution</h1>
-                <ul>
-                  <li>
-                <a href="https://twitter.com/ZettaBlockHQ" target="_blank">
-                  <svg>
-                      <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#social-twitter"></use>
-                    </svg></a></li>
-                  <li>
-                <a href="https://www.linkedin.com/company/zettablockhq/" target="_blank">
-                  <svg>
-                      <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#social-linkedin"></use>
-                    </svg></a></li>
-                  <li>
-                <a href="https://discord.gg/px42xPBFkN" target="_blank">
-                  <svg>
-                      <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#social-discord"></use>
-                    </svg></a></li>
-                  <li>
-                <a href="https://zettablockhq.medium.com/" target="_blank">
-                  <svg>
-                      <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#social-medium"></use>
-                    </svg></a></li>
-                  <li>
-                <a href="https://github.com/Zettablock" target="_blank">
-                  <svg>
-                      <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#social-github"></use>
-                    </svg></a></li>
-                  <li>
-                <a href=" https://www.youtube.com/channel/UCZ7OYTGcXA93faGcmnyjTzw
-" target="_blank">
-                  <svg>
-                      <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#social-youtube"></use>
-                    </svg></a></li>
-                </ul>
-                <h1>Subscribe to Our Mailing List</h1>
-
-                <div class="signup">
-                  <form class="fix-12-12 subscribe" action="https://zettablock.us14.list-manage.com/subscribe/post?u=1ff0f35da3b86da52617aadd6&amp;id=bc40fdafb4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate><input type="email" value="" name="EMAIL" placeholder="Email Address">
-                  <button class="signup-button" href="#">Sign Up</button></form>
-
+            <div class="fix-12-12 newslette-wrap">
+              <div class="newslette">
+                <div class="newslette-left">
+                  <h2>Say goodbye to slow and unstable data infra</h2>
                 </div>
-
-
+                <div class="newslette-right">
+                  <div class="button" @click="toggleSignup()">
+                    <span class="button-text">Get Early Access</span>
+                    <svg class="button-icon">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
+                    </svg>
+                  </div>
+                  <p>Build your decentralized apps today</p>
+                </div>
+              </div>
+            </div>
+            <div class="fix-12-12 footer">
+              <div class="footer-item item-left">
+                <div class="logo">
+                  <svg class="logo-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-icon"></use>
+                  </svg>
+                  <svg class="logo-text">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-text"></use>
+                  </svg>
+                </div>
+                <div class="description">
+                  ZettaBlock is the unified Web3 data platform. Developers use ZettaBlock to build real-time, reliable, data-intensive apps in minutes.
+                </div>
+              </div>
+              <div class="footer-item">
+                <div class="subtitle">Join the Web3 Data Revolution</div>
+                <div class="social-wrap">
+                  <a class="social-item" href="https://twitter.com/ZettaBlockHQ" target="_blank">
+                    <svg>
+                      <use href="#social-twitter"></use>
+                    </svg>
+                  </a>
+                  <a class="social-item" href="https://www.linkedin.com/company/zettablockhq/" target="_blank">
+                    <svg>
+                      <use href="#social-linkedin"></use>
+                    </svg>
+                  </a>
+                  <a class="social-item" href="https://discord.gg/px42xPBFkN" target="_blank">
+                    <svg>
+                      <use href="#social-discord"></use>
+                    </svg>
+                  </a>
+                  <a class="social-item" href="https://zettablockhq.medium.com/" target="_blank">
+                    <svg>
+                      <use href="#social-medium"></use>
+                    </svg>
+                  </a>
+                  <a class="social-item" href="https://github.com/Zettablock" target="_blank">
+                    <svg>
+                      <use href="#social-github"></use>
+                    </svg>
+                  </a>
+                  <a class="social-item" href=" https://www.youtube.com/channel/UCZ7OYTGcXA93faGcmnyjTzw" target="_blank">
+                    <svg>
+                      <use href="#social-youtube"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="subtitle">Subscribe to Our Mailing List</div>
+                <div class="sign-up-wrap">
+                  <form class="" action="https://zettablock.us14.list-manage.com/subscribe/post?u=1ff0f35da3b86da52617aadd6&amp;id=bc40fdafb4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+                    <input type="email" value="" name="EMAIL" placeholder="Email Address">
+                    <button type="submit" class="button">
+                      <span>Sign Up</span>
+                      <svg>
+                        <use href="#arrow-right"></use>
+                      </svg>
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="copyright">
+                © 2022 ZettaBlock Inc.
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="background" style="background:#fff;"></div>
     </section>
 
 
@@ -365,12 +386,10 @@
   import SvgLibrary from "../components/SvgLibrary.vue";
   import Panels from "../components/Panels.vue";
   import bounty from "bounty";
+  import Swiper from 'swiper'
   import gsap from 'gsap'
   import ScrollTrigger from 'gsap/ScrollTrigger'
   gsap.registerPlugin(ScrollTrigger)
-
-
-
 
   export default {
     name: "home",
@@ -404,6 +423,7 @@
           {id: 7, icon: 'ic-doubletick', title: 'Reliability', desc: 'Provide near-perfect system uptimes to support real-time, data-intensive apps.'},
           {id: 8, icon: 'ic-flag', title: 'More', desc: 'Looking forward to your exploration'},
         ],
+        slide7SwiperIndex: 0,
         slide7List: [
           {id: 1, title: 'Get started with ZettaBlock', desc: 'Deploying a modern data stack in 5 minutes', link: ''},
           {id: 2, title: 'Rethinking the morden data stack', desc: '',  link: ''},
@@ -415,12 +435,14 @@
       document.title = "ZettaBlock - The Unified Web3 Data Platform";
     },
     mounted() {
+      this.slide7Swiper = null
       setTimeout(() => {
         this.onCreateView();
       }, 100);
       this.$nextTick(() => {
         this.initSlide3()
         this.handleSlide5MenuChange({target: $('.menu-item')[0]}, 0)
+        this.initSlide7Swiper()
       })
     },
     watch: {},
@@ -449,6 +471,10 @@
         })
       },
       showCount () {
+        console.log('showCount')
+        if (!document.querySelector('#slide3Number1')) {
+          return
+        }
         bounty({
           el: '#slide3Number1',
           value: '110B+',
@@ -498,6 +524,36 @@
         this.slide5Left = left - parentLeft + 'px'
         this.slide5Width = width + 'px'
         this.slide5CurrentIndex = i
+      },
+
+      initSlide7Swiper () {
+        console.log('init swiper')
+        this.slide7Swiper = new Swiper('#slide7Swiper', {
+          slidesPerView: "auto",
+          loop: true,
+        })
+        // this.slide7Swiper.on('activeIndexChange', function (e) {
+        //   const { realIndex } = e
+        //   if (realIndex !== this.slide7SwiperIndex) {
+        //     this.slide7SwiperIndex = realIndex
+        //   }
+        // })
+      },
+      handleSlide7SwiperPrev(){
+        // if (this.slide7SwiperIndex > 1) {
+        //   this.slide7SwiperIndex--
+        // } else {
+        //   this.slide7SwiperIndex = this.slide7List.length - 1
+        // }
+        this.slide7Swiper.slidePrev()
+      },
+      handleSlide7SwiperNext(){
+        // if (this.slide7SwiperIndex < this.slide7List.length - 1) {
+        //   this.slide7SwiperIndex++
+        // } else {
+        //   this.slide7SwiperIndex = 0
+        // }
+        this.slide7Swiper.slideNext()
       },
 
       toggleSignup() {
@@ -1032,17 +1088,18 @@
     .container{
       height: auto !important;
       .wrap{
-        padding-right: 0;
-        padding-bottom: 140px;
+        padding-bottom: 300px;
       }
     }
     .fix-12-12{
       display: flex;
+      position: relative;
       .fix-title{
         width: 256px !important;
         height: 188px !important;
         margin-right: 90px !important;
         position: relative;
+        flex-shrink: 0;
         .title-order{
           position: absolute;
           top: 0;
@@ -1061,10 +1118,9 @@
       .content-content{
         flex: 1;
         overflow: hidden;
-        // background: #eee;
         .swiper{
           display: flex;
-          .swiper-item{
+          .swiper-slide{
             width: 460px;
             height: 380px;
             padding: 30px;
@@ -1077,6 +1133,7 @@
             display: flex;
             flex-direction: column;
             text-align: left;
+            box-sizing: border-box;
 
             .item-icon{
               width: 24px;
@@ -1119,170 +1176,256 @@
               }
             }
           }
+          .swiper-button-next{
+            position: absolute;
+            left: 0;
+            top: 0 ;
+            width: 30px;
+            height: 30px;
+            background: red;
+          }
+        }
+      }
+      .swiper-button{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 88px;
+        height: 44px;
+        .button-item{
+          width: 44px;
+          height: 44px;
+          cursor: pointer;
+        }
+        .disabled{
+          opacity: .35;
+          cursor: auto;
+          pointer-events: none;
         }
       }
     }
   }
-
-  .slide66 {
-    .container .wrap:not(.noSpaces),
-    .container .wrap.spaceWrap,
-    .container .wrap .spaceWrap {
-      padding: 120px calc(8% + 15px);
-      padding-bottom: 0px;
+  .slide8{
+    overflow: visible;
+    .content{
+      overflow: visible;
     }
-
-    .why {
-      position: relative;
-      display: flex;
-      gap: 30px;
-      .col {
-        position: relative;
-        flex: 1;
-        img {
-          margin-bottom: 30px;
-        }
-        &:nth-child(1) {
-          top: 200px;
-        }
-        &:nth-child(2) {
-          top: 66px;
-        }
-        &:nth-child(3) {
-          top: -180px;
-        }
-        &:nth-child(4) {
-          top: -30px;
-        }
-      }
-    }
-    #marquee {
-      scroll-behavior: smooth;
-    }
-
-    .news {
-      height: 380px;
-      position: relative;
-      margin-top: 200px;
-      h1 {
-        position: absolute;
-        top: 0;
-        left: 40px;
-        text-align: left;
-        text-indent: -40px;
-        font-family: "Archia";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 60px;
-        line-height: 110%;
-        z-index: 9;
-
-        display: flex;
-        align-items: center;
-        letter-spacing: -0.2px;
-
-        color: #281af0;
-      }
-      .page-button {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 44px;
-        height: 44px;
-        padding: 0;
-        margin: 0;
-        box-sizing: content-box;
-        border: 0;
-        background: transparent;
-        z-index: 11;
-        &:nth-child(3) {
-          left: 50px;
-        }
-        svg {
-          width: 44px;
-          height: 44px;
-        }
-      }
-      .area10 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 10;
-        padding-left: 350px;
-        overflow-x: scroll;
-        -webkit-overflow-scrolling: touch;
-        display: -webkit-box;
-        white-space: nowrap;
-        li {
-          flex: 1;
-          width: 460px;
-          height: 380px;
-
-          background: #ffffff;
-          border: 1px solid #281af0;
-          margin-right: 30px;
-          padding: 30px;
+    .container{
+      height: auto !important;
+      background: #000000;
+      overflow: visible;
+      .wrap{
+        padding-top: 0 !important;
+        overflow: visible !important;
+        padding-bottom: 90px;
+        .newslette-wrap{
+          width: 100%;
+          height: 1px;
           position: relative;
-          svg {
-            width: 24px;
-            height: 24px;
-            opacity: 0.2;
+          .newslette{
             position: absolute;
-            top: 30px;
-            left: 30px;
-          }
-          h2 {
-            width: 400px;
-            position: absolute;
-            top: 70px;
-            left: 30px;
-            font-family: "Archia";
-            font-style: normal;
-            font-weight: 600;
-            font-size: 48px;
-            line-height: 110%;
-            letter-spacing: -0.2px;
-            color: #281af0;
-            white-space: normal;
-            text-align: left;
-          }
-          p {
-            width: 400px;
-            position: absolute;
-            top: 180px;
-            left: 30px;
-            white-space: normal;
-            text-align: left;
-            font-family: "Archia";
-            font-style: normal;
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 150%;
-            letter-spacing: -0.2px;
-            color: #000000;
-            opacity: 0.7;
-          }
-          a {
-            position: absolute;
-            bottom: 30px;
-            left: 30px;
-            font-family: "Archia";
-            font-style: normal;
-            font-weight: 600;
-            font-size: 24px;
-            line-height: 100%;
+            bottom: -40px;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(180deg, rgba(251, 250, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 25.98%, rgba(239, 239, 255, 0.4) 87.14%, rgba(245, 243, 253, 0.4) 100%), #FFFFFF;
+            border: 1px solid rgba(40, 26, 240, 0.04);
+            box-shadow: 0px 27px 11px rgba(40, 27, 240, 0.01), 0px 15px 9px rgba(40, 27, 240, 0.02), 0px 7px 7px rgba(40, 27, 240, 0.04), 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
+            border-radius: 16px;
             display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
             align-items: center;
-            letter-spacing: -0.2px;
-            color: #281af0;
-
-            svg {
-              position: relative;
-              top: auto;
-              left: auto;
-              margin-left: 10px;
-              opacity: 1;
+            padding: 30px;
+            .newslette-left{
+              max-width: 480px;
+              margin: 20px 0;
+              h2{
+                font-family: 'Basier Square';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 40px;
+                line-height: 120%;
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.6px;
+                color: #000000;
+                text-align: left;
+              }
             }
+            .newslette-right{
+              width: 248px;
+              margin: 20px 0;
+              .button{
+                width: 100%;
+                height: 52px;
+                line-height: 52px;
+                background: radial-gradient(129.53% 327.88% at 69.76% 0%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #2914F7;
+                box-shadow: 0px 77px 31px rgba(106, 38, 249, 0.01), 0px 43px 26px rgba(106, 38, 249, 0.05), 0px 19px 19px rgba(106, 38, 249, 0.09), 0px 5px 11px rgba(106, 38, 249, 0.1), 0px 0px 0px rgba(106, 38, 249, 0.1);
+                border-radius: 4px;
+                margin-bottom: 11px;
+                margin-left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .button-text{
+                  font-family: 'Basier Square';
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 18px;
+                }
+                .button-icon{
+                  width: 24px;
+                  height: 24px;
+                  margin-left: 5px;
+                  margin-right: 0;
+                }
+              }
+              p{
+                font-family: 'Basier Square';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 150%;
+                letter-spacing: -0.2px;
+                color: #3E31F1;
+                opacity: 0.5;
+                text-align: left;
+              }
+            }
+          }
+        }
+        .footer{
+          width: 100%;
+          margin-top: 100px;
+          display: flex;
+          flex-wrap: wrap;
+          position: relative;
+          .footer-item{
+            width: 50%;
+            overflow: hidden;
+            padding-top: 50px;
+            .logo{
+              display: flex;
+              align-items: center;
+              .logo-icon{
+                width: 48px;
+                height: 48px;
+                margin-right: 32px;
+              }
+              .logo-text{
+                width: 258px;
+                height: 40px;
+                color: #fff;
+              }
+            }
+            .description{
+              flex: 1;
+              max-width: 400px;
+              margin-top: 45px;
+              font-family: 'Basier Square';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 24px;
+              line-height: 160%;
+              letter-spacing: -0.2px;
+              color: #FFFFFF;
+              opacity: 0.7;
+              text-align: left;
+              margin-right: 30px;
+              margin-bottom: 45px;
+            }
+            .subtitle{
+              font-family: 'Basier Square';
+              font-style: normal;
+              font-weight: 500;
+              font-size: 40px;
+              line-height: 110%;
+              letter-spacing: -0.2px;
+              color: #FFFFFF;
+              text-align: left;
+            }
+            .social-wrap{
+              width: 100%;
+              margin-top: 45px;
+              margin-bottom: 72px;
+              display: flex;
+              .social-item{
+                width: 100px;
+                height: 100px;
+                flex-shrink: 0;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1.66667px solid #414141;
+                margin-left: -16px;
+
+                svg{
+                  width: 32px;
+                  height: 32px;
+                }
+
+                &:nth-child(1){
+                  margin-left: 0;
+                }
+              }
+            }
+            .sign-up-wrap{
+              width: 100%;
+              margin-top: 45px;
+              border-bottom: 1px solid #fff;
+              padding-bottom: 15px;
+              form{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                input{
+                  height: 32px;
+                  line-height: 32px;
+                  font-weight: 600;
+                  font-size: 28px;
+                  background: transparent;
+                  border: 0;
+                  background:none;
+                  outline:none;
+                  color: #ffffff;
+                }
+                .button{
+                  display: flex;
+                  align-items: center;
+                  cursor: pointer;
+                  background: transparent;
+                  padding: 0;
+                  margin: 0;
+                  span{
+                    font-weight: 600;
+                    font-size: 28px;
+                    color: #FFFFFF;
+                    margin-right: 6px;
+                  }
+                  svg{
+                    width: 37px;
+                    height: 37px;
+                    color: #FFFFFF;
+                  }
+                }
+              }
+            }
+          }
+          .item-left{
+            display: flex;
+            flex-direction: column;
+          }
+          .copyright{
+            position: absolute;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 100%;
+            color: #FFFFFF;
+            text-align: left;
+            left: 0;
+            bottom: 0;
           }
         }
       }

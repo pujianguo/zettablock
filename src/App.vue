@@ -17,4 +17,5 @@
 
 <style lang="scss">
   @import "./scss/global";
+  @import "./scss/swiper.min.css";
 </style>
