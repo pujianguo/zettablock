@@ -190,17 +190,16 @@ export default {
       }
     }
     a.cta {
-      font-family: "Archia";
-      font-style: normal;
-      font-weight: 600;
+      font-weight: 500;
       font-size: 16px;
       line-height: 100%;
-      letter-spacing: -0.2px;
-
       color: #281af0;
+      display: inline-flex;
+      align-items: center;
       svg {
         width: 16px;
         height: 16px;
+        margin-left: 5px;
       }
     }
   }
