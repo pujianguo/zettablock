@@ -12,24 +12,54 @@
               <img class="logo-ani ae-2 fromCenter margin-top-6 margin-bottom-4" src="assets/logo-animation.gif" alt="">
               <div class="fix-10-12 fix-main-title ae-3 fromCenter">
                 <div class="main-title">
-                  The Unified Web3 <br/>Data Platform
+                  The Full-Stack, Real-time <br/>Web3 Data Infra
                 </div>
               </div>
               <div class="fix-10-12">
-                <div class="ae-6 fromBottom button access-button" @click="toggleSignup">
-                  <span class="button-text">Get Early Access</span>
-                  <svg class="button-icon">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
-                  </svg>
+                <p class="ae-5 fromBottom description">Customize your own real-time GraphQL and SQL APIs to build dApps and analytics. On-chain and off-chain.</p>
+
+                <div class="button-wrap">
+                  <div class="ae-6 fromBottom button access-button" @click="toggleSignup">
+                    <span class="button-text">Get Early Access</span>
+                    <svg class="button-icon">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
+                    </svg>
+                  </div>
+                  <div class="ae-6 fromBottom button view-button" @click="toggleSignup">
+                    <span class="button-text">View Docs</span>
+                    <svg class="button-icon">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
+                    </svg>
+                  </div>
+
                 </div>
-                <p class="ae-5 fromBottom description">ZettaBlock is a one-stop blockchain data platform to make data indexing, querying, analyzing, and sharing easy and flexible.<br>Anyone can build real-time, reliable, data-intensive dApps via SQL without the complexity of maintaining infrastructure.</p>
                 <p class="ae-5 fromBottom scroll-tip">scroll down to explore</p>
+              </div>
+            </div>
+            <div class="link-wrap">
+              <div class="link-item" v-for="item in slide1LinkList" :key="item.id"
+                :style="{width: item.width + 'px', height: item.height + 'px'}"
+                >
+                <svg>
+                  <use :href="`#${item.icon}`"></use>
+                </svg>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="background" style="background: url(/assets/images/slide1_bg.png) no-repeat top center / cover"></div>
+    </section>
+
+    <!-- Slide 12 -->
+    <section id="product" class="slide slide12 whiteSlide">
+      <div class="content">
+        <div class="container">
+          <div class="wrap">
+          </div>
+        </div>
+      </div>
+      <div class="background" style="background: #FAFAFF;"></div>
     </section>
 
 
@@ -420,6 +450,17 @@
       return {
         scrollOffer: 0,
         showForm: false,
+        slide1LinkList: [
+          {id: 1, icon: 'link-polygon', width: 192, height: 40, href: ''},
+          {id: 2, icon: 'link-crypto', width: 242, height: 40, href: ''},
+          {id: 3, icon: 'link-ripple', width: 151, height: 40, href: ''},
+          {id: 4, icon: 'link-opensea', width: 176, height: 40, href: ''},
+          {id: 5, icon: 'link-celer', width: 101, height: 40, href: ''},
+          {id: 6, icon: 'link-autograph', width: 173, height: 40, href: ''},
+          {id: 7, icon: 'link-lotex', width: 150, height: 40, href: ''},
+          {id: 8, icon: 'link-cyberconnect', width: 258, height: 40, href: ''},
+          {id: 9, icon: 'link-friktion', width: 163, height: 40, href: ''},
+        ],
         slide2CurrentIndex: 1,
         slide2Left: 0,
         slide5CurrentIndex: 0,
@@ -754,9 +795,9 @@
     }
     .main-title {
       width: 100%;
-      font-size: 80px;
+      font-size: 60px;
       font-weight: 700;
-      line-height: 88px;
+      line-height: 66px;
       text-align: center;
       text-transform: uppercase;
       background: radial-gradient(53.42% 202.11% at 78.75% 25.76%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #281AF0;
@@ -766,33 +807,47 @@
       text-fill-color: transparent;
 
     }
-    .access-button{
-      width: 248px;
-      height: 52px;
-      background: radial-gradient(129.53% 327.88% at 69.76% 0%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #2914F7;
-      box-shadow: 0px 77px 31px rgba(106, 38, 249, 0.01), 0px 43px 26px rgba(106, 38, 249, 0.05), 0px 19px 19px rgba(106, 38, 249, 0.09), 0px 5px 11px rgba(106, 38, 249, 0.1), 0px 0px 0px rgba(106, 38, 249, 0.1);
-      border-radius: 4px;
-      text-align: center;
+    .button-wrap{
       margin-bottom: 45px;
-      .button-text{
-        font-family: 'Basier Square';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 100%;
+      .button{
+        width: 248px;
+        height: 52px;
+        border-radius: 4px;
+        text-align: center;
+        margin: 0 20px;
+        .button-text{
+          font-family: 'Basier Square';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 100%;
+        }
+        .button-icon{
+          width: 24px;
+          height: 24px;
+          margin-left: 5px;
+          margin-right: 0;
+        }
       }
-      .button-icon{
-        width: 24px;
-        height: 24px;
-        margin-left: 5px;
-        margin-right: 0;
+      .access-button{
+        background: radial-gradient(129.53% 327.88% at 69.76% 0%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #2914F7;
+        box-shadow: 0px 77px 31px rgba(106, 38, 249, 0.01), 0px 43px 26px rgba(106, 38, 249, 0.05), 0px 19px 19px rgba(106, 38, 249, 0.09), 0px 5px 11px rgba(106, 38, 249, 0.1), 0px 0px 0px rgba(106, 38, 249, 0.1);
+        color: #fff;
+      }
+      .view-button{
+        background: linear-gradient(180deg, #FBFAFF 0%, #FFFFFF 25.98%, #EFEFFF 87.14%, #F5F3FD 100%);
+        border: 1px solid rgba(40, 26, 240, 0.04);
+        box-shadow: 0px 27px 11px rgba(40, 27, 240, 0.01), 0px 15px 9px rgba(40, 27, 240, 0.02), 0px 7px 7px rgba(40, 27, 240, 0.04), 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
+        color: #2919F7;
       }
     }
     .description{
+      max-width: 724px;
+      margin: 0 auto 30px;
       font-family: "Basier Square";
       font-style: normal;
       font-weight: 400;
-      font-size: 16px;
+      font-size: 24px;
       line-height: 150%;
       text-align: center;
       letter-spacing: -0.2px;
@@ -811,11 +866,38 @@
       text-align: center;
       margin-top: 100px;
     }
+    .link-wrap{
+      width: 100%;
+      opacity: 0.4;
+      display: flex;
+      margin-top: 40px;
+      // transform: translateX(-100%) 5s;
+      animation: linkMove 50s linear infinite;
+      @keyframes linkMove {
+        from {transform: translateX(0);}
+        50% {transform: translateX(-100%);}
+        51% {transform: translateX(100%);}
+        to {transform: translateX(0);}
+      }
+      .link-item{
+        flex-shrink: 0;
+        margin-right: 40px;
+        svg{
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
     .background {
       background-size: cover;
       background-position: center bottom;
     }
 
+  }
+  .slide12 {
+    .container{
+      height: auto !important;
+    }
   }
   .slide2 {
     .container{
