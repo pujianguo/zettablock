@@ -51,29 +51,70 @@
       <div class="background" style="background: url(/assets/images/slide1_bg.png) no-repeat top center / cover"></div>
     </section>
 
-    <!-- Slide 12 -->
-    <section id="product" class="slide slide12 whiteSlide">
+    <!-- Slide 2 -->
+    <section id="product" class="slide slide2 whiteSlide">
       <div class="content">
         <div class="container">
           <div class="wrap">
+            <div class="fix-12-12">
+              <div class="content-body">
+                <div class="body-left">
+                  <div class="title">Supported Chains</div>
+                  <div class="input-wrap">
+                  <!-- <div class="input-wrap input-wrap_success"> -->
+                    <input class="input" type="text" placeholder="Request a new network">
+                    <svg class="btn">
+                      <use href="#arrow-right"></use>
+                    </svg>
+                    <div class="success-wrap">
+                      <span>Thank You!</span>
+                      <svg class="btn">
+                        <use href="#success"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="body-right">
+                  <div class="wrap-title">Multiple Chains Support</div>
+                  <div class="chain-wrap">
+                    <div class="chain-item" v-for="item in chainList" :key="item.directiveFunction">
+                      <img class="icon" :src="item.icon" alt="">
+                      <span class="name">{{item.name}}</span>
+                      <span class="coming-soon">{{item.isComingSoon ? 'coming soon' : '&nbsp;'}}</span>
+                    </div>
+                    <div class="chain-item chain-item_more">More</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="background" style="background: #FAFAFF;"></div>
     </section>
 
-
-    <!-- Slide 2 -->
-    <section id="product" class="slide slide2 whiteSlide">
+    <!-- Slide3 -->
+    <section id="product" class="slide slide3 whiteSlide">
       <div class="content">
         <div class="container">
-          <div class="wrap padding-top-8 padding-bottom-9">
-            <div class="fix-12-12 fix-title">
-              <div class="title-order ae-2 fromCenter">
-                <div class="order">1</div>
+          <div class="wrap">
+            <div class="fix-12-12">
+              <div class="section-title">Develop. Preview. Ship</div>
+              <div class="code-wrap">
+                <img src="/assets/images/slide3_img.png" alt="">
               </div>
-              <h1 class="title-text ae-3 fromCenter">Start building your dApps</h1>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 4 -->
+    <section id="product" class="slide slide4 whiteSlide">
+      <div class="content">
+        <div class="container">
+          <div class="wrap padding-top-8 padding-bottom-8">
+            <div class="section-title">Build crypto-powered apps</div>
 
             <div class="fix-12-12 slide-content">
               <div class="content-title" :style="{'--left': slide2Left }">
@@ -83,10 +124,10 @@
               <div class="content-image">
                 <div class="content-image-inner" :style="{left: slide2CurrentIndex === 1 ? 0 : '-100%'}">
                   <div class="img-item">
-                    <img src="/assets/images/slide2_start_with.png" alt="">
+                    <img src="/assets/images/slide4_start_with.png" alt="">
                   </div>
                   <div class="img-item">
-                    <img src="/assets/images/slide2_start_without.png" alt="">
+                    <img src="/assets/images/slide4_start_without.png" alt="">
                   </div>
                 </div>
               </div>
@@ -97,111 +138,14 @@
       <div class="background" style="background:#fff;"></div>
     </section>
 
-    <!-- Slide 3 -->
-    <section id="usecase" class="slide slide3 whiteSlide">
-      <div class="content">
-        <div class="container">
-          <div class="wrap padding-top-9 padding-bottom-9">
-            <div class="fix-12-12 fix-title">
-              <div class="title-order">
-                <div class="order">2</div>
-              </div>
-              <h1 class="title-text">Start with the developer</h1>
-              <p class="title-description">
-                ZettaBlock is a one-stop blockchain data platform to make data indexing, querying, analyzing, and sharing easy and flexible.<br/>
-                Anyone can build real-time, reliable, data-intensive dApps via SQL without the complexity of maintaining infrastructure.
-              </p>
-            </div>
-            <!-- 图表 -->
-            <div class="fix-12-12 flex-left-top margin-top-10">
-
-            </div>
-            <!-- 数字 -->
-            <ul class="fix-12-12 data-number">
-              <li>
-                <h1 id="slide3Number1"></h1>
-                <h2>Transactions</h2>
-                <p>Rich transactions indexed and decoded for 8+ blockchains since genesis.</p>
-              </li>
-              <li>
-                <h1 id="slide3Number2"></h1>
-                <h2>Smart Contracts</h2>
-                <p>Contracts available with internal data structures for querying.</p>
-              </li>
-              <li>
-                <h1 id="slide3Number3"></h1>
-                <h2>Price Feeds </h2>
-                <p>Price feeds for fiat and crypto pairs.</p>
-              </li>
-              <li>
-                <h1 id="slide3Number4"></h1>
-                <h2>180 Day Uptime</h2>
-                <p>Truely reliable platform for decentralised products of the future.</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="background" style="background:#fff;"></div>
-    </section>
-
-    <!-- Slide 4 -->
-    <section id="usecase" class="slide slide4 whiteSlide">
-      <div class="content">
-        <div class="container">
-          <div class="wrap padding-top-9">
-            <div class="fix-12-12 fix-title">
-              <div class="title-order">
-                <div class="order">3</div>
-              </div>
-              <h1 class="title-text">Features</h1>
-              <p class="title-description">
-                ZettaBlock is a one-stop blockchain data platform to make data indexing, querying, analyzing, and sharing easy and flexible.<br/>
-                Anyone can build real-time, reliable, data-intensive dApps via SQL without the complexity of maintaining infrastructure.
-              </p>
-            </div>
-            <div class="fix-12-12 feature flex-left-top margin-top-9">
-              <ul class="pill controller" data-slider-id="feature">
-                <li class="selected"></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-              <ul class="slider" data-slider-id="feature">
-                <li class="selected">
-                  <img src="assets/feature-1.png" alt="Feature1">
-                </li>
-                <li class="hide">
-                  <img src="assets/feature-2.png" alt="Feature2">
-                </li>
-                <li class="hide">
-                  <img src="assets/feature-3.png" alt="Feature3">
-                </li>
-                <li class="hide">
-                  <img src="assets/feature-4.png" alt="Feature4">
-                </li>
-                <li class="hide">
-                  <img src="assets/feature-5.png" alt="Feature5">
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="background" style="background:#fff;"></div>
-    </section>
-
     <!-- Slide 5 -->
-    <section class="slide slide5 whiteSlide">
+    <section id="product" class="slide slide5 whiteSlide">
       <div class="content">
         <div class="container">
-          <div class="wrap padding-top-9 padding-bottom-8">
-            <div class="fix-12-12 fix-title">
-              <div class="title-order">
-                <div class="order">4</div>
-              </div>
-              <h1 class="title-text">Get Started with ZettaBlock</h1>
+          <div class="wrap padding-top-8 padding-bottom-18">
+            <div class="fix-12-12">
+              <div class="section-subtitle">Unlimited API possibilities</div>
+              <div class="section-title">Get started with ZettaBlock Suite</div>
             </div>
             <div class="fix-12-12">
               <div class="menu" :style="{'--left': slide5Left, '--width': slide5Width }">
@@ -212,20 +156,22 @@
               </div>
               <div class="swiper" id="slide5Swiper">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide swiper-slide-nft">
-                    swiper-slide-nft
-                  </div>
-                  <div class="swiper-slide swiper-slide-defi">
-                    swiper-slide-defi
-                  </div>
-                  <div class="swiper-slide swiper-slide-wallet">
-                    swiper-slide-wallet
-                  </div>
-                  <div class="swiper-slide swiper-slide-analytics">
-                    swiper-slide-analytics
-                  </div>
-                  <div class="swiper-slide swiper-slide-blockchains">
-                    swiper-slide-chains
+                  <div class="swiper-slide" v-for="item in slide5List" :key="item.id">
+                    <div class="content-left">
+                      <img class="title-img" :src="item.textImg" alt="">
+                      <ul class="info-list">
+                        <li class="info-item" v-for="(p, i) in item.info" :key="item.id + i">{{p}}</li>
+                      </ul>
+                      <div class="button">
+                        <span class="button-text">Read more use cases</span>
+                        <svg class="button-icon">
+                          <use href="#arrow-right"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="content-right">
+                      <img :src="item.img" alt="">
+                    </div>
                   </div>
                 </div>
               </div>
@@ -233,47 +179,16 @@
           </div>
         </div>
       </div>
-      <div class="background" style="background:#fff;"></div>
     </section>
 
     <!-- Slide 6-->
     <section id="blog" class="slide slide6 whiteSlide">
       <div class="content">
         <div class="container">
-          <div class="wrap padding-top-8">
-            <div class="fix-12-12 fix-title">
-              <div class="title-order">
-                <div class="order">5</div>
-              </div>
-              <h1 class="title-text">WHY ZettaBlock ?</h1>
-              <p class="title-description">
-                ZettaBlock is a one-stop blockchain data platform to make data indexing, querying, analyzing, and <br/> sharing easy and flexible. Anyone can build real-time, reliable.
-              </p>
-            </div>
-            <div class="fix-12-12 content-content">
-              <div class="item" v-for="item in slide6List" :key="item.id">
-                <svg class="item-icon">
-                  <use :href="`#${item.icon}`"></use>
-                </svg>
-                <div class="item-title">{{item.title}}</div>
-                <div class="item-desc">{{item.desc}}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="background" style="background:#fff;"></div>
-    </section>
-
-    <!-- Slide 7-->
-    <section id="blog" class="slide slide7 whiteSlide">
-      <div class="content">
-        <div class="container">
           <div class="wrap">
             <div class="fix-12-12">
               <div class="fix-title">
                 <div class="title-order">
-                  <div class="order">6</div>
                 </div>
                 <h1 class="title-text">Recent Articles</h1>
               </div>
@@ -285,13 +200,15 @@
                         <use href="#union-1"></use>
                       </svg>
                       <div class="item-title">{{item.title}}</div>
-                      <div class="item-desc">{{item.desc}}</div>
-                      <a class="item-link" :href="item.link">
-                        <span>READ</span>
-                        <svg class="link-icon">
-                          <use href="#arrow-right"></use>
-                        </svg>
-                      </a>
+                      <div class="item-footer">
+                        <a class="item-link" :href="item.link">
+                          <span>READ</span>
+                          <svg class="link-icon">
+                            <use href="#arrow-right"></use>
+                          </svg>
+                        </a>
+                        <img class="chain-icon" :src="item.chainIcon" alt="">
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -311,28 +228,58 @@
       <div class="background" style="background:#FAFAFF;"></div>
     </section>
 
-    <!-- Slide 8 -->
+    <!-- Slide 7 -->
+    <section id="product" class="slide slide7 whiteSlide">
+      <div class="content">
+        <div class="container">
+          <div class="wrap padding-top-18">
+            <div class="fix-12-12">
+              <div class="section-subtitle">The first full-stack</div>
+              <div class="section-title">
+                The first full-stack Web3 <br/>data infra for a next-gen internet
+              </div>
+            </div>
+            <div class="fix-12-12 content-content">
+              <div class="item" v-for="item in slide6List" :key="item.id">
+                <svg class="item-icon">
+                  <use :href="`#${item.icon}`"></use>
+                </svg>
+                <div class="item-title">{{item.title}}</div>
+                <div class="item-desc">{{item.desc}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="slide slide8 whiteSlide">
       <div class="content">
         <div class="container">
-          <div class="wrap">
-            <div class="fix-12-12 newslette-wrap">
-              <div class="newslette">
-                <div class="newslette-left">
-                  <h2>Say goodbye to slow and unstable data infra</h2>
-                </div>
-                <div class="newslette-right">
-                  <div class="button" @click="toggleSignup()">
-                    <span class="button-text">Get Early Access</span>
-                    <svg class="button-icon">
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
-                    </svg>
-                  </div>
-                  <p>Build your decentralized apps today</p>
+          <div class="wrap padding-top-8 padding-bottom-8">
+            <div class="fix-12-12 newslette">
+              <div class="newslette-left">
+                <h1>Ready to speed up your web3 development?</h1>
+                <h2>Simple, out-of-box, ultra fast, low cost, and high performance.</h2>
+              </div>
+              <div class="newslette-right">
+                <div class="button" @click="toggleSignup()">
+                  <span class="button-text">Unlock Access For Free</span>
+                  <svg class="button-icon">
+                    <use href="#arrow-right"></use>
+                  </svg>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide9 whiteSlide">
+      <div class="content">
+        <div class="container">
+          <div class="wrap padding-top-9 padding-bottom-9">
             <div class="fix-12-12 footer">
               <div class="footer-item item-left">
                 <div class="logo">
@@ -344,7 +291,7 @@
                   </svg>
                 </div>
                 <div class="description">
-                  ZettaBlock is the unified Web3 data platform. Developers use ZettaBlock to build real-time, reliable, data-intensive apps in minutes.
+                  ZettaBlock is a full-stack web3 data platform for data indexing, querying and analyzing. Developers can build real-time, public-facing, reliable GraphQL and SQL APIs in minutes.
                 </div>
               </div>
               <div class="footer-item">
@@ -394,8 +341,23 @@
                   </form>
                 </div>
               </div>
-              <div class="copyright">
-                © 2022 ZettaBlock Inc.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide10 whiteSlide">
+      <div class="content">
+        <div class="container">
+          <div class="wrap padding-top-0 padding-bottom-0">
+            <div class="fix-12-12">
+              <div class="copyright">© 2022 ZettaBlock Inc.</div>
+              <div class="menu">
+                <a class="menu-item" href="#blog">Blog</a>
+                <a class="menu-item" href="#blog">Press Kit</a>
+                <a class="menu-item" href="#blog">Terms of Service</a>
+                <a class="menu-item" href="#blog">Privacy Policy</a>
               </div>
             </div>
           </div>
@@ -461,6 +423,19 @@
           {id: 8, icon: 'link-cyberconnect', width: 258, height: 40, href: ''},
           {id: 9, icon: 'link-friktion', width: 163, height: 40, href: ''},
         ],
+        chainList: [
+        {id: 1, icon: '/assets/images/chain/chain-icon-01.png', name: 'Ethereum'},
+        {id: 2, icon: '/assets/images/chain/chain-icon-02.png', name: 'Polygon'},
+        {id: 3, icon: '/assets/images/chain/chain-icon-03.png', name: 'Arbitrum'},
+        {id: 4, icon: '/assets/images/chain/chain-icon-04.png', name: 'Solana'},
+        {id: 5, icon: '/assets/images/chain/chain-icon-05.png', name: 'Aptos'},
+        {id: 6, icon: '/assets/images/chain/chain-icon-06.png', name: 'Ripple XRP'},
+        {id: 7, icon: '/assets/images/chain/chain-icon-07.png', name: 'IoTex'},
+        {id: 8, icon: '/assets/images/chain/chain-icon-08.png', name: 'BNB Chian', isComingSoon: true},
+        {id: 9, icon: '/assets/images/chain/chain-icon-09.png', name: 'Optimism', isComingSoon: true},
+        {id: 10, icon: '/assets/images/chain/chain-icon-10.png', name: 'Avalanche', isComingSoon: true},
+        {id: 11, icon: '/assets/images/chain/chain-icon-11.png', name: 'Near', isComingSoon: true},
+        ],
         slide2CurrentIndex: 1,
         slide2Left: 0,
         slide5CurrentIndex: 0,
@@ -472,6 +447,44 @@
           {id: 3, name: 'Wallet'},
           {id: 4, name: 'Data Analytics'},
           {id: 5, name: 'Blockchains'},
+        ],
+        slide5List: [
+          { id: 1, name: 'NFT', textImg: '/assets/images/slide5/text_NFT.svg',
+            link: '', img: '/assets/images/slide5/card_1.png', info:
+            [
+              'Deep reverse index to fetch NFT ownership, transfer, and price all in real-time.',
+              'Identify the right whitelist for newly launched NFTs based on transaction history.'
+            ]
+          },
+          { id: 2, name: 'DeFi', textImg: '/assets/images/slide5/text_DeFi.svg',
+            link: '', img: '/assets/images/slide5/card_2.png', info:
+            [
+              'Perform real-time portfolio tracking with customized logic.',
+              'Gain insights into DeFi protocols at the smart contract level.'
+            ]
+          },
+          { id: 3, name: 'Wallet', textImg: '/assets/images/slide5/text_Wallet.svg',
+            link: '', img: '/assets/images/slide5/card_3.png', info:
+            [
+              'Build enhanced dashboards for customer holdings assets.',
+              'Visualize user transaction history, NFT holdings, and interactions with major protocols.'
+            ]
+          },
+          { id: 4, name: 'Data Analytics', textImg: '/assets/images/slide5/text_Data Analytics.svg',
+            link: '', img: '/assets/images/slide5/card_4.png', info:
+            [
+              'Build monitoring dashboards cross chains for competitor analysis.',
+              'External facing APIs for their ecosystems.',
+              'Help better allocate resources to ecosystem partners'
+            ]
+          },
+          { id: 5, name: 'Block-chains', textImg: '/assets/images/slide5/text_Block-chains.svg',
+            link: '', img: '/assets/images/slide5/card_5.png', info:
+            [
+              'Perform on-chain credential validations, wallet profiling and AML risk analytics.',
+              'Build machine learning models to perform tasks such as credit score rating.'
+            ]
+          },
         ],
         slide6List: [
           {id: 1, icon: 'ic-database', title: 'Data Unification', desc: 'Support easy access to on-chain and off-chain data from multiple data sources.'},
@@ -485,9 +498,11 @@
         ],
         slide7SwiperIndex: 0,
         slide7List: [
-          {id: 1, title: 'Get started with ZettaBlock', desc: 'Deploying a modern data stack in 5 minutes', link: ''},
-          {id: 2, title: 'Rethinking the morden data stack', desc: '',  link: ''},
-          {id: 3, title: 'Orchestrate a data platform for Solana', desc: '', link: ''},
+          {id: 1, title: 'Polygon relies on ZettaBlock for data infrastructure', chainIcon: '/assets/images/chain/icon_1.png', link: ''},
+          {id: 2, title: 'ZetttaBlock’s infrastructure saves crypto.com 16,000 hours per year', chainIcon: '/assets/images/chain/icon_2.png',  link: ''},
+          {id: 3, title: 'Artemis deploys production-ready APIs in hours with ZettaBlock', chainIcon: '/assets/images/chain/icon_3.png', link: ''},
+          {id: 4, title: 'Friktion’s new portoflio portal runs on ZettaBlock', chainIcon: '/assets/images/chain/icon_4.png', link: ''},
+          {id: 5, title: 'Orchestrate a data platform for Autograph in 5 minutes', chainIcon: '/assets/images/chain/icon_5.png', link: ''},
         ]
       };
     },
@@ -495,7 +510,7 @@
       document.title = "ZettaBlock - The Unified Web3 Data Platform";
     },
     mounted() {
-      this.slide7Swiper = null
+      this.slide5Swiper = null
       this.slide7Swiper = null
       setTimeout(() => {
         this.onCreateView();
@@ -598,7 +613,7 @@
         })
         this.slide5Swiper.on('activeIndexChange', (e) => {
           const { realIndex } = e
-          if (realIndex !== this.slide7SwiperIndex) {
+          if (realIndex !== this.slide5SwiperIndex) {
             this.handleSlide5MenuChange(realIndex)
           }
         })
@@ -774,6 +789,26 @@
       opacity: 0.5;
     }
   }
+  .section-title{
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 110%;
+    background: radial-gradient(53.42% 202.11% at 78.75% 25.76%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #281AF0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  .section-subtitle{
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #5A20FB;
+    opacity: 0.2;
+    margin-bottom: 20px;
+    text-align: left;
+  }
   .slide1 {
     .wrap{
       .fix-12-12{
@@ -894,12 +929,161 @@
     }
 
   }
-  .slide12 {
+  .slide2 {
     .container{
       height: auto !important;
     }
+    .content-body{
+      width: 100%;
+      display: flex;
+      .body-left{
+        width: 340px;
+        flex-shrink: 0;
+        margin-right: 42px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .title{
+          font-family: 'Basier Square';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 48px;
+          line-height: 110%;
+          text-transform: uppercase;
+          color: #000000;
+          text-align: left;
+        }
+        .input-wrap{
+          width: 303px;
+          height: 52px;
+          box-sizing: border-box;
+          padding: 18px;
+          background: linear-gradient(180deg, #FBFAFF 0%, #FFFFFF 25.98%, #EFEFFF 87.14%, #F5F3FD 100%);
+          border: 1px solid rgba(40, 26, 240, 0.04);
+          box-shadow: 0px 27px 11px rgba(40, 27, 240, 0.01), 0px 15px 9px rgba(40, 27, 240, 0.02), 0px 7px 7px rgba(40, 27, 240, 0.04), 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .input{
+            border: 0;
+            background: none;
+            outline: none;
+            font-weight: 500;
+            font-size: 16px;
+            color:#281AF0;
+            &::placeholder{
+              color: rgba(40, 26, 240, 0.3);
+            }
+          }
+          .btn{
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            color:#281AF0;
+          }
+          .success-wrap{
+            display: none;
+          }
+        }
+        .input-wrap_success{
+          position: relative;
+          .success-wrap{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 18px;
+            background: radial-gradient(129.53% 327.88% at 69.76% 0%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #2914F7;
+            box-shadow: 0px 77px 31px rgba(106, 38, 249, 0.01), 0px 43px 26px rgba(106, 38, 249, 0.05), 0px 19px 19px rgba(106, 38, 249, 0.09), 0px 5px 11px rgba(106, 38, 249, 0.1), 0px 0px 0px rgba(106, 38, 249, 0.1);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            span {
+              font-weight: 500;
+              font-size: 16px;
+              color: #FFFFFF;
+            }
+            svg{
+              width: 18px;
+              height: 18px;
+            }
+          }
+        }
+      }
+      .body-right{
+        flex: 1;
+        .wrap-title{
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 100%;
+          letter-spacing: -0.2px;
+          color: rgba(40, 26, 240, 0.4);
+          text-align: left;
+          margin-bottom: 27px;
+        }
+        .chain-wrap{
+          display: flex;
+          flex-wrap: wrap;
+          border-top: 1px solid #DBD9FD;
+          border-left: 1px solid #DBD9FD;
+          .chain-item{
+            display: flex;
+            flex-direction: column;
+            width: 16.66%;
+            padding: 25px 25px 5px;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #DBD9FD;
+            border-right: 1px solid #DBD9FD;
+            .icon{
+              width: 50px;
+              height: 50px;
+              border-radius: 10px;
+              display: block;
+              margin-bottom: 10px;
+            }
+            .name{
+              font-weight: 500;
+              font-size: 14px;
+            }
+            .coming-soon{
+              font-size: 10px;
+              color: #DBD9FD;
+            }
+          }
+          .chain-item_more{
+            font-weight: 500;
+            font-size: 14px;
+            color: #A9A3F9;
+            padding-bottom: 25px;
+          }
+        }
+      }
+    }
   }
-  .slide2 {
+  .slide3{
+    .container{
+      height: auto !important;
+      .wrap{
+        padding-top: 180px;
+        padding-bottom: 80px;
+      }
+      .code-wrap{
+        margin-top: 80px;
+        width: 100%;
+        // height: 520px;
+        .img{
+          width: 100%;
+        }
+
+
+      }
+    }
+  }
+  .slide4 {
     .container{
       height: auto !important;
     }
@@ -907,7 +1091,7 @@
       width: 100%;
       border: 1px solid rgba(40, 26, 240, 0.08);
       border-radius: 12px;
-      margin-top: 80px;
+      margin-top: 110px;
       position: relative;
       .content-title{
         position: absolute;
@@ -1010,118 +1194,20 @@
       }
     }
   }
-  .slide3 {
-    .container{
-      height: auto !important;
-    }
-
-    .data-number {
-      display: grid;
-      grid-template-rows: minmax(100px auto);
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      grid-auto-flow: dense;
-      grid-gap: 10px;
-      margin-top: 160px;
-      li {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-bottom: 20px;
-        h1 {
-          font-family: 'Basier Square';
-          font-style: normal;
-          font-weight: 600;
-          font-size: 60px;
-          height: 60px;
-          line-height: 100%;
-          letter-spacing: -0.2px;
-          color: #281af0;
-          margin-bottom: 5px;
-          svg{
-            fill: #281af0 !important;
-          }
-        }
-        h2 {
-          font-family: "Basier Square";
-          font-style: normal;
-          font-weight: 500;
-          font-size: 24px;
-          line-height: 150%;
-          letter-spacing: -0.2px;
-          color: #000000;
-          margin-bottom: 12px;
-        }
-        p {
-          font-family: "Basier Square";
-          font-style: normal;
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 150%;
-          letter-spacing: -0.2px;
-          color: #000000;
-          text-align: left;
-        }
-      }
-    }
-  }
-  .slide4 {
-    .container{
-      height: auto !important;
-    }
-    .feature {
-      .pill {
-        width: 359px;
-        li {
-          width: 359px;
-          height: 96px;
-          margin-bottom: 20px;
-          background-size: cover;
-          &:nth-child(1) {
-            background-image: url(/assets/feature-list-1.png);
-          }
-          &:nth-child(2) {
-            background-image: url(/assets/feature-list-2.png);
-          }
-          &:nth-child(3) {
-            background-image: url(/assets/feature-list-3.png);
-          }
-          &:nth-child(4) {
-            background-image: url(/assets/feature-list-4.png);
-          }
-          &:nth-child(5) {
-            background-image: url(/assets/feature-list-5.png);
-          }
-          &:nth-child(1).selected {
-            background-image: url(/assets/feature-list-1-a.png);
-          }
-          &:nth-child(2).selected {
-            background-image: url(/assets/feature-list-2-a.png);
-          }
-          &:nth-child(3).selected {
-            background-image: url(/assets/feature-list-3-a.png);
-          }
-          &:nth-child(4).selected {
-            background-image: url(/assets/feature-list-4-a.png);
-          }
-          &:nth-child(5).selected {
-            background-image: url(/assets/feature-list-5-a.png);
-          }
-        }
-      }
-    }
-  }
   .slide5 {
     .container{
       height: auto !important;
     }
+    .section-title{
+      text-align: left;
+    }
     .menu{
+      margin-top: 40px;
       position: relative;
       display: flex;
-      margin-top: 35px;
-      justify-content: center;
       .menu-item{
         z-index: 10;
-        margin: 0 15px;
+        margin-right: 30px;
         padding: 18px 46px;
         font-family: 'Basier Square';
         font-style: normal;
@@ -1158,69 +1244,80 @@
     .swiper{
       width: 100%;
       margin-top: 100px;
-      height: 700px;
-      background: #FAFAFF;
-      border: 1px solid rgba(40, 26, 240, 0.08);
-      border-radius: 12px;
+      height: 520px;
       .swiper-slide{
         width: 100%;
         height: 100%;
+        display: flex;
+        .content-left{
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding-right: 30px;
+          .title-img{
+            margin-bottom: 40px;
+            height: 90px;
+          }
+          .info-list{
+            flex: 1;
+            .info-item{
+              position: relative;
+              padding-left: 20px;
+              text-align: left;
+              font-weight: 400;
+              font-size: 24px;
+              line-height: 36px;
+              color: #000000;
+              &::before{
+                content: '';
+                position: absolute;
+                top: 11px;
+                left: 0;
+                width: 0;
+                height: 0;
+                border-color: transparent transparent transparent  #571FFA;
+                border-width: 7px 0 7px 12px;
+                border-style: solid;
+              }
+            }
+          }
+          .button{
+            width: 255px;
+            height: 52px;
+            margin: 0;
+            font-weight: 500;
+            font-size: 18px;
+            box-sizing: border-box;
+            color: #2919F7;
+            background: linear-gradient(180deg, #FBFAFF 0%, #FFFFFF 25.98%, #EFEFFF 87.14%, #F5F3FD 100%);
+            border: 1px solid rgba(40, 26, 240, 0.04);
+            box-shadow: 0px 27px 11px rgba(40, 27, 240, 0.01), 0px 15px 9px rgba(40, 27, 240, 0.02), 0px 7px 7px rgba(40, 27, 240, 0.04), 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            svg{
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+        .content-right{
+          flex: 2;
+          img{
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+          }
+        }
       }
     }
   }
   .slide6 {
     .container{
       height: auto !important;
-    }
-    .content-content{
-      display: grid;
-      grid-template-rows: minmax(100px auto);
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      grid-auto-flow: dense;
-      grid-gap: 30px;
-      margin-top: 70px;
-      .item{
-        padding: 40px 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        background: #FAFAFF;
-        border: 1px solid rgba(40, 26, 240, 0.08);
-        border-radius: 12px;
-        text-align: left;
-        .item-icon{
-          width: 32px;
-          height: 32px;
-        }
-        .item-title{
-          font-family: 'Basier Square';
-          font-style: normal;
-          font-weight: 600;
-          font-size: 32px;
-          line-height: 120%;
-          color: #392CFF;
-          margin-bottom: 20px;
-        }
-        .item-desc{
-          font-family: 'Basier Square';
-          font-style: normal;
-          font-weight: 400;
-          font-size: 20px;
-          line-height: 150%;
-          letter-spacing: 0.2px;
-          color: #000000;
-          opacity: 0.7;
-        }
-      }
-    }
-
-  }
-  .slide7 {
-    .container{
-      height: auto !important;
-      .wrap{
-        padding-bottom: 300px;
-      }
     }
     .fix-12-12{
       display: flex;
@@ -1275,35 +1372,35 @@
               font-family: 'Basier Square';
               font-style: normal;
               font-weight: 500;
-              font-size: 48px;
-              line-height: 110%;
+              font-size: 32px;
+              line-height: 130%;
               letter-spacing: -0.2px;
               color: #000000;
-            }
-            .item-desc{
-              margin-top: 10px;
-              font-family: 'Basier Square';
-              font-style: normal;
-              font-weight: 400;
-              font-size: 22px;
-              line-height: 150%;
-              color: #000000;
-              opacity: 0.5;
               flex: 1;
             }
-            .item-link{
-              font-family: 'Basier Square';
-              font-style: normal;
-              font-weight: 600;
-              font-size: 24px;
-              line-height: 100%;
+            .item-footer{
               display: flex;
               align-items: center;
-              letter-spacing: -0.2px;
-              color: #281AF0;
-              .link-icon{
-                width: 32px;
-                height: 32px;
+              justify-content: space-between;
+
+              .item-link{
+                font-family: 'Basier Square';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 100%;
+                display: flex;
+                align-items: center;
+                letter-spacing: -0.2px;
+                color: #281AF0;
+                .link-icon{
+                  width: 32px;
+                  height: 32px;
+                }
+              }
+              .chain-icon{
+                width: 54px;
+                height: 54px;
               }
             }
           }
@@ -1336,233 +1433,307 @@
       }
     }
   }
-  .slide8{
-    overflow: visible;
-    .content{
-      overflow: visible;
-    }
+  .slide7 {
     .container{
       height: auto !important;
-      background: #000000;
-      overflow: visible;
-      .wrap{
-        padding-top: 0 !important;
-        overflow: visible !important;
-        padding-bottom: 90px;
-        .newslette-wrap{
-          width: 100%;
-          height: 1px;
-          position: relative;
-          .newslette{
-            position: absolute;
-            bottom: -40px;
-            left: 0;
-            width: 100%;
-            background: linear-gradient(180deg, rgba(251, 250, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 25.98%, rgba(239, 239, 255, 0.4) 87.14%, rgba(245, 243, 253, 0.4) 100%), #FFFFFF;
-            border: 1px solid rgba(40, 26, 240, 0.04);
-            box-shadow: 0px 27px 11px rgba(40, 27, 240, 0.01), 0px 15px 9px rgba(40, 27, 240, 0.02), 0px 7px 7px rgba(40, 27, 240, 0.04), 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
-            border-radius: 16px;
+    }
+    .section-title{
+      text-align: left;
+    }
+    .content-content{
+      display: grid;
+      grid-template-rows: minmax(100px auto);
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-auto-flow: dense;
+      grid-gap: 30px;
+      margin-top: 50px;
+      .item{
+        padding: 40px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background: #FAFAFF;
+        border: 1px solid rgba(40, 26, 240, 0.08);
+        border-radius: 12px;
+        text-align: left;
+        .item-icon{
+          width: 32px;
+          height: 32px;
+        }
+        .item-title{
+          font-family: 'Basier Square';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 32px;
+          line-height: 120%;
+          color: #392CFF;
+          margin-bottom: 20px;
+        }
+        .item-desc{
+          font-family: 'Basier Square';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 150%;
+          letter-spacing: 0.2px;
+          color: #000000;
+          opacity: 0.7;
+        }
+      }
+    }
+
+  }
+
+  .slide8{
+    .container{
+      height: auto !important;
+      background: #FAFAFF;
+      .newslette{
+        width: 100%;
+        background: linear-gradient(180deg, rgba(251, 250, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 25.98%, rgba(239, 239, 255, 0.4) 87.14%, rgba(245, 243, 253, 0.4) 100%), #FFFFFF;
+        border: 1px solid rgba(40, 26, 240, 0.04);
+        box-shadow: 0px 27px 11px rgba(40, 27, 240, 0.01), 0px 15px 9px rgba(40, 27, 240, 0.02), 0px 7px 7px rgba(40, 27, 240, 0.04), 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
+        border-radius: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 50px;
+        .newslette-left{
+          max-width: 480px;
+          margin: 20px 0;
+          h1{
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 110%;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
             align-items: center;
-            padding: 30px;
-            .newslette-left{
-              max-width: 480px;
-              margin: 20px 0;
-              h2{
-                font-family: 'Basier Square';
-                font-style: normal;
-                font-weight: 500;
-                font-size: 40px;
-                line-height: 120%;
-                display: flex;
-                align-items: center;
-                letter-spacing: 0.6px;
-                color: #000000;
-                text-align: left;
-              }
-            }
-            .newslette-right{
-              width: 248px;
-              margin: 20px 0;
-              .button{
-                width: 100%;
-                height: 52px;
-                line-height: 52px;
-                background: radial-gradient(129.53% 327.88% at 69.76% 0%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #2914F7;
-                box-shadow: 0px 77px 31px rgba(106, 38, 249, 0.01), 0px 43px 26px rgba(106, 38, 249, 0.05), 0px 19px 19px rgba(106, 38, 249, 0.09), 0px 5px 11px rgba(106, 38, 249, 0.1), 0px 0px 0px rgba(106, 38, 249, 0.1);
-                border-radius: 4px;
-                margin-bottom: 11px;
-                margin-left: 0;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                .button-text{
-                  font-family: 'Basier Square';
-                  font-style: normal;
-                  font-weight: 500;
-                  font-size: 18px;
-                }
-                .button-icon{
-                  width: 24px;
-                  height: 24px;
-                  margin-left: 5px;
-                  margin-right: 0;
-                }
-              }
-              p{
-                font-family: 'Basier Square';
-                font-style: normal;
-                font-weight: 500;
-                font-size: 14px;
-                line-height: 150%;
-                letter-spacing: -0.2px;
-                color: #3E31F1;
-                opacity: 0.5;
-                text-align: left;
-              }
-            }
+            letter-spacing: 0.6px;
+            color: #000000;
+            text-align: left;
+            background: radial-gradient(53.72% 255.12% at 60.89% 41.25%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #281AF0;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+          }
+          h2{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 150%;
+            color: #3E31F1;
+            opacity: 0.5;
+            text-align: left;
+            margin-top: 10px;
           }
         }
-        .footer{
-          width: 100%;
-          margin-top: 100px;
-          display: flex;
-          flex-wrap: wrap;
-          position: relative;
-          .footer-item{
-            width: 50%;
-            overflow: hidden;
-            padding-top: 50px;
-            .logo{
-              display: flex;
-              align-items: center;
-              .logo-icon{
-                width: 48px;
-                height: 48px;
-                margin-right: 32px;
-              }
-              .logo-text{
-                width: 258px;
-                height: 40px;
-                color: #fff;
-              }
-            }
-            .description{
-              flex: 1;
-              max-width: 400px;
-              margin-top: 45px;
-              font-family: 'Basier Square';
-              font-style: normal;
-              font-weight: 400;
-              font-size: 24px;
-              line-height: 160%;
-              letter-spacing: -0.2px;
-              color: #FFFFFF;
-              opacity: 0.7;
-              text-align: left;
-              margin-right: 30px;
-              margin-bottom: 45px;
-            }
-            .subtitle{
+        .newslette-right{
+          // width: 260px;
+          margin: 20px 0;
+          .button{
+            width: 100%;
+            height: 52px;
+            line-height: 52px;
+            background: radial-gradient(129.53% 327.88% at 69.76% 0%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #2914F7;
+            box-shadow: 0px 77px 31px rgba(106, 38, 249, 0.01), 0px 43px 26px rgba(106, 38, 249, 0.05), 0px 19px 19px rgba(106, 38, 249, 0.09), 0px 5px 11px rgba(106, 38, 249, 0.1), 0px 0px 0px rgba(106, 38, 249, 0.1);
+            border-radius: 4px;
+            margin-bottom: 11px;
+            margin-left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .button-text{
               font-family: 'Basier Square';
               font-style: normal;
               font-weight: 500;
-              font-size: 40px;
-              line-height: 110%;
-              letter-spacing: -0.2px;
-              color: #FFFFFF;
-              text-align: left;
+              font-size: 18px;
             }
-            .social-wrap{
-              width: 100%;
-              margin-top: 45px;
-              margin-bottom: 72px;
-              display: flex;
-              .social-item{
-                width: 100px;
-                height: 100px;
-                flex-shrink: 0;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border: 1.66667px solid #414141;
-                margin-left: -16px;
-
-                svg{
-                  width: 32px;
-                  height: 32px;
-                }
-
-                &:nth-child(1){
-                  margin-left: 0;
-                }
-              }
-            }
-            .sign-up-wrap{
-              width: 100%;
-              margin-top: 45px;
-              border-bottom: 1px solid #fff;
-              padding-bottom: 15px;
-              form{
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                input{
-                  height: 32px;
-                  line-height: 32px;
-                  font-weight: 600;
-                  font-size: 28px;
-                  background: transparent;
-                  border: 0;
-                  background:none;
-                  outline:none;
-                  color: #ffffff;
-                }
-                .button{
-                  display: flex;
-                  align-items: center;
-                  cursor: pointer;
-                  background: transparent;
-                  padding: 0;
-                  margin: 0;
-                  span{
-                    font-weight: 600;
-                    font-size: 28px;
-                    color: #FFFFFF;
-                    margin-right: 6px;
-                  }
-                  svg{
-                    width: 37px;
-                    height: 37px;
-                    color: #FFFFFF;
-                  }
-                }
-              }
+            .button-icon{
+              width: 24px;
+              height: 24px;
+              margin-left: 5px;
+              margin-top: 1px;
+              color: #fff;
             }
           }
-          .item-left{
-            display: flex;
-            flex-direction: column;
-          }
-          .copyright{
-            position: absolute;
+          p{
+            font-family: 'Basier Square';
+            font-style: normal;
             font-weight: 500;
-            font-size: 28px;
-            line-height: 100%;
-            color: #FFFFFF;
+            font-size: 14px;
+            line-height: 150%;
+            letter-spacing: -0.2px;
+            color: #3E31F1;
+            opacity: 0.5;
             text-align: left;
-            left: 0;
-            bottom: 0;
           }
         }
       }
     }
   }
 
+  .slide9{
+    .container{
+      height: auto !important;
+      background: #000000;
+      .footer{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        .footer-item{
+          width: 50%;
+          .logo{
+            display: flex;
+            align-items: center;
+            .logo-icon{
+              width: 32px;
+              height: 32px;
+              margin-right: 21px;
+            }
+            .logo-text{
+              width: 172px;
+              height: 27px;
+              color: #fff;
+            }
+          }
+          .description{
+            flex: 1;
+            max-width: 400px;
+            margin-top: 38px;
+            font-family: 'Basier Square';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 160%;
+            letter-spacing: -0.2px;
+            color: #FFFFFF;
+            opacity: 0.7;
+            text-align: left;
+            margin-right: 30px;
+            margin-bottom: 45px;
+          }
+          .subtitle{
+            font-family: 'Basier Square';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 110%;
+            letter-spacing: -0.2px;
+            color: #FFFFFF;
+            text-align: left;
+            margin-bottom: 30px;
+          }
+          .social-wrap{
+            width: 100%;
+            margin-bottom: 40px;
+            display: flex;
+            .social-item{
+              width: 80px;
+              height: 80px;
+              flex-shrink: 0;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 1.66667px solid #414141;
+              margin-left: -16px;
+
+              svg{
+                width: 32px;
+                height: 32px;
+              }
+
+              &:nth-child(1){
+                margin-left: 0;
+              }
+            }
+          }
+          .sign-up-wrap{
+            width: 100%;
+            max-width: 540px;
+            height: 52px;
+            padding: 0 15px;
+            box-sizing: border-box;
+            border: 1px solid #414141;
+            form{
+              width: 100%;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              input{
+                height: 32px;
+                line-height: 32px;
+                font-weight: 400;
+                font-size: 20px;
+                background: transparent;
+                border: 0;
+                background:none;
+                outline:none;
+                color: #ffffff;
+                flex: 1;
+              }
+              .button{
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                background: transparent;
+                padding: 0;
+                margin: 0 0 0 10px;
+                span{
+                  font-weight: 600;
+                  font-size: 20px;
+                  color: #FFFFFF;
+                  margin-right: 6px;
+                }
+                svg{
+                  width: 26px;
+                  height: 26px;
+                  color: #FFFFFF;
+                }
+              }
+            }
+          }
+        }
+        .item-left{
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+  .slide10{
+    .container{
+      height: auto !important;
+      background: radial-gradient(155.96% 713.49% at 81.1% 50%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #2914F7;
+      box-shadow: 0px 77px 31px rgba(106, 38, 249, 0.01), 0px 43px 26px rgba(106, 38, 249, 0.05), 0px 19px 19px rgba(106, 38, 249, 0.09), 0px 5px 11px rgba(106, 38, 249, 0.1), 0px 0px 0px rgba(106, 38, 249, 0.1);
+    }
+    .fix-12-12{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 33px 0;
+      .copyright{
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 100%;
+        color: #fff;
+      }
+      .menu{
+        .menu-item{
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 100%;
+          letter-spacing: -0.2px;
+          text-transform: uppercase;
+          color: #FFFFFF;
+          margin-left: 40px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
   }
   @media screen and (max-width: 767px) {
