@@ -7,7 +7,7 @@
     <section class="slide slide1 whiteSlide">
       <div class="content">
         <div class="container">
-          <div class="wrap padding-bottom-4">
+          <div class="wrap padding-bottom-2">
             <div class="fix-12-12">
               <img class="logo-ani ae-2 fromCenter margin-top-6 margin-bottom-4" src="assets/logo-animation.gif" alt="">
               <div class="fix-12-12 fix-main-title ae-3 fromCenter">
@@ -33,7 +33,7 @@
                   </div>
 
                 </div>
-                <p class="ae-5 fromBottom scroll-tip">scroll down to explore</p>
+                <p class="ae-5 fromBottom scroll-tip">Trusted by leading web3 companies</p>
               </div>
             </div>
 
@@ -48,13 +48,15 @@
         <div class="container">
           <div class="wrap padding-top-0 padding-bottom-0">
             <div class="fix-12-12">
-              <div class="link-wrap">
-                <div class="link-item" v-for="(item, i) in [...slide1LinkList, ...slide1LinkList]" :key="i"
-                  :style="{width: item.width + 'px', height: item.height + 'px'}"
-                  >
-                  <svg>
-                    <use :href="`#${item.icon}`"></use>
-                  </svg>
+              <div class="">
+                <div class="link-wrap" id="linkWrap">
+                  <div class="link-item" v-for="(item, i) in [...slide1LinkList, ...slide1LinkList]" :key="i"
+                    :style="{width: item.width + 'px', height: item.height + 'px'}"
+                    >
+                    <svg>
+                      <use :href="`#${item.icon}`"></use>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -109,7 +111,7 @@
     <section id="product" class="slide slide3 whiteSlide">
       <div class="content">
         <div class="container">
-          <div class="wrap">
+          <div class="wrap padding-top-18 padding-bottom-5">
             <div class="fix-12-12">
               <div class="section-title">Develop. Preview. Ship</div>
               <!-- <div class="code-wrap">
@@ -126,8 +128,8 @@
     <section id="product" class="slide slide4 whiteSlide">
       <div class="content">
         <div class="container">
-          <div class="wrap padding-top-8 padding-bottom-8">
-            <div class="section-title">Build crypto-powered apps</div>
+          <div class="wrap padding-top-9 padding-bottom-8">
+            <div class="section-title">Build data-powered apps within seconds</div>
 
             <div class="fix-12-12 slide-content">
               <div class="content-title" :style="{'--left': slide2Left }">
@@ -157,8 +159,8 @@
         <div class="container">
           <div class="wrap padding-top-8 padding-bottom-18">
             <div class="fix-12-12">
-              <div class="section-subtitle">Unlimited API possibilities</div>
-              <div class="section-title">Get started with ZettaBlock Suite</div>
+              <div class="section-subtitle">Unlimited possibilities</div>
+              <div class="section-title">Get started with ZettaBlock platform</div>
             </div>
             <div class="fix-12-12">
               <div class="menu" :style="{'--left': slide5Left, '--width': slide5Width }">
@@ -171,7 +173,7 @@
                 <div class="swiper-wrapper">
                   <div class="swiper-slide" v-for="item in slide5List" :key="item.id">
                     <div class="content-left">
-                      <img class="title-img" :src="item.textImg" alt="">
+                      <img class="title-img" :class="{'title-img_large': item.id === 4 || item.id === 5}" :src="item.textImg" alt="">
                       <ul class="info-list">
                         <li class="info-item" v-for="(p, i) in item.info" :key="item.id + i">{{p}}</li>
                       </ul>
@@ -245,20 +247,40 @@
     <section id="product" class="slide slide7 whiteSlide">
       <div class="content">
         <div class="container">
-          <div class="wrap padding-top-18">
+          <div class="wrap padding-top-13 padding-bottom-11">
             <div class="fix-12-12">
-              <div class="section-subtitle">The first full-stack</div>
+              <div class="section-subtitle">The First Full-stack Web3 Infra</div>
               <div class="section-title">
-                The first full-stack Web3 <br/>data infra for a next-gen internet
+                Data Infra for a next-gen internet
               </div>
             </div>
             <div class="fix-12-12 content-content">
-              <div class="item" v-for="item in slide6List" :key="item.id">
-                <svg class="item-icon">
-                  <use :href="`#${item.icon}`"></use>
-                </svg>
-                <div class="item-title">{{item.title}}</div>
-                <div class="item-desc">{{item.desc}}</div>
+              <div class="content-left">
+                <div class="item" v-for="item in slide6List" :key="item.id">
+                  <div class="item-icon-wrap">
+                    <svg class="item-icon">
+                      <use :href="`#${item.icon}`"></use>
+                    </svg>
+                  </div>
+                  <div class="item-content">
+                    <div class="item-title">{{item.title}}</div>
+                    <div class="item-desc">{{item.desc}}</div>
+                  </div>
+                </div>
+              </div>
+              <div class="content-right">
+                <div class="item">
+                  <div class="title">110B+ Transactions</div>
+                  <div class="desc">for 7+ blockchains since genesis</div>
+                </div>
+                <div class="item">
+                  <div class="title">17M+ Smart Contracts</div>
+                  <div class="desc">decoded for querying</div>
+                </div>
+                <div class="item">
+                  <div class="title">4.3B+ Price Feeds</div>
+                  <div class="desc">for fiat and crypto pairs</div>
+                </div>
               </div>
             </div>
           </div>
@@ -304,11 +326,11 @@
                   </svg>
                 </div>
                 <div class="description">
-                  ZettaBlock is a full-stack web3 data platform for data indexing, querying and analyzing. Developers can build real-time, public-facing, reliable GraphQL and SQL APIs in minutes.
+                  ZettaBlock is a full-stack web3 data platform for indexing, querying and analyzing. Developers can build real-time, public-facing, reliable GraphQL APIs and SQL in minutes.
                 </div>
               </div>
               <div class="footer-item">
-                <div class="subtitle">Join the Web3 Data Revolution</div>
+                <div class="subtitle">Join the Web3 data revolution</div>
                 <div class="social-wrap">
                   <a class="social-item" href="https://twitter.com/ZettaBlockHQ" target="_blank">
                     <svg>
@@ -341,7 +363,7 @@
                     </svg>
                   </a>
                 </div>
-                <div class="subtitle">Subscribe to Our Mailing List</div>
+                <div class="subtitle">Subscribe to our mailing list</div>
                 <div class="sign-up-wrap">
                   <form class="" action="https://zettablock.us14.list-manage.com/subscribe/post?u=1ff0f35da3b86da52617aadd6&amp;id=bc40fdafb4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
                     <input type="email" value="" name="EMAIL" placeholder="Email Address">
@@ -365,7 +387,7 @@
         <div class="container">
           <div class="wrap padding-top-0 padding-bottom-0">
             <div class="fix-12-12">
-              <div class="copyright">© 2022 ZettaBlock Inc.</div>
+              <div class="copyright">© 2022 DataLego Inc.</div>
               <div class="menu">
                 <a class="menu-item" href="#blog">Blog</a>
                 <a class="menu-item" href="#blog">Press Kit</a>
@@ -377,7 +399,6 @@
         </div>
       </div>
     </section>
-
 
     <div class="form-container" v-show="showForm">
         <div class="form-content">
@@ -414,6 +435,7 @@
   import Swiper from 'swiper'
   import gsap from 'gsap'
   import ScrollTrigger from 'gsap/ScrollTrigger'
+import { transform } from "_dom7@4.0.4@dom7";
   gsap.registerPlugin(ScrollTrigger)
 
   export default {
@@ -429,14 +451,15 @@
         showForm: false,
         slide1LinkList: [
           {id: 1, icon: 'link-polygon', width: 192, height: 40, href: ''},
-          {id: 2, icon: 'link-crypto', width: 242, height: 40, href: ''},
-          {id: 3, icon: 'link-ripple', width: 151, height: 40, href: ''},
-          {id: 4, icon: 'link-opensea', width: 176, height: 40, href: ''},
+          {id: 2, icon: 'link-ripple', width: 151, height: 40, href: ''},
+          {id: 3, icon: 'link-crypto', width: 242, height: 40, href: ''},
+          {id: 4, icon: 'link-autograph', width: 173, height: 40, href: ''},
           {id: 5, icon: 'link-celer', width: 101, height: 40, href: ''},
-          {id: 6, icon: 'link-autograph', width: 173, height: 40, href: ''},
-          {id: 7, icon: 'link-lotex', width: 150, height: 40, href: ''},
-          {id: 8, icon: 'link-cyberconnect', width: 258, height: 40, href: ''},
-          {id: 9, icon: 'link-friktion', width: 163, height: 40, href: ''},
+          {id: 6, icon: 'link-lotex', width: 150, height: 40, href: ''},
+          {id: 7, icon: 'link-cyberconnect', width: 258, height: 40, href: ''},
+          {id: 8, icon: 'link-friktion', width: 163, height: 40, href: ''},
+          {id: 9, icon: 'link-artemis', width: 183, height: 40, href: ''},
+          {id: 10, icon: 'link-ancient8', width: 182, height: 40, href: ''},
         ],
         chainList: [
         {id: 1, icon: '/assets/images/chain/chain-icon-01.png', name: 'Ethereum'},
@@ -467,8 +490,8 @@
           { id: 1, name: 'NFT', textImg: '/assets/images/slide5/text_NFT.svg',
             link: '', img: '/assets/images/slide5/card_1.png', info:
             [
-              'Deep reverse index to fetch NFT ownership, transfer, and price all in real-time.',
-              'Identify the right whitelist for newly launched NFTs based on transaction history.'
+              'Deep index to fetch NFT ownership, transfer, and price all in real-time.',
+              'Identify the right whitelist for new NFTs based on transaction history.',
             ]
           },
           { id: 2, name: 'DeFi', textImg: '/assets/images/slide5/text_DeFi.svg',
@@ -502,14 +525,11 @@
           },
         ],
         slide6List: [
-          {id: 1, icon: 'ic-database', title: 'Data Unification', desc: 'Support easy access to on-chain and off-chain data from multiple data sources.'},
-          {id: 2, icon: 'ic-processor', title: 'Scalability', desc: 'Support users to easily join petabyte-scale (1,000TB+) data with SQL.'},
-          {id: 3, icon: 'ic-flag', title: 'Easy of Use', desc: 'Rich transactions indexed and decoded for 8+ blockchains since genesis.'},
-          {id: 4, icon: 'ic-performance', title: 'Absolute Performance', desc: '<0.01 second low-latency customized APIs with sub-second data freshness.'},
-          {id: 5, icon: 'ic-cashwithdraw', title: 'Cost Efficiency', desc: 'Reduce many economic costs and technical thresholds for developers.'},
-          {id: 6, icon: 'ic-stats', title: 'Analytics Supported', desc: 'Provide query builder and visualization interface for blockchain analytics.'},
-          {id: 7, icon: 'ic-doubletick', title: 'Reliability', desc: 'Provide near-perfect system uptimes to support real-time, data-intensive apps.'},
-          {id: 8, icon: 'ic-flag', title: 'More', desc: 'Looking forward to your exploration'},
+          {id: 1, icon: 'section7-1', title: 'Zero Infra Overhead', desc: 'Save months of development and over 90% of their annual costs.'},
+          {id: 2, icon: 'section7-2', title: 'Flexibility', desc: 'Build your own GraphQL APIs and SQL with custom transformation logic needs.'},
+          {id: 3, icon: 'section7-3', title: 'Strong Performance', desc: 'Sub-second data freshness, 10ms response time, high throughput, petabyte-scale join.'},
+          {id: 4, icon: 'section7-4', title: 'Data Unification', desc: 'Seamlessly obtain any decoded on-chain data, combining with your own off-chain data.'},
+          {id: 5, icon: 'section7-5', title: 'Reliability', desc: 'Provide near-perfect system uptimes (99.95%) to support real-time, data-intensive apps.'},
         ],
         slide7SwiperIndex: 0,
         slide7List: [
@@ -531,6 +551,7 @@
         this.onCreateView();
       }, 100);
       this.$nextTick(() => {
+        this.initLinkWrap()
         this.initSlide3()
         this.handleSlide5MenuChange(0, true)
         this.initSlide5Swiper()
@@ -542,6 +563,9 @@
       this.removeHome();
     },
     methods: {
+      initLinkWrap () {
+        gsap.to('#linkWrap', {transform: 'translateX(-100%)', ease: 'none', duration: 30, repeat: -1})
+      },
       // Slide2中的切换
       handleSlide2CurrentIndexChange ({ target }, index) {
         const { width, left } = target.getBoundingClientRect()
@@ -931,19 +955,10 @@
       height: auto !important;
     }
     .link-wrap{
-      width: 100%;
       opacity: 0.4;
       display: flex;
       margin-top: 40px;
       margin-bottom: 100px;
-      // transform: translateX(-100%) 5s;
-      animation: linkMove 10s linear infinite;
-      @keyframes linkMove {
-        from {transform: translateX(-10%);}
-        // 50% {transform: translateX(-50%);}
-        // 51% {transform: translateX(0);}
-        to {transform: translateX(-60%);}
-      }
       .link-item{
         flex-shrink: 0;
         margin-right: 40px;
@@ -979,7 +994,6 @@
           font-weight: 700;
           font-size: 48px;
           line-height: 110%;
-          text-transform: uppercase;
           color: #000000;
           text-align: left;
         }
@@ -1063,6 +1077,7 @@
             display: flex;
             flex-direction: column;
             width: 16.66%;
+            flex-shrink: 0;
             padding: 25px 25px 5px;
             align-items: center;
             justify-content: center;
@@ -1070,7 +1085,6 @@
             border-right: 1px solid #DBD9FD;
             .icon{
               width: 50px;
-              height: 50px;
               border-radius: 10px;
               display: block;
               margin-bottom: 10px;
@@ -1097,10 +1111,6 @@
   .slide3{
     .container{
       height: auto !important;
-      .wrap{
-        padding-top: 180px;
-        padding-bottom: 80px;
-      }
       .code-wrap{
         margin-top: 80px;
         width: 100%;
@@ -1116,6 +1126,9 @@
   .slide4 {
     .container{
       height: auto !important;
+    }
+    .section-title{
+      font-size: 50px;
     }
     .slide-content{
       width: 100%;
@@ -1298,6 +1311,9 @@
           .title-img{
             margin-bottom: 40px;
             height: 90px;
+          }
+          .title-img_large{
+            height: 180px;
           }
           .info-list{
             flex: 1;
@@ -1485,44 +1501,70 @@
       text-align: left;
     }
     .content-content{
-      display: grid;
-      grid-template-rows: minmax(100px auto);
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      grid-auto-flow: dense;
-      grid-gap: 30px;
-      margin-top: 50px;
-      .item{
-        padding: 40px 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        background: #FAFAFF;
-        border: 1px solid rgba(40, 26, 240, 0.08);
-        border-radius: 12px;
-        text-align: left;
-        .item-icon{
-          width: 32px;
-          height: 32px;
+      display: flex;
+      margin-top: 60px;
+      .content-left{
+        flex: 1;
+        .item{
+          margin-bottom: 32px;
+          display: flex;
+          text-align: left;
+          .item-icon-wrap{
+            width: 54px;
+            height: 54px;
+            flex-shrink: 0;
+            background: #F5F5FF;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 24px;
+            .item-icon{
+              width: 32px;
+              height: 32px;
+            }
+          }
+          .item-content{
+            .item-title{
+              font-weight: 600;
+              font-size: 24px;
+              line-height: 100%;
+              color: #000000;
+              margin-bottom: 8px;
+            }
+            .item-desc{
+              font-size: 16px;
+              line-height: 100%;
+              color: #000000;
+            }
+          }
         }
-        .item-title{
-          font-family: 'Basier Square';
-          font-style: normal;
-          font-weight: 600;
-          font-size: 32px;
-          line-height: 120%;
-          color: #392CFF;
+      }
+      .content-right{
+        .item{
+          width: 460px;
+          // height: 128px;
+          background: linear-gradient(180deg, #FBFAFF 0%, #FFFFFF 25.98%, #FAFAFE 87.14%, #F6F5FB 100%);
+          border: 1px solid rgba(40, 26, 240, 0.04);
+          box-shadow: 0px 27px 11px rgba(40, 27, 240, 0.01), 0px 15px 9px rgba(40, 27, 240, 0.02), 0px 7px 7px rgba(40, 27, 240, 0.04), 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
+          border-radius: 4px;
           margin-bottom: 20px;
+          padding: 30px 40px;
+          text-align: left;
+          .title{
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 100%;
+            color: #281AF0;
+          }
+          .desc{
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: -0.2px;
+            color: #000000;
+          }
         }
-        .item-desc{
-          font-family: 'Basier Square';
-          font-style: normal;
-          font-weight: 400;
-          font-size: 20px;
-          line-height: 150%;
-          letter-spacing: 0.2px;
-          color: #000000;
-          opacity: 0.7;
-        }
+
       }
     }
 
@@ -1681,7 +1723,7 @@
               align-items: center;
               justify-content: center;
               border: 1.66667px solid #414141;
-              margin-left: -16px;
+              margin-left: -12px;
 
               svg{
                 width: 32px;
