@@ -49,7 +49,7 @@
           <div class="wrap padding-top-0 padding-bottom-0">
             <div class="fix-12-12">
               <div class="link-wrap">
-                <div class="link-item" v-for="item in [...slide1LinkList, ...slide1LinkList]" :key="item.id"
+                <div class="link-item" v-for="(item, i) in [...slide1LinkList, ...slide1LinkList]" :key="i"
                   :style="{width: item.width + 'px', height: item.height + 'px'}"
                   >
                   <svg>
@@ -112,9 +112,10 @@
           <div class="wrap">
             <div class="fix-12-12">
               <div class="section-title">Develop. Preview. Ship</div>
-              <div class="code-wrap">
+              <!-- <div class="code-wrap">
                 <img src="/assets/images/slide3_img.png" alt="">
-              </div>
+              </div> -->
+              <section-code/>
             </div>
           </div>
         </div>
@@ -408,6 +409,7 @@
   import { slidesFunction } from "../utils/slides_v5.2.1";
   import SvgLibrary from "../components/SvgLibrary.vue";
   import Panels from "../components/Panels.vue";
+  import SectionCode from "../components/SectionCode.vue";
   import bounty from "bounty";
   import Swiper from 'swiper'
   import gsap from 'gsap'
@@ -419,6 +421,7 @@
     components: {
       SvgLibrary,
       Panels,
+      SectionCode,
     },
     data() {
       return {

@@ -15,6 +15,19 @@
       </div>
     </div>
 
+    <div class="code-card">
+      <div class="card-header">
+        <div class="traffic">
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <textarea class="codemirror" id="codemirror2" name="code"></textarea>
+      </div>
+    </div>
+
     <div class="chart-card margin-top-3">
       <div class="card-header">Weekly ETH Deposited</div>
       <div class="card-body">
@@ -30,6 +43,15 @@ import * as CodeMirror from 'codemirror/lib/codemirror'
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/theme/monokai.css'
 import 'codemirror/mode/sql/sql'
+import 'codemirror/mode/javascript/javascript'
+
+// 折叠
+import 'codemirror/addon/fold/foldgutter.css'
+import 'codemirror/addon/fold/foldcode'
+import 'codemirror/addon/fold/foldgutter'
+import 'codemirror/addon/fold/brace-fold'
+import 'codemirror/addon/fold/comment-fold'
+
 
 import * as echarts from 'echarts'
 
@@ -124,7 +146,29 @@ export default {
         this.CodeMirrorEditor.setValue(html)
         i++
       },30)
-    }
+    },
+    initCode2 () {
+      let myTextarea = document.getElementById('codemirror2');
+      let CodeMirrorEditor = CodeMirror.fromTextArea(myTextarea, {
+        mode:'javascript',//编辑器语言
+        // theme:'monokai', //编辑器主题
+        extraKeys: {"Ctrl": "autocomplete"},//ctrl可以弹出选择项
+        lineNumbers: false,//显示行号
+        readOnly: true,
+        lineWrapping: true, // 允许换行
+        defaultTextHeight: 32,
+        foldGutter: true,
+        lineWrapping: true,
+        gutters: ['CodeMirror-linenumbers', 'CodeMirror-foldgutter', 'CodeMirror-lint-markers'],
+
+      });
+      CodeMirrorEditor.setValue(`function Fun () {
+  let a = 1;
+  let b = 2;
+  return a + b
+}
+`)
+    },
   },
   created () {
   },
@@ -132,6 +176,7 @@ export default {
     this.$nextTick(() => {
       this.drawChart();
       this.initCode()
+      this.initCode2()
     })
   }
 }
