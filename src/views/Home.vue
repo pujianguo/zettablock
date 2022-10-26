@@ -10,13 +10,13 @@
           <div class="wrap padding-bottom-4">
             <div class="fix-12-12">
               <img class="logo-ani ae-2 fromCenter margin-top-6 margin-bottom-4" src="assets/logo-animation.gif" alt="">
-              <div class="fix-10-12 fix-main-title ae-3 fromCenter">
+              <div class="fix-12-12 fix-main-title ae-3 fromCenter">
                 <div class="main-title">
-                  The Full-Stack, Real-time <br/>Web3 Data Infra
+                  The First Full-stack,<br/>Real-time Web3 Data Infra
                 </div>
               </div>
               <div class="fix-10-12">
-                <p class="ae-5 fromBottom description">Customize your own real-time GraphQL and SQL APIs to build dApps and analytics. On-chain and off-chain.</p>
+                <p class="ae-5 fromBottom description">Build your own GraphQL API and SQL. <br/>Indexing and analytics. On-chain and off-chain.</p>
 
                 <div class="button-wrap">
                   <div class="ae-6 fromBottom button access-button" @click="toggleSignup">
@@ -36,26 +36,38 @@
                 <p class="ae-5 fromBottom scroll-tip">scroll down to explore</p>
               </div>
             </div>
-            <div class="link-wrap">
-              <div class="link-item" v-for="item in slide1LinkList" :key="item.id"
-                :style="{width: item.width + 'px', height: item.height + 'px'}"
-                >
-                <svg>
-                  <use :href="`#${item.icon}`"></use>
-                </svg>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
       <div class="background" style="background: url(/assets/images/slide1_bg.png) no-repeat top center / cover"></div>
     </section>
 
+    <section class="slide slide1a whiteSlide">
+      <div class="content">
+        <div class="container">
+          <div class="wrap padding-top-0 padding-bottom-0">
+            <div class="fix-12-12">
+              <div class="link-wrap">
+                <div class="link-item" v-for="item in [...slide1LinkList, ...slide1LinkList]" :key="item.id"
+                  :style="{width: item.width + 'px', height: item.height + 'px'}"
+                  >
+                  <svg>
+                    <use :href="`#${item.icon}`"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Slide 2 -->
     <section id="product" class="slide slide2 whiteSlide">
       <div class="content">
         <div class="container">
-          <div class="wrap">
+          <div class="wrap padding-top-10">
             <div class="fix-12-12">
               <div class="content-body">
                 <div class="body-left">
@@ -596,6 +608,12 @@
 
       // Slide5
       handleSlide5MenuChange(i, isInit = false) {
+        this.slide5CurrentIndex = i
+        if (!isInit) {
+          this.slide5Swiper.slideTo(i)
+        }
+      },
+      handleSlide5MenuChange1(i, isInit = false) {
         const target = $('.menu-item')[i]
         const { width, left } = target.getBoundingClientRect()
         const { left: parentLeft } = target.parentNode.getBoundingClientRect()
@@ -832,9 +850,8 @@
       width: 100%;
       font-size: 60px;
       font-weight: 700;
-      line-height: 66px;
+      line-height: 72px;
       text-align: center;
-      text-transform: uppercase;
       background: radial-gradient(53.42% 202.11% at 78.75% 25.76%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #281AF0;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -901,18 +918,28 @@
       text-align: center;
       margin-top: 100px;
     }
+    .background {
+      background-size: cover;
+      background-position: center bottom;
+    }
+  }
+  .slide1a {
+    .container{
+      height: auto !important;
+    }
     .link-wrap{
       width: 100%;
       opacity: 0.4;
       display: flex;
       margin-top: 40px;
+      margin-bottom: 100px;
       // transform: translateX(-100%) 5s;
-      animation: linkMove 50s linear infinite;
+      animation: linkMove 10s linear infinite;
       @keyframes linkMove {
-        from {transform: translateX(0);}
-        50% {transform: translateX(-100%);}
-        51% {transform: translateX(100%);}
-        to {transform: translateX(0);}
+        from {transform: translateX(-10%);}
+        // 50% {transform: translateX(-50%);}
+        // 51% {transform: translateX(0);}
+        to {transform: translateX(-60%);}
       }
       .link-item{
         flex-shrink: 0;
@@ -1222,18 +1249,25 @@
         box-shadow: 0px 27px 11px rgba(40, 27, 240, 0.01), 0px 15px 9px rgba(40, 27, 240, 0.02), 0px 7px 7px rgba(40, 27, 240, 0.04), 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
         border-radius: 50px;
         transition-delay: 0s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       .active {
         color: #fff;
-        background: transparent;
-        transition-delay: 0.3s;
+        // background: transparent;
+        // transition-delay: 0.3s;
+        background: radial-gradient(129.53% 327.88% at 69.76% 0%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #2914F7;
+        box-shadow: 0px 77px 31px rgba(106, 38, 249, 0.01), 0px 43px 26px rgba(106, 38, 249, 0.05), 0px 19px 19px rgba(106, 38, 249, 0.09), 0px 5px 11px rgba(106, 38, 249, 0.1), 0px 0px 0px rgba(106, 38, 249, 0.1);
+        border-radius: 99px;
+        transition: all .4s;
+        transition-timing-function: ease-in-out;
       }
       &::before {
         position: absolute;
         left: var(--left);
         width: var(--width);
         height: 100%;
-        content: '';
         background: radial-gradient(129.53% 327.88% at 69.76% 0%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #2914F7;
         box-shadow: 0px 77px 31px rgba(106, 38, 249, 0.01), 0px 43px 26px rgba(106, 38, 249, 0.05), 0px 19px 19px rgba(106, 38, 249, 0.09), 0px 5px 11px rgba(106, 38, 249, 0.1), 0px 0px 0px rgba(106, 38, 249, 0.1);
         border-radius: 99px;
@@ -1244,11 +1278,14 @@
     .swiper{
       width: 100%;
       margin-top: 100px;
-      height: 520px;
+      padding-bottom: 20px;
+      // height: 520px;
       .swiper-slide{
         width: 100%;
         height: 100%;
         display: flex;
+        box-sizing: border-box;
+        padding: 0 5px;
         .content-left{
           flex: 1;
           display: flex;
@@ -1286,6 +1323,7 @@
             width: 255px;
             height: 52px;
             margin: 0;
+            margin-top: 20px;
             font-weight: 500;
             font-size: 18px;
             box-sizing: border-box;
@@ -1300,14 +1338,17 @@
             svg{
               width: 24px;
               height: 24px;
+              flex-shrink: 0;
             }
           }
         }
         .content-right{
           flex: 2;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           img{
             width: 100%;
-            height: 100%;
             display: block;
             object-fit: cover;
           }
