@@ -490,37 +490,36 @@ import { transform } from "_dom7@4.0.4@dom7";
           { id: 1, name: 'NFT', textImg: '/assets/images/slide5/text_NFT.svg',
             link: '', img: '/assets/images/slide5/card_1.png', info:
             [
-              'Deep index to fetch NFT ownership, transfer, and price all in real-time.',
-              'Identify the right whitelist for new NFTs based on transaction history.',
+              'Fetch NFT ownership, transfer, and price all in real-time.',
+              'Identify proper whitelists for new NFTs based on transaction history.',
             ]
           },
           { id: 2, name: 'DeFi', textImg: '/assets/images/slide5/text_DeFi.svg',
             link: '', img: '/assets/images/slide5/card_2.png', info:
             [
-              'Perform real-time portfolio tracking with customized logic.',
-              'Gain insights into DeFi protocols at the smart contract level.'
+              'Track user portfolio in real-time with custom logic.',
+              'Gain deeper transaction insights into DeFi protocols.'
             ]
           },
           { id: 3, name: 'Wallet', textImg: '/assets/images/slide5/text_Wallet.svg',
             link: '', img: '/assets/images/slide5/card_3.png', info:
             [
               'Build enhanced dashboards for customer holdings assets.',
-              'Visualize user transaction history, NFT holdings, and interactions with major protocols.'
+              'Visualize user transaction history, NFT holdings, protocol interactions.'
             ]
           },
-          { id: 4, name: 'Data Analytics', textImg: '/assets/images/slide5/text_Data Analytics.svg',
-            link: '', img: '/assets/images/slide5/card_4.png', info:
-            [
-              'Build monitoring dashboards cross chains for competitor analysis.',
-              'External facing APIs for their ecosystems.',
-              'Help better allocate resources to ecosystem partners'
-            ]
-          },
-          { id: 5, name: 'Block-chains', textImg: '/assets/images/slide5/text_Block-chains.svg',
+          { id: 4, name: 'Block-chains', textImg: '/assets/images/slide5/text_Block-chains.svg',
             link: '', img: '/assets/images/slide5/card_5.png', info:
             [
-              'Perform on-chain credential validations, wallet profiling and AML risk analytics.',
-              'Build machine learning models to perform tasks such as credit score rating.'
+              'Understand protocol traffic to better allocate resources in its ecosytem.',
+              'Build ecosystem monitoring dashboards cross chains.'
+            ]
+          },
+          { id: 5, name: 'AI-driven', textImg: '/assets/images/slide5/text_Block-chains.svg',
+            link: '', img: '/assets/images/slide5/card_5.png', info:
+            [
+              'Perform wallet profiling and AML risk assessment.',
+              'Build AI models for tasks like on-chain credit scoring.'
             ]
           },
         ],
@@ -535,7 +534,7 @@ import { transform } from "_dom7@4.0.4@dom7";
         slide7List: [
           {id: 1, title: 'Polygon relies on ZettaBlock for data infrastructure', chainIcon: '/assets/images/chain/icon_1.png', link: ''},
           {id: 2, title: 'ZetttaBlock’s infrastructure saves crypto.com 16,000 hours per year', chainIcon: '/assets/images/chain/icon_2.png',  link: ''},
-          {id: 3, title: 'Artemis deploys production-ready APIs in hours with ZettaBlock', chainIcon: '/assets/images/chain/icon_3.png', link: ''},
+          {id: 3, title: 'Artemis deploys production-ready APIs in minutes with ZettaBlock', chainIcon: '/assets/images/chain/icon_3.png', link: ''},
           {id: 4, title: 'Friktion’s new portoflio portal runs on ZettaBlock', chainIcon: '/assets/images/chain/icon_4.png', link: ''},
           {id: 5, title: 'Orchestrate a data platform for Autograph in 5 minutes', chainIcon: '/assets/images/chain/icon_5.png', link: ''},
         ]
