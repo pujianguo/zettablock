@@ -154,7 +154,7 @@ export default {
         // theme:'monokai', //编辑器主题
         extraKeys: {"Ctrl": "autocomplete"},//ctrl可以弹出选择项
         lineNumbers: false,//显示行号
-        readOnly: true,
+        // readOnly: true,
         lineWrapping: true, // 允许换行
         defaultTextHeight: 32,
         foldGutter: true,
@@ -165,8 +165,19 @@ export default {
       CodeMirrorEditor.setValue(`function Fun () {
   let a = 1;
   let b = 2;
+  console.log(1)
+  console.log(2)
+  console.log(2)
+  console.log(2)
+  console.log(2)
+  console.log(2)
+  console.log(2)
+  console.log(2)
+  console.log(2)
+  console.log(2)
   return a + b
 }
+
 `)
     },
   },
@@ -234,6 +245,7 @@ export default {
     }
     .card-body{
       flex: 1;
+      overflow: hidden;
       .CodeMirror-wrap{
         width: 100%;
         height: 100%;

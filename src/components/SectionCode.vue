@@ -25,12 +25,12 @@
             >
             <span>Code Snippets</span>
           </div>
-          <div class="title-item" :class="{active: currentIndex === 2}"
+          <!-- <div class="title-item" :class="{active: currentIndex === 2}"
             @click="handleCurrentChange(2)"
             v-show="isPlay"
             >
             <span>Visualization</span>
-          </div>
+          </div> -->
         </div>
         <div class="title-handle" v-if="isGraphqlEnd">
           <div class="handle-item item-text" v-show="currentIndex === 1">Try It!</div>
@@ -73,7 +73,6 @@ import 'codemirror/theme/ayu-dark.css'
 import 'codemirror/mode/sql/sql'
 import 'codemirror/mode/javascript/javascript'
 import 'codemirror/mode/python/python'
-import 'codemirror/mode/sparql/sparql'
 
 // 折叠
 import 'codemirror/addon/fold/foldgutter.css'
@@ -248,7 +247,7 @@ export default {
         },
         series: [
           {
-            name: "销量",
+            name: "",
             type: "bar",
             data: yData,
             animationDuration: 2800, //加上这个
@@ -302,12 +301,11 @@ export default {
   }
   .code-body{
     flex: 1;
-    overflow: auto;
+    overflow: hidden;
     .CodeMirror-wrap{
-      min-width: 100%;
-      min-height: 100%;
+      width: 100%;
+      height: 100%;
       line-height: 32px;
-      // overflow: auto;
     }
   }
   .code-left{
@@ -393,9 +391,13 @@ export default {
       position: relative;
       .code-graphql{
         width: 50%;
+        height: 100%;
+        overflow: hidden;
       }
       .code-data{
         width: 50%;
+        height: 100%;
+        overflow: hidden;
       }
       .code-snippets{
         position: absolute;
@@ -405,6 +407,7 @@ export default {
         height: 100%;
         z-index: -1;
         opacity: 0;
+        overflow: hidden;
       }
       .code-snippets_show{
         opacity: 1;

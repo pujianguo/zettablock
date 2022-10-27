@@ -435,7 +435,6 @@
   import Swiper from 'swiper'
   import gsap from 'gsap'
   import ScrollTrigger from 'gsap/ScrollTrigger'
-import { transform } from "_dom7@4.0.4@dom7";
   gsap.registerPlugin(ScrollTrigger)
 
   export default {
