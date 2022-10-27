@@ -77,9 +77,11 @@
                   <div class="input-wrap">
                   <!-- <div class="input-wrap input-wrap_success"> -->
                     <input class="input" type="text" placeholder="Request a new network">
-                    <svg class="btn">
-                      <use href="#arrow-right"></use>
-                    </svg>
+                    <div class="btn-wrap">
+                      <svg class="btn">
+                        <use href="#arrow-right"></use>
+                      </svg>
+                    </div>
                     <div class="success-wrap">
                       <span>Thank You!</span>
                       <svg class="btn">
@@ -94,7 +96,7 @@
                     <div class="chain-item" v-for="item in chainList" :key="item.directiveFunction">
                       <img class="icon" :src="item.icon" alt="">
                       <span class="name">{{item.name}}</span>
-                      <span class="coming-soon">{{item.isComingSoon ? 'coming soon' : '&nbsp;'}}</span>
+                      <span class="coming-soon" v-if="item.isComingSoon">WIP</span>
                     </div>
                     <div class="chain-item chain-item_more">More</div>
                   </div>
@@ -169,7 +171,7 @@
                   @click="handleSlide5MenuChange(index)"
                   >{{item.name}}</div>
               </div>
-              <div class="swiper" id="slide5Swiper">
+              <div class="swiper swiper-no-swiping" id="slide5Swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide" v-for="item in slide5List" :key="item.id">
                     <div class="content-left">
@@ -177,11 +179,12 @@
                       <ul class="info-list">
                         <li class="info-item" v-for="(p, i) in item.info" :key="item.id + i">{{p}}</li>
                       </ul>
-                      <div class="button">
+                      <div class="button" @click="() => item.isClick = true">
                         <span class="button-text">Read more use cases</span>
                         <svg class="button-icon">
                           <use href="#arrow-right"></use>
                         </svg>
+                        <div class="coming-soon" :class="{'coming-soon_show': item.isClick}">coming soon</div>
                       </div>
                     </div>
                     <div class="content-right">
@@ -491,14 +494,16 @@
             [
               'Fetch NFT ownership, transfer, and price all in real-time.',
               'Identify proper whitelists for new NFTs based on transaction history.',
-            ]
+            ],
+            isClick: false,
           },
           { id: 2, name: 'DeFi', textImg: '/assets/images/slide5/text_DeFi.svg',
             link: '', img: '/assets/images/slide5/card_2.png', info:
             [
               'Track user portfolio in real-time with custom logic.',
               'Gain deeper transaction insights into DeFi protocols.'
-            ]
+            ],
+            isClick: false,
           },
           { id: 3, name: 'Wallets', textImg: '/assets/images/slide5/text_Wallet.svg',
             link: '', img: '/assets/images/slide5/card_3.png', info:
@@ -512,14 +517,16 @@
             [
               'Understand protocol traffic to better allocate resources in its ecosytem.',
               'Build ecosystem monitoring dashboards across chains.'
-            ]
+            ],
+            isClick: false,
           },
           { id: 5, name: 'AI-driven', textImg: '/assets/images/slide5/text_AI-driven.svg',
             link: '', img: '/assets/images/slide5/card_5.png', info:
             [
               'Perform wallet profiling and AML risk assessment.',
               'Build AI models for tasks like on-chain credit scoring.'
-            ]
+            ],
+            isClick: false,
           },
         ],
         slide6List: [
@@ -651,6 +658,7 @@
       },
       initSlide5Swiper () {
         this.slide5Swiper = new Swiper('#slide5Swiper', {
+          noSwiping : true,
           slidesPerView: "auto",
           // loop: true,
         })
@@ -999,7 +1007,8 @@
           width: 303px;
           height: 52px;
           box-sizing: border-box;
-          padding: 18px;
+          padding-left: 18px;
+          padding-right: 5px;
           background: linear-gradient(180deg, #FBFAFF 0%, #FFFFFF 25.98%, #EFEFFF 87.14%, #F5F3FD 100%);
           border: 1px solid rgba(40, 26, 240, 0.04);
           box-shadow: 0px 27px 11px rgba(40, 27, 240, 0.01), 0px 15px 9px rgba(40, 27, 240, 0.02), 0px 7px 7px rgba(40, 27, 240, 0.04), 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
@@ -1018,11 +1027,22 @@
               color: rgba(40, 26, 240, 0.3);
             }
           }
-          .btn{
-            width: 24px;
-            height: 24px;
+          .btn-wrap{
+            width: 42px;
+            height: 42px;
+            background: radial-gradient(189.29% 189.29% at 69.05% 0%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #2914F7;
+            box-shadow: 0px 27px 11px rgba(40, 27, 240, 0.01), 0px 15px 9px rgba(40, 27, 240, 0.02), 0px 7px 7px rgba(40, 27, 240, 0.04), 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
-            color:#281AF0;
+
+            .btn{
+              width: 24px;
+              height: 24px;
+              color:#fff;
+            }
           }
           .success-wrap{
             display: none;
@@ -1081,6 +1101,7 @@
             justify-content: center;
             border-bottom: 1px solid #DBD9FD;
             border-right: 1px solid #DBD9FD;
+            position: relative;
             .icon{
               width: 50px;
               border-radius: 10px;
@@ -1092,8 +1113,18 @@
               font-size: 14px;
             }
             .coming-soon{
+              position: absolute;
+              width: 31px;
+              height: 18px;
+              right: 6px;
+              top: 6px;
+              line-height: 18px;
+              text-align: center;
+              background: rgba(40, 26, 240, 0.08);
+              border-radius: 4px;
+              font-weight: 500;
               font-size: 10px;
-              color: #A29DFB;
+              color: #817AFC;
             }
           }
           .chain-item_more{
@@ -1352,10 +1383,35 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            position: relative;
+            overflow: visible;
             svg{
               width: 24px;
               height: 24px;
               flex-shrink: 0;
+            }
+
+            .coming-soon{
+              position: absolute;
+              width: 100%;
+              height: 37px;
+              line-height: 37px;
+              text-align: center;
+              left: 0;
+              top: -47px;
+              background: #F9F9FF;
+              border: 1px solid rgba(40, 26, 240, 0.08);
+              border-radius: 4px;
+              font-weight: 600;
+              font-size: 14px;
+              letter-spacing: 2px;
+              text-transform: uppercase;
+              color: rgba(90, 32, 251, 0.4);
+              pointer-events: none;
+              opacity: 0;
+            }
+            .coming-soon_show{
+              opacity: 1;
             }
           }
         }
