@@ -159,7 +159,7 @@
         <div class="container">
           <div class="wrap padding-top-8 padding-bottom-18">
             <div class="fix-12-12">
-              <div class="section-subtitle">Unlimited possibilities</div>
+              <div class="section-subtitle">Unlock the future of blockchain</div>
               <div class="section-title">Get started with ZettaBlock platform</div>
             </div>
             <div class="fix-12-12">
@@ -479,14 +479,14 @@
         slide5Left: 0,
         slide5Width: 0,
         slide5Menu: [
-          {id: 1, name: 'NFT'},
+          {id: 1, name: 'NFTs'},
           {id: 2, name: 'DeFi'},
-          {id: 3, name: 'Wallet'},
-          {id: 4, name: 'Data Analytics'},
-          {id: 5, name: 'Blockchains'},
+          {id: 3, name: 'Wallets'},
+          {id: 4, name: 'Blockchains'},
+          {id: 5, name: 'AI-driven'},
         ],
         slide5List: [
-          { id: 1, name: 'NFT', textImg: '/assets/images/slide5/text_NFT.svg',
+          { id: 1, name: 'NFTs', textImg: '/assets/images/slide5/text_NFT.svg',
             link: '', img: '/assets/images/slide5/card_1.png', info:
             [
               'Fetch NFT ownership, transfer, and price all in real-time.',
@@ -500,7 +500,7 @@
               'Gain deeper transaction insights into DeFi protocols.'
             ]
           },
-          { id: 3, name: 'Wallet', textImg: '/assets/images/slide5/text_Wallet.svg',
+          { id: 3, name: 'Wallets', textImg: '/assets/images/slide5/text_Wallet.svg',
             link: '', img: '/assets/images/slide5/card_3.png', info:
             [
               'Build enhanced dashboards for customer holdings assets.',
@@ -511,10 +511,10 @@
             link: '', img: '/assets/images/slide5/card_5.png', info:
             [
               'Understand protocol traffic to better allocate resources in its ecosytem.',
-              'Build ecosystem monitoring dashboards cross chains.'
+              'Build ecosystem monitoring dashboards across chains.'
             ]
           },
-          { id: 5, name: 'AI-driven', textImg: '/assets/images/slide5/text_Block-chains.svg',
+          { id: 5, name: 'AI-driven', textImg: '/assets/images/slide5/text_AI-driven.svg',
             link: '', img: '/assets/images/slide5/card_5.png', info:
             [
               'Perform wallet profiling and AML risk assessment.',
@@ -848,8 +848,8 @@
     letter-spacing: 4px;
     text-transform: uppercase;
     color: #5A20FB;
-    opacity: 0.2;
-    margin-bottom: 20px;
+    opacity: 0.4;
+    margin-bottom: 12px;
     text-align: left;
   }
   .slide1 {
@@ -934,12 +934,12 @@
       font-family: 'Basier Square';
       font-style: normal;
       font-weight: 600;
-      font-size: 14px;
+      font-size: 16px;
       line-height: 100%;
       letter-spacing: 4px;
       text-transform: uppercase;
       color: #5A20FB;
-      opacity: 0.2;
+      opacity: 0.4;
       text-align: center;
       margin-top: 100px;
     }
@@ -1093,7 +1093,7 @@
             }
             .coming-soon{
               font-size: 10px;
-              color: #DBD9FD;
+              color: #A29DFB;
             }
           }
           .chain-item_more{
@@ -1584,11 +1584,11 @@
         align-items: center;
         padding: 25px 50px;
         .newslette-left{
-          max-width: 480px;
+          max-width: 520px;
           margin: 20px 0;
           h1{
             font-weight: 700;
-            font-size: 36px;
+            font-size: 40px;
             line-height: 110%;
             display: flex;
             align-items: center;
@@ -1603,7 +1603,7 @@
           }
           h2{
             font-weight: 500;
-            font-size: 14px;
+            font-size: 18px;
             line-height: 150%;
             color: #3E31F1;
             opacity: 0.5;
