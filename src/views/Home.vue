@@ -16,7 +16,7 @@
                 </div>
               </div>
               <div class="fix-10-12">
-                <p class="ae-5 fromBottom description">Build your own GraphQL API and SQL. <br/>Indexing and analytics. On-chain and off-chain.</p>
+                <p class="ae-5 fromBottom description">Build your own GraphQL APIs and SQL. <br/>Indexing and analytics. On-chain and off-chain.</p>
 
                 <div class="button-wrap">
                   <div class="ae-6 fromBottom button access-button" @click="toggleSignup">
@@ -33,7 +33,7 @@
                   </div>
 
                 </div>
-                <p class="ae-5 fromBottom scroll-tip">Trusted by leading web3 companies</p>
+                <p class="ae-5 fromBottom scroll-tip">Trusted by leading Web3 companies</p>
               </div>
             </div>
 
@@ -251,7 +251,7 @@
             <div class="fix-12-12">
               <div class="section-subtitle">The First Full-stack Web3 Infra</div>
               <div class="section-title">
-                Data Infra for a next-gen internet
+                Data infra for a next-gen internet
               </div>
             </div>
             <div class="fix-12-12 content-content">
@@ -294,7 +294,7 @@
           <div class="wrap padding-top-8 padding-bottom-8">
             <div class="fix-12-12 newslette">
               <div class="newslette-left">
-                <h1>Ready to speed up your web3 development?</h1>
+                <h1>Ready to speed up your Web3 development?</h1>
                 <h2>Simple, out-of-box, ultra fast, low cost, and high performance.</h2>
               </div>
               <div class="newslette-right">
@@ -326,7 +326,7 @@
                   </svg>
                 </div>
                 <div class="description">
-                  ZettaBlock is a full-stack web3 data platform for indexing, querying and analyzing. Developers can build real-time, public-facing, reliable GraphQL APIs and SQL in minutes.
+                  ZettaBlock is a full-stack Web3 data platform for indexing, querying and analyzing. Developers can build real-time, public-facing, reliable GraphQL APIs and SQL in minutes.
                 </div>
               </div>
               <div class="footer-item">
