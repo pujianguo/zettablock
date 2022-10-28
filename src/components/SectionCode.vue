@@ -34,10 +34,10 @@
         </div>
         <div class="title-handle" v-if="isGraphqlEnd">
           <div class="handle-item item-text" v-show="currentIndex === 1">Try It!</div>
-          <div class="handle-item item-text" v-show="currentIndex === 0">Create & Query</div>
-          <div class="handle-item item-icon" v-show="currentIndex === 0" @click="handlePlay">
+          <div class="handle-item item-text" v-show="currentIndex === 0" @click="handlePlay">Create & Query</div>
+          <!-- <div class="handle-item item-icon" v-show="currentIndex === 0" @click="handlePlay">
             <svg><use href="#play"></use></svg>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="code-body">
@@ -369,7 +369,8 @@ export default {
             font-weight: 500;
             font-size: 18px;
             color: #FFFFFF;
-            text-align: center
+            text-align: center;
+            cursor: pointer;
           }
           &.item-icon{
             width: 40px;

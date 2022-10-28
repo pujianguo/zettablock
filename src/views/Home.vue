@@ -701,8 +701,9 @@
       },
 
       toggleSignup() {
-        console.log("toggle",this.showForm);
-        this.showForm = !this.showForm;
+        // console.log("toggle",this.showForm);
+        // this.showForm = !this.showForm;
+        window.open("https://discord.gg/zettablock", "_blank", "");
       },
       onCreateView() {
         document.querySelector("body").classList.add("posr");
@@ -1111,6 +1112,9 @@
             .name{
               font-weight: 500;
               font-size: 14px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
             }
             .coming-soon{
               position: absolute;
