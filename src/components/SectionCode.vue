@@ -170,7 +170,7 @@ export default {
         this.graphqlCodemirror = CodeMirror.fromTextArea(myTextarea, {
           mode:'javascript',
           theme: this.codeTheme,
-          lineNumbers: true,
+          // lineNumbers: true,
           readOnly: true,
           lineWrapping: true,
         });
@@ -195,9 +195,8 @@ export default {
           theme: this.codeTheme,
           readOnly: true,
           lineWrapping: true,
-          foldGutter: true,
-          lineWrapping: true,
-          gutters: ['CodeMirror-linenumbers', 'CodeMirror-foldgutter', 'CodeMirror-lint-markers'],
+          // foldGutter: true,
+          // gutters: ['CodeMirror-linenumbers', 'CodeMirror-foldgutter', 'CodeMirror-lint-markers'],
 
         });
         this.dataCodemirror.setValue(dataCodeString)
@@ -209,7 +208,7 @@ export default {
         this.snippetsCodemirror = CodeMirror.fromTextArea(myTextarea, {
           mode:'python',
           theme: this.codeTheme,
-          lineNumbers: true,
+          // lineNumbers: true,
           readOnly: true,
           lineWrapping: true,
         });
@@ -393,12 +392,19 @@ export default {
         width: 50%;
         height: 100%;
         overflow: hidden;
+        .CodeMirror-wrap{
+          padding: 10px 10px;
+        }
+
       }
       .code-data{
         width: 50%;
         height: 100%;
         overflow: hidden;
         border-left: 1px solid $border-color;
+        .CodeMirror-wrap{
+          padding: 10px 10px;
+        }
       }
       .code-snippets{
         position: absolute;
@@ -409,6 +415,9 @@ export default {
         z-index: -1;
         opacity: 0;
         overflow: hidden;
+        .CodeMirror-wrap{
+          padding: 10px 10px;
+        }
       }
       .code-snippets_show{
         opacity: 1;
