@@ -168,7 +168,7 @@ export default {
       if (!this.graphqlCodemirror) {
         let myTextarea = document.getElementById('graphqlCodemirror');
         this.graphqlCodemirror = CodeMirror.fromTextArea(myTextarea, {
-          mode:'sql',
+          mode:'javascript',
           theme: this.codeTheme,
           lineNumbers: true,
           readOnly: true,
@@ -268,7 +268,7 @@ export default {
   $border-color: rgba(40, 26, 240, 0.08);
   margin-top: 80px;
   width: 100%;
-  height: 520px;
+  height: 530px;
   background: #FAFBFC;
   border: 1px solid $border-color;
   border-radius: 12px;
@@ -305,21 +305,20 @@ export default {
     .CodeMirror-wrap{
       width: 100%;
       height: 100%;
-      line-height: 32px;
+      line-height: 22px;
+      font-size: 14px;
     }
   }
   .code-left{
-    flex: 2 0;
     border-right: 1px solid $border-color;
     display: flex;
     flex-direction: column;
-    width: 0;
+    width: 38%;
   }
   .code-right{
-    flex: 3 0;
     display: flex;
     flex-direction: column;
-    width: 0;
+    width: 62%;
     .code-title{
       display: flex;
       align-items: center;
@@ -399,6 +398,7 @@ export default {
         width: 50%;
         height: 100%;
         overflow: hidden;
+        border-left: 1px solid $border-color;
       }
       .code-snippets{
         position: absolute;

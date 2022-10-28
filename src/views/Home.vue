@@ -513,7 +513,7 @@
             ]
           },
           { id: 4, name: 'Block-chains', textImg: '/assets/images/slide5/text_Block-chains.svg',
-            link: '', img: '/assets/images/slide5/card_5.png', info:
+            link: '', img: '/assets/images/slide5/card_4.png', info:
             [
               'Understand protocol traffic to better allocate resources in its ecosytem.',
               'Build ecosystem monitoring dashboards across chains.'
@@ -850,6 +850,19 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 165px;
+      height: 100px;
+      transform: translate(-50%, -50%);
+      // background: red;
+      background: url('/assets/images/title_bg.png') no-repeat center;
+      z-index: -1;
+    }
   }
   .section-subtitle{
     font-weight: 600;
@@ -1147,7 +1160,6 @@
       .code-wrap{
         margin-top: 80px;
         width: 100%;
-        // height: 520px;
         .img{
           width: 100%;
         }
@@ -1276,6 +1288,11 @@
     }
     .section-title{
       text-align: left;
+      &::before{
+        left: unset;
+        right: 0;
+        transform: translate(0,-50%);
+      }
     }
     .menu{
       margin-top: 40px;
@@ -1557,6 +1574,11 @@
     }
     .section-title{
       text-align: left;
+      &::before{
+        left: unset;
+        right: 0;
+        transform: translate(0,-50%);
+      }
     }
     .content-content{
       display: flex;

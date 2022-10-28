@@ -1,8 +1,14 @@
-export const sqlCodeString = `SELECT
+export const sqlCodeString = `-- ETH weekly deposited to Beacan
+
+SELECT
+  -- Convert wei to ether
   SUM(VALUE) / 1e18 AS total_deposited_eth,
+  -- Truncate time to date
   date_trunc('week', DATE(block_time)) AS week_date
 FROM ethereum_mainnet.traces
-WHERE LOWER(to_address) = LOWER('0x00000000219ab540356cBB839Cbe05303d7705Fa')
+-- Find all data deposited to Beacan
+WHERE LOWER(to_address) =
+  LOWER('0x00000000219ab540356cBB839Cbe05303d7705Fa')
   AND STATUS = 1
   AND VALUE > 0
 GROUP BY 2
@@ -17,7 +23,8 @@ export const graphqlCodeString =  `{
     week_date
     total_deposited_eth
   }
-}`
+}
+`
 
 export const dataCodeString = `{
   "data": {
@@ -87,7 +94,19 @@ import json
 
 endpoint = 'https://api.zettablock.com/qugate/v1/userapis/sq_6edb14cd3ebd4cb79685c9b965c93f64/graphql'
 headers = {'authorization': 'Basic c2NvdHQ6aGVsbG9fc2NvdHQ5MTI='}
-data = {"query":"{records( filter: { week_date:{min: \"2022-07-11\", max: \"2022-10-10\"}}) {week_date, total_deposited_eth}}"}
+data = {'query': """
+{records(
+  filter: {
+    week_date:
+        {
+            min: "2022-07-11",
+            max: "2022-10-10"
+        } }) {
+    week_date
+    total_deposited_eth
+  }
+}
+"""}
 
 res = requests.post(endpoint, headers=headers, data=json.dumps(data))
 print(res.text)`
