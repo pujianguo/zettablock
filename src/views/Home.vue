@@ -345,7 +345,7 @@
                       <use href="#social-linkedin"></use>
                     </svg>
                   </a>
-                  <a class="social-item" href="https://discord.gg/px42xPBFkN" target="_blank">
+                  <a class="social-item" href="https://discord.gg/zettablock" target="_blank">
                     <svg>
                       <use href="#social-discord"></use>
                     </svg>
