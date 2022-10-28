@@ -547,7 +547,7 @@
       };
     },
     created() {
-      document.title = "ZettaBlock - The Unified Web3 Data Platform";
+      document.title = "ZettaBlock - The First Full-stack, Real-time Web3 Data Infra";
     },
     mounted() {
       this.slide5Swiper = null
