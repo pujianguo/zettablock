@@ -155,6 +155,119 @@
       <div class="background" style="background:#fff;"></div>
     </section>
 
+    <!-- Slide 11 -->
+    <section class="slide slide11 whiteSlide">
+      <div class="content">
+        <div class="container">
+          <div class="wrap">
+            <div class="fix-12-12">
+              <div class="section-subtitle">Designed for developers</div>
+              <div class="section-title">The complete, fully managed web3 data suite</div>
+              <div class="title-desc">Access and build real-time, reliable APIs to power your apps in minutes.Ship fast with zero data infra overhead.</div>
+            </div>
+            <div class="fix-12-12 content-content">
+              <!-- item1 -->
+              <div class="item">
+                <div class="item-left">
+                  <div class="item-info">
+                    <div class="item-title">Custom GraphQL APIs</div>
+                    <div class="item-description">Transform, filter and stream data in any shape into anywhere you want via low latency APIs. Index 100X faster than subgraphs.</div>
+                    <div class="item-tip">Subgraph seamless migration coming soon.</div>
+                  </div>
+                </div>
+                <div class="item-right">
+                  <div class="item-img-wrap">
+                    <div class="item-img-inner">
+                      <img class="img" src="/assets/images/slide11/2.jpg" alt=""/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- item2 -->
+              <div class="item">
+                <div class="item-left">
+                  <div class="item-img-wrap">
+                    <div class="item-img-inner">
+                      <div class="swiper item-swiper" id="slide11Swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide" v-for="(item, i) in slide11List" :key="item.id">
+                            <img class="swiper-img" :src="item.img" alt="">
+                          </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-right">
+                  <div class="item-info">
+                    <div class="item-title">Prebuilt Web3 APIs</div>
+                    <div class="item-description">Dramatically simplify and optimize common request patterns with prebuilt real-time APIs. Anyone can further customize them in minutes. </div>
+                    <div class="item-menu">
+                      <div class="menu-item" :class="{active: slide11CurrentIndex === i}"
+                        v-for="(item, i) in slide11List" :key="item.id"
+                        @click="handleSlide11MenuChange(i)"
+                        >{{item.name}} {{slide11CurrentIndex === i ? 'API' : ''}}</div>
+                    </div>
+                    <div class="item-tip">{{slide11List[slide11CurrentIndex].title}}</div>
+                  </div>
+                </div>
+              </div>
+              <!-- item3 -->
+              <div class="item">
+                <div class="item-left">
+                  <div class="item-info">
+                    <div class="item-title">Data Lake API</div>
+                    <div class="item-description">Our data lake makes blockchains speak SQL to maximize data analytics capabilities, and access queries and historical data via the data lake API.</div>
+                  </div>
+                </div>
+                <div class="item-right">
+                  <div class="item-img-wrap">
+                    <div class="item-img-inner">
+                      <img class="img" src="/assets/images/slide11/2.jpg" alt=""/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- item4 -->
+              <div class="item">
+                <div class="item-left">
+                  <div class="item-img-wrap">
+                    <div class="item-img-inner">
+                      <img class="img" src="/assets/images/slide11/2.jpg" alt=""/>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-right">
+                  <div class="item-info">
+                    <div class="item-title">On&off-chain data</div>
+                    <div class="item-description">Access comprehensive raw, fully decoded and aggregated on-chain data, with multiple off-chain data sources support such as Snowflake. </div>
+                  </div>
+                </div>
+              </div>
+              <!-- item5 -->
+              <div class="item">
+                <div class="item-left">
+                  <div class="item-info">
+                    <div class="item-title">Dashboards</div>
+                    <div class="item-description">Build dashboards with a grid-based collection of charts and text boxes, all of which show up-to-date data.</div>
+                  </div>
+                </div>
+                <div class="item-right">
+                  <div class="item-img-wrap">
+                    <div class="item-img-inner">
+                      <img class="img" src="/assets/images/slide11/2.jpg" alt=""/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <!-- Slide 5 -->
     <section id="product" class="slide slide5 whiteSlide">
       <div class="content">
@@ -435,7 +548,7 @@
   import Panels from "../components/Panels.vue";
   import SectionCode from "../components/SectionCode.vue";
   import bounty from "bounty";
-  import Swiper from 'swiper'
+  import Swiper, {Pagination} from 'swiper'
   import gsap from 'gsap'
   import ScrollTrigger from 'gsap/ScrollTrigger'
   gsap.registerPlugin(ScrollTrigger)
@@ -529,6 +642,14 @@
             isClick: false,
           },
         ],
+        slide11CurrentIndex: 0,
+        slide11List: [
+          {id: 1, name: 'NFT', img: '/assets/images/slide11/swiper1.jpg', title: 'NFT mints,ownership, transfers, account balances, price, etc'},
+          {id: 2, name: 'Tokens', img: '/assets/images/slide11/swiper2.jpg', title: 'Token price, ownership, transfers, metadata, and account balances'},
+          {id: 3, name: 'Block', img: '/assets/images/slide11/swiper3.jpg', title: 'NFT mints,ownership, transfers, account balances, price, etc'},
+          {id: 4, name: 'ENS', img: '/assets/images/slide11/swiper4.jpg', title: 'NFT mints,ownership, transfers, account balances, price, etc'},
+          {id: 5, name: 'Stream', img: '/assets/images/slide11/swiper5.jpg', title: 'NFT mints,ownership, transfers, account balances, price, etc'},
+        ],
         slide6List: [
           {id: 1, icon: 'section7-1', title: 'Zero Infra Overhead', desc: 'Save months of development and over 90% of their annual costs.'},
           {id: 2, icon: 'section7-2', title: 'Flexibility', desc: 'Build your own GraphQL APIs and SQL with custom transformation logic needs.'},
@@ -550,6 +671,7 @@
       document.title = "ZettaBlock - The First Full-stack, Real-time Web3 Data Infra";
     },
     mounted() {
+      this.slide11Swiper = null
       this.slide5Swiper = null
       this.slide7Swiper = null
       setTimeout(() => {
@@ -559,6 +681,7 @@
         this.initLinkWrap()
         this.initSlide3()
         this.handleSlide5MenuChange(0, true)
+        this.initSlide11Swiper()
         this.initSlide5Swiper()
         this.initSlide7Swiper()
       })
@@ -664,10 +787,33 @@
         })
         this.slide5Swiper.on('activeIndexChange', (e) => {
           const { realIndex } = e
-          if (realIndex !== this.slide5SwiperIndex) {
+          if (realIndex !== this.slide5CurrentIndex) {
             this.handleSlide5MenuChange(realIndex)
           }
         })
+      },
+
+      initSlide11Swiper () {
+        this.slide11Swiper = new Swiper('#slide11Swiper', {
+          modules: [Pagination],
+          slidesPerView: "auto",
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        })
+        this.slide11Swiper.on('activeIndexChange', (e) => {
+          const { realIndex } = e
+          if (realIndex !== this.slide11CurrentIndex) {
+            this.handleSlide11MenuChange(realIndex)
+          }
+        })
+      },
+      handleSlide11MenuChange(i, isInit = false) {
+        this.slide11CurrentIndex = i
+        if (!isInit) {
+          this.slide11Swiper.slideTo(i)
+        }
       },
 
       initSlide7Swiper () {
@@ -1163,8 +1309,6 @@
         .img{
           width: 100%;
         }
-
-
       }
     }
   }
@@ -1282,6 +1426,192 @@
       }
     }
   }
+
+  .slide11 {
+    background: #FAFAFF !important;
+    .container{
+      height: auto !important;
+    }
+    .section-subtitle{
+      text-align: center;
+    }
+    .section-title{
+      font-size: 50px;
+    }
+    .title-desc{
+      font-size: 28px;
+      line-height: 150%;
+      max-width: 950px;
+      text-align: center;
+      margin: 30px auto 100px;
+    }
+    .content-content{
+      .item{
+        display: flex;
+        align-items: center;
+        margin-bottom: 140px;
+        text-align: left;
+        .item-left{
+          width: 50%;
+        }
+        .item-right{
+          width: 50%;
+        }
+        .item-title{
+          font-weight: 700;
+          font-size: 54px;
+          line-height: 100%;
+        }
+        .item-description{
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 150%;
+          color: #000000;
+          opacity: 0.6;
+          margin: 20px 0;
+        }
+        .item-tip{
+          padding: 0 20px;
+          line-height: 32px;
+          background: #F9F9FF;
+          border: 1px solid rgba(40, 26, 240, 0.08);
+          border-radius: 4px;
+          font-size: 14px;
+          color: #5A20FB;
+          opacity: 0.4;
+        }
+        .item-img-wrap{
+          position: relative;
+          width: 100%;
+          height: 0;
+          padding-bottom: 53.731%;
+          background: #FFFFFF;
+          border: 0.784047px solid rgba(40, 26, 240, 0.08);
+          box-shadow: 0px 81px 81px rgba(50, 28, 242, 0.04), 0px 20px 45px rgba(50, 28, 242, 0.05), 0px 0px 0px rgba(50, 28, 242, 0.05);
+          border-radius: 10px;
+          overflow: hidden;
+          .item-img-inner{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+          }
+          .img{
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+          }
+        }
+        .item-swiper{
+          width: 100%;
+          height: 100%;
+          .swiper-img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          .swiper-pagination{
+            position: absolute !important;
+            bottom: 10px;
+            right: 10px;
+            width: 100px;
+            display: flex;
+            justify-content: space-around;
+            height: 28px;
+            align-items: center;
+            .swiper-pagination-bullet{
+              background: rgba(40, 26, 240, 0.5) !important;
+            }
+            .swiper-pagination-bullet-active{
+              background: #281AF0 !important;
+            }
+          }
+        }
+        .item-menu{
+          width: 100%;
+          min-width: 500px;
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+          .menu-item{
+            padding: 8px 12px;
+            margin-right: 10px;
+            height: 32px;
+            line-height: 14px;
+            background: linear-gradient(180deg, #FBFAFF 0%, #FFFFFF 25.98%, #EFEFFF 87.14%, #F5F3FD 100%);
+            border: 1px solid rgba(40, 26, 240, 0.04);
+            box-shadow: 0px 7px 7px rgba(40, 27, 240, 0.04), 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: -0.2px;
+            color: rgba(40, 26, 240, 0.3);
+            cursor: pointer;
+            &.active{
+              background: radial-gradient(129.53% 327.88% at 69.76% 0%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #2914F7;
+              box-shadow: 0px 19px 19px rgba(106, 38, 249, 0.09), 0px 5px 11px rgba(106, 38, 249, 0.1), 0px 0px 0px rgba(106, 38, 249, 0.1);
+              color: #fff;
+            }
+          }
+        }
+
+        &:nth-child(1){
+          .item-left{
+            padding-right: 100px;
+          }
+          .item-info{
+            max-width: 540px;
+          }
+          .item-tip{
+            padding: 0;
+            text-align: center;
+            max-width: 320px;
+          }
+        }
+        &:nth-child(2){
+          .item-right{
+            padding-left: 100px;
+          }
+          .item-info{
+            max-width: 540px;
+          }
+          .item-tip{
+            border: 0;
+            padding: 0;
+          }
+
+        }
+        &:nth-child(3){
+          .item-left{
+            padding-right: 100px;
+          }
+          .item-info{
+            max-width: 550px;
+          }
+        }
+        &:nth-child(4){
+          .item-right{
+            padding-left: 100px;
+          }
+          .item-info{
+            max-width: 540px;
+          }
+        }
+        &:nth-child(5){
+          margin-bottom: 40px;
+          .item-left{
+            padding-right: 100px;
+          }
+          .item-info{
+            max-width: 550px;
+          }
+        }
+      }
+    }
+  }
+
   .slide5 {
     .container{
       height: auto !important;
