@@ -156,7 +156,7 @@
     </section>
 
     <!-- Slide 11 -->
-    <section class="slide slide11 whiteSlide">
+    <section class="slide slide11 whiteSlide hidden">
       <div class="content">
         <div class="container">
           <div class="wrap">
