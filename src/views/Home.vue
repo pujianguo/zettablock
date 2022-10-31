@@ -25,7 +25,7 @@
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
                     </svg>
                   </div>
-                  <div class="ae-6 fromBottom button view-button" @click="toggleSignup">
+                  <div class="ae-7 fromBottom button view-button" @click="toggleSignup">
                     <span class="button-text">View Docs</span>
                     <svg class="button-icon">
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
@@ -33,7 +33,7 @@
                   </div>
 
                 </div>
-                <p class="ae-5 fromBottom scroll-tip">Trusted by leading Web3 companies</p>
+                <p class="ae-8 fromBottom scroll-tip">Trusted by leading Web3 companies</p>
               </div>
             </div>
 
@@ -172,7 +172,7 @@
                   <div class="item-info">
                     <div class="item-title">Custom GraphQL APIs</div>
                     <div class="item-description">Transform, filter and stream data in any shape into anywhere you want via low latency APIs. Index 100X faster than subgraphs.</div>
-                    <div class="item-tip">Subgraph seamless migration coming soon.</div>
+                    <div class="item-tip">Note: Subgraph seamless migration coming soon.</div>
                   </div>
                 </div>
                 <div class="item-right ae-4 fromRight">
@@ -270,7 +270,7 @@
                 </div>
                 <div class="item-right ae-1 fromRight">
                   <div class="item-info">
-                    <div class="item-title">On&off-chain data</div>
+                    <div class="item-title">On- & off-chain data</div>
                     <div class="item-description">Access comprehensive raw, fully decoded and aggregated on-chain data, with multiple off-chain data sources support such as Snowflake. </div>
                   </div>
                 </div>
@@ -1501,7 +1501,7 @@
         }
         .item-tip{
           padding: 0 20px;
-          line-height: 1.6;
+          line-height: 2;
           background: #F9F9FF;
           border: 1px solid rgba(40, 26, 240, 0.2);
           border-radius: 4px;
