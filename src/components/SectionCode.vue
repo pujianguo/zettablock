@@ -83,6 +83,9 @@ import 'codemirror/addon/fold/comment-fold'
 
 import * as echarts from 'echarts'
 
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
 
 
 export default {
@@ -104,9 +107,24 @@ export default {
   watch: {
   },
   created () {
+    this.isInit = false
   },
   mounted () {
-    this.init()
+    this.$nextTick(() => {
+      ScrollTrigger.create({
+        trigger: '.slide3',
+        start: 'top center',
+        end: 'bottom top',
+        // markers: true,
+        onEnter: () => {
+          if (!this.isInit) {
+            this.isInit = true
+            this.init()
+          }
+        },
+      })
+    })
+    // this.init()
     // this.initSqlCode()
     // this.initGraphqlCode()
     // this.initDataCode()
