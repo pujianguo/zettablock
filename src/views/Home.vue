@@ -66,7 +66,7 @@
     </section>
 
     <!-- Slide 2 -->
-    <section id="product" class="slide slide2 whiteSlide">
+    <section id="chains" class="slide slide2 whiteSlide">
       <div class="content">
         <div class="container">
           <div class="wrap padding-top-10">
