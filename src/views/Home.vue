@@ -159,7 +159,7 @@
     <section id="product" class="slide slide11 whiteSlide">
       <div class="content">
         <div class="container">
-          <div class="wrap padding-bottom-0">
+          <div class="wrap padding-bottom-7">
             <div class="fix-12-12">
               <div class="section-subtitle ae-1 fromBottom">Designed for developers</div>
               <div class="section-title ae-2 fromBottom">The complete, fully managed web3 data suite</div>
@@ -192,7 +192,7 @@
     <section class="slide slide11 whiteSlide">
       <div class="content">
         <div class="container">
-          <div class="wrap padding-top-14 padding-bottom-0">
+          <div class="wrap padding-top-7 padding-bottom-7">
             <div class="fix-12-12 content-content">
               <div class="item item-2">
                 <div class="item-left ae-1 fromLeft">
@@ -232,7 +232,7 @@
     <section class="slide slide11 whiteSlide">
       <div class="content">
         <div class="container">
-          <div class="wrap padding-top-14 padding-bottom-0">
+          <div class="wrap padding-top-7 padding-bottom-7">
             <div class="fix-12-12 content-content">
               <div class="item item-3">
                 <div class="item-left ae-1 fromLeft">
@@ -258,7 +258,7 @@
     <section class="slide slide11 whiteSlide">
       <div class="content">
         <div class="container">
-          <div class="wrap padding-top-14 padding-bottom-0">
+          <div class="wrap padding-top-7 padding-bottom-7">
             <div class="fix-12-12 content-content">
               <div class="item item-4">
                 <div class="item-left ae-1 fromLeft">
@@ -284,7 +284,7 @@
     <section class="slide slide11 whiteSlide">
       <div class="content">
         <div class="container">
-          <div class="wrap padding-top-14 padding-bottom-8">
+          <div class="wrap padding-top-7 padding-bottom-8">
             <div class="fix-12-12 content-content">
               <div class="item item-5">
                 <div class="item-left ae-1 fromLeft">
