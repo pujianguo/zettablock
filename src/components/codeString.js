@@ -1,4 +1,4 @@
-export const sqlCodeString = `-- ETH weekly deposited to Beacan
+export const sqlCodeString = `-- ETH weekly deposited to Beacon
 
 SELECT
   -- Convert wei to ether
@@ -6,7 +6,6 @@ SELECT
   -- Truncate time to date
   date_trunc('week', DATE(block_time)) AS week_date
 FROM ethereum_mainnet.traces
--- Find all data deposited to Beacan
 WHERE LOWER(to_address) =
   LOWER('0x00000000219ab540356cBB839Cbe05303d7705Fa')
   AND STATUS = 1

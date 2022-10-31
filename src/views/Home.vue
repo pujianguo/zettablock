@@ -163,7 +163,7 @@
             <div class="fix-12-12">
               <div class="section-subtitle">Designed for developers</div>
               <div class="section-title">The complete, fully managed web3 data suite</div>
-              <div class="title-desc">Access and build real-time, reliable APIs to power your apps in minutes.Ship fast with zero data infra overhead.</div>
+              <div class="title-desc">Access and build real-time, reliable APIs to power your apps in minutes. Ship fast with zero data infra overhead.</div>
             </div>
             <div class="fix-12-12 content-content">
               <!-- item1 -->
@@ -172,7 +172,7 @@
                   <div class="item-info">
                     <div class="item-title">Custom GraphQL APIs</div>
                     <div class="item-description">Transform, filter and stream data in any shape into anywhere you want via low latency APIs. Index 100X faster than subgraphs.</div>
-                    <div class="item-tip">Subgraph seamless migration coming soon.</div>
+                    <div class="item-tip">Note: Subgraph seamless migration coming soon.</div>
                   </div>
                 </div>
                 <div class="item-right">
@@ -240,7 +240,7 @@
                 </div>
                 <div class="item-right">
                   <div class="item-info">
-                    <div class="item-title">On&off-chain data</div>
+                    <div class="item-title">On- & off-chain data</div>
                     <div class="item-description">Access comprehensive raw, fully decoded and aggregated on-chain data, with multiple off-chain data sources support such as Snowflake. </div>
                   </div>
                 </div>
@@ -644,11 +644,11 @@
         ],
         slide11CurrentIndex: 0,
         slide11List: [
-          {id: 1, name: 'NFT', img: '/assets/images/slide11/product-2-1.png', title: 'NFT mints,ownership, transfers, account balances, price, etc.'},
+          {id: 1, name: 'NFT', img: '/assets/images/slide11/product-2-1.png', title: 'NFT mints, ownership, transfers, account balances, price, etc.'},
           {id: 2, name: 'Tokens', img: '/assets/images/slide11/product-2-2.png', title: 'Token price, ownership, transfers, metadata, and account balances.'},
-          {id: 3, name: 'Block', img: '/assets/images/slide11/product-2-3.png', title: 'Full raw and decoded blockchain data, including transactions, logs, trace, accounts, blocks.'},
+          {id: 3, name: 'Block', img: '/assets/images/slide11/product-2-3.png', title: 'Full raw and decoded blockchain data, including transactions, logs, traces, accounts, and blocks.'},
           {id: 4, name: 'ENS', img: '/assets/images/slide11/product-2-4.png', title: 'ENS names, records and reserve.'},
-          {id: 5, name: 'Stream', img: '/assets/images/slide11/product-2-5.png', title: 'Stream blockchain data into your backend via webhooks and websockets.'},
+          {id: 5, name: 'Stream', img: '/assets/images/slide11/product-2-5.png', title: 'Stream blockchain data into your backend via webhooks and websockets. (Coming Soon)'},
         ],
         slide6List: [
           {id: 1, icon: 'section7-1', title: 'Zero Infra Overhead', desc: 'Save months of development and over 90% of their annual costs.'},
