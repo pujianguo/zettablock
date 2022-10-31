@@ -110,7 +110,7 @@
     </section>
 
     <!-- Slide3 -->
-    <section id="product" class="slide slide3 whiteSlide">
+    <section id="develop" class="slide slide3 whiteSlide">
       <div class="content">
         <div class="container">
           <div class="wrap padding-top-18">
@@ -127,7 +127,7 @@
     </section>
 
     <!-- Slide 4 -->
-    <section id="product" class="slide slide4 whiteSlide">
+    <section id="withzettablock" class="slide slide4 whiteSlide">
       <div class="content">
         <div class="container">
           <div class="wrap padding-top-9">
@@ -156,7 +156,7 @@
     </section>
 
     <!-- Slide 11 -->
-    <section class="slide slide11 whiteSlide">
+    <section id="product" class="slide slide11 whiteSlide">
       <div class="content">
         <div class="container">
           <div class="wrap">
@@ -269,7 +269,7 @@
 
 
     <!-- Slide 5 -->
-    <section id="product" class="slide slide5 whiteSlide">
+    <section id="usecases" class="slide slide5 whiteSlide">
       <div class="content">
         <div class="container">
           <div class="wrap padding-top-8 padding-bottom-18">
@@ -360,7 +360,7 @@
     </section>
 
     <!-- Slide 7 -->
-    <section id="product" class="slide slide7 whiteSlide">
+    <section id="about" class="slide slide7 whiteSlide">
       <div class="content">
         <div class="container">
           <div class="wrap padding-top-13 padding-bottom-11">
