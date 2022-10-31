@@ -1474,7 +1474,7 @@
         }
         .item-tip{
           padding: 0 20px;
-          line-height: 32px;
+          line-height: 1.6;
           background: #F9F9FF;
           border: 1px solid rgba(40, 26, 240, 0.2);
           border-radius: 4px;
@@ -1585,6 +1585,8 @@
           .item-tip{
             border: 0;
             padding: 0;
+            background: #fff;
+            min-height: 64px;
           }
           .item-description{
             border-bottom: 1px solid rgba(40, 26, 240, 0.2);
