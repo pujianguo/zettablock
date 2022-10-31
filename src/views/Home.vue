@@ -141,7 +141,7 @@
               <div class="content-image">
                 <div class="content-image-inner" :style="{left: slide2CurrentIndex === 1 ? 0 : '-100%'}">
                   <div class="img-item">
-                    <img src="/assets/images/slide4_start_with.png" alt="">
+                    <img src="/assets/images/slide4_start_with.svg" alt="">
                   </div>
                   <div class="img-item">
                     <img src="/assets/images/slide4_start_without.png" alt="">
@@ -384,17 +384,26 @@
                   </div>
                 </div>
               </div>
-              <div class="content-right">
+              <div class="content-right data-number">
                 <div class="item">
-                  <div class="title">110B+ Transactions</div>
+                  <div class="title">
+                    <span id="slide7Number1"></span>
+                    <span>B+ Transactions</span>
+                  </div>
                   <div class="desc">for 7+ blockchains since genesis</div>
                 </div>
                 <div class="item">
-                  <div class="title">17M+ Smart Contracts</div>
+                  <div class="title">
+                    <span id="slide7Number2"></span>
+                    <span>M+ Smart Contracts</span>
+                  </div>
                   <div class="desc">decoded for querying</div>
                 </div>
                 <div class="item">
-                  <div class="title">4.3B+ Price Feeds</div>
+                  <div class="title">
+                    <span id="slide7Number3"></span>
+                    <span>B+ Price Feeds</span>
+                  </div>
                   <div class="desc">for fiat and crypto pairs</div>
                 </div>
               </div>
@@ -547,7 +556,7 @@
   import SvgLibrary from "../components/SvgLibrary.vue";
   import Panels from "../components/Panels.vue";
   import SectionCode from "../components/SectionCode.vue";
-  import bounty from "bounty";
+  import bounty from "../utils/bounty";
   import Swiper, {Pagination} from 'swiper'
   import gsap from 'gsap'
   import ScrollTrigger from 'gsap/ScrollTrigger'
@@ -679,7 +688,7 @@
       }, 100);
       this.$nextTick(() => {
         this.initLinkWrap()
-        this.initSlide3()
+        this.initSlide7()
         this.handleSlide5MenuChange(0, true)
         this.initSlide11Swiper()
         this.initSlide5Swiper()
@@ -696,64 +705,53 @@
       },
       // Slide2中的切换
       handleSlide2CurrentIndexChange ({ target }, index) {
-        const { width, left } = target.getBoundingClientRect()
+        const { left } = target.getBoundingClientRect()
         const { left: parentLeft } = target.parentNode.getBoundingClientRect()
         this.slide2Left = left - parentLeft + 'px'
         this.slide2CurrentIndex = index
       },
 
       // Slide3中的方法
-      initSlide3 () {
+      initSlide7 () {
         ScrollTrigger.create({
-          trigger: '.slide3 .data-number',
+          trigger: '.slide7 .data-number',
           start: 'top bottom-=50px',
           end: 'bottom top',
-          // markers: true,
+          markers: true,
           onEnter: () => {
             this.showCount()
           },
         })
       },
       showCount () {
-        console.log('showCount')
-        if (!document.querySelector('#slide3Number1')) {
+        if (!document.querySelector('#slide7Number1')) {
           return
         }
         bounty({
-          el: '#slide3Number1',
-          value: '110B+',
+          el: '#slide7Number1',
+          value: '110',
           lineHeight: 1,
-          height: 60,
+          height: 50,
           letterSpacing: -1,
           animationDelay: 100,
           letterAnimationDelay: 200,
           duration: 3000,
         });
         bounty({
-          el: '#slide3Number2',
-          value: '1M+',
+          el: '#slide7Number2',
+          value: '17',
           lineHeight: 1,
-          height: 60,
+          height: 50,
           letterSpacing: -1,
           animationDelay: 100,
           letterAnimationDelay: 200,
           duration: 3000,
         });
         bounty({
-          el: '#slide3Number3',
-          value: '4.3B+',
+          el: '#slide7Number3',
+          value: '4.3',
           lineHeight: 1,
-          height: 60,
-          letterSpacing: -1,
-          animationDelay: 100,
-          letterAnimationDelay: 200,
-          duration: 3000,
-        });
-        bounty({
-          el: '#slide3Number4',
-          value: '99.95%',
-          lineHeight: 1,
-          height: 60,
+          height: 50,
           letterSpacing: -1,
           animationDelay: 100,
           letterAnimationDelay: 200,
@@ -817,7 +815,6 @@
       },
 
       initSlide7Swiper () {
-        console.log('init swiper')
         this.slide7Swiper = new Swiper('#slide7Swiper', {
           slidesPerView: "auto",
           loop: true,
@@ -861,7 +858,6 @@
         $(window).off("mousemove");
       },
       clicklSrcoll(t) {
-        console.log("this.scrollOffer", this.scrollOffer);
         if (t == "left") {
           this.scrollOffer += 960;
         } else if (t == "right") {
@@ -874,7 +870,6 @@
         if (this.scrollOffer >= elem.scrollWidth) {
           this.scrollOffer = elem.scrollWidth;
         }
-        console.log("this.scrollOffer", this.scrollOffer);
         elem.scrollTo(this.scrollOffer, 0);
       },
     },
@@ -1107,7 +1102,7 @@
       letter-spacing: 4px;
       text-transform: uppercase;
       color: #5A20FB;
-      opacity: 0.4;
+      opacity: 0.4 !important;
       text-align: center;
       margin-top: 100px;
     }
@@ -1535,6 +1530,8 @@
           display: flex;
           align-items: center;
           margin-bottom: 20px;
+          padding-top: 30px;
+          border-top: 1px solid rgba(40, 26, 240, 0.08);
           .menu-item{
             padding: 8px 12px;
             margin-right: 10px;
@@ -1563,6 +1560,9 @@
           }
           .item-info{
             max-width: 540px;
+          }
+          .item-description{
+            margin-bottom: 30px;
           }
           .item-tip{
             padding: 0;
@@ -1952,20 +1952,31 @@
       }
       .content-right{
         .item{
-          width: 460px;
-          // height: 128px;
+          max-width: 460px;
           background: linear-gradient(180deg, #FBFAFF 0%, #FFFFFF 25.98%, #FAFAFE 87.14%, #F6F5FB 100%);
           border: 1px solid rgba(40, 26, 240, 0.04);
           box-shadow: 0px 27px 11px rgba(40, 27, 240, 0.01), 0px 15px 9px rgba(40, 27, 240, 0.02), 0px 7px 7px rgba(40, 27, 240, 0.04), 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
           border-radius: 4px;
           margin-bottom: 20px;
-          padding: 30px 40px;
+          padding: 30px 20px 30px 30px;
           text-align: left;
           .title{
             font-weight: 600;
             font-size: 36px;
             line-height: 100%;
             color: #281AF0;
+            display: flex;
+            align-items: center;
+            span {
+              &:nth-child(1){
+                svg{
+                  fill: #281AF0 !important;
+                }
+              }
+              &:nth-child(2){
+                margin-top: -5px;
+              }
+            }
           }
           .desc{
             font-size: 16px;
