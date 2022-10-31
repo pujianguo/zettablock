@@ -25,7 +25,7 @@
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
                     </svg>
                   </div>
-                  <div class="ae-6 fromBottom button view-button" @click="toggleSignup">
+                  <div class="ae-7 fromBottom button view-button" @click="toggleSignup">
                     <span class="button-text">View Docs</span>
                     <svg class="button-icon">
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
@@ -33,7 +33,7 @@
                   </div>
 
                 </div>
-                <p class="ae-5 fromBottom scroll-tip">Trusted by leading Web3 companies</p>
+                <p class="ae-8 fromBottom scroll-tip">Trusted by leading Web3 companies</p>
               </div>
             </div>
 
@@ -73,8 +73,8 @@
             <div class="fix-12-12">
               <div class="content-body">
                 <div class="body-left">
-                  <div class="title">Supported Chains</div>
-                  <div class="input-wrap">
+                  <div class="title ae-1 fromBottom">Supported Chains</div>
+                  <div class="input-wrap ae-2 fromBottom">
                   <!-- <div class="input-wrap input-wrap_success"> -->
                     <input class="input" type="text" placeholder="Request a new network">
                     <div class="btn-wrap">
@@ -91,8 +91,8 @@
                   </div>
                 </div>
                 <div class="body-right">
-                  <div class="wrap-title">Multiple Chains Support</div>
-                  <div class="chain-wrap">
+                  <div class="wrap-title ae-3 fromBottom">Multiple Chains Support</div>
+                  <div class="chain-wrap ae-4 fromBottom">
                     <div class="chain-item" v-for="item in chainList" :key="item.directiveFunction">
                       <img class="icon" :src="item.icon" alt="">
                       <span class="name">{{item.name}}</span>
@@ -115,11 +115,11 @@
         <div class="container">
           <div class="wrap padding-top-18">
             <div class="fix-12-12">
-              <div class="section-title">Develop. Preview. Ship</div>
+              <div class="section-title  ae-1 fromBottom">Develop. Preview. Ship</div>
               <!-- <div class="code-wrap">
                 <img src="/assets/images/slide3_img.png" alt="">
               </div> -->
-              <section-code/>
+              <section-code class="ae-2 fromBottom" />
             </div>
           </div>
         </div>
@@ -131,9 +131,9 @@
       <div class="content">
         <div class="container">
           <div class="wrap padding-top-9">
-            <div class="section-title">Build data-powered apps within seconds</div>
+            <div class="section-title ae-1 fromBottom">Build data-powered apps within seconds</div>
 
-            <div class="fix-12-12 slide-content">
+            <div class="fix-12-12 slide-content ae-2 fromBottom">
               <div class="content-title" :style="{'--left': slide2Left }">
                 <div class="title-item" :class="{active: slide2CurrentIndex === 1}" @click="handleSlide2CurrentIndexChange($event, 1)">With ZettaBlock</div>
                 <div class="title-item" :class="{active: slide2CurrentIndex === 2}" @click="handleSlide2CurrentIndexChange($event, 2)">Without ZettaBlock</div>
@@ -141,7 +141,7 @@
               <div class="content-image">
                 <div class="content-image-inner" :style="{left: slide2CurrentIndex === 1 ? 0 : '-100%'}">
                   <div class="img-item">
-                    <img src="/assets/images/slide4_start_with.png" alt="">
+                    <img src="/assets/images/slide4_start_with.svg" alt="">
                   </div>
                   <div class="img-item">
                     <img src="/assets/images/slide4_start_without.png" alt="">
@@ -159,23 +159,23 @@
     <section id="product" class="slide slide11 whiteSlide">
       <div class="content">
         <div class="container">
-          <div class="wrap">
+          <div class="wrap padding-bottom-0">
             <div class="fix-12-12">
-              <div class="section-subtitle">Designed for developers</div>
-              <div class="section-title">The complete, fully managed web3 data suite</div>
-              <div class="title-desc">Access and build real-time, reliable APIs to power your apps in minutes. Ship fast with zero data infra overhead.</div>
+              <div class="section-subtitle ae-1 fromBottom">Designed for developers</div>
+              <div class="section-title ae-2 fromBottom">The complete, fully managed web3 data suite</div>
+              <div class="title-desc ae-3 fromBottom">Access and build real-time, reliable APIs to power your apps in minutes. Ship fast with zero data infra overhead.</div>
             </div>
             <div class="fix-12-12 content-content">
               <!-- item1 -->
-              <div class="item">
-                <div class="item-left">
+              <div class="item item-1">
+                <div class="item-left ae-4 fromLeft">
                   <div class="item-info">
                     <div class="item-title">Custom GraphQL APIs</div>
                     <div class="item-description">Transform, filter and stream data in any shape into anywhere you want via low latency APIs. Index 100X faster than subgraphs.</div>
                     <div class="item-tip">Note: Subgraph seamless migration coming soon.</div>
                   </div>
                 </div>
-                <div class="item-right">
+                <div class="item-right ae-4 fromRight">
                   <div class="item-img-wrap">
                     <div class="item-img-inner">
                       <img class="img" src="/assets/images/slide11/product-1.png" alt=""/>
@@ -183,9 +183,19 @@
                   </div>
                 </div>
               </div>
-              <!-- item2 -->
-              <div class="item">
-                <div class="item-left">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section 11  item2 -->
+    <section class="slide slide11 whiteSlide">
+      <div class="content">
+        <div class="container">
+          <div class="wrap padding-top-14 padding-bottom-0">
+            <div class="fix-12-12 content-content">
+              <div class="item item-2">
+                <div class="item-left ae-1 fromLeft">
                   <div class="item-img-wrap">
                     <div class="item-img-inner">
                       <div class="swiper item-swiper" id="slide11Swiper">
@@ -199,7 +209,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="item-right">
+                <div class="item-right ae-1 fromRight">
                   <div class="item-info">
                     <div class="item-title">Prebuilt Web3 APIs</div>
                     <div class="item-description">Dramatically simplify and optimize common request patterns with prebuilt real-time APIs. Anyone can further customize them in minutes. </div>
@@ -213,15 +223,25 @@
                   </div>
                 </div>
               </div>
-              <!-- item3 -->
-              <div class="item">
-                <div class="item-left">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section 11  item3 -->
+    <section class="slide slide11 whiteSlide">
+      <div class="content">
+        <div class="container">
+          <div class="wrap padding-top-14 padding-bottom-0">
+            <div class="fix-12-12 content-content">
+              <div class="item item-3">
+                <div class="item-left ae-1 fromLeft">
                   <div class="item-info">
                     <div class="item-title">Data Lake API</div>
                     <div class="item-description">Our data lake makes blockchains speak SQL to maximize data analytics capabilities, and access queries and historical data via the data lake API.</div>
                   </div>
                 </div>
-                <div class="item-right">
+                <div class="item-right ae-1 fromRight">
                   <div class="item-img-wrap">
                     <div class="item-img-inner">
                       <img class="img" src="/assets/images/slide11/product-3.png" alt=""/>
@@ -229,31 +249,51 @@
                   </div>
                 </div>
               </div>
-              <!-- item4 -->
-              <div class="item">
-                <div class="item-left">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section 11  item4 -->
+    <section class="slide slide11 whiteSlide">
+      <div class="content">
+        <div class="container">
+          <div class="wrap padding-top-14 padding-bottom-0">
+            <div class="fix-12-12 content-content">
+              <div class="item item-4">
+                <div class="item-left ae-1 fromLeft">
                   <div class="item-img-wrap">
                     <div class="item-img-inner">
                       <img class="img" src="/assets/images/slide11/product-4.png" alt=""/>
                     </div>
                   </div>
                 </div>
-                <div class="item-right">
+                <div class="item-right ae-1 fromRight">
                   <div class="item-info">
                     <div class="item-title">On- & off-chain data</div>
                     <div class="item-description">Access comprehensive raw, fully decoded and aggregated on-chain data, with multiple off-chain data sources support such as Snowflake. </div>
                   </div>
                 </div>
               </div>
-              <!-- item5 -->
-              <div class="item">
-                <div class="item-left">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section 11  item5 -->
+    <section class="slide slide11 whiteSlide">
+      <div class="content">
+        <div class="container">
+          <div class="wrap padding-top-14 padding-bottom-8">
+            <div class="fix-12-12 content-content">
+              <div class="item item-5">
+                <div class="item-left ae-1 fromLeft">
                   <div class="item-info">
                     <div class="item-title">Dashboards</div>
                     <div class="item-description">Build dashboards with a grid-based collection of charts and text boxes, all of which show up-to-date data.</div>
                   </div>
                 </div>
-                <div class="item-right">
+                <div class="item-right ae-1 fromRight">
                   <div class="item-img-wrap">
                     <div class="item-img-inner">
                       <img class="img" src="/assets/images/slide11/product-5.png" alt=""/>
@@ -272,13 +312,13 @@
     <section id="usecases" class="slide slide5 whiteSlide">
       <div class="content">
         <div class="container">
-          <div class="wrap padding-top-8 padding-bottom-18">
+          <div class="wrap padding-top-20 padding-bottom-18">
             <div class="fix-12-12">
-              <div class="section-subtitle">Unlock the future of blockchain</div>
-              <div class="section-title">Get started with ZettaBlock platform</div>
+              <div class="section-subtitle ae-1 fromBottom">Unlock the future of blockchain</div>
+              <div class="section-title ae-2 fromBottom">Get started with ZettaBlock platform</div>
             </div>
             <div class="fix-12-12">
-              <div class="menu" :style="{'--left': slide5Left, '--width': slide5Width }">
+              <div class="menu ae-3 fromBottom" :style="{'--left': slide5Left, '--width': slide5Width }">
                 <div class="menu-item" v-for="(item, index) in slide5Menu" :key="item.id"
                   :class="{active: slide5CurrentIndex === index}"
                   @click="handleSlide5MenuChange(index)"
@@ -288,11 +328,11 @@
                 <div class="swiper-wrapper">
                   <div class="swiper-slide" v-for="item in slide5List" :key="item.id">
                     <div class="content-left">
-                      <img class="title-img" :class="{'title-img_large': item.id === 4 || item.id === 5}" :src="item.textImg" alt="">
-                      <ul class="info-list">
+                      <img class="title-img ae-4 fromBottom" :class="{'title-img_large': item.id === 4 || item.id === 5}" :src="item.textImg" alt="">
+                      <ul class="info-list ae-5 fromBottom">
                         <li class="info-item" v-for="(p, i) in item.info" :key="item.id + i">{{p}}</li>
                       </ul>
-                      <div class="button" @click="() => item.isClick = true">
+                      <div class="button ae-6 fromBottom" @click="handleSlide5BtnClick(item)">
                         <span class="button-text">Read more use cases</span>
                         <svg class="button-icon">
                           <use href="#arrow-right"></use>
@@ -301,7 +341,7 @@
                       </div>
                     </div>
                     <div class="content-right">
-                      <img :src="item.img" alt="">
+                      <img class="ae-7 fromBottom" :src="item.img" alt="">
                     </div>
                   </div>
                 </div>
@@ -318,15 +358,15 @@
         <div class="container">
           <div class="wrap">
             <div class="fix-12-12">
-              <div class="fix-title">
+              <div class="fix-title ae-1 fromBottom">
                 <div class="title-order">
                 </div>
                 <h1 class="title-text">Recent Articles</h1>
               </div>
-              <div class="content-content">
-                <div class="swiper" id="slide7Swiper">
+              <div class="content-content ae-2 fromRight">
+                <div class="swiper" id="slide6Swiper">
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide" v-for="item in slide7List" :key="item.id">
+                    <div class="swiper-slide" v-for="item in slide6List" :key="item.id">
                       <svg class="item-icon">
                         <use href="#union-1"></use>
                       </svg>
@@ -344,11 +384,11 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-button">
-                <svg class="button-item" :class="{disabled: false}" @click="handleSlide7SwiperPrev">
+              <div class="swiper-button ae-2 fromBottom">
+                <svg class="button-item" :class="{disabled: false}" @click="handleSlide6SwiperPrev">
                   <use href="#chevron-left"></use>
                 </svg>
-                <svg class="button-item" :class="{disabled: false}" @click="handleSlide7SwiperNext">
+                <svg class="button-item" :class="{disabled: false}" @click="handleSlide6SwiperNext">
                   <use href="#chevron-right"></use>
                 </svg>
               </div>
@@ -365,14 +405,15 @@
         <div class="container">
           <div class="wrap padding-top-13 padding-bottom-11">
             <div class="fix-12-12">
-              <div class="section-subtitle">The First Full-stack Web3 Infra</div>
-              <div class="section-title">
+              <div class="section-subtitle ae-1 fromBottom">The First Full-stack Web3 Infra</div>
+              <div class="section-title ae-2 fromBottom">
                 Data infra for a next-gen internet
               </div>
             </div>
             <div class="fix-12-12 content-content">
               <div class="content-left">
-                <div class="item" v-for="item in slide6List" :key="item.id">
+                <div class="item" v-for="(item, i) in slide7List" :key="item.id"
+                  :class="`ae-${i+1} fromBottom`">
                   <div class="item-icon-wrap">
                     <svg class="item-icon">
                       <use :href="`#${item.icon}`"></use>
@@ -384,17 +425,26 @@
                   </div>
                 </div>
               </div>
-              <div class="content-right">
-                <div class="item">
-                  <div class="title">110B+ Transactions</div>
+              <div class="content-right data-number">
+                <div class="item ae-5 fromBottom">
+                  <div class="title">
+                    <span id="slide7Number1"></span>
+                    <span>B+ Transactions</span>
+                  </div>
                   <div class="desc">for 7+ blockchains since genesis</div>
                 </div>
-                <div class="item">
-                  <div class="title">17M+ Smart Contracts</div>
+                <div class="item ae-6 fromBottom">
+                  <div class="title">
+                    <span id="slide7Number2"></span>
+                    <span>M+ Smart Contracts</span>
+                  </div>
                   <div class="desc">decoded for querying</div>
                 </div>
-                <div class="item">
-                  <div class="title">4.3B+ Price Feeds</div>
+                <div class="item ae-7 fromBottom">
+                  <div class="title">
+                    <span id="slide7Number3"></span>
+                    <span>B+ Price Feeds</span>
+                  </div>
                   <div class="desc">for fiat and crypto pairs</div>
                 </div>
               </div>
@@ -410,11 +460,11 @@
           <div class="wrap padding-top-8 padding-bottom-8">
             <div class="fix-12-12 newslette">
               <div class="newslette-left">
-                <h1>Ready to speed up your Web3 development?</h1>
-                <h2>Simple, out-of-box, ultra fast, low cost, and high performance.</h2>
+                <h1 class="ae-1 fromBottom">Ready to speed up your Web3 development?</h1>
+                <h2 class="ae-2 fromBottom">Simple, out-of-box, ultra fast, low cost, and high performance.</h2>
               </div>
               <div class="newslette-right">
-                <div class="button" @click="toggleSignup()">
+                <div class="button ae-3 fromRight" @click="toggleSignup()">
                   <span class="button-text">Unlock Access For Free</span>
                   <svg class="button-icon">
                     <use href="#arrow-right"></use>
@@ -433,7 +483,7 @@
           <div class="wrap padding-top-9 padding-bottom-9">
             <div class="fix-12-12 footer">
               <div class="footer-item item-left">
-                <div class="logo">
+                <div class="logo ae-1 fromBottom">
                   <svg class="logo-icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-icon"></use>
                   </svg>
@@ -441,13 +491,13 @@
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-text"></use>
                   </svg>
                 </div>
-                <div class="description">
+                <div class="description ae-2 fromBottom">
                   ZettaBlock is a full-stack Web3 data platform for indexing, querying and analyzing. Developers can build real-time, public-facing, reliable GraphQL APIs and SQL in minutes.
                 </div>
               </div>
               <div class="footer-item">
-                <div class="subtitle">Join the Web3 data revolution</div>
-                <div class="social-wrap">
+                <div class="subtitle ae-2 fromBottom">Join the Web3 data revolution</div>
+                <div class="social-wrap ae-3 fromBottom">
                   <a class="social-item" href="https://twitter.com/ZettaBlockHQ" target="_blank">
                     <svg>
                       <use href="#social-twitter"></use>
@@ -479,8 +529,8 @@
                     </svg>
                   </a>
                 </div>
-                <div class="subtitle">Subscribe to our mailing list</div>
-                <div class="sign-up-wrap">
+                <div class="subtitle ae-4 fromBottom">Subscribe to our mailing list</div>
+                <div class="sign-up-wrap ae-5 fromBottom">
                   <form class="" action="https://zettablock.us14.list-manage.com/subscribe/post?u=1ff0f35da3b86da52617aadd6&amp;id=bc40fdafb4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
                     <input type="email" value="" name="EMAIL" placeholder="Email Address">
                     <button type="submit" class="button">
@@ -547,7 +597,7 @@
   import SvgLibrary from "../components/SvgLibrary.vue";
   import Panels from "../components/Panels.vue";
   import SectionCode from "../components/SectionCode.vue";
-  import bounty from "bounty";
+  import bounty from "../utils/bounty";
   import Swiper, {Pagination} from 'swiper'
   import gsap from 'gsap'
   import ScrollTrigger from 'gsap/ScrollTrigger'
@@ -577,17 +627,17 @@
           {id: 10, icon: 'link-ancient8', width: 182, height: 40, href: ''},
         ],
         chainList: [
-        {id: 1, icon: '/assets/images/chain/chain-icon-01.png', name: 'Ethereum'},
-        {id: 2, icon: '/assets/images/chain/chain-icon-02.png', name: 'Polygon'},
-        {id: 3, icon: '/assets/images/chain/chain-icon-03.png', name: 'Arbitrum'},
-        {id: 4, icon: '/assets/images/chain/chain-icon-04.png', name: 'Solana'},
-        {id: 5, icon: '/assets/images/chain/chain-icon-05.png', name: 'Aptos'},
-        {id: 6, icon: '/assets/images/chain/chain-icon-06.png', name: 'Ripple XRP'},
-        {id: 7, icon: '/assets/images/chain/chain-icon-07.png', name: 'IoTex'},
-        {id: 8, icon: '/assets/images/chain/chain-icon-08.png', name: 'BNB Chian', isComingSoon: true},
-        {id: 9, icon: '/assets/images/chain/chain-icon-09.png', name: 'Optimism', isComingSoon: true},
-        {id: 10, icon: '/assets/images/chain/chain-icon-10.png', name: 'Avalanche', isComingSoon: true},
-        {id: 11, icon: '/assets/images/chain/chain-icon-11.png', name: 'Near', isComingSoon: true},
+          {id: 1, icon: '/assets/images/chain/chain-icon-01.png', name: 'Ethereum'},
+          {id: 2, icon: '/assets/images/chain/chain-icon-02.png', name: 'Polygon'},
+          {id: 3, icon: '/assets/images/chain/chain-icon-03.png', name: 'Arbitrum'},
+          {id: 4, icon: '/assets/images/chain/chain-icon-04.png', name: 'Solana'},
+          {id: 5, icon: '/assets/images/chain/chain-icon-05.png', name: 'Aptos'},
+          {id: 6, icon: '/assets/images/chain/chain-icon-06.png', name: 'Ripple XRP'},
+          {id: 7, icon: '/assets/images/chain/chain-icon-07.png', name: 'IoTex'},
+          {id: 8, icon: '/assets/images/chain/chain-icon-08.png', name: 'BNB Chian', isComingSoon: true},
+          {id: 9, icon: '/assets/images/chain/chain-icon-09.png', name: 'Optimism', isComingSoon: true},
+          {id: 10, icon: '/assets/images/chain/chain-icon-10.png', name: 'Avalanche', isComingSoon: true},
+          {id: 11, icon: '/assets/images/chain/chain-icon-11.png', name: 'Near', isComingSoon: true},
         ],
         slide2CurrentIndex: 1,
         slide2Left: 0,
@@ -650,21 +700,21 @@
           {id: 4, name: 'ENS', img: '/assets/images/slide11/product-2-4.png', title: 'ENS names, records and reserve.'},
           {id: 5, name: 'Stream', img: '/assets/images/slide11/product-2-5.png', title: 'Stream blockchain data into your backend via webhooks and websockets. (Coming Soon)'},
         ],
+        slide6SwiperIndex: 0,
         slide6List: [
+          {id: 1, title: 'Polygon relies on ZettaBlock for data infrastructure', chainIcon: '/assets/images/chain/icon_1.png', link: ''},
+          {id: 2, title: 'ZettaBlock’s infrastructure saves crypto.com 16,000 hours per year', chainIcon: '/assets/images/chain/icon_2.png',  link: ''},
+          {id: 3, title: 'Artemis deploys production-ready APIs in minutes with ZettaBlock', chainIcon: '/assets/images/chain/icon_3.png', link: ''},
+          {id: 4, title: 'Friktion’s new portoflio portal runs on ZettaBlock', chainIcon: '/assets/images/chain/icon_4.png', link: ''},
+          {id: 5, title: 'Orchestrate a data platform for Autograph in 5 minutes', chainIcon: '/assets/images/chain/icon_5.png', link: ''},
+        ],
+        slide7List: [
           {id: 1, icon: 'section7-1', title: 'Zero Infra Overhead', desc: 'Save months of development and over 90% of their annual costs.'},
           {id: 2, icon: 'section7-2', title: 'Flexibility', desc: 'Build your own GraphQL APIs and SQL with custom transformation logic needs.'},
           {id: 3, icon: 'section7-3', title: 'Strong Performance', desc: 'Sub-second data freshness, 10ms response time, high throughput, petabyte-scale join.'},
           {id: 4, icon: 'section7-4', title: 'Data Unification', desc: 'Seamlessly obtain any decoded on-chain data, combining with your own off-chain data.'},
           {id: 5, icon: 'section7-5', title: 'Reliability', desc: 'Provide near-perfect system uptimes (99.95%) to support real-time, data-intensive apps.'},
         ],
-        slide7SwiperIndex: 0,
-        slide7List: [
-          {id: 1, title: 'Polygon relies on ZettaBlock for data infrastructure', chainIcon: '/assets/images/chain/icon_1.png', link: ''},
-          {id: 2, title: 'ZettaBlock’s infrastructure saves crypto.com 16,000 hours per year', chainIcon: '/assets/images/chain/icon_2.png',  link: ''},
-          {id: 3, title: 'Artemis deploys production-ready APIs in minutes with ZettaBlock', chainIcon: '/assets/images/chain/icon_3.png', link: ''},
-          {id: 4, title: 'Friktion’s new portoflio portal runs on ZettaBlock', chainIcon: '/assets/images/chain/icon_4.png', link: ''},
-          {id: 5, title: 'Orchestrate a data platform for Autograph in 5 minutes', chainIcon: '/assets/images/chain/icon_5.png', link: ''},
-        ]
       };
     },
     created() {
@@ -673,17 +723,17 @@
     mounted() {
       this.slide11Swiper = null
       this.slide5Swiper = null
-      this.slide7Swiper = null
+      this.slide6Swiper = null
       setTimeout(() => {
         this.onCreateView();
       }, 100);
       this.$nextTick(() => {
         this.initLinkWrap()
-        this.initSlide3()
         this.handleSlide5MenuChange(0, true)
         this.initSlide11Swiper()
         this.initSlide5Swiper()
-        this.initSlide7Swiper()
+        this.initSlide6Swiper()
+        this.initSlide7()
       })
     },
     watch: {},
@@ -696,16 +746,16 @@
       },
       // Slide2中的切换
       handleSlide2CurrentIndexChange ({ target }, index) {
-        const { width, left } = target.getBoundingClientRect()
+        const { left } = target.getBoundingClientRect()
         const { left: parentLeft } = target.parentNode.getBoundingClientRect()
         this.slide2Left = left - parentLeft + 'px'
         this.slide2CurrentIndex = index
       },
 
-      // Slide3中的方法
-      initSlide3 () {
+      // Slide7中的方法
+      initSlide7 () {
         ScrollTrigger.create({
-          trigger: '.slide3 .data-number',
+          trigger: '.slide7 .data-number',
           start: 'top bottom-=50px',
           end: 'bottom top',
           // markers: true,
@@ -715,45 +765,34 @@
         })
       },
       showCount () {
-        console.log('showCount')
-        if (!document.querySelector('#slide3Number1')) {
+        if (!document.querySelector('#slide7Number1')) {
           return
         }
         bounty({
-          el: '#slide3Number1',
-          value: '110B+',
+          el: '#slide7Number1',
+          value: '110',
           lineHeight: 1,
-          height: 60,
+          height: 50,
           letterSpacing: -1,
           animationDelay: 100,
           letterAnimationDelay: 200,
           duration: 3000,
         });
         bounty({
-          el: '#slide3Number2',
-          value: '1M+',
+          el: '#slide7Number2',
+          value: '17',
           lineHeight: 1,
-          height: 60,
+          height: 50,
           letterSpacing: -1,
           animationDelay: 100,
           letterAnimationDelay: 200,
           duration: 3000,
         });
         bounty({
-          el: '#slide3Number3',
-          value: '4.3B+',
+          el: '#slide7Number3',
+          value: '4.3',
           lineHeight: 1,
-          height: 60,
-          letterSpacing: -1,
-          animationDelay: 100,
-          letterAnimationDelay: 200,
-          duration: 3000,
-        });
-        bounty({
-          el: '#slide3Number4',
-          value: '99.95%',
-          lineHeight: 1,
-          height: 60,
+          height: 50,
           letterSpacing: -1,
           animationDelay: 100,
           letterAnimationDelay: 200,
@@ -792,6 +831,14 @@
           }
         })
       },
+      handleSlide5BtnClick (item) {
+        if (item.isClick) return
+        item.isClick = true
+        const timer = setTimeout(() => {
+          item.isClick = false
+          clearTimeout(timer)
+        }, 3000)
+      },
 
       initSlide11Swiper () {
         this.slide11Swiper = new Swiper('#slide11Swiper', {
@@ -816,34 +863,17 @@
         }
       },
 
-      initSlide7Swiper () {
-        console.log('init swiper')
-        this.slide7Swiper = new Swiper('#slide7Swiper', {
+      initSlide6Swiper () {
+        this.slide6Swiper = new Swiper('#slide6Swiper', {
           slidesPerView: "auto",
           loop: true,
         })
-        // this.slide7Swiper.on('activeIndexChange', function (e) {
-        //   const { realIndex } = e
-        //   if (realIndex !== this.slide7SwiperIndex) {
-        //     this.slide7SwiperIndex = realIndex
-        //   }
-        // })
       },
-      handleSlide7SwiperPrev(){
-        // if (this.slide7SwiperIndex > 1) {
-        //   this.slide7SwiperIndex--
-        // } else {
-        //   this.slide7SwiperIndex = this.slide7List.length - 1
-        // }
-        this.slide7Swiper.slidePrev()
+      handleSlide6SwiperPrev(){
+        this.slide6Swiper.slidePrev()
       },
-      handleSlide7SwiperNext(){
-        // if (this.slide7SwiperIndex < this.slide7List.length - 1) {
-        //   this.slide7SwiperIndex++
-        // } else {
-        //   this.slide7SwiperIndex = 0
-        // }
-        this.slide7Swiper.slideNext()
+      handleSlide6SwiperNext(){
+        this.slide6Swiper.slideNext()
       },
 
       toggleSignup() {
@@ -861,7 +891,6 @@
         $(window).off("mousemove");
       },
       clicklSrcoll(t) {
-        console.log("this.scrollOffer", this.scrollOffer);
         if (t == "left") {
           this.scrollOffer += 960;
         } else if (t == "right") {
@@ -874,7 +903,6 @@
         if (this.scrollOffer >= elem.scrollWidth) {
           this.scrollOffer = elem.scrollWidth;
         }
-        console.log("this.scrollOffer", this.scrollOffer);
         elem.scrollTo(this.scrollOffer, 0);
       },
     },
@@ -1016,7 +1044,7 @@
     letter-spacing: 4px;
     text-transform: uppercase;
     color: #5A20FB;
-    opacity: 0.4;
+    opacity: 0.4 !important;
     margin-bottom: 12px;
     text-align: left;
   }
@@ -1107,7 +1135,7 @@
       letter-spacing: 4px;
       text-transform: uppercase;
       color: #5A20FB;
-      opacity: 0.4;
+      opacity: 0.4 !important;
       text-align: center;
       margin-top: 100px;
     }
@@ -1450,7 +1478,6 @@
       .item{
         display: flex;
         align-items: center;
-        margin-bottom: 140px;
         text-align: left;
         .item-left{
           width: 50%;
@@ -1474,7 +1501,7 @@
         }
         .item-tip{
           padding: 0 20px;
-          line-height: 1.6;
+          line-height: 2;
           background: #F9F9FF;
           border: 1px solid rgba(40, 26, 240, 0.2);
           border-radius: 4px;
@@ -1559,23 +1586,26 @@
           }
         }
 
-        &:nth-child(1){
+        &.item-1{
           .item-left{
             padding-right: 100px;
           }
           .item-info{
             max-width: 540px;
           }
+          .item-description{
+            margin-bottom: 30px;
+          }
           .item-tip{
             padding: 0;
             text-align: center;
-            max-width: 320px;
+            max-width: 360px;
           }
           .item-description{
             border-bottom: 1px solid rgba(40, 26, 240, 0.2);
           }
         }
-        &:nth-child(2){
+        &.item-2{
           .item-right{
             padding-left: 100px;
           }
@@ -1593,7 +1623,7 @@
           }
 
         }
-        &:nth-child(3){
+        &.item-3{
           .item-left{
             padding-right: 100px;
           }
@@ -1601,7 +1631,7 @@
             max-width: 550px;
           }
         }
-        &:nth-child(4){
+        &.item-4{
           .item-right{
             padding-left: 100px;
           }
@@ -1609,7 +1639,7 @@
             max-width: 540px;
           }
         }
-        &:nth-child(5){
+        &.item-5{
           margin-bottom: 40px;
           .item-left{
             padding-right: 100px;
@@ -1962,20 +1992,31 @@
       }
       .content-right{
         .item{
-          width: 460px;
-          // height: 128px;
+          max-width: 460px;
           background: linear-gradient(180deg, #FBFAFF 0%, #FFFFFF 25.98%, #FAFAFE 87.14%, #F6F5FB 100%);
           border: 1px solid rgba(40, 26, 240, 0.04);
           box-shadow: 0px 27px 11px rgba(40, 27, 240, 0.01), 0px 15px 9px rgba(40, 27, 240, 0.02), 0px 7px 7px rgba(40, 27, 240, 0.04), 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
           border-radius: 4px;
           margin-bottom: 20px;
-          padding: 30px 40px;
+          padding: 30px 20px 30px 30px;
           text-align: left;
           .title{
             font-weight: 600;
             font-size: 36px;
             line-height: 100%;
             color: #281AF0;
+            display: flex;
+            align-items: center;
+            span {
+              &:nth-child(1){
+                svg{
+                  fill: #281AF0 !important;
+                }
+              }
+              &:nth-child(2){
+                margin-top: -5px;
+              }
+            }
           }
           .desc{
             font-size: 16px;
