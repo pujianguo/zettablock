@@ -22,7 +22,7 @@
             <li><a href="#product">Product<svg>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-down"></use>
                 </svg></a></li>
-            <li><a href="#usecase">Use Cases</a></li>
+            <li><a href="#usecases">Use Cases</a></li>
             <!-- <li><a>Pricing</a></li> -->
             <li><a href="#blog">Blog</a></li>
             <li><a href="#about">About</a></li>

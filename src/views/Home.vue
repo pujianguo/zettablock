@@ -110,10 +110,10 @@
     </section>
 
     <!-- Slide3 -->
-    <section id="product" class="slide slide3 whiteSlide">
+    <section id="develop" class="slide slide3 whiteSlide">
       <div class="content">
         <div class="container">
-          <div class="wrap padding-top-18 padding-bottom-5">
+          <div class="wrap padding-top-18">
             <div class="fix-12-12">
               <div class="section-title">Develop. Preview. Ship</div>
               <!-- <div class="code-wrap">
@@ -127,10 +127,10 @@
     </section>
 
     <!-- Slide 4 -->
-    <section id="product" class="slide slide4 whiteSlide">
+    <section id="withzettablock" class="slide slide4 whiteSlide">
       <div class="content">
         <div class="container">
-          <div class="wrap padding-top-9 padding-bottom-8">
+          <div class="wrap padding-top-9">
             <div class="section-title">Build data-powered apps within seconds</div>
 
             <div class="fix-12-12 slide-content">
@@ -152,11 +152,11 @@
           </div>
         </div>
       </div>
-      <div class="background" style="background:#fff;"></div>
+      <div class="background" style="background: #FAFAFF !important;"></div>
     </section>
 
     <!-- Slide 11 -->
-    <section class="slide slide11 whiteSlide">
+    <section id="product" class="slide slide11 whiteSlide">
       <div class="content">
         <div class="container">
           <div class="wrap">
@@ -178,7 +178,7 @@
                 <div class="item-right">
                   <div class="item-img-wrap">
                     <div class="item-img-inner">
-                      <img class="img" src="/assets/images/slide11/2.jpg" alt=""/>
+                      <img class="img" src="/assets/images/slide11/product-1.png" alt=""/>
                     </div>
                   </div>
                 </div>
@@ -224,7 +224,7 @@
                 <div class="item-right">
                   <div class="item-img-wrap">
                     <div class="item-img-inner">
-                      <img class="img" src="/assets/images/slide11/2.jpg" alt=""/>
+                      <img class="img" src="/assets/images/slide11/product-3.png" alt=""/>
                     </div>
                   </div>
                 </div>
@@ -234,7 +234,7 @@
                 <div class="item-left">
                   <div class="item-img-wrap">
                     <div class="item-img-inner">
-                      <img class="img" src="/assets/images/slide11/2.jpg" alt=""/>
+                      <img class="img" src="/assets/images/slide11/product-4.png" alt=""/>
                     </div>
                   </div>
                 </div>
@@ -256,7 +256,7 @@
                 <div class="item-right">
                   <div class="item-img-wrap">
                     <div class="item-img-inner">
-                      <img class="img" src="/assets/images/slide11/2.jpg" alt=""/>
+                      <img class="img" src="/assets/images/slide11/product-5.png" alt=""/>
                     </div>
                   </div>
                 </div>
@@ -269,7 +269,7 @@
 
 
     <!-- Slide 5 -->
-    <section id="product" class="slide slide5 whiteSlide">
+    <section id="usecases" class="slide slide5 whiteSlide">
       <div class="content">
         <div class="container">
           <div class="wrap padding-top-8 padding-bottom-18">
@@ -360,7 +360,7 @@
     </section>
 
     <!-- Slide 7 -->
-    <section id="product" class="slide slide7 whiteSlide">
+    <section id="about" class="slide slide7 whiteSlide">
       <div class="content">
         <div class="container">
           <div class="wrap padding-top-13 padding-bottom-11">
@@ -653,11 +653,11 @@
         ],
         slide11CurrentIndex: 0,
         slide11List: [
-          {id: 1, name: 'NFT', img: '/assets/images/slide11/swiper1.jpg', title: 'NFT mints,ownership, transfers, account balances, price, etc'},
-          {id: 2, name: 'Tokens', img: '/assets/images/slide11/swiper2.jpg', title: 'Token price, ownership, transfers, metadata, and account balances'},
-          {id: 3, name: 'Block', img: '/assets/images/slide11/swiper3.jpg', title: 'NFT mints,ownership, transfers, account balances, price, etc'},
-          {id: 4, name: 'ENS', img: '/assets/images/slide11/swiper4.jpg', title: 'NFT mints,ownership, transfers, account balances, price, etc'},
-          {id: 5, name: 'Stream', img: '/assets/images/slide11/swiper5.jpg', title: 'NFT mints,ownership, transfers, account balances, price, etc'},
+          {id: 1, name: 'NFT', img: '/assets/images/slide11/product-2-1.png', title: 'NFT mints,ownership, transfers, account balances, price, etc.'},
+          {id: 2, name: 'Tokens', img: '/assets/images/slide11/product-2-2.png', title: 'Token price, ownership, transfers, metadata, and account balances.'},
+          {id: 3, name: 'Block', img: '/assets/images/slide11/product-2-3.png', title: 'Full raw and decoded blockchain data, including transactions, logs, trace, accounts, blocks.'},
+          {id: 4, name: 'ENS', img: '/assets/images/slide11/product-2-4.png', title: 'ENS names, records and reserve.'},
+          {id: 5, name: 'Stream', img: '/assets/images/slide11/product-2-5.png', title: 'Stream blockchain data into your backend via webhooks and websockets.'},
         ],
         slide6List: [
           {id: 1, icon: 'section7-1', title: 'Zero Infra Overhead', desc: 'Save months of development and over 90% of their annual costs.'},
@@ -1308,6 +1308,7 @@
     }
   }
   .slide4 {
+    background: #FAFAFF !important;
     .container{
       height: auto !important;
     }
@@ -1423,7 +1424,7 @@
   }
 
   .slide11 {
-    background: #FAFAFF !important;
+    background: #ffffff !important;
     .container{
       height: auto !important;
     }
@@ -1463,17 +1464,18 @@
           line-height: 150%;
           color: #000000;
           opacity: 0.6;
-          margin: 20px 0;
+          padding-bottom: 30px;
+          margin: 20px 0 35px;
         }
         .item-tip{
           padding: 0 20px;
-          line-height: 32px;
+          line-height: 1.6;
           background: #F9F9FF;
-          border: 1px solid rgba(40, 26, 240, 0.08);
+          border: 1px solid rgba(40, 26, 240, 0.2);
           border-radius: 4px;
           font-size: 14px;
           color: #5A20FB;
-          opacity: 0.4;
+          opacity: 0.6;
         }
         .item-img-wrap{
           position: relative;
@@ -1481,8 +1483,8 @@
           height: 0;
           padding-bottom: 53.731%;
           background: #FFFFFF;
-          border: 0.784047px solid rgba(40, 26, 240, 0.08);
-          box-shadow: 0px 81px 81px rgba(50, 28, 242, 0.04), 0px 20px 45px rgba(50, 28, 242, 0.05), 0px 0px 0px rgba(50, 28, 242, 0.05);
+          border: 2px solid rgba(40, 26, 240, 0.1);
+          box-shadow: 0px 20px 45px rgba(50, 28, 242, 0.05), 0px 0px 0px rgba(50, 28, 242, 0.05);
           border-radius: 10px;
           overflow: hidden;
           .item-img-inner{
@@ -1544,7 +1546,7 @@
             font-weight: 500;
             font-size: 16px;
             letter-spacing: -0.2px;
-            color: rgba(40, 26, 240, 0.3);
+            color: rgba(40, 26, 240, 0.5);
             cursor: pointer;
             &.active{
               background: radial-gradient(129.53% 327.88% at 69.76% 0%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #2914F7;
@@ -1569,6 +1571,9 @@
             text-align: center;
             max-width: 320px;
           }
+          .item-description{
+            border-bottom: 1px solid rgba(40, 26, 240, 0.2);
+          }
         }
         &:nth-child(2){
           .item-right{
@@ -1580,6 +1585,11 @@
           .item-tip{
             border: 0;
             padding: 0;
+            background: #fff;
+            min-height: 64px;
+          }
+          .item-description{
+            border-bottom: 1px solid rgba(40, 26, 240, 0.2);
           }
 
         }
