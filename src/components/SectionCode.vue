@@ -33,7 +33,10 @@
           </div> -->
         </div>
         <div class="title-handle" v-if="isGraphqlEnd">
-          <div class="handle-item item-text" v-show="currentIndex === 1">Try It!</div>
+          <div class="handle-item item-text" v-show="currentIndex === 1"
+            :class="{'item-text_disable': isCopy}"
+            v-clipboard="snippetsCodeSting" @success="handleCopyCodeSuccess"
+            >{{isCopy ? 'Copied!' : 'Try It!'}}</div>
           <div class="handle-item item-text" v-show="currentIndex === 0" @click="handlePlay">Create & Query</div>
           <!-- <div class="handle-item item-icon" v-show="currentIndex === 0" @click="handlePlay">
             <svg><use href="#play"></use></svg>
@@ -100,6 +103,8 @@ export default {
       isGraphqlEnd: false,
       currentIndex: 0,
       codeTheme: 'default',
+      snippetsCodeSting: snippetsCodeSting,
+      isCopy: false
     }
   },
   computed: {
@@ -232,6 +237,15 @@ export default {
         });
         this.snippetsCodemirror.setValue(snippetsCodeSting)
       }
+    },
+
+    handleCopyCodeSuccess() {
+      if (this.isCopy) return
+      this.isCopy = true
+      const timer = setTimeout(() => {
+        this.isCopy = false
+        clearTimeout(timer)
+      }, 3000)
     },
 
     drawChart () {
@@ -387,6 +401,9 @@ export default {
             color: #FFFFFF;
             text-align: center;
             cursor: pointer;
+            &.item-text_disable{
+              pointer-events: none;
+            }
           }
           &.item-icon{
             width: 40px;

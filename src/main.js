@@ -6,7 +6,9 @@ import VueGtag from 'vue-gtag'
 import VueCollapse from "vue2-collapse";
 import axios from 'axios'
 import util from './utils/util'
+import VueClipboards from 'vue-clipboards'
 
+Vue.use(VueClipboards)
 Vue.use(VueGtag, {
   config: { id: 'G-NK4XX5R11N' }  // 这里修改为你的gtag id，应该是G开头的。
 });

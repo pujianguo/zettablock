@@ -332,7 +332,7 @@
                       <ul class="info-list ae-5 fromBottom">
                         <li class="info-item" v-for="(p, i) in item.info" :key="item.id + i">{{p}}</li>
                       </ul>
-                      <div class="button ae-6 fromBottom" @click="() => item.isClick = true">
+                      <div class="button ae-6 fromBottom" @click="handleSlide5BtnClick(item)">
                         <span class="button-text">Read more use cases</span>
                         <svg class="button-icon">
                           <use href="#arrow-right"></use>
@@ -830,6 +830,14 @@
             this.handleSlide5MenuChange(realIndex)
           }
         })
+      },
+      handleSlide5BtnClick (item) {
+        if (item.isClick) return
+        item.isClick = true
+        const timer = setTimeout(() => {
+          item.isClick = false
+          clearTimeout(timer)
+        }, 3000)
       },
 
       initSlide11Swiper () {
