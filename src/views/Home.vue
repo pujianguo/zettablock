@@ -159,7 +159,7 @@
     <section id="product" class="slide slide11 whiteSlide">
       <div class="content">
         <div class="container">
-          <div class="wrap">
+          <div class="wrap padding-bottom-0">
             <div class="fix-12-12">
               <div class="section-subtitle ae-1 fromBottom">Designed for developers</div>
               <div class="section-title ae-2 fromBottom">The complete, fully managed web3 data suite</div>
@@ -167,7 +167,7 @@
             </div>
             <div class="fix-12-12 content-content">
               <!-- item1 -->
-              <div class="item">
+              <div class="item item-1">
                 <div class="item-left ae-4 fromLeft">
                   <div class="item-info">
                     <div class="item-title">Custom GraphQL APIs</div>
@@ -183,9 +183,19 @@
                   </div>
                 </div>
               </div>
-              <!-- item2 -->
-              <div class="item">
-                <div class="item-left ae-4 fromLeft">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section 11  item2 -->
+    <section class="slide slide11 whiteSlide">
+      <div class="content">
+        <div class="container">
+          <div class="wrap padding-top-14 padding-bottom-0">
+            <div class="fix-12-12 content-content">
+              <div class="item item-2">
+                <div class="item-left ae-1 fromLeft">
                   <div class="item-img-wrap">
                     <div class="item-img-inner">
                       <div class="swiper item-swiper" id="slide11Swiper">
@@ -199,7 +209,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="item-right ae-4 fromRight">
+                <div class="item-right ae-1 fromRight">
                   <div class="item-info">
                     <div class="item-title">Prebuilt Web3 APIs</div>
                     <div class="item-description">Dramatically simplify and optimize common request patterns with prebuilt real-time APIs. Anyone can further customize them in minutes. </div>
@@ -213,15 +223,25 @@
                   </div>
                 </div>
               </div>
-              <!-- item3 -->
-              <div class="item">
-                <div class="item-left ae-4 fromLeft">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section 11  item3 -->
+    <section class="slide slide11 whiteSlide">
+      <div class="content">
+        <div class="container">
+          <div class="wrap padding-top-14 padding-bottom-0">
+            <div class="fix-12-12 content-content">
+              <div class="item item-3">
+                <div class="item-left ae-1 fromLeft">
                   <div class="item-info">
                     <div class="item-title">Data Lake API</div>
                     <div class="item-description">Our data lake makes blockchains speak SQL to maximize data analytics capabilities, and access queries and historical data via the data lake API.</div>
                   </div>
                 </div>
-                <div class="item-right ae-4 fromRight">
+                <div class="item-right ae-1 fromRight">
                   <div class="item-img-wrap">
                     <div class="item-img-inner">
                       <img class="img" src="/assets/images/slide11/product-3.png" alt=""/>
@@ -229,31 +249,51 @@
                   </div>
                 </div>
               </div>
-              <!-- item4 -->
-              <div class="item">
-                <div class="item-left ae-4 fromLeft">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section 11  item4 -->
+    <section class="slide slide11 whiteSlide">
+      <div class="content">
+        <div class="container">
+          <div class="wrap padding-top-14 padding-bottom-0">
+            <div class="fix-12-12 content-content">
+              <div class="item item-4">
+                <div class="item-left ae-1 fromLeft">
                   <div class="item-img-wrap">
                     <div class="item-img-inner">
                       <img class="img" src="/assets/images/slide11/product-4.png" alt=""/>
                     </div>
                   </div>
                 </div>
-                <div class="item-right ae-4 fromRight">
+                <div class="item-right ae-1 fromRight">
                   <div class="item-info">
                     <div class="item-title">On&off-chain data</div>
                     <div class="item-description">Access comprehensive raw, fully decoded and aggregated on-chain data, with multiple off-chain data sources support such as Snowflake. </div>
                   </div>
                 </div>
               </div>
-              <!-- item5 -->
-              <div class="item">
-                <div class="item-left ae-4 fromLeft">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section 11  item5 -->
+    <section class="slide slide11 whiteSlide">
+      <div class="content">
+        <div class="container">
+          <div class="wrap padding-top-14 padding-bottom-8">
+            <div class="fix-12-12 content-content">
+              <div class="item item-5">
+                <div class="item-left ae-1 fromLeft">
                   <div class="item-info">
                     <div class="item-title">Dashboards</div>
                     <div class="item-description">Build dashboards with a grid-based collection of charts and text boxes, all of which show up-to-date data.</div>
                   </div>
                 </div>
-                <div class="item-right ae-4 fromRight">
+                <div class="item-right ae-1 fromRight">
                   <div class="item-img-wrap">
                     <div class="item-img-inner">
                       <img class="img" src="/assets/images/slide11/product-5.png" alt=""/>
@@ -272,7 +312,7 @@
     <section id="usecases" class="slide slide5 whiteSlide">
       <div class="content">
         <div class="container">
-          <div class="wrap padding-top-8 padding-bottom-18">
+          <div class="wrap padding-top-20 padding-bottom-18">
             <div class="fix-12-12">
               <div class="section-subtitle ae-1 fromBottom">Unlock the future of blockchain</div>
               <div class="section-title ae-2 fromBottom">Get started with ZettaBlock platform</div>
@@ -1430,7 +1470,6 @@
       .item{
         display: flex;
         align-items: center;
-        margin-bottom: 140px;
         text-align: left;
         .item-left{
           width: 50%;
@@ -1539,7 +1578,7 @@
           }
         }
 
-        &:nth-child(1){
+        &.item-1{
           .item-left{
             padding-right: 100px;
           }
@@ -1558,7 +1597,7 @@
             border-bottom: 1px solid rgba(40, 26, 240, 0.2);
           }
         }
-        &:nth-child(2){
+        &.item-2{
           .item-right{
             padding-left: 100px;
           }
@@ -1576,7 +1615,7 @@
           }
 
         }
-        &:nth-child(3){
+        &.item-3{
           .item-left{
             padding-right: 100px;
           }
@@ -1584,7 +1623,7 @@
             max-width: 550px;
           }
         }
-        &:nth-child(4){
+        &.item-4{
           .item-right{
             padding-left: 100px;
           }
@@ -1592,7 +1631,7 @@
             max-width: 540px;
           }
         }
-        &:nth-child(5){
+        &.item-5{
           margin-bottom: 40px;
           .item-left{
             padding-right: 100px;
