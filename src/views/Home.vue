@@ -148,7 +148,7 @@
     <section class="slide slide4 whiteSlide">
       <div class="content">
         <div class="container">
-          <div class="wrap ">
+          <div class="wrap">
             <div class="section-title ae-1 fromBottom">Build data-powered apps within seconds</div>
 
             <div class="fix-12-12 slide-content ae-2 fromBottom">
@@ -162,7 +162,7 @@
                   <div class="subtitle">hours</div>
                 </div>
               </div>
-              <div class="content-content">
+              <div class="content-content-pc">
                 <div class="content-content-inner" :style="{left: slide2CurrentIndex === 1 ? 0 : '-100%'}">
                   <div class="content-item content-item-with">
                     <div class="col col-1">
@@ -359,6 +359,119 @@
                   </div>
                   <div class="content-item content-item-without">
                     <img src="/assets/images/slide4/without.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="content-content-m">
+                <div class="content-content-inner" :style="{left: slide2CurrentIndex === 1 ? 0 : '-100%'}">
+                  <div class="content-item content-item-with">
+                    <div class="col col-1">
+                      <div class="img-box-left">
+                        <img class="img" src="/assets/images/slide4/start-mb-1-1.png" alt="">
+                        <img class="img" src="/assets/images/slide4/start-mb-1-2.png" alt="">
+                      </div>
+                    </div>
+                    <div class="col col-2">
+                      <svg class="svg-path-1" viewBox="0 0 150 57">
+                        <path id="circle-path" d="M2,0 V15 L75,42 V57" stroke-width="0.5" fill="none" stroke="#281AF0"></path>
+                        <path d="M148,0 V15 L75,42" stroke-width="0.5" fill="none" stroke="#281AF0"></path>
+                        <circle cx="-6" cy="0" r="2" fill="#281AF0">
+                          <animateMotion
+                            id="animateMotion1"
+                            begin="0"
+                            dur="2s"
+                            rotate="auto"
+                            path="M2,0 V15 L75,42 V57"
+                            repeatCount="indefinite"
+                          ></animateMotion>
+                        </circle>
+                        <circle cx="-6" cy="0" r="2" fill="#281AF0">
+                          <animateMotion
+                            id="animateMotion11"
+                            begin="1s"
+                            dur="2s"
+                            rotate="auto"
+                            path="M2,0 V15 L75,42 V57"
+                            repeatCount="indefinite"
+                          ></animateMotion>
+                        </circle>
+                      </svg>
+                    </div>
+                    <div class="col col-3">
+                      <div class="circle-box">
+                        <div class="circle">
+                          <div class="circle-content">
+                            <svg class="logo-icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-icon-2"></use>
+                            </svg>
+                            <svg class="logo-text">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-text-2"></use>
+                            </svg>
+                          </div>
+                          <div class="circle-ring"></div>
+                          <div class="circle-ring"></div>
+                          <div class="circle-ring"></div>
+                          <div class="circle-ring"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col col-2-2">
+                      <svg class="svg-path-2" viewBox="0 0 150 163">
+                        <path d="M75,0 V15 L2,42 V163" stroke-width="0.5" fill="none" stroke="#281AF0"></path>
+                        <path d="M75,0 V15 L148,42 V163" stroke-width="0.5" fill="none" stroke="#281AF0"></path>
+                        <g>
+                          <circle cx="-6" cy="0" r="1.5" fill="#281AF0">
+                            <animateMotion
+                              dur="2.1s"
+                              begin="0"
+                              rotate="auto"
+                              path="M75,0 V15 L2,42 V163"
+                              repeatCount="indefinite"
+                            ></animateMotion>
+                          </circle>
+                          <circle cx="-6" cy="0" r="1.5" fill="#281AF0">
+                            <animateMotion
+                              begin="0"
+                              dur="2.1s"
+                              rotate="auto"
+                              path="M75,0 V15 L148,42 V163"
+                              repeatCount="indefinite"
+                            ></animateMotion>
+                          </circle>
+                        </g>
+                        <g>
+                          <circle cx="-6" cy="0" r="1.5" fill="#281AF0">
+                            <animateMotion
+                              dur="2.1s"
+                              begin="0.7s"
+                              rotate="auto"
+                              path="M75,0 V15 L2,42 V163"
+                              repeatCount="indefinite"
+                            ></animateMotion>
+                          </circle>
+                          <circle cx="-6" cy="0" r="1.5" fill="#281AF0">
+                            <animateMotion
+                              begin="0.7s"
+                              dur="2.1s"
+                              rotate="auto"
+                              path="M75,0 V15 L148,42 V163"
+                              repeatCount="indefinite"
+                            ></animateMotion>
+                          </circle>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="col col-4">
+                      <div class="img-box-right">
+                        <img class="img" src="/assets/images/slide4/start-mb-2-1.png" alt="">
+                        <img class="img" src="/assets/images/slide4/start-mb-2-2.png" alt="">
+                        <img class="img" src="/assets/images/slide4/start-mb-2-3.png" alt="">
+                        <img class="img" src="/assets/images/slide4/start-mb-2-4.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-item content-item-without">
+                    <img src="/assets/images/slide4/without_m.png" alt="">
                   </div>
                 </div>
               </div>
