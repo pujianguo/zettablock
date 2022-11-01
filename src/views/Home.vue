@@ -93,7 +93,7 @@
             <div class="fix-12-12">
               <div class="content-body">
                 <div class="body-left">
-                  <div class="title ae-1 fromBottom">Supported Chains</div>
+                  <div class="title ae-1 fromBottom">Supported chains</div>
                   <div class="wrap-title ae-3 fromBottom is-mobile">Multiple Chains Support</div>
                   <div class="input-wrap ae-2 fromBottom">
                   <!-- <div class="input-wrap input-wrap_success"> -->
