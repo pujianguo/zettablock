@@ -431,8 +431,6 @@
   }
   .slide-content{
     width: 100%;
-    border: 1px solid rgba(40, 26, 240, 0.08);
-    border-radius: 12px;
     margin-top: 110px;
     position: relative;
     .content-title{
@@ -459,9 +457,32 @@
         font-weight: 500;
         font-size: 18px;
         color: rgba(40, 26, 240, 0.4);
+        position: relative;
         cursor: pointer;
+        .title{
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+        }
+        .subtitle{
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%, 0);
+          bottom: -40px;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 100%;
+          letter-spacing: 4px;
+          text-transform: uppercase;
+          color: #5A20FB;
+          opacity: 0.4;
+          display: none;
+        }
         &.active{
           color: #FFFFFF;
+          .subtitle{
+            display: block;
+          }
         }
       }
       &::before{
@@ -480,6 +501,8 @@
     }
     .content-content{
       position: relative;
+      border: 1px solid rgba(40, 26, 240, 0.08);
+      border-radius: 12px;
       width: 100%;
       height: 0;
       padding-bottom: 50.7246%;
@@ -493,10 +516,12 @@
         height: 100%;
         transition: all .4s;
         transition-timing-function: ease-in-out;
+        display: flex;
         .content-item{
           width: 50%;
           height: 100%;
           display: inline-block;
+          overflow: hidden;
         }
         .content-item-with{
           display: flex;
@@ -508,17 +533,17 @@
             justify-content: center;
           }
           .col-1{
-            width: 360px;
+            flex: 26.0869%;
             .card-chain{
               width: 100%;
-              height: 200px;
+              // height: 200px;
+              padding: 25px;
               display: flex;
               background: #FFFFFF;
               box-shadow: 0px 27px 11px rgba(40, 27, 240, 0.01), 0px 15px 9px rgba(40, 27, 240, 0.02), 0px 7px 7px rgba(40, 27, 240, 0.04), 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
               border-radius: 8px;
               flex-direction: column;
               justify-content: center;
-              gap: 24px;
               .card-title{
                 font-weight: 500;
                 font-size: 20px;
@@ -562,41 +587,51 @@
                 margin-bottom: 0;
               }
             }
+            .img{
+              width: 100%;
+            }
           }
           .col-2{
-            flex: 1;
+            flex: 8.14492%;
             .svg-path-1{
               width: 100%;
-              height: 228px;
             }
             .svg-path-2{
               width: 100%;
-              height: 462px;
             }
           }
           .col-3{
-            flex-shrink: 1;
-            .circle{
-              width: 220px;
-              height: 220px;
+            // flex: 1;
+            flex: 15.94202%;
+            .circle-box{
+              width: 100%;
+              height: 0;
+              padding-bottom: 100%;
               position: relative;
+            }
+            .circle{
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
               .circle-content{
                 width: 100%;
                 height: 100%;
                 background: radial-gradient(129.53% 327.88% at 69.76% 0%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #2914F7;
                 box-shadow: 0px 77px 31px rgba(106, 38, 249, 0.01), 0px 43px 26px rgba(106, 38, 249, 0.05), 0px 19px 19px rgba(106, 38, 249, 0.09), 0px 5px 11px rgba(106, 38, 249, 0.1), 0px 0px 0px rgba(106, 38, 249, 0.1);
-                border-radius: 200px;
+                border-radius: 50%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 .logo-icon{
-                  width: 63px;
-                  height: 63px;
-                  margin-bottom: 15px;
+                  width: 28.636%;
+                  height: 28.636%;
+                  margin-bottom: 10px;
                 }
                 .logo-text{
-                  width: 107px;
+                  width: 48.636%;
                   height: 15px;
                 }
               }
@@ -621,7 +656,7 @@
               }
               @keyframes circleRingMove {
                 0% {
-                  opacity: 1;
+                  opacity: 0.7;
                   transform: scale(1);
                 }
                 100% {
@@ -630,6 +665,35 @@
                 }
               }
             }
+          }
+        }
+        .content-item-without{
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .img-box-left{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          .img{
+            width: 100%;
+            box-shadow: 0px 27px 11px rgba(40, 27, 240, 0.01), 0px 15px 9px rgba(40, 27, 240, 0.02), 0px 7px 7px rgba(40, 27, 240, 0.04), 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
+            border-radius: 8px;
+          }
+        }
+        .img-box-right{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          .img{
+            width: 100%;
+            box-shadow: 0px 27px 11px rgba(40, 27, 240, 0.01), 0px 15px 9px rgba(40, 27, 240, 0.02), 0px 7px 7px rgba(40, 27, 240, 0.04), 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
+            border-radius: 8px;
           }
         }
       }
