@@ -19,28 +19,64 @@
         </div>
         <div class="right">
           <ul class="menu">
-            <li><a href="#product">Product<svg>
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-down"></use>
-                </svg></a></li>
+            <li>
+              <a href="#product">
+                Product
+                <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-down"></use></svg>
+              </a>
+            </li>
             <li><a href="#usecases">Use Cases</a></li>
-            <!-- <li><a>Pricing</a></li> -->
             <li><a href="#blog">Blog</a></li>
             <li><a href="#about">About</a></li>
           </ul>
-          <a class="cta" @click="toggleSignup">Get Early Access <svg>
-              <use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#arrow-right-blue"></use>
-            </svg></a>
+          <a class="cta" @click="toggleSignup">
+            Get Early Access
+            <svg><use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#arrow-right-blue"></use></svg>
+          </a>
         </div>
       </div>
       <div class="sections compact hidden">
-        <div class="left"><a href="#" title="Slides Framework"><svg style="width:82px;height:24px">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
-            </svg></a></div>
-        <div class="right"><span class="button actionButton sidebarTrigger" data-sidebar-id="1"><svg>
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu"></use>
-            </svg></span></div>
+        <div class="left">
+          <a href="#" title="ZettaBlock" class="logo">
+            <svg class="logo-icon">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-icon"></use>
+            </svg>
+            <svg class="logo-text">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-text"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="right">
+          <div class="menu-btn" :class="{'menu-btn_open': isOpen}" @click="handleMenuChange">
+            <span class="btn" data-sidebar-id="1">
+              <!-- <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+                >
+                <rect width="16" height="2" fill="#281AF0"/>
+                <rect y="6" width="16" height="2" fill="#281AF0"/>
+                <rect y="12" width="16" height="2" fill="#281AF0"/>
+              </svg> -->
+            </span>
+          </div>
+        </div>
       </div>
     </nav>
+    <div class="m-menu-wrap" :class="{'m-menu-wrap_open': isOpen}">
+      <ul class="menu">
+        <li>
+          <a href="#product">
+            Product
+            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-down"></use></svg>
+          </a>
+        </li>
+        <li><a href="#usecases">Use Cases</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <a class="cta" @click="toggleSignup">
+        Get Early Access
+        <svg><use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#arrow-right-blue"></use></svg>
+      </a>
+    </div>
     <!-- Sidebar -->
     <!-- <nav class="sidebar" data-sidebar-id="1">
       <div class="close"><svg>
@@ -137,21 +173,30 @@ export default {
     },
   },
   data() {
-    return {};
+    return {
+      isOpen: false,
+    };
   },
 
-  methods: {},
+  methods: {
+    handleMenuChange () {
+      this.isOpen = !this.isOpen
+    }
+  },
 };
 </script>
 
 <style lang="scss">
   .panel.top {
     width: 100%;
-    height: 70px;
-
+    padding: 0;
     background: rgba(255, 255, 255, 0.8);
     border-bottom: 1px solid #281af0;
     backdrop-filter: blur(20px);
+    .desktop{
+      height: 70px;
+      padding: 10px 30px;
+    }
     .left{
       .logo{
         display: flex;
@@ -189,6 +234,87 @@ export default {
         }
       }
     }
+    .right .menu-btn{
+      width: 42px;
+      height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      .btn{
+        position: relative;
+        display: block;
+        width: 16px;
+        height: 2px;
+        background: #281AF0;
+        margin: 0 auto;
+        border: none;
+        cursor: pointer;
+        color: inherit;
+        font-size: 0;
+        transition: 0.35s;
+
+        &::before,
+        &::after {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          display: block;
+          width: 100%;
+          height: 2px;
+          background: #281AF0;
+          content: "";
+          transition: transform 0.35s;
+          transform-origin: 50% 50%;
+        }
+        &::before {
+          transform: translate(-50%, -6px);
+
+        }
+        &::after {
+          transform: translate(-50%, 6px);
+        }
+      }
+      &.menu-btn_open{
+        .btn{
+          background: transparent;
+          &::before {
+            animation: menuBefore 0.5s forwards;
+          }
+
+          &::after {
+            animation: menuAfter 0.5s forwards;
+          }
+          @keyframes menuBefore {
+            0% {
+              transform: translate(-50%, -6px);
+            }
+            40% {
+              transform: translate(-50%, 0);
+            }
+            60% {
+              transform: translate(-50%, 0);
+            }
+            100% {
+              transform: translate(-50%, 0) rotate(45deg);
+            }
+          }
+          @keyframes menuAfter {
+            0% {
+              transform: translate(-50%, 6px);
+            }
+            40% {
+              transform: translate(-50%, 0);
+            }
+            60% {
+              transform: translate(-50%, 0);
+            }
+            100% {
+              transform: translate(-50%, 0) rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
     a.cta {
       font-weight: 500;
       font-size: 16px;
@@ -202,5 +328,83 @@ export default {
         margin-left: 5px;
       }
     }
+    .compact {
+      height: 50px;
+      padding: 0 30px;
+      .logo{
+        .logo-icon{
+          width: 18px;
+          height: 18px;
+          margin-right: 12px;
+        }
+        .logo-text{
+          width: 97px;
+          height: 15px;
+        }
+      }
+    }
+  }
+  .m-menu-wrap{
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 0.3s;
+    position: fixed;
+    top: 51px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-bottom: 0.5px solid #281AF0;
+    box-shadow: 0px 27px 11px rgba(40, 27, 240, 0.01), 0px 15px 9px rgba(40, 27, 240, 0.02), 0px 7px 7px rgba(40, 27, 240, 0.04), 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
+    backdrop-filter: blur(22.5px);
+    z-index: 199;
+    .menu{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      li {
+        a {
+          font-family: 'Basier Square';
+          font-style: normal;
+          font-weight: 500;
+          line-height: 100%;
+          display: flex;
+          font-size: 24px;
+          margin: 20px 0;
+          align-items: center;
+          letter-spacing: -0.2px;
+          color: #000000;
+          &:hover {
+            text-decoration: underline;
+          }
+          svg {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
+    a.cta {
+      width: 100%;
+      margin: 20px auto;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 100%;
+      color: #281af0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      svg {
+        width: 16px;
+        height: 16px;
+        margin-left: 5px;
+      }
+    }
+  }
+  .m-menu-wrap_open{
+    transform: translateY(0);
+    opacity: 1;
   }
 </style>
