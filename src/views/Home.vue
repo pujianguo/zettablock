@@ -73,7 +73,7 @@
             <div class="fix-12-12">
               <div class="content-body">
                 <div class="body-left">
-                  <div class="title ae-1 fromBottom">Supported Chains</div>
+                  <div class="title ae-1 fromBottom">Supported chains</div>
                   <div class="input-wrap ae-2 fromBottom">
                   <!-- <div class="input-wrap input-wrap_success"> -->
                     <input class="input" type="text" placeholder="Request a new network">
@@ -1421,6 +1421,8 @@
               width: 100%;
               height: 100%;
               object-fit: cover;
+              border: 2px solid rgba(40, 26, 240, 0.2);
+              border-radius: 12px;
             }
           }
         }
