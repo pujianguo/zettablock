@@ -1002,13 +1002,18 @@
     .copyright{
       order: 2;
       font-size: 14px;
-      margin-top: 24px;
+      margin-top: 10px;
+      margin-bottom: 18px;
     }
     .menu{
       order: 1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       .menu-item{
         font-size: 14px;
-        margin: 0 20px;
+        margin: 0 10px;
+        margin-bottom: 11px;
       }
     }
   }
