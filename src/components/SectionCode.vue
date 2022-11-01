@@ -499,4 +499,211 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  .section-code{
+    $border-color: rgba(40, 26, 240, 0.08);
+    margin-top: 80px;
+    width: 100%;
+    height: 530px;
+    background: #FAFBFC;
+    border: 1px solid $border-color;
+    border-radius: 12px;
+    display: flex;
+    text-align: left;
+    overflow: hidden;
+    .code-title{
+      flex-shrink: 0;
+      height: 66px;
+      padding: 13px 14px;
+      border-bottom: 1px solid $border-color;
+      display: flex;
+      align-items: center;
+      .icon-dian{
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background: #EAEAFF;
+        border: 1px solid rgba(40, 26, 240, 0.08);
+        border-radius: 5px;
+        margin: 0 10px 0 3px;
+      }
+      .text{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: -0.2px;
+        color: #565693;
+      }
+    }
+    .code-body{
+      flex: 1;
+      overflow: hidden;
+      .CodeMirror-wrap{
+        width: 100%;
+        height: 100%;
+        line-height: 22px;
+        font-size: 14px;
+      }
+    }
+    .code-left{
+      border-right: 1px solid $border-color;
+      display: flex;
+      flex-direction: column;
+      width: 38%;
+    }
+    .code-right{
+      display: flex;
+      flex-direction: column;
+      width: 62%;
+      .code-title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .title-menu{
+          display: flex;
+          align-items: center;
+          .title-item{
+            height: 40px;
+            line-height: 40px;
+            padding: 0 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            border: 1px solid transparent;
+            margin-right: 15px;
+            svg{
+              width: 20px;
+              height: 20px;
+              margin-right: 10px;
+            }
+            span{
+              font-weight: 500;
+              font-size: 18px;
+              line-height: 20px;
+              letter-spacing: -0.2px;
+              color: #565693;
+            }
+            &.active{
+              background: #DEE4ED;
+              border: 1px solid rgba(40, 26, 240, 0.15);
+            }
+          }
+        }
+        .title-handle{
+          display: flex;
+          align-items: center;
+          .handle-item{
+            background: radial-gradient(129.53% 327.88% at 69.76% 0%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #2914F7;
+            box-shadow: 0px 77px 31px rgba(106, 38, 249, 0.01), 0px 43px 26px rgba(106, 38, 249, 0.05), 0px 19px 19px rgba(106, 38, 249, 0.09), 0px 5px 11px rgba(106, 38, 249, 0.1), 0px 0px 0px rgba(106, 38, 249, 0.1);
+            border-radius: 4px;
+            &.item-text{
+              width: 169px;
+              height: 40px;
+              line-height: 40px;
+              font-weight: 500;
+              font-size: 18px;
+              color: #FFFFFF;
+              text-align: center;
+              cursor: pointer;
+              &.item-text_disable{
+                pointer-events: none;
+              }
+            }
+            &.item-icon{
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              margin-left: 20px;
+              padding: 10px;
+              cursor: pointer;
+              svg{
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+      }
+      .code-body{
+        display: flex;
+        position: relative;
+        .code-graphql{
+          width: 50%;
+          height: 100%;
+          overflow: hidden;
+          .CodeMirror-wrap{
+            padding: 10px 10px;
+          }
+
+        }
+        .code-data{
+          width: 50%;
+          height: 100%;
+          overflow: hidden;
+          border-left: 1px solid $border-color;
+          .CodeMirror-wrap{
+            padding: 10px 10px;
+          }
+        }
+        .code-snippets{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          opacity: 0;
+          overflow: hidden;
+          .CodeMirror-wrap{
+            padding: 10px 10px;
+          }
+        }
+        .code-snippets_show{
+          opacity: 1;
+          z-index: 1;
+        }
+        .code-chart{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+          background: #fff;
+          display: flex;
+          flex-direction: column;
+          z-index: -1;
+          opacity: 0;
+          .card-header{
+            width: 100%;
+            height: 69px;
+            padding: 29px 22px 20px;
+            line-height: 20px;
+            font-family: 'Basier Square';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            color: #4A4A61;
+          }
+          .card-body{
+            flex: 1;
+            .chart{
+              width: 100%;
+              height: 100%;
+            }
+
+          }
+        }
+        .code-chart_show{
+          opacity: 1;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}
 </style>
