@@ -32,7 +32,7 @@
             <span>Visualization</span>
           </div> -->
         </div>
-        <div class="title-handle" v-if="isGraphqlEnd">
+        <div class="title-handle" :class="{'title-handle_try': currentIndex === 1}" v-if="isGraphqlEnd">
           <div class="handle-item item-text" v-show="currentIndex === 1"
             :class="{'item-text_disable': isCopy}"
             v-clipboard="snippetsCodeSting" @success="handleCopyCodeSuccess"
@@ -501,89 +501,115 @@ export default {
 }
 
 @media screen and (max-width: 767px) {
+  $border-color: rgba(40, 26, 240, 0.08);
+
   .section-code{
-    $border-color: rgba(40, 26, 240, 0.08);
-    margin-top: 80px;
+    margin-top: 50px;
     width: 100%;
-    height: 530px;
-    background: #FAFBFC;
-    border: 1px solid $border-color;
-    border-radius: 12px;
+    height: auto;
+    border: 0;
+    border-radius: 0;
     display: flex;
     text-align: left;
+    flex-direction: column;
     overflow: hidden;
+    background: transparent;
     .code-title{
       flex-shrink: 0;
-      height: 66px;
-      padding: 13px 14px;
+      height: 38px;
+      padding: 8px 7px;
       border-bottom: 1px solid $border-color;
       display: flex;
       align-items: center;
       .icon-dian{
-        width: 11px;
-        height: 11px;
+        width: 8px;
+        height: 8px;
         border-radius: 50%;
         background: #EAEAFF;
         border: 1px solid rgba(40, 26, 240, 0.08);
         border-radius: 5px;
-        margin: 0 10px 0 3px;
+        margin: 0 15px 0 3px;
       }
       .text{
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 20px;
-        letter-spacing: -0.2px;
-        color: #565693;
+        font-size: 14px;
+        line-height: 14px;
       }
     }
     .code-body{
       flex: 1;
       overflow: hidden;
       .CodeMirror-wrap{
-        width: 100%;
-        height: 100%;
-        line-height: 22px;
-        font-size: 14px;
+        line-height: 16px;
+        font-size: 10px;
       }
     }
     .code-left{
-      border-right: 1px solid $border-color;
+      border: 1px solid $border-color;
       display: flex;
       flex-direction: column;
-      width: 38%;
+      width: 100%;
+      height: 360px;
+      border-radius: 6px;
+      background: #FAFBFC;
+      overflow: hidden;
     }
     .code-right{
       display: flex;
       flex-direction: column;
-      width: 62%;
+      width: 100%;
+      border: 1px solid $border-color;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 666px;
+      border-radius: 6px;
+      margin-top: 10px;
+      background: #FAFBFC;
+      position: relative;
       .code-title{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 0;
+        border-bottom: 0;
+        &::before{
+          position: absolute;
+          content: '';
+          border: 1px solid $border-color;
+          height: 38px;
+          top: -1px;
+          left: -1px;
+          right: -1px;
+          border-radius: 6px;
+          pointer-events: none;
+        }
         .title-menu{
           display: flex;
           align-items: center;
+          position: absolute;
+          left: -1px;
+          top: -1px;
+          right: -1px;
           .title-item{
-            height: 40px;
-            line-height: 40px;
+            height: 38px;
+            line-height: 38px;
             padding: 0 10px;
             cursor: pointer;
             display: flex;
             align-items: center;
+            justify-content: center;
             border-radius: 5px;
             border: 1px solid transparent;
             margin-right: 15px;
+            width: 50%;
+            margin: 0;
             svg{
-              width: 20px;
-              height: 20px;
-              margin-right: 10px;
+              width: 14px;
+              height: 14px;
+              margin-right: 6px;
             }
             span{
-              font-weight: 500;
-              font-size: 18px;
-              line-height: 20px;
-              letter-spacing: -0.2px;
-              color: #565693;
+              font-size: 14px;
             }
             &.active{
               background: #DEE4ED;
@@ -594,6 +620,12 @@ export default {
         .title-handle{
           display: flex;
           align-items: center;
+          position: absolute;
+          left: 50%;
+          top: 33.757%;
+          transform: translate(-50%, 0);
+          z-index: 2;
+          margin-top: 5px;
           .handle-item{
             background: radial-gradient(129.53% 327.88% at 69.76% 0%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #2914F7;
             box-shadow: 0px 77px 31px rgba(106, 38, 249, 0.01), 0px 43px 26px rgba(106, 38, 249, 0.05), 0px 19px 19px rgba(106, 38, 249, 0.09), 0px 5px 11px rgba(106, 38, 249, 0.1), 0px 0px 0px rgba(106, 38, 249, 0.1);
@@ -625,13 +657,19 @@ export default {
             }
           }
         }
+        .title-handle_try{
+          top: unset;
+          bottom: 67px;
+        }
       }
       .code-body{
         display: flex;
         position: relative;
+        flex-direction: column;
+        border-radius: 0 0 6px 6px;
         .code-graphql{
-          width: 50%;
-          height: 100%;
+          width: 100%;
+          height: 33.757%;
           overflow: hidden;
           .CodeMirror-wrap{
             padding: 10px 10px;
@@ -639,10 +677,11 @@ export default {
 
         }
         .code-data{
-          width: 50%;
-          height: 100%;
+          width: 100%;
+          height: 66.243%;
           overflow: hidden;
-          border-left: 1px solid $border-color;
+          border-left: 0;
+          border-top: 1px solid $border-color;
           .CodeMirror-wrap{
             padding: 10px 10px;
           }
