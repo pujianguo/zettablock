@@ -478,14 +478,14 @@
         transition-timing-function: ease-in-out;
       }
     }
-    .content-image{
+    .content-content{
       position: relative;
       width: 100%;
       height: 0;
       padding-bottom: 50.7246%;
       overflow: hidden;
       display: flex;
-      .content-image-inner{
+      .content-content-inner{
         position: absolute;
         left: 0;
         top: 0;
@@ -493,15 +493,143 @@
         height: 100%;
         transition: all .4s;
         transition-timing-function: ease-in-out;
-        .img-item{
+        .content-item{
           width: 50%;
           height: 100%;
           display: inline-block;
-          img{
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        }
+        .content-item-with{
+          display: flex;
+          padding: 50px 80px;
+          box-sizing: border-box;
+          .col{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .col-1{
+            width: 360px;
+            .card-chain{
+              width: 100%;
+              height: 200px;
+              display: flex;
+              background: #FFFFFF;
+              box-shadow: 0px 27px 11px rgba(40, 27, 240, 0.01), 0px 15px 9px rgba(40, 27, 240, 0.02), 0px 7px 7px rgba(40, 27, 240, 0.04), 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
+              border-radius: 8px;
+              flex-direction: column;
+              justify-content: center;
+              gap: 24px;
+              .card-title{
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 100%;
+              }
+              .card-body{
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 100%;
+                .img-logo{
+                  width: 44px;
+                  height: 44px;
+                  margin: 6px;
+                }
+              }
+              &:nth-child(1){
+                margin-bottom: 24px;
+              }
+            }
+            .card-img{
+              width: 100%;
+              height: 130px;
+              padding: 15px 15px 15px 20px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              background: #FFFFFF;
+              box-shadow: 0px 27px 11px rgba(40, 27, 240, 0.01), 0px 15px 9px rgba(40, 27, 240, 0.02), 0px 7px 7px rgba(40, 27, 240, 0.04), 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
+              border-radius: 8px;
+              margin-bottom: 24px;
+              .card-title{
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 100%;
+              }
+              .card-body{
+                // width: 210px;
+                height: 100px;
+              }
+              &:last-child{
+                margin-bottom: 0;
+              }
+            }
+          }
+          .col-2{
+            flex: 1;
+            .svg-path-1{
+              width: 100%;
+              height: 228px;
+            }
+            .svg-path-2{
+              width: 100%;
+              height: 462px;
+            }
+          }
+          .col-3{
+            flex-shrink: 1;
+            .circle{
+              width: 220px;
+              height: 220px;
+              position: relative;
+              .circle-content{
+                width: 100%;
+                height: 100%;
+                background: radial-gradient(129.53% 327.88% at 69.76% 0%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #2914F7;
+                box-shadow: 0px 77px 31px rgba(106, 38, 249, 0.01), 0px 43px 26px rgba(106, 38, 249, 0.05), 0px 19px 19px rgba(106, 38, 249, 0.09), 0px 5px 11px rgba(106, 38, 249, 0.1), 0px 0px 0px rgba(106, 38, 249, 0.1);
+                border-radius: 200px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .logo-icon{
+                  width: 63px;
+                  height: 63px;
+                  margin-bottom: 15px;
+                }
+                .logo-text{
+                  width: 107px;
+                  height: 15px;
+                }
+              }
+              .circle-ring{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 1px solid  rgba(105, 36, 252, 1);
+                border-radius: 50%;
+                animation: circleRingMove 3s linear infinite;
+                &:nth-child(2){
+                  animation-delay: -0.75s;
+                }
+                &:nth-child(3){
+                  animation-delay: -1.5s;
+                }
+                &:nth-child(4){
+                  animation-delay: -2.25s;
+                }
+              }
+              @keyframes circleRingMove {
+                0% {
+                  opacity: 1;
+                  transform: scale(1);
+                }
+                100% {
+                  opacity: 0;
+                  transform: scale(1.5);
+                }
+              }
+            }
           }
         }
       }

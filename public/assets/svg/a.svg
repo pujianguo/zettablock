@@ -1,0 +1,14 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 228">
+  <path id="circle-path" d="M0,0 H20 L120,114 H140" stroke-width="1" fill="none" stroke="#281AF0"></path>
+  <path d="M0,228 H20 L120,114" stroke-width="1" fill="none" stroke="#281AF0"></path>
+  <circle cx="0" cy="0" r="3" fill="#281AF0">
+  <animateMotion
+  id="animateMotion1"
+  begin="0; animateMotion2.end"
+  dur="2s"
+  rotate="auto"
+  path="M0,0 H20 L120,114 H140"
+  repeatCount="indefinite"
+  ></animateMotion>
+  </circle>
+</svg>

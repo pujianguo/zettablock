@@ -145,7 +145,7 @@
     </section>
 
     <!-- Slide 4 -->
-    <section id="withzettablock" class="slide slide4 whiteSlide">
+    <section class="slide slide4 whiteSlide">
       <div class="content">
         <div class="container">
           <div class="wrap ">
@@ -156,12 +156,138 @@
                 <div class="title-item" :class="{active: slide2CurrentIndex === 1}" @click="handleSlide2CurrentIndexChange($event, 1)">With ZettaBlock</div>
                 <div class="title-item" :class="{active: slide2CurrentIndex === 2}" @click="handleSlide2CurrentIndexChange($event, 2)">Without ZettaBlock</div>
               </div>
-              <div class="content-image">
-                <div class="content-image-inner" :style="{left: slide2CurrentIndex === 1 ? 0 : '-100%'}">
-                  <div class="img-item">
-                    <img src="/assets/images/slide4_start_with.svg" alt="">
+              <div class="content-content">
+                <div class="content-content-inner" :style="{left: slide2CurrentIndex === 1 ? 0 : '-100%'}">
+                  <div class="content-item content-item-with">
+                    <div class="col col-1">
+                      <div class="card-chain">
+                        <div class="card-title">ON-CHAIN</div>
+                        <div class="card-body">
+                          <div>
+                            <img class="img-logo" src="/assets/images/slide4/on_chain_icon_1.png" alt="">
+                            <img class="img-logo" src="/assets/images/slide4/on_chain_icon_2.png" alt="">
+                            <img class="img-logo" src="/assets/images/slide4/on_chain_icon_3.png" alt="">
+                            <img class="img-logo" src="/assets/images/slide4/on_chain_icon_4.png" alt="">
+                          </div>
+                          <div>
+                            <img class="img-logo" src="/assets/images/slide4/on_chain_icon_5.png" alt="">
+                            <img class="img-logo" src="/assets/images/slide4/on_chain_icon_6.png" alt="">
+                            <img class="img-logo" src="/assets/images/slide4/on_chain_icon_7.png" alt="">
+                            <img class="img-logo" src="/assets/images/slide4/on_chain_icon_8.png" alt="">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-chain">
+                        <div class="card-title">OFF-CHAIN</div>
+                        <div class="card-body">
+                          <div>
+                            <img class="img-logo" src="/assets/images/slide4/off_chain_icon_1.png" alt="">
+                            <img class="img-logo" src="/assets/images/slide4/off_chain_icon_2.png" alt="">
+                            <img class="img-logo" src="/assets/images/slide4/off_chain_icon_3.png" alt="">
+                            <img class="img-logo" src="/assets/images/slide4/off_chain_icon_4.png" alt="">
+                          </div>
+                          <div>
+                            <img class="img-logo" src="/assets/images/slide4/off_chain_icon_5.png" alt="">
+                            <img class="img-logo" src="/assets/images/slide4/off_chain_icon_6.png" alt="">
+                            <img class="img-logo" src="/assets/images/slide4/off_chain_icon_7.png" alt="">
+                            <img class="img-logo" src="/assets/images/slide4/off_chain_icon_8.png" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col col-2">
+                      <svg class="svg-path-1" viewBox="0 0 140 228">
+                        <path id="circle-path" d="M0,0 H20 L120,114 H140" stroke-width="1" fill="none" stroke="#281AF0"></path>
+                        <path d="M0,228 H20 L120,114" stroke-width="1" fill="none" stroke="#281AF0"></path>
+
+                        <circle cx="-6" cy="0" r="3" fill="#281AF0">
+                          <animateMotion
+                            id="animateMotion1"
+                            begin="0; animateMotion2.end + 0.5s"
+                            dur="2s"
+                            rotate="auto"
+                            path="M0,0 H20 L120,114 H140"
+                          ></animateMotion>
+                        </circle>
+                      </svg>
+                    </div>
+                    <div class="col col-3">
+                      <div class="circle">
+                        <div class="circle-content">
+                          <svg class="logo-icon">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-icon-2"></use>
+                          </svg>
+                          <svg class="logo-text">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-text-2"></use>
+                          </svg>
+                        </div>
+                        <div class="circle-ring"></div>
+                        <div class="circle-ring"></div>
+                        <div class="circle-ring"></div>
+                        <div class="circle-ring"></div>
+                      </div>
+                    </div>
+                    <div class="col col-2">
+                      <svg class="svg-path-2" viewBox="0 0 140 462">
+                        <path d="M0,231 H20 L120,0 H140" stroke-width="1" fill="none" stroke="#281AF0"></path>
+                        <path d="M0,231 H20 L120,153 H140" stroke-width="1" fill="none" stroke="#281AF0"></path>
+                        <path d="M0,231 H20 L120,309 H140" stroke-width="1" fill="none" stroke="#281AF0"></path>
+                        <path d="M0,231 H20 L120,462 H140" stroke-width="1" fill="none" stroke="#281AF0"></path>
+                        <circle cx="-6" cy="0" r="3" fill="#281AF0">
+                          <animateMotion
+                            dur="2s"
+                            id="animateMotion2"
+                            begin="animateMotion1.end + 0.5s"
+                            rotate="auto"
+                            path="M0,231 H20 L120,0 H140"
+                          ></animateMotion>
+                        </circle>
+                        <circle cx="-6" cy="0" r="3" fill="#281AF0">
+                          <animateMotion
+                            begin="animateMotion1.end + 0.5s"
+                            dur="2s"
+                            rotate="auto"
+                            path="M0,231 H20 L120,153 H140"
+                          ></animateMotion>
+                        </circle>
+                        <circle cx="-6" cy="0" r="3" fill="#281AF0">
+                          <animateMotion
+                            begin="animateMotion1.end + 0.5s"
+                            dur="2s"
+                            rotate="auto"
+                            path="M0,231 H20 L120,309 H140"
+                          ></animateMotion>
+                        </circle>
+                        <circle cx="-6" cy="0" r="3" fill="#281AF0">
+                          <animateMotion
+                            begin="animateMotion1.end + 0.5s"
+                            dur="2s"
+                            rotate="auto"
+                            path="M0,231 H20 L120,462 H140"
+                          ></animateMotion>
+                        </circle>
+                      </svg>
+                    </div>
+                    <div class="col col-1">
+                      <div class="card-img">
+                        <div class="card-title">NFT</div>
+                        <img class="card-body" src="/assets/images/slide4/card_1.png" alt="">
+                      </div>
+                      <div class="card-img">
+                        <div class="card-title">Wallet</div>
+                        <img class="card-body" src="/assets/images/slide4/card_2.png" alt="">
+                      </div>
+                      <div class="card-img">
+                        <div class="card-title">DeFi</div>
+                        <img class="card-body" src="/assets/images/slide4/card_3.png" alt="">
+                      </div>
+                      <div class="card-img">
+                        <div class="card-title">GameFi</div>
+                        <img class="card-body" src="/assets/images/slide4/card_4.png" alt="">
+                      </div>
+                    </div>
                   </div>
-                  <div class="img-item">
+                  <div class="content-item">
                     <img src="/assets/images/slide4_start_without.png" alt="">
                   </div>
                 </div>
