@@ -174,38 +174,65 @@
                     <div class="col col-2">
                       <svg class="svg-path-1" viewBox="0 0 140 228">
                         <path id="circle-path" d="M0,3 H20 L120,114 H140" stroke-width="1" fill="none" stroke="#281AF0"></path>
-                        <path d="M0,225 H20 L120,114" stroke-width="1" fill="none" stroke="#281AF0"></path>
-
-                        <circle cx="-6" cy="0" r="3" fill="#281AF0">
-                          <animateMotion
-                            id="animateMotion1"
-                            begin="0"
-                            dur="2.1s"
-                            rotate="auto"
-                            path="M3,3 H20 L120,114 H140"
-                            repeatCount="indefinite"
-                          ></animateMotion>
-                        </circle>
-                        <circle cx="-6" cy="0" r="3" fill="#281AF0">
-                          <animateMotion
-                            id="animateMotion11"
-                            begin="0.7s"
-                            dur="2.1s"
-                            rotate="auto"
-                            path="M3,3 H20 L120,114 H140"
-                            repeatCount="indefinite"
-                          ></animateMotion>
-                        </circle>
-                        <circle cx="-6" cy="0" r="3" fill="#281AF0">
-                          <animateMotion
-                            id="animateMotion111"
-                            begin="1.4s"
-                            dur="2.1s"
-                            rotate="auto"
-                            path="M3,3 H20 L120,114 H140"
-                            repeatCount="indefinite"
-                          ></animateMotion>
-                        </circle>
+                        <path d="M0,225 H20 L120,114 H140" stroke-width="1" fill="none" stroke="#281AF0"></path>
+                        <g>
+                          <circle cx="-6" cy="0" r="3" fill="#281AF0">
+                            <animateMotion
+                              begin="0"
+                              dur="2.1s"
+                              rotate="auto"
+                              path="M3,3 H20 L120,114 H140"
+                              repeatCount="indefinite"
+                            ></animateMotion>
+                          </circle>
+                          <circle cx="-6" cy="0" r="3" fill="#281AF0">
+                            <animateMotion
+                              begin="0.7s"
+                              dur="2.1s"
+                              rotate="auto"
+                              path="M3,3 H20 L120,114 H140"
+                              repeatCount="indefinite"
+                            ></animateMotion>
+                          </circle>
+                          <circle cx="-6" cy="0" r="3" fill="#281AF0">
+                            <animateMotion
+                              begin="1.4s"
+                              dur="2.1s"
+                              rotate="auto"
+                              path="M3,3 H20 L120,114 H140"
+                              repeatCount="indefinite"
+                            ></animateMotion>
+                          </circle>
+                        </g>
+                        <g>
+                          <circle cx="-6" cy="0" r="3" fill="#281AF0">
+                            <animateMotion
+                              begin="0"
+                              dur="2.1s"
+                              rotate="auto"
+                              path="M0,225 H20 L120,114 H140"
+                              repeatCount="indefinite"
+                            ></animateMotion>
+                          </circle>
+                          <circle cx="-6" cy="0" r="3" fill="#281AF0">
+                            <animateMotion
+                              begin="0.7s"
+                              dur="2.1s"
+                              rotate="auto"
+                              path="M0,225 H20 L120,114 H140"
+                              repeatCount="indefinite"
+                            ></animateMotion>
+                          </circle>
+                          <circle cx="-6" cy="0" r="3" fill="#281AF0">
+                            <animateMotion
+                              begin="1.4s"
+                              dur="2.1s"
+                              rotate="auto"
+                              path="M0,225 H20 L120,114 H140"
+                              repeatCount="indefinite"
+                            ></animateMotion>
+                          </circle>
+                        </g>
                       </svg>
                     </div>
                     <div class="col col-3">
@@ -374,27 +401,49 @@
                     <div class="col col-2">
                       <svg class="svg-path-1" viewBox="0 0 150 57">
                         <path id="circle-path" d="M2,0 V15 L75,42 V57" stroke-width="0.5" fill="none" stroke="#281AF0"></path>
-                        <path d="M148,0 V15 L75,42" stroke-width="0.5" fill="none" stroke="#281AF0"></path>
-                        <circle cx="-6" cy="0" r="2" fill="#281AF0">
-                          <animateMotion
-                            id="animateMotion1"
-                            begin="0"
-                            dur="2s"
-                            rotate="auto"
-                            path="M2,0 V15 L75,42 V57"
-                            repeatCount="indefinite"
-                          ></animateMotion>
-                        </circle>
-                        <circle cx="-6" cy="0" r="2" fill="#281AF0">
-                          <animateMotion
-                            id="animateMotion11"
-                            begin="1s"
-                            dur="2s"
-                            rotate="auto"
-                            path="M2,0 V15 L75,42 V57"
-                            repeatCount="indefinite"
-                          ></animateMotion>
-                        </circle>
+                        <path d="M148,0 V15 L75,42 V57" stroke-width="0.5" fill="none" stroke="#281AF0"></path>
+                        <g>
+                          <circle cx="-6" cy="0" r="2" fill="#281AF0">
+                            <animateMotion
+                              begin="0"
+                              dur="2s"
+                              rotate="auto"
+                              path="M2,0 V15 L75,42 V57"
+                              repeatCount="indefinite"
+                            ></animateMotion>
+                          </circle>
+                          <circle cx="-6" cy="0" r="2" fill="#281AF0">
+                            <animateMotion
+                              begin="1s"
+                              dur="2s"
+                              rotate="auto"
+                              path="M2,0 V15 L75,42 V57"
+                              repeatCount="indefinite"
+                            ></animateMotion>
+                          </circle>
+                        </g>
+                        <g>
+                          <circle cx="-6" cy="0" r="2" fill="#281AF0">
+                            <animateMotion
+                              id="animateMotion1"
+                              begin="0"
+                              dur="2s"
+                              rotate="auto"
+                              path="M148,0 V15 L75,42 V57"
+                              repeatCount="indefinite"
+                            ></animateMotion>
+                          </circle>
+                          <circle cx="-6" cy="0" r="2" fill="#281AF0">
+                            <animateMotion
+                              id="animateMotion11"
+                              begin="1s"
+                              dur="2s"
+                              rotate="auto"
+                              path="M148,0 V15 L75,42 V57"
+                              repeatCount="indefinite"
+                            ></animateMotion>
+                          </circle>
+                        </g>
                       </svg>
                     </div>
                     <div class="col col-3">
