@@ -118,6 +118,7 @@
                       <img class="icon" :src="item.icon" alt="">
                       <span class="name">{{item.name}}</span>
                       <span class="coming-soon" v-if="item.isComingSoon">WIP</span>
+                      
                     </div>
                     <div class="chain-item chain-item_more">More</div>
                   </div>
