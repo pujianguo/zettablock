@@ -932,7 +932,7 @@
               <div class="copyright">© 2022 DataLego Inc.</div>
               <div class="menu">
                 <a class="menu-item" href="#blog">Blog</a>
-                <a class="menu-item" href="#blog">Press Kit</a>
+                <a class="menu-item" href="https://drive.google.com/drive/folders/1rGwlHFzxwxdPamOGFSxJIenrPeoFRTeQ?usp=sharing" target="_blank">Press Kit</a>
                 <a class="menu-item" href="#blog">Terms of Service</a>
                 <a class="menu-item" href="#blog">Privacy Policy</a>
               </div>
