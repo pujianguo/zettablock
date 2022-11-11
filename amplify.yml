@@ -6,6 +6,7 @@ frontend:
     build:
       commands:
         - node -v
+        - npm rebuild node-sass
         - npm run build
   artifacts:
     baseDirectory: dist
