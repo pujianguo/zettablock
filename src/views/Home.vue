@@ -1011,7 +1011,7 @@
           {id: 5, icon: '/assets/images/chain/chain-icon-05.png', name: 'Aptos'},
           {id: 6, icon: '/assets/images/chain/chain-icon-06.png', name: 'Ripple XRP'},
           {id: 7, icon: '/assets/images/chain/chain-icon-07.png', name: 'IoTex'},
-          {id: 8, icon: '/assets/images/chain/chain-icon-08.png', name: 'BNB Chian', isComingSoon: true},
+          {id: 8, icon: '/assets/images/chain/chain-icon-08.png', name: 'BNB Chain', isComingSoon: true},
           {id: 9, icon: '/assets/images/chain/chain-icon-09.png', name: 'Optimism', isComingSoon: true},
           {id: 10, icon: '/assets/images/chain/chain-icon-10.png', name: 'Avalanche', isComingSoon: true},
           {id: 11, icon: '/assets/images/chain/chain-icon-11.png', name: 'Near', isComingSoon: true},
