@@ -11,11 +11,12 @@ WHERE LOWER(to_address) =
   AND STATUS = 1
   AND VALUE > 0
 GROUP BY 2
-ORDER BY 2`
+ORDER BY 2
+`
 
 export const graphqlCodeString =  `{
   records(filter: {
-    week_data: {
+    week_date: {
       min: “2022-07-04”,
       max: ”2022-10-10”
   }}) {
