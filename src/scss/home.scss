@@ -273,6 +273,22 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      
+      .requestButton{
+        width: 303px;
+        height: 52px;
+        padding: 18px;
+        background: radial-gradient(129.53% 327.88% at 69.76% 0%, #962EFF 0%, rgba(150, 46, 255, 0) 100%), #2914F7;
+        border-radius: 4px;
+        color:#fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .btn{
+          width: 24px;
+          height: 24px;
+        }
+      }
       .title{
         font-family: 'Basier Square';
         font-style: normal;

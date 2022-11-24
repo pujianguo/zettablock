@@ -90,9 +90,10 @@ export const dataCodeString = `{
 }`
 
 export const snippetsCodeSting = `import requests
+import requests
 import json
 
-endpoint = 'https://api.zettablock.com/qugate/v1/userapis/sq_6edb14cd3ebd4cb79685c9b965c93f64/graphql'
+endpoint = 'https://api.zettablock.com/qugate/v1/userapis/sq_a06840487e984af08822a4884d18e9c4/graphql'
 headers = {'authorization': 'Basic c2NvdHQ6aGVsbG9fc2NvdHQ5MTI='}
 data = {'query': """
 {records(
@@ -109,7 +110,8 @@ data = {'query': """
 """}
 
 res = requests.post(endpoint, headers=headers, data=json.dumps(data))
-print(res.text)`
+print(res.text)
+`
 
 export const chartData = {
 

@@ -95,8 +95,11 @@
                 <div class="body-left">
                   <div class="title ae-1 fromBottom">Supported chains</div>
                   <div class="wrap-title ae-3 fromBottom is-mobile">Multiple Chains Support</div>
-                  <div class="input-wrap ae-2 fromBottom">
-                  <!-- <div class="input-wrap input-wrap_success"> -->
+                  <a class="requestButton ae-3 fromBottom" href="https://feedback.zettablock.com/" target="_blank">
+                    <span>Request a new network</span>
+                    <svg class="btn"><use href="#arrow-right"></use></svg>
+                  </a>
+                  <!-- <div class="input-wrap ae-2 fromBottom">
                     <input class="input" type="text" placeholder="Request a new network">
                     <div class="btn-wrap">
                       <svg class="btn">
@@ -109,7 +112,7 @@
                         <use href="#success"></use>
                       </svg>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="body-right">
                   <div class="wrap-title ae-3 fromBottom is-pc">Multiple Chains Support</div>
