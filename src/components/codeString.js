@@ -90,7 +90,6 @@ export const dataCodeString = `{
 }`
 
 export const snippetsCodeSting = `import requests
-import requests
 import json
 
 endpoint = 'https://api.zettablock.com/qugate/v1/userapis/sq_a06840487e984af08822a4884d18e9c4/graphql'
