@@ -26,7 +26,7 @@
               </a>
             </li>
             <li><a href="#usecases">Use Cases</a></li>
-            <li><a href="#blog">Blog</a></li>
+            <li><a href="https://zettablockhq.medium.com/" target="_blank">Blog</a></li>
             <li><a href="#about">About</a></li>
           </ul>
           <a class="cta" @click="toggleSignup">
@@ -69,7 +69,7 @@
           </a>
         </li>
         <li><a href="#usecases">Use Cases</a></li>
-        <li><a href="#blog">Blog</a></li>
+        <li><a href="https://zettablockhq.medium.com/" target="_blank">Blog</a></li>
         <li><a href="#about">About</a></li>
       </ul>
       <a class="cta" @click="toggleSignup">

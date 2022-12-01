@@ -16,7 +16,7 @@
                 </div>
               </div>
               <div class="fix-10-12">
-                <p class="ae-5 fromBottom description">Build your own GraphQL APIs and SQL. <br/>Indexing and analytics. On-chain and off-chain.</p>
+                <p class="ae-5 fromBottom description">Build your own GraphQL APIs via SQL. <br/>Indexing and analytics. On-chain and off-chain.</p>
 
                 <div class="button-wrap">
                   <div class="ae-6 fromBottom button access-button" @click="toggleSignup">
@@ -751,7 +751,7 @@
                       </svg>
                       <div class="item-title">{{item.title}}</div>
                       <div class="item-footer">
-                        <a class="item-link" :href="item.link">
+                        <a class="item-link" :href="item.link" target="_blank">
                           <span>READ</span>
                           <svg class="link-icon">
                             <use href="#arrow-right"></use>
@@ -1082,11 +1082,12 @@
         ],
         slide6SwiperIndex: 0,
         slide6List: [
-          {id: 1, title: 'Polygon relies on ZettaBlock for data infrastructure', chainIcon: '/assets/images/chain/icon_1.png', link: ''},
-          {id: 2, title: 'ZettaBlock’s infrastructure saves crypto.com 16,000 hours per year', chainIcon: '/assets/images/chain/icon_2.png',  link: ''},
-          {id: 3, title: 'Artemis deploys production-ready APIs in minutes with ZettaBlock', chainIcon: '/assets/images/chain/icon_3.png', link: ''},
-          {id: 4, title: 'Friktion’s new portoflio portal runs on ZettaBlock', chainIcon: '/assets/images/chain/icon_4.png', link: ''},
-          {id: 5, title: 'Orchestrate a data platform for Autograph in 5 minutes', chainIcon: '/assets/images/chain/icon_5.png', link: ''},
+          {id: 1, title: 'ZettaBlock Partners with Shardeum to Grow the Web3 Developer Ecosystem', chainIcon: '/assets/images/chain/icon_6.png', link: 'https://medium.com/@zettablockhq/zettablock-partners-with-shardeum-to-grow-the-web3-developer-ecosystem-7f27fa3f8dcc'},
+          {id: 2, title: 'Polygon relies on ZettaBlock for data infrastructure', chainIcon: '/assets/images/chain/icon_1.png', link: ''},
+          {id: 3, title: 'ZettaBlock’s infrastructure saves crypto.com 16,000 hours per year', chainIcon: '/assets/images/chain/icon_2.png',  link: ''},
+          {id: 4, title: 'Artemis deploys production-ready APIs in minutes with ZettaBlock', chainIcon: '/assets/images/chain/icon_3.png', link: ''},
+          {id: 5, title: 'Friktion’s new portoflio portal runs on ZettaBlock', chainIcon: '/assets/images/chain/icon_4.png', link: ''},
+          {id: 6, title: 'Orchestrate a data platform for Autograph in 5 minutes', chainIcon: '/assets/images/chain/icon_5.png', link: ''},
         ],
         slide7List: [
           {id: 1, icon: 'section7-1', title: 'Zero Infra Overhead', desc: 'Save months of development and over 90% of their annual costs.'},
