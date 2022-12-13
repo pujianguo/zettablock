@@ -25,12 +25,12 @@
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
                     </svg>
                   </div>
-                  <div class="ae-7 fromBottom button view-button" @click="toggleSignup">
+                  <a class="ae-7 fromBottom button view-button" href="https://zettablock.readme.io/" target="_blank">
                     <span class="button-text">View Docs</span>
                     <svg class="button-icon">
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
                     </svg>
-                  </div>
+                  </a>
 
                 </div>
                 <p class="ae-8 fromBottom scroll-tip">Trusted by leading Web3 companies</p>
@@ -934,10 +934,10 @@
             <div class="fix-12-12">
               <div class="copyright">© 2022 DataLego Inc.</div>
               <div class="menu">
-                <a class="menu-item" href="#blog">Blog</a>
+                <a class="menu-item" href="https://zettablockhq.medium.com/" target="_blank">Blog</a>
                 <a class="menu-item" href="https://drive.google.com/drive/folders/1rGwlHFzxwxdPamOGFSxJIenrPeoFRTeQ?usp=sharing" target="_blank">Press Kit</a>
-                <a class="menu-item" href="#blog">Terms of Service</a>
-                <a class="menu-item" href="#blog">Privacy Policy</a>
+                <a class="menu-item" href="#">Terms of Service</a>
+                <a class="menu-item" href="#">Privacy Policy</a>
               </div>
             </div>
           </div>
