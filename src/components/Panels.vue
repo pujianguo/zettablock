@@ -27,10 +27,10 @@
             </li>
             <li><a href="#usecases">Use Cases</a></li>
             <li><a href="https://zettablockhq.medium.com/" target="_blank">Blog</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="https://zettablock.readme.io/" target="_blank">Docs</a></li>
           </ul>
-          <a class="cta" @click="toggleSignup">
-            Get Early Access
+          <a class="cta" href="https://calendly.com/zettablock/30min" target="_blank">
+            Schedule Demo
             <svg><use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#arrow-right-blue"></use></svg>
           </a>
         </div>
