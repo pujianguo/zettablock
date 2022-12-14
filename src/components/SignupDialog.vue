@@ -16,7 +16,7 @@
           </svg>
         </div>
       </div>
-      <form v-if="!isSubmit" class="dialog-form" id="myForm" action="https://zettablock.us14.list-manage.com/subscribe/post?u=1ff0f35da3b86da52617aadd6&amp;id=bc40fdafb4&amp;f_id=00d781e0f0" method="post" name="mc-embedded-subscribe-form" novalidate>
+      <div v-if="!isSubmit" class="dialog-form">
         <div class="form-item">
           <div class="item-label">Name</div>
           <input class="item-input" v-model="editForm.name" name="NAME" placeholder="What do people call you?" />
@@ -41,7 +41,7 @@
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
           </svg>
         </div>
-      </form>
+      </div>
       <div v-else class="submit-success">
         <div class="success-title">Application sent!</div>
         <div class="success-text">
@@ -71,7 +71,8 @@ export default {
         title: '',
       },
       emailError: '',
-      isSubmit: false
+      isSubmit: false,
+      submitLoading: false,
     }
   },
   watch: {
@@ -99,7 +100,8 @@ export default {
         title: '',
       }
       this.emailError = ''
-      this.isSubmit = ''
+      this.isSubmit = false
+      this.submitLoading = false
     },
     handleClose () {
       this.visible = false
@@ -114,9 +116,26 @@ export default {
         return
       }
       this.emailError = ''
-      this.isSubmit = true
-      const myForm = document.querySelector('#myForm')
-      myForm.submit()
+      if (this.submitLoading) {
+        return
+      }
+
+      const data = `NAME=${this.editForm.name}&EMAIL=${this.editForm.email}&COMPANY=${this.editForm.company}&TITLE=${this.editForm.title}`
+      const url = "https://zettablock.us14.list-manage.com/subscribe/post?u=1ff0f35da3b86da52617aadd6&amp;id=bc40fdafb4&amp;f_id=00d781e0f0"
+      this.submitLoading = true
+      fetch(url, {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: data
+      }).then((res) => {
+        this.isSubmit = true
+        this.submitLoading = false
+      }).catch(err => {
+        this.submitLoading = false
+        console.log('err', err)
+      })
     }
   }
 }
