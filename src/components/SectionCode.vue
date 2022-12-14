@@ -16,7 +16,7 @@
             @click="handleCurrentChange(0)"
             v-show="isSqlEnd"
             >
-            <svg><use href="#download"></use></svg>
+            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#download"></use></svg>
             <span>ethdep.graphql</span>
           </div>
           <div class="title-item" :class="{active: currentIndex === 1}"
@@ -39,7 +39,7 @@
             >{{isCopy ? 'Copied!' : 'Try It!'}}</div>
           <div class="handle-item item-text" v-show="currentIndex === 0" @click="handlePlay">Create & Query</div>
           <!-- <div class="handle-item item-icon" v-show="currentIndex === 0" @click="handlePlay">
-            <svg><use href="#play"></use></svg>
+            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use></svg>
           </div> -->
         </div>
       </div>

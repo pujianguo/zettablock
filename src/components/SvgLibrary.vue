@@ -682,6 +682,14 @@
       </defs>
     </symbol>
 
+    <symbol id="icon-close" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g opacity="0.2">
+        <rect x="2.22266" width="25.1408" height="3.1426" transform="rotate(45 2.22266 0)" fill="#281AF0"/>
+        <rect x="19.999" y="2.22266" width="25.1408" height="3.1426" transform="rotate(135 19.999 2.22266)" fill="#281AF0"/>
+      </g>
+    </symbol>
+
+
 
 
 

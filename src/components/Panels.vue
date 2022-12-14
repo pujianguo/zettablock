@@ -74,7 +74,7 @@
       </ul>
       <a class="cta" @click="toggleSignup">
         Get Early Access
-        <svg><use xmlns:xlink=" http://www.w3.org/1999/xlink" xlink:href="#arrow-right-blue"></use></svg>
+        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right-blue"></use></svg>
       </a>
     </div>
     <!-- Sidebar -->

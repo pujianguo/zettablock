@@ -1,0 +1,302 @@
+<template>
+  <div class="signup-dialog" v-if="visible">
+    <div class="signup-dialog-content">
+      <div class="close-btn" @click="handleClose">
+        <svg class="close-icon">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+        </svg>
+      </div>
+      <div class="dialog-header">
+        <div class="logo">
+          <svg class="logo-icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-icon"></use>
+          </svg>
+          <svg class="logo-text">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-text"></use>
+          </svg>
+        </div>
+      </div>
+      <form v-if="!isSubmit" class="dialog-form" id="myForm" action="https://zettablock.us14.list-manage.com/subscribe/post?u=1ff0f35da3b86da52617aadd6&amp;id=bc40fdafb4" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+        <div class="form-item">
+          <div class="item-label">Name</div>
+          <input class="item-input" v-model="editForm.name" name="NAME" placeholder="What do people call you?" />
+        </div>
+        <div class="form-item">
+          <div class="item-label">Email</div>
+          <input class="item-input" v-model="editForm.email" name="EMAIL" placeholder="Email (we won’t span, promise)" />
+          <p class="item-error">{{emailError}}</p>
+        </div>
+        <div class="form-item">
+          <div class="item-label">Company</div>
+          <input class="item-input" v-model="editForm.company" name="COMPANY" placeholder="what company are you in?" />
+        </div>
+        <div class="form-item">
+          <div class="item-label">Job Title</div>
+          <input class="item-input" v-model="editForm.title" name="TITLE" placeholder="What are you working on?" />
+        </div>
+        <input style="display: none;" checked type="checkbox" value="1" name="group[45212][1]" id="mce-group[45212]-45212-2">
+        <div class="submit-button button" @click="handleSubmit">
+          <span class="button-text">Get Early Access</span>
+          <svg class="button-icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
+          </svg>
+        </div>
+      </form>
+      <div v-else class="submit-success">
+        <div class="success-title">Application sent!</div>
+        <div class="success-text">
+          <p>Thanks you for your interest; </p>
+          <p>join our <a href="https://discord.gg/zettablock" target="_blank">discord</a> to stay in touch and get latest updates!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+import {validateEmail} from '@/utils/util'
+export default {
+  props: {
+    value: {
+      type: Boolean,
+      default: false
+    }
+  },
+  data () {
+    return {
+      visible: false,
+      editForm: {
+        name: '',
+        email: '',
+        company: '',
+        title: '',
+      },
+      emailError: '',
+      isSubmit: false
+    }
+  },
+  watch: {
+    value: {
+      immediate: true,
+      handler (val) {
+        if (val !== this.visible) {
+          this.visible = val
+        }
+      }
+    },
+    visible (val) {
+      this.$emit('input', val)
+    }
+  },
+  methods: {
+    handleClose () {
+      this.visible = false
+    },
+    handleSubmit () {
+      if (this.editForm.email === '') {
+        this.emailError = 'Please enter a value'
+        return
+      }
+      if (!validateEmail(this.editForm.email)) {
+        this.emailError = 'Please check the email format'
+        return
+      }
+      this.isSubmit = true
+      const myForm = document.querySelector('#myForm')
+      myForm.submit()
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+.signup-dialog{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(240, 240, 245, 0.6);
+  backdrop-filter: blur(25px);
+  // display: none;
+  .signup-dialog-content{
+    width: 600px;
+    height: 700px;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 45px rgba(50, 28, 242, 0.05), 0px 0px 0px rgba(50, 28, 242, 0.05);
+    padding: 50px 120px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    .dialog-header{
+      width: 100%;
+      .logo{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .logo-icon{
+          width: 26px;
+          height: 26px;
+          margin-right: 16px;
+        }
+        .logo-text{
+          width: 140px;
+          height: 22px;
+          color: #000;
+        }
+      }
+    }
+    .dialog-form{
+      width: 100%;
+      margin-top: 30px;
+      .form-item{
+        width: 100%;
+        margin-bottom: 22px;
+        .item-label{
+          font-weight: 500;
+          color: #000000;
+          margin-bottom: 10px;
+        }
+        .item-input{
+          width: 100%;
+          height: 52px;
+          background: #FFFFFF;
+          border: 1px solid rgba(40, 26, 240, 0.1);
+          box-shadow: 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
+          border-radius: 4px;
+          padding: 0 18px;
+          color: #281AF0;
+          &::placeholder{
+            color: #281AF0;
+            opacity: 0.2;
+          }
+        }
+        .item-error{
+          color: #e85c41;
+        }
+      }
+    }
+    .submit-button{
+      width: 248px;
+      height: 52px;
+      margin: 50px auto 0;
+      background: radial-gradient(129.53% 327.88% at 69.76% 0%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #2914F7;
+      box-shadow: 0px 27px 11px rgba(40, 27, 240, 0.01), 0px 15px 9px rgba(40, 27, 240, 0.02), 0px 7px 7px rgba(40, 27, 240, 0.04), 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      .button-text{
+        font-family: 'Basier Square';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 100%;
+      }
+      .button-icon{
+        width: 24px;
+        height: 24px;
+        margin-left: 5px;
+        margin-right: 0;
+      }
+    }
+    .submit-success{
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .success-title{
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 120%;
+        color: #000;
+        text-align: center;
+      }
+      .success-text{
+        margin-top: 26px;
+        P{
+          font-weight: 500;
+          color: #000;
+          text-align: center;
+          a{
+            color: #281AF0;
+          }
+        }
+      }
+    }
+
+    .close-btn{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      .close-icon{
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+// mobile
+@media screen and (max-width: 767px) {
+  .signup-dialog{
+    .signup-dialog-content{
+      width: 335px;
+      height: 580px;
+      padding: 40px 20px;
+      .dialog-header{
+        .logo{
+          .logo-icon{
+            width: 18px;
+            height: 18px;
+          }
+          .logo-text{
+            width: 97px;
+            height: 15px;
+          }
+        }
+      }
+      .dialog-form{
+        .form-item{
+          margin-bottom: 20px;
+          .item-label{
+            font-size: 14px;
+          }
+          .item-input{
+            height: 44px;
+            font-size: 14px;
+          }
+        }
+      }
+      .submit-button{
+        width: 100%;
+        height: 48px;
+        margin-top: 40px;
+      }
+      .close-btn{
+        top: 5px;
+        right: 5px;
+        width: 26px;
+        height: 26px;
+        .close-icon{
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}
+
+
+</style>

@@ -54,7 +54,7 @@
                     :style="{width: item.width + 'px', height: item.height + 'px'}"
                     >
                     <svg>
-                      <use :href="`#${item.icon}`"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" :xlink:href="`#${item.icon}`"></use>
                     </svg>
                   </div>
                 </div>
@@ -65,7 +65,7 @@
                     :style="{width: item.width / 2 + 'px', height: item.height / 2 + 'px'}"
                     >
                     <svg>
-                      <use :href="`#${item.icon}`"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" :xlink:href="`#${item.icon}`"></use>
                     </svg>
                   </div>
                 </div>
@@ -74,7 +74,7 @@
                     :style="{width: item.width / 2 + 'px', height: item.height / 2 + 'px'}"
                     >
                     <svg>
-                      <use :href="`#${item.icon}`"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" :xlink:href="`#${item.icon}`"></use>
                     </svg>
                   </div>
                 </div>
@@ -97,19 +97,19 @@
                   <div class="wrap-title ae-3 fromBottom is-mobile">Multiple Chains Support</div>
                   <a class="requestButton ae-3 fromBottom" href="https://feedback.zettablock.com/" target="_blank">
                     <span>Request a new network</span>
-                    <svg class="btn"><use href="#arrow-right"></use></svg>
+                    <svg class="btn"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use></svg>
                   </a>
                   <!-- <div class="input-wrap ae-2 fromBottom">
                     <input class="input" type="text" placeholder="Request a new network">
                     <div class="btn-wrap">
                       <svg class="btn">
-                        <use href="#arrow-right"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
                       </svg>
                     </div>
                     <div class="success-wrap">
                       <span>Thank You!</span>
                       <svg class="btn">
-                        <use href="#success"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#success"></use>
                       </svg>
                     </div>
                   </div> -->
@@ -121,7 +121,7 @@
                       <img class="icon" :src="item.icon" alt="">
                       <span class="name">{{item.name}}</span>
                       <span class="coming-soon" v-if="item.isComingSoon">WIP</span>
-                      
+
                     </div>
                     <div class="chain-item chain-item_more">More</div>
                   </div>
@@ -714,7 +714,7 @@
                       <div class="button ae-6 fromBottom" @click="handleSlide5BtnClick(item)">
                         <span class="button-text">Read more use cases</span>
                         <svg class="button-icon">
-                          <use href="#arrow-right"></use>
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
                         </svg>
                         <div class="coming-soon" :class="{'coming-soon_show': item.isClick}">coming soon</div>
                       </div>
@@ -747,14 +747,14 @@
                   <div class="swiper-wrapper">
                     <div class="swiper-slide" v-for="item in slide6List" :key="item.id">
                       <svg class="item-icon">
-                        <use href="#union-1"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#union-1"></use>
                       </svg>
                       <div class="item-title">{{item.title}}</div>
                       <div class="item-footer">
                         <a class="item-link" :href="item.link" target="_blank">
                           <span>READ</span>
                           <svg class="link-icon">
-                            <use href="#arrow-right"></use>
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
                           </svg>
                         </a>
                         <img class="chain-icon" :src="item.chainIcon" alt="">
@@ -765,10 +765,10 @@
               </div>
               <div class="swiper-button ae-2 fromBottom">
                 <svg class="button-item" :class="{disabled: false}" @click="handleSlide6SwiperPrev">
-                  <use href="#chevron-left"></use>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#chevron-left"></use>
                 </svg>
                 <svg class="button-item" :class="{disabled: false}" @click="handleSlide6SwiperNext">
-                  <use href="#chevron-right"></use>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#chevron-right"></use>
                 </svg>
               </div>
             </div>
@@ -795,7 +795,7 @@
                   :class="`ae-${i+1} fromBottom`">
                   <div class="item-icon-wrap">
                     <svg class="item-icon">
-                      <use :href="`#${item.icon}`"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" :xlink:href="`#${item.icon}`"></use>
                     </svg>
                   </div>
                   <div class="item-content">
@@ -846,7 +846,7 @@
                 <div class="button ae-3 fromRight" @click="toggleSignup()">
                   <span class="button-text">Unlock Access For Free</span>
                   <svg class="button-icon">
-                    <use href="#arrow-right"></use>
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
                   </svg>
                 </div>
               </div>
@@ -879,32 +879,32 @@
                 <div class="social-wrap ae-3 fromBottom">
                   <a class="social-item" href="https://twitter.com/ZettaBlockHQ" target="_blank">
                     <svg>
-                      <use href="#social-twitter"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-twitter"></use>
                     </svg>
                   </a>
                   <a class="social-item" href="https://www.linkedin.com/company/zettablockhq/" target="_blank">
                     <svg>
-                      <use href="#social-linkedin"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-linkedin"></use>
                     </svg>
                   </a>
                   <a class="social-item" href="https://discord.gg/zettablock" target="_blank">
                     <svg>
-                      <use href="#social-discord"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-discord"></use>
                     </svg>
                   </a>
                   <a class="social-item" href="https://zettablockhq.medium.com/" target="_blank">
                     <svg>
-                      <use href="#social-medium"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-medium"></use>
                     </svg>
                   </a>
                   <a class="social-item" href="https://github.com/Zettablock" target="_blank">
                     <svg>
-                      <use href="#social-github"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-github"></use>
                     </svg>
                   </a>
                   <a class="social-item" href=" https://www.youtube.com/channel/UCZ7OYTGcXA93faGcmnyjTzw" target="_blank">
                     <svg>
-                      <use href="#social-youtube"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-youtube"></use>
                     </svg>
                   </a>
                 </div>
@@ -915,7 +915,7 @@
                     <button type="submit" class="button">
                       <span>Sign Up</span>
                       <svg>
-                        <use href="#arrow-right"></use>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
                       </svg>
                     </button>
                   </form>
@@ -961,12 +961,14 @@
                 <button @click="toggleSignup()" class="button square fix-4-12">
                   <span href="">Get Early Access
                     <svg style="width: 32px; height: 24px">
-                      <use xlink:href="#arrowbutton"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrowbutton"></use>
                     </svg></span>
                 </button>
               </form>
         </div>
     </div>
+
+    <SignupDialog v-model="signupDialogVisible"></SignupDialog>
   </div>
 
 </template>
@@ -976,6 +978,7 @@
   import SvgLibrary from "../components/SvgLibrary.vue";
   import Panels from "../components/Panels.vue";
   import SectionCode from "../components/SectionCode.vue";
+  import SignupDialog from "../components/SignupDialog.vue";
   import bounty from "../utils/bounty";
   import Swiper, {Pagination} from 'swiper'
   import gsap from 'gsap'
@@ -988,6 +991,7 @@
       SvgLibrary,
       Panels,
       SectionCode,
+      SignupDialog,
     },
     data() {
       return {
@@ -1096,6 +1100,8 @@
           {id: 4, icon: 'section7-4', title: 'Data Unification', desc: 'Seamlessly obtain any decoded on-chain data, combining with your own off-chain data.'},
           {id: 5, icon: 'section7-5', title: 'Reliability', desc: 'Provide near-perfect system uptimes (99.95%) to support real-time, data-intensive apps.'},
         ],
+
+        signupDialogVisible: false,
       };
     },
     created() {
@@ -1268,7 +1274,9 @@
       toggleSignup() {
         // console.log("toggle",this.showForm);
         // this.showForm = !this.showForm;
-        window.open("https://discord.gg/zettablock", "_blank", "");
+        // window.open("https://discord.gg/zettablock", "_blank", "");
+        this.signupDialogVisible = true
+
       },
       onCreateView() {
         document.querySelector("body").classList.add("posr");

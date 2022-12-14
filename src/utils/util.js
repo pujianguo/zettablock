@@ -41,6 +41,13 @@ export function isAndroid(value, allowEmptyString) {
   return !!navigator.userAgent.match(/(Android)/i);
 }
 
+
+export const validateEmail = function (value) {
+  const regExpEmail = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+  return regExpEmail.test(value);
+};
+
+
 export default {
   isEmpty,
   isMobile,
