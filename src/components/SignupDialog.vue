@@ -22,9 +22,11 @@
           <input class="item-input" v-model="editForm.name" name="NAME" placeholder="What do people call you?" />
         </div>
         <div class="form-item">
-          <div class="item-label">Email</div>
+          <div class="item-error-wrap">
+            <div class="item-label">Email</div>
+            <p class="item-error">{{emailError}}</p>
+          </div>
           <input class="item-input" v-model="editForm.email" name="EMAIL" placeholder="Email (we won’t span, promise)" />
-          <p class="item-error">{{emailError}}</p>
         </div>
         <div class="form-item">
           <div class="item-label">Company</div>
@@ -189,12 +191,17 @@ export default {
       .form-item{
         width: 100%;
         margin-bottom: 22px;
+        .item-error-wrap{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
         .item-label{
           font-weight: 500;
           color: #000000;
-          margin-bottom: 10px;
         }
         .item-input{
+          margin-top: 10px;
           width: 100%;
           height: 52px;
           background: #FFFFFF;
@@ -329,13 +336,18 @@ export default {
       .form-item{
         width: 100%;
         margin-bottom: 10px;
+        .item-error-wrap{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
         .item-label{
           font-weight: 500;
           color: #000000;
-          margin-bottom: 10px;
           font-size: 14px;
         }
         .item-input{
+          margin-top: 10px;
           width: 100%;
           height: 38px;
           background: #FFFFFF;
