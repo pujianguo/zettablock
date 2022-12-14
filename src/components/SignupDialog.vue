@@ -80,6 +80,9 @@ export default {
       handler (val) {
         if (val !== this.visible) {
           this.visible = val
+          if (val) {
+            this.init()
+          }
         }
       }
     },
@@ -88,6 +91,16 @@ export default {
     }
   },
   methods: {
+    init() {
+      this.editForm = {
+        name: '',
+        email: '',
+        company: '',
+        title: '',
+      }
+      this.emailError = ''
+      this.isSubmit = ''
+    },
     handleClose () {
       this.visible = false
     },
@@ -100,6 +113,7 @@ export default {
         this.emailError = 'Please check the email format'
         return
       }
+      this.emailError = ''
       this.isSubmit = true
       const myForm = document.querySelector('#myForm')
       myForm.submit()
