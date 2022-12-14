@@ -43,7 +43,7 @@ export function isAndroid(value, allowEmptyString) {
 
 
 export const validateEmail = function (value) {
-  const regExpEmail = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+  const regExpEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
   return regExpEmail.test(value);
 };
 

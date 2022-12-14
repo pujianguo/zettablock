@@ -16,7 +16,7 @@
           </svg>
         </div>
       </div>
-      <form v-if="!isSubmit" class="dialog-form" id="myForm" action="https://zettablock.us14.list-manage.com/subscribe/post?u=1ff0f35da3b86da52617aadd6&amp;id=bc40fdafb4" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+      <form v-if="!isSubmit" class="dialog-form" id="myForm" action="https://zettablock.us14.list-manage.com/subscribe/post?u=1ff0f35da3b86da52617aadd6&amp;id=bc40fdafb4&amp;f_id=00d781e0f0" method="post" name="mc-embedded-subscribe-form" novalidate>
         <div class="form-item">
           <div class="item-label">Name</div>
           <input class="item-input" v-model="editForm.name" name="NAME" placeholder="What do people call you?" />
@@ -261,6 +261,149 @@ export default {
       }
     }
   }
+}
+@media screen and (max-width: 1100px) {
+  .signup-dialog{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(240, 240, 245, 0.6);
+  backdrop-filter: blur(25px);
+  // display: none;
+  .signup-dialog-content{
+    width: 500px;
+    height: 520px;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 45px rgba(50, 28, 242, 0.05), 0px 0px 0px rgba(50, 28, 242, 0.05);
+    padding: 40px 100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    .dialog-header{
+      width: 100%;
+      .logo{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .logo-icon{
+          width: 20px;
+          height: 20px;
+          margin-right: 6px;
+        }
+        .logo-text{
+          width: 140px;
+          height: 18px;
+          color: #000;
+        }
+      }
+    }
+    .dialog-form{
+      width: 100%;
+      margin-top: 20px;
+      .form-item{
+        width: 100%;
+        margin-bottom: 10px;
+        .item-label{
+          font-weight: 500;
+          color: #000000;
+          margin-bottom: 10px;
+          font-size: 14px;
+        }
+        .item-input{
+          width: 100%;
+          height: 38px;
+          background: #FFFFFF;
+          border: 1px solid rgba(40, 26, 240, 0.1);
+          box-shadow: 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
+          border-radius: 4px;
+          font-size: 12px;
+          padding: 0 12px;
+          color: #281AF0;
+          &::placeholder{
+            color: #281AF0;
+            opacity: 0.2;
+          }
+        }
+        .item-error{
+          color: #e85c41;
+        }
+      }
+    }
+    .submit-button{
+      width: 248px;
+      height: 44px;
+      margin: 40px auto 0;
+      background: radial-gradient(129.53% 327.88% at 69.76% 0%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #2914F7;
+      box-shadow: 0px 27px 11px rgba(40, 27, 240, 0.01), 0px 15px 9px rgba(40, 27, 240, 0.02), 0px 7px 7px rgba(40, 27, 240, 0.04), 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      .button-text{
+        font-family: 'Basier Square';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+      }
+      .button-icon{
+        width: 20px;
+        height: 20px;
+        margin-left: 5px;
+        margin-right: 0;
+      }
+    }
+    .submit-success{
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .success-title{
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 120%;
+        color: #000;
+        text-align: center;
+      }
+      .success-text{
+        margin-top: 26px;
+        P{
+          font-weight: 500;
+          color: #000;
+          text-align: center;
+          a{
+            color: #281AF0;
+          }
+        }
+      }
+    }
+
+    .close-btn{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      .close-icon{
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
 }
 // mobile
 @media screen and (max-width: 767px) {
