@@ -24,17 +24,29 @@
         <div class="form-item">
           <div class="item-error-wrap">
             <div class="item-label">Email</div>
-            <p class="item-error">{{emailError}}</p>
+            <p v-show="emailError" class="item-error">{{emailError}}</p>
           </div>
-          <input class="item-input" v-model="editForm.email" name="EMAIL" placeholder="Email (we won’t span, promise)" />
+          <input class="item-input" v-model="editForm.email" name="EMAIL" placeholder="No spam, we promise" />
         </div>
         <div class="form-item">
-          <div class="item-label">Company</div>
-          <input class="item-input" v-model="editForm.company" name="COMPANY" placeholder="what company are you in?" />
+          <div class="item-error-wrap">
+            <div class="item-label">Use Case</div>
+            <p v-show="useError" class="item-error">{{useError}}</p>
+          </div>
+          <select class="item-input item-select" v-model="editForm.use" name="USE" placeholder="What are you working on?">
+            <option value="Data Analysis">Data Analysis</option>
+            <option value="App Development">App Development</option>
+          </select>
         </div>
         <div class="form-item">
-          <div class="item-label">Job Title</div>
-          <input class="item-input" v-model="editForm.title" name="TITLE" placeholder="What are you working on?" />
+          <div class="item-error-wrap">
+            <div class="item-label">License Type</div>
+            <p v-show="interestError" class="item-error">{{interestError}}</p>
+          </div>
+          <select class="item-input item-select" v-model="editForm.interest" name="INTEREST" placeholder="What type of usage?">
+            <option value="Personal / Individual">Personal / Individual</option>
+            <option value="Commercial / Enterprise">Commercial / Enterprise</option>
+          </select>
         </div>
         <input style="display: none;" checked type="checkbox" value="1" name="group[45212][1]" id="mce-group[45212]-45212-2">
         <div class="submit-button button" @click="handleSubmit">
@@ -46,9 +58,14 @@
       </div>
       <div v-else class="submit-success">
         <div class="success-title">Application sent!</div>
-        <div class="success-text">
-          <p>Thanks you for your interest; </p>
-          <p>join our <a href="https://discord.gg/zettablock" target="_blank">discord</a> to stay in touch and get latest updates!</p>
+        <div class="success-text success-text-pc">
+          <p>Thank you for the interest. We’ll be in touch shortly.</p>
+          <p>Join our <a href="https://discord.gg/zettablock" target="_blank">discord</a> for higher priority!</p>
+        </div>
+        <div class="success-text success-text-m">
+          <p>Thank you for the interest.</p>
+          <p>We’ll be in touch shortly.</p>
+          <p>Join our <a href="https://discord.gg/zettablock" target="_blank">discord</a> for higher priority!</p>
         </div>
       </div>
     </div>
@@ -69,10 +86,13 @@ export default {
       editForm: {
         name: '',
         email: '',
-        company: '',
-        title: '',
+        use: '',
+        interest: '',
       },
+      nameError: '',
       emailError: '',
+      useError: '',
+      interestError: '',
       isSubmit: false,
       submitLoading: false,
     }
@@ -98,8 +118,8 @@ export default {
       this.editForm = {
         name: '',
         email: '',
-        company: '',
-        title: '',
+        use: '',
+        interest: '',
       }
       this.emailError = ''
       this.isSubmit = false
@@ -109,20 +129,36 @@ export default {
       this.visible = false
     },
     handleSubmit () {
+      let errFlag = false
       if (this.editForm.email === '') {
         this.emailError = 'Please enter a value'
-        return
+        errFlag = true
+      } else {
+        this.emailError = ''
       }
       if (!validateEmail(this.editForm.email)) {
         this.emailError = 'Please check the email format'
-        return
+        errFlag = true
+      } else {
+        this.emailError = ''
       }
-      this.emailError = ''
-      if (this.submitLoading) {
+      if (this.editForm.use === '') {
+        this.useError = 'Please select a value'
+        errFlag = true
+      } else {
+        this.useError = ''
+      }
+      if (this.editForm.interest === '') {
+        this.interestError = 'Please select a value'
+        errFlag = true
+      } else {
+        this.interestError = ''
+      }
+      if (errFlag || this.submitLoading) {
         return
       }
 
-      const data = `NAME=${this.editForm.name}&EMAIL=${this.editForm.email}&COMPANY=${this.editForm.company}&TITLE=${this.editForm.title}`
+      const data = `NAME=${this.editForm.name}&EMAIL=${this.editForm.email}&USE=${this.editForm.use}&interest=${this.editForm.INTEREST}`
       const url = "https://zettablock.us14.list-manage.com/subscribe/post?u=1ff0f35da3b86da52617aadd6&amp;id=bc40fdafb4&amp;f_id=00d781e0f0"
       this.submitLoading = true
       fetch(url, {
@@ -204,7 +240,6 @@ export default {
           margin-top: 10px;
           width: 100%;
           height: 52px;
-          background: #FFFFFF;
           border: 1px solid rgba(40, 26, 240, 0.1);
           box-shadow: 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
           border-radius: 4px;
@@ -213,6 +248,13 @@ export default {
           &::placeholder{
             color: #281AF0;
             opacity: 0.2;
+          }
+        }
+        .item-select{
+          appearance: none;
+          background: url("/icon/select_arrow.svg") no-repeat right 15px center;
+          &:focus-visible{
+            outline: none;
           }
         }
         .item-error{
@@ -269,8 +311,13 @@ export default {
           }
         }
       }
+      .success-text-pc{
+        display: block;
+      }
+      .success-text-m{
+        display: none;
+      }
     }
-
     .close-btn{
       position: absolute;
       top: 10px;
@@ -350,7 +397,6 @@ export default {
           margin-top: 10px;
           width: 100%;
           height: 38px;
-          background: #FFFFFF;
           border: 1px solid rgba(40, 26, 240, 0.1);
           box-shadow: 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
           border-radius: 4px;
@@ -480,6 +526,14 @@ export default {
         .close-icon{
           width: 16px;
           height: 16px;
+        }
+      }
+      .submit-success{
+        .success-text-pc{
+          display: none;
+        }
+        .success-text-m{
+          display: block;
         }
       }
     }
