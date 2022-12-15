@@ -159,7 +159,7 @@ export default {
         return
       }
 
-      const data = `NAME=${this.editForm.name}&EMAIL=${this.editForm.email}&USE=${this.editForm.use}&interest=${this.editForm.INTEREST}`
+      const data = `NAME=${this.editForm.name}&EMAIL=${this.editForm.email}&USE=${this.editForm.use}&INTEREST=${this.editForm.interest}`
       const url = "https://zettablock.us14.list-manage.com/subscribe/post?u=1ff0f35da3b86da52617aadd6&amp;id=bc40fdafb4&amp;f_id=00d781e0f0"
       this.submitLoading = true
       fetch(url, {
