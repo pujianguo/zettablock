@@ -174,7 +174,6 @@ export default {
       }).catch(err => {
         this.submitLoading = false
         this.isSubmit = true
-        console.log('err', err)
       })
     }
   }
