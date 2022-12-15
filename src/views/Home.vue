@@ -1106,6 +1106,9 @@
     },
     created() {
       document.title = "ZettaBlock - The First Full-stack, Real-time Web3 Data Infra";
+      if (this.$route.query.hasOwnProperty('signup')) {
+        this.signupDialogVisible = true
+      }
     },
     mounted() {
       this.slide11Swiper = null

@@ -128,6 +128,9 @@ export default {
     },
     handleClose () {
       this.visible = false
+      if (this.$route.query.hasOwnProperty('signup')) {
+        this.$router.push('/')
+      }
     },
     handleSubmit () {
       let errFlag = false
