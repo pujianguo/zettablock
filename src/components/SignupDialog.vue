@@ -392,6 +392,7 @@ export default {
     }
   }
 }
+//small screen
 @media screen and (max-height: 750px) {
   .signup-dialog{
     .signup-dialog-content{
