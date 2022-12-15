@@ -33,7 +33,8 @@
             <div class="item-label">Use Case</div>
             <p v-show="useError" class="item-error">{{useError}}</p>
           </div>
-          <select class="item-input item-select" v-model="editForm.use" name="USE" placeholder="What are you working on?">
+          <select class="item-input item-select" :class="{'select-disabled': editForm.use ===''}" v-model="editForm.use" name="USE" placeholder="What are you working on?">
+            <option value="" disabled selected>What are you working on?</option>
             <option value="Data Analysis">Data Analysis</option>
             <option value="App Development">App Development</option>
           </select>
@@ -43,12 +44,12 @@
             <div class="item-label">License Type</div>
             <p v-show="interestError" class="item-error">{{interestError}}</p>
           </div>
-          <select class="item-input item-select" v-model="editForm.interest" name="INTEREST" placeholder="What type of usage?">
+          <select class="item-input item-select" :class="{'select-disabled': editForm.interest ===''}" v-model="editForm.interest" name="INTEREST" placeholder="What type of usage?">
+            <option value="" disabled selected>What type of usage?</option>
             <option value="Personal / Individual">Personal / Individual</option>
             <option value="Commercial / Enterprise">Commercial / Enterprise</option>
           </select>
         </div>
-        <input style="display: none;" checked type="checkbox" value="1" name="group[45212][1]" id="mce-group[45212]-45212-2">
         <div class="submit-button button" @click="handleSubmit">
           <span class="button-text">Get Early Access</span>
           <svg class="button-icon">
@@ -172,6 +173,7 @@ export default {
         this.submitLoading = false
       }).catch(err => {
         this.submitLoading = false
+        this.isSubmit = true
         console.log('err', err)
       })
     }
@@ -257,6 +259,9 @@ export default {
             outline: none;
           }
         }
+        .select-disabled{
+          color: rgba(40,26,240, 0.2);
+        }
         .item-error{
           color: #e85c41;
         }
@@ -337,150 +342,52 @@ export default {
 }
 @media screen and (max-width: 1100px) {
   .signup-dialog{
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(240, 240, 245, 0.6);
-  backdrop-filter: blur(25px);
-  // display: none;
-  .signup-dialog-content{
-    width: 500px;
-    height: 520px;
-    background: #FFFFFF;
-    box-shadow: 0px 20px 45px rgba(50, 28, 242, 0.05), 0px 0px 0px rgba(50, 28, 242, 0.05);
-    padding: 40px 100px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    .dialog-header{
-      width: 100%;
-      .logo{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .logo-icon{
+    .signup-dialog-content{
+      width: 500px;
+      height: 520px;
+      padding: 40px 100px;
+      .dialog-header{
+        .logo{
+          .logo-icon{
+            width: 20px;
+            height: 20px;
+            margin-right: 6px;
+          }
+          .logo-text{
+            width: 140px;
+            height: 18px;
+          }
+        }
+      }
+      .dialog-form{
+        margin-top: 20px;
+        .form-item{
+          margin-bottom: 10px;
+          .item-label{
+            font-size: 14px;
+          }
+          .item-input{
+            height: 38px;
+            font-size: 12px;
+            padding: 0 12px;
+          }
+        }
+      }
+      .submit-button{
+        width: 248px;
+        height: 44px;
+        margin: 40px auto 0;
+        .button-text{
+          font-size: 16px;
+        }
+        .button-icon{
           width: 20px;
           height: 20px;
-          margin-right: 6px;
+          margin-left: 5px;
         }
-        .logo-text{
-          width: 140px;
-          height: 18px;
-          color: #000;
-        }
-      }
-    }
-    .dialog-form{
-      width: 100%;
-      margin-top: 20px;
-      .form-item{
-        width: 100%;
-        margin-bottom: 10px;
-        .item-error-wrap{
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-        }
-        .item-label{
-          font-weight: 500;
-          color: #000000;
-          font-size: 14px;
-        }
-        .item-input{
-          margin-top: 10px;
-          width: 100%;
-          height: 38px;
-          border: 1px solid rgba(40, 26, 240, 0.1);
-          box-shadow: 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
-          border-radius: 4px;
-          font-size: 12px;
-          padding: 0 12px;
-          color: #281AF0;
-          &::placeholder{
-            color: #281AF0;
-            opacity: 0.2;
-          }
-        }
-        .item-error{
-          color: #e85c41;
-        }
-      }
-    }
-    .submit-button{
-      width: 248px;
-      height: 44px;
-      margin: 40px auto 0;
-      background: radial-gradient(129.53% 327.88% at 69.76% 0%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #2914F7;
-      box-shadow: 0px 27px 11px rgba(40, 27, 240, 0.01), 0px 15px 9px rgba(40, 27, 240, 0.02), 0px 7px 7px rgba(40, 27, 240, 0.04), 0px 2px 4px rgba(40, 27, 240, 0.04), 0px 0px 0px rgba(40, 27, 240, 0.04);
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      .button-text{
-        font-family: 'Basier Square';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 100%;
-      }
-      .button-icon{
-        width: 20px;
-        height: 20px;
-        margin-left: 5px;
-        margin-right: 0;
-      }
-    }
-    .submit-success{
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      .success-title{
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 120%;
-        color: #000;
-        text-align: center;
-      }
-      .success-text{
-        margin-top: 26px;
-        P{
-          font-weight: 500;
-          color: #000;
-          text-align: center;
-          a{
-            color: #281AF0;
-          }
-        }
-      }
-    }
-
-    .close-btn{
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      width: 30px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      .close-icon{
-        width: 20px;
-        height: 20px;
       }
     }
   }
-}
 }
 // mobile
 @media screen and (max-width: 767px) {
