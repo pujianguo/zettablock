@@ -343,7 +343,7 @@ export default {
     }
   }
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
   .signup-dialog{
     .signup-dialog-content{
       width: 500px;
