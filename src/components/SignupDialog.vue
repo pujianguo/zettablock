@@ -105,6 +105,7 @@ export default {
         if (val !== this.visible) {
           this.visible = val
           if (val) {
+            this.$router.push('?signup')
             this.init()
           }
         }
