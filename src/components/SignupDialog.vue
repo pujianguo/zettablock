@@ -392,6 +392,55 @@ export default {
     }
   }
 }
+@media screen and (max-height: 750px) {
+  .signup-dialog{
+    .signup-dialog-content{
+      width: 500px;
+      height: 520px;
+      padding: 40px 100px;
+      .dialog-header{
+        .logo{
+          .logo-icon{
+            width: 20px;
+            height: 20px;
+            margin-right: 6px;
+          }
+          .logo-text{
+            width: 140px;
+            height: 18px;
+          }
+        }
+      }
+      .dialog-form{
+        margin-top: 20px;
+        .form-item{
+          margin-bottom: 10px;
+          .item-label{
+            font-size: 14px;
+          }
+          .item-input{
+            height: 38px;
+            font-size: 12px;
+            padding: 0 12px;
+          }
+        }
+      }
+      .submit-button{
+        width: 248px;
+        height: 44px;
+        margin: 40px auto 0;
+        .button-text{
+          font-size: 16px;
+        }
+        .button-icon{
+          width: 20px;
+          height: 20px;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
 // mobile
 @media screen and (max-width: 767px) {
   .signup-dialog{
