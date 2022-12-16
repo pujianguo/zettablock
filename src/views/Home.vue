@@ -25,7 +25,7 @@
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
                     </svg>
                   </div>
-                  <a class="ae-7 fromBottom button view-button" href="https://zettablock.readme.io/" target="_blank">
+                  <a class="ae-7 fromBottom button view-button" href="https://docs.zettablock.com/" target="_blank">
                     <span class="button-text">View Docs</span>
                     <svg class="button-icon">
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
