@@ -27,7 +27,7 @@
             </li>
             <li><a href="#usecases">Use Cases</a></li>
             <li><a href="https://zettablockhq.medium.com/" target="_blank">Blog</a></li>
-            <li><a href="https://docs.zettablock.com/" target="_blank">Docs</a></li>
+            <li><a href="https://zettablock.readme.io/" target="_blank">Docs</a></li>
           </ul>
           <a class="cta" href="https://calendly.com/zettablock/30min" target="_blank">
             Schedule Demo
