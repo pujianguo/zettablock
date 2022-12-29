@@ -1019,4 +1019,34 @@
   }
 }
 
+.policy-page{
+  margin-top: 10vh;
+  .page-title{
+    font-size: 40px;
+  }
+  .page-subtitle{
+    font-size: 14px;
+    flex-direction: column;
+    p{
+      margin: 10px 0 0;
+    }
+  }
+  .policy-content{
+    .p{
+      margin-bottom: 30px;
+    }
+    .p-title{
+      font-size: 20px;
+    }
+    .p-subtitle{
+      font-size: 18px;
+    }
+    .p-content{
+      p{
+        font-size: 14px;
+      }
+    }
+  }
+}
+
 }

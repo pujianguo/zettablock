@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import Policy from './views/Policy.vue'
 import Slides from './views/Slides.vue'
 import Test from './views/Test.vue'
 // const Error404 = () =>
@@ -18,6 +19,11 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home,
+    },
+    {
+      path: '/policy',
+      name: 'Policy',
+      component: Policy,
     },
     {
       path: '/slides',

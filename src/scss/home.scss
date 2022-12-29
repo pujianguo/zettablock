@@ -273,7 +273,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      
+
       .requestButton{
         width: 303px;
         height: 52px;
@@ -1537,6 +1537,97 @@
         color: #FFFFFF;
         margin-left: 40px;
         cursor: pointer;
+      }
+    }
+  }
+}
+
+.policy-page{
+  margin-top: 30vh;
+  justify-content: flex-start !important;
+  .page-title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 120%;
+    background: radial-gradient(53.42% 202.11% at 78.75% 25.76%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #281AF0;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .page-subtitle{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #5A20FB;
+    opacity: 0.4;
+    margin-top: 40px;
+    p{
+      margin: 0 20px;
+    };
+  }
+  .policy-content{
+    width: 100%;
+    margin-top: 117px;
+    text-align: left;
+    .p{
+      margin-bottom: 50px;
+    }
+    .p-title{
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 150%;
+      color: #000000;
+      margin-bottom: 20px;
+    }
+    .p-subtitle{
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 150%;
+      color: #000000;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    .p-content{
+      p{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #000;
+        margin-bottom: 15px;
+        opacity: 0.6;
+        a{
+          color: #281AF0;
+          font-weight: 700;
+          text-decoration: underline;
+        }
+        .bold{
+          font-weight: bold;
+        }
+      }
+      .order-content{
+        padding-left: 35px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        p{
+          margin-bottom: 5px;
+          position: relative;
+          &::before{
+            position: absolute;
+            left: -20px;
+            content: attr(data-order)
+          }
+        }
+        .mt-10{
+          margin-top: 15px;
+        }
       }
     }
   }
