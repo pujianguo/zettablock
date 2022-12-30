@@ -117,7 +117,7 @@
                   <div class="p-title">7. Your Rights</div>
                   <div class="p-content">
                     <p>When providing us with your Personal Data, you may request access to your Personal Data, as well as information on how we process your Personal Data. You may also request rectification, erasure and restriction of the processing, as well as to have your Personal Data exported in a structured, commonly used and machine-readable format (data portability).</p>
-                    <p>Requests pursuant to the above rights may submitted to: <a href="mailto:support@zettablock.com">support@zettablock.com</a></p>
+                    <p>Requests pursuant to the above rights may submitted to: <a href="mailto:team@zettablock.com">team@zettablock.com</a></p>
                     <p>You may also file a complaint to your applicable data protection authority if you are of the opinion that Datalego has failed to comply with your rights as a data subject.</p>
                   </div>
                 </div>
