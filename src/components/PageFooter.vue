@@ -80,7 +80,7 @@
                 <a class="menu-item" href="https://zettablockhq.medium.com/" target="_blank">Blog</a>
                 <a class="menu-item" href="https://drive.google.com/drive/folders/1rGwlHFzxwxdPamOGFSxJIenrPeoFRTeQ?usp=sharing" target="_blank">Press Kit</a>
                 <a class="menu-item" href="#">Terms of Service</a>
-                <a class="menu-item" href="#">Privacy Policy</a>
+                <a class="menu-item" href="/policy">Privacy Policy</a>
               </div>
             </div>
           </div>

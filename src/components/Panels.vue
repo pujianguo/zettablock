@@ -8,7 +8,7 @@
     <nav class="panel top">
       <div class="sections desktop">
         <div class="left">
-          <a href="#" title="ZettaBlock" class="logo">
+          <a href="/" title="ZettaBlock" class="logo">
             <svg class="logo-icon">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-icon"></use>
             </svg>
