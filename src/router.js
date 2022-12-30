@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import Policy from './views/Policy.vue'
+import Privacy from './views/Privacy.vue'
 import Slides from './views/Slides.vue'
 import Test from './views/Test.vue'
 // const Error404 = () =>
@@ -21,9 +21,9 @@ export default new Router({
       component: Home,
     },
     {
-      path: '/policy',
-      name: 'Policy',
-      component: Policy,
+      path: '/privacy',
+      name: 'Privacy',
+      component: Privacy,
     },
     {
       path: '/slides',

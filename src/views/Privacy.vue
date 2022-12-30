@@ -131,7 +131,7 @@
                 <div class="p">
                   <div class="p-title">9. Contact Us</div>
                   <div class="p-content">
-                    <p>If you have any questions about this Privacy Policy, please contact us by email: <a href="mailto:support@zettablock.com">support@zettablock.com</a></p>
+                    <p>If you have any questions about this Privacy Policy, please contact us by email: <a href="mailto:team@zettablock.com">team@zettablock.com</a></p>
                   </div>
                 </div>
               </div>
