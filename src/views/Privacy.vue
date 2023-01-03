@@ -18,7 +18,7 @@
                   <div class="p-title">1. Introduction</div>
                   <div class="p-content">
                     <p>Welcome to Datalego Inc.</p>
-                    <p>Datalego Inc. (“us”, “we”, “Datalego”, or “our”) operates <a href="https://www.zettablock.com/" target="_blank">https://www.zettablock.com/</a> or relevant subdomains (<a href="https://app.zettablock.com/" target="_blank">https://app.zettablock.com/</a>, <a href="https://demo.zettablock.dev/" target="_blank">https://demo.zettablock.dev/</a>) (together or individually the “Service”).</p>
+                    <p>Datalego Inc. (“us”, “we”, “Datalego”, or “our”) operates <a href="https://www.zettablock.com/" target="_blank">https://www.zettablock.com/</a> or relevant subdomains (<a href="https://app.zettablock.com/" target="_blank">https://app.zettablock.com/</a>, <a href="https://demo.zettablock.dev/" target="_blank">https://demo.zettablock.dev/</a>, <a href="https://docs.zettablock.dev/" target="_blank">https://docs.zettablock.dev/</a>) (together or individually the “Service”).</p>
                     <p>This Privacy Policy assists you as the User (defined below) of our Service to understand which information we collect, why we collect information, how we use information and the data privacy rights you have as the User.</p>
                     <p>We use your data to provide and improve our Service. Before using our Service, please review this Privacy Policy carefully and contact us if you have any questions. By using our Service, you agree to the collection and use of information in accordance with this policy.</p>
                   </div>
