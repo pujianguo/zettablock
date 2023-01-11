@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Privacy from './views/Privacy.vue'
+import Terms from './views/Terms.vue'
 import Slides from './views/Slides.vue'
 import Test from './views/Test.vue'
 // const Error404 = () =>
@@ -24,6 +25,11 @@ export default new Router({
       path: '/privacy',
       name: 'Privacy',
       component: Privacy,
+    },
+    {
+      path: '/terms',
+      name: 'Terms',
+      component: Terms,
     },
     {
       path: '/slides',
