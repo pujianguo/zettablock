@@ -56,7 +56,7 @@
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
           </svg>
         </div>
-        <div class="terms hidden">By logging in, you are agreeing to the <a class="menu-item" target="_blank" href="/terms">Terms of Service</a> and confirm that you have read the <a class="menu-item" target="_blank" href="/privacy">Privacy Policy</a>.</div>
+        <!-- <div class="terms">By logging in, you are agreeing to the <a class="menu-item" target="_blank" href="/terms">Terms of Service</a> and confirm that you have read the <a class="menu-item" target="_blank" href="/privacy">Privacy Policy</a>.</div> -->
       </div>
       <div v-else class="submit-success">
         <div class="success-title">Application sent!</div>
