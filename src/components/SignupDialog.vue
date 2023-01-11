@@ -56,6 +56,7 @@
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
           </svg>
         </div>
+        <div class="terms hidden">By logging in, you are agreeing to the <a class="menu-item" target="_blank" href="/terms">Terms of Service</a> and confirm that you have read the <a class="menu-item" target="_blank" href="/privacy">Privacy Policy</a>.</div>
       </div>
       <div v-else class="submit-success">
         <div class="success-title">Application sent!</div>
@@ -271,7 +272,7 @@ export default {
       }
     }
     .submit-button{
-      width: 248px;
+      width: 100%;
       height: 52px;
       margin: 50px auto 0;
       background: radial-gradient(129.53% 327.88% at 69.76% 0%, #962EFF 0%, rgba(150, 46, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #2914F7;
@@ -341,6 +342,20 @@ export default {
         height: 20px;
       }
     }
+    .terms{
+      font-size: 14px;
+      color: rgba(90, 32, 251, 0.4);
+      text-align: center;
+      margin-top: 40px;
+      font-weight: 600;
+      a{
+        color: rgba(90, 32, 251, 0.7);
+        text-decoration: underline;
+        &:hover{
+          color: rgba(90, 32, 251, 1);
+        }
+      }
+    }
   }
 }
 @media screen and (max-width: 1200px) {
@@ -388,6 +403,9 @@ export default {
           height: 20px;
           margin-left: 5px;
         }
+      }
+      .terms{
+        font-size: 12px;
       }
     }
   }
@@ -439,7 +457,9 @@ export default {
           margin-left: 5px;
         }
       }
+      
     }
+    
   }
 }
 // mobile
@@ -495,6 +515,10 @@ export default {
         .success-text-m{
           display: block;
         }
+      }
+      .terms{
+        margin-top: 30px;
+        font-size: 10px;
       }
     }
   }
