@@ -11,7 +11,7 @@
               <h1 class="page-title">Terms of Service</h1>
               <div class="page-subtitle">
                 <p>Last Updated: Dec 27, 2022</p>
-                <p>Effective Date: Dec 27, 2022</p>
+                <!-- <p>Effective Date: Dec 27, 2022</p> -->
               </div>
               <div class="policy-content">
                 <div class="p">
