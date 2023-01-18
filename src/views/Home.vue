@@ -19,7 +19,7 @@
                 <p class="ae-5 fromBottom description">Build your own GraphQL APIs via SQL. <br/>Indexing and analytics. On-chain and off-chain.</p>
 
                 <div class="button-wrap">
-                  <div class="ae-6 fromBottom button access-button" @click="toggleSignup">
+                  <div class="ae-6 fromBottom button access-button" data-tf-popup="wx1GTSpH" data-tf-opacity="100" data-tf-size="100" data-tf-iframe-props="title=ZettaBlock Signup" data-tf-transitive-search-params  @click="typeform">
                     <span class="button-text">Get Early Access</span>
                     <svg class="button-icon">
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
@@ -1194,6 +1194,9 @@
         // window.open("https://discord.gg/zettablock", "_blank", "");
         this.signupDialogVisible = true
 
+      },
+      typeform() {
+        this.signupDialogVisible = false
       },
       onCreateView() {
         document.querySelector("body").classList.add("posr");
